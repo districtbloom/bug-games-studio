@@ -1,0 +1,4 @@
+Fonts bundled so the harness renders offline. All are under the SIL Open Font License 1.1:
+Bricolage Grotesque, DM Mono, Geist Mono, Instrument Sans (licence texts: *-OFL.txt beside them) and
+Instrument Serif (same licence; see InstrumentSans-OFL.txt for the licence text, copyright The Instrument Serif Project Authors).
+Fonts are served only to the local test boards; nothing is redistributed as part of a game.

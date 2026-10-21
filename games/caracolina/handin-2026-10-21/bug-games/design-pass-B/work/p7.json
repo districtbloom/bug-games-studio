@@ -1,0 +1,6 @@
+[
+ {"name":"L1","w":1000,"h":500,"lt":5,"shotJs":"const h=19.7,d=lightAt(h).sunDisc,c=[24,4,159],D=70;const e=[c[0]-d[0]*D,1.5,c[2]-d[2]*D];const L=[c[0]+d[0]*10,c[1]+3+d[1]*10,c[2]+d[2]*10];return {hour:h,eye:[e,e],look:[L,L],lens:40}"},
+ {"name":"L2","w":1000,"h":500,"lt":5,"shotJs":"const h=19.8,d=lightAt(h).sunDisc,c=[24,4,159],D=90;const e=[c[0]-d[0]*D,2,c[2]-d[2]*D+12];const L=[c[0]+d[0]*12,c[1]+3+d[1]*12,c[2]+d[2]*12];return {hour:h,eye:[e,e],look:[L,L],lens:50}"},
+ {"name":"L3","w":1000,"h":500,"lt":5,"shotJs":"const h=19.9,d=lightAt(h).sunDisc,c=[24,4,159],D=60;const e=[c[0]-d[0]*D,0.5,c[2]-d[2]*D-8];const L=[c[0]+d[0]*8,c[1]+4+d[1]*8,c[2]+d[2]*8];return {hour:h,eye:[e,e],look:[L,L],lens:34}"},
+ {"name":"L4","w":1000,"h":500,"lt":5,"shotJs":"const h=20.3,d=lightAt(h).sunDisc,c=[24,4,159],D=70;const e=[c[0]-d[0]*D,1.5,c[2]-d[2]*D];const L=[c[0]+d[0]*10,c[1]+3+d[1]*10,c[2]+d[2]*10];return {hour:h,eye:[e,e],look:[L,L],lens:40}"}
+]

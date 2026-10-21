@@ -1,0 +1,45 @@
+[
+ {
+  "name": "PH1",
+  "w": 390,
+  "h": 826,
+  "lt": 5,
+  "png": true,
+  "shot": {
+   "hour": 19.8,
+   "eye": [
+    [
+     2.5,
+     -2.9,
+     35.5
+    ],
+    [
+     2.5,
+     -2.9,
+     35.5
+    ]
+   ],
+   "look": [
+    [
+     15.462804207206846,
+     -7.058233816355187,
+     50.15178482691241
+    ],
+    [
+     15.462804207206846,
+     -7.058233816355187,
+     50.15178482691241
+    ]
+   ],
+   "lens": 26
+  }
+ },
+ {
+  "name": "poster-9x16-b",
+  "w": 1080,
+  "h": 1920,
+  "lt": 5,
+  "png": true,
+  "shotJs": "const h=19.8,d=lightAt(h).sunDisc,c=[24,-20,159],D=130;const e=[c[0]-d[0]*D,-35,c[2]-d[2]*D];const L=34,A=0.5625,tW=12*A/L,tH=12/L;const tc=[c[0]-e[0],c[2]-e[2]];const yc=Math.atan2(tc[0],-tc[1]);const al=Math.atan((0.6-.5)*2*tW);const yaw=yc-al;const p=Math.atan((0.62-.5)*2*tH);const look=[e[0]+Math.sin(yaw)*Math.cos(p)*10,e[1]+Math.sin(p)*10,e[2]-Math.cos(yaw)*Math.cos(p)*10];return {hour:h,eye:[e,e],look:[look,look],lens:L}"
+ }
+]

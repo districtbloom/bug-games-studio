@@ -1,0 +1,34 @@
+[
+ {
+  "name": "3_main",
+  "w": 1600,
+  "h": 800,
+  "lt": 2.0,
+  "png": true,
+  "shotJs": "PEOPLE.festival=false; const r=PEOPLE.find('quim'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.8,98+k*.05);\nconst P=r.pos, E=[P[0]+2.741,P[1]+1.62,P[2]+-1.22], L=[P[0]+-0.078,P[1]+1.67,P[2]+-0.194];\nPEOPLE.attn={id:'quim',p:[E[0],E[2]]};\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nwindow.__shot={who:'quim',P:P.slice(),E,L};\nreturn {hour:19.8,eye:[E,E],look:[L,L],lens:45};"
+ },
+ {
+  "name": "3_thumb_616",
+  "w": 616,
+  "h": 308,
+  "lt": 2.0,
+  "png": true,
+  "shotJs": "PEOPLE.festival=false; const r=PEOPLE.find('quim'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.8,98+k*.05);\nconst P=r.pos, E=[P[0]+2.193,P[1]+1.62,P[2]+-0.976], L=[P[0]+-0.07,P[1]+1.7,P[2]+-0.175];\nPEOPLE.attn={id:'quim',p:[E[0],E[2]]};\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nwindow.__shot={who:'quim',P:P.slice(),E,L};\nreturn {hour:19.8,eye:[E,E],look:[L,L],lens:60};"
+ },
+ {
+  "name": "3_check_noturn",
+  "w": 800,
+  "h": 400,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "PEOPLE.festival=false; const r=PEOPLE.find('quim'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.8,98+k*.05);\nconst P=r.pos, E=[P[0]+2.741,P[1]+1.62,P[2]+-1.22], L=[P[0]+-0.078,P[1]+1.67,P[2]+-0.194];\nPEOPLE.attn=null;\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nwindow.__shot={who:'quim',P:P.slice(),E,L};\nreturn {hour:19.8,eye:[E,E],look:[L,L],lens:45};"
+ },
+ {
+  "name": "3_check_turn",
+  "w": 800,
+  "h": 400,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "PEOPLE.festival=false; const r=PEOPLE.find('quim'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.8,98+k*.05);\nconst P=r.pos, E=[P[0]+2.741,P[1]+1.62,P[2]+-1.22], L=[P[0]+-0.078,P[1]+1.67,P[2]+-0.194];\nPEOPLE.attn={id:'quim',p:[E[0],E[2]]};\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nwindow.__shot={who:'quim',P:P.slice(),E,L};\nreturn {hour:19.8,eye:[E,E],look:[L,L],lens:45};"
+ }
+]

@@ -1,0 +1,34 @@
+[
+ {
+  "name": "v1_p5_40",
+  "w": 800,
+  "h": 400,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "PEOPLE.festival=false; const r=PEOPLE.find('quim'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.8,98+k*.05);\nconst P=r.pos, E=[P[0]+2.993,P[1]+1.62,P[2]+-0.199], L=[P[0]+0,P[1]+1.5,P[2]+0];\nPEOPLE.attn={id:'quim',p:[E[0],E[2]]};\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nwindow.__shot={who:'quim',P:P.slice(),E,L};\nreturn {hour:19.8,eye:[E,E],look:[L,L],lens:40};"
+ },
+ {
+  "name": "v2_m6_40",
+  "w": 800,
+  "h": 400,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "PEOPLE.festival=false; const r=PEOPLE.find('quim'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.8,98+k*.05);\nconst P=r.pos, E=[P[0]+2.9,P[1]+1.62,P[2]+-0.767], L=[P[0]+0,P[1]+1.5,P[2]+0];\nPEOPLE.attn={id:'quim',p:[E[0],E[2]]};\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nwindow.__shot={who:'quim',P:P.slice(),E,L};\nreturn {hour:19.8,eye:[E,E],look:[L,L],lens:40};"
+ },
+ {
+  "name": "v3_m6_35_close",
+  "w": 800,
+  "h": 400,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "PEOPLE.festival=false; const r=PEOPLE.find('quim'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.8,98+k*.05);\nconst P=r.pos, E=[P[0]+2.514,P[1]+1.62,P[2]+-0.665], L=[P[0]+0,P[1]+1.5,P[2]+0];\nPEOPLE.attn={id:'quim',p:[E[0],E[2]]};\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nwindow.__shot={who:'quim',P:P.slice(),E,L};\nreturn {hour:19.8,eye:[E,E],look:[L,L],lens:35};"
+ },
+ {
+  "name": "v4_thumb70",
+  "w": 616,
+  "h": 308,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "PEOPLE.festival=false; const r=PEOPLE.find('quim'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.8,98+k*.05);\nconst P=r.pos, E=[P[0]+2.9,P[1]+1.62,P[2]+-0.767], L=[P[0]+0,P[1]+1.55,P[2]+0];\nPEOPLE.attn={id:'quim',p:[E[0],E[2]]};\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nwindow.__shot={who:'quim',P:P.slice(),E,L};\nreturn {hour:19.8,eye:[E,E],look:[L,L],lens:70};"
+ }
+]

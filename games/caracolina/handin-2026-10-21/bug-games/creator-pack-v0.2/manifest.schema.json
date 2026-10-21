@@ -1,0 +1,1144 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://bug.games/schemas/package-manifest-v0.1.json",
+ "title": "bug.games package manifest (v0.1)",
+ "description": "manifest.json at the root of <slug>-package-v<N>.zip: slot -> file -> master size, the game's words, proposals, measure.py readings and the undecided fields. Derived from the harness's kit_spec.py and manifest.template.json. Sizes are master sizes, already at 2× the display size.",
+ "type": "object",
+ "required": [
+  "game",
+  "slots",
+  "words"
+ ],
+ "properties": {
+  "$schema": {
+   "type": "string"
+  },
+  "game": {
+   "type": "string",
+   "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+   "description": "the slug: the title lowercased, apostrophes dropped, other runs of non-alphanumerics as '-'"
+  },
+  "version": {
+   "type": "integer",
+   "minimum": 1,
+   "description": "N in <slug>-package-v<N>.zip"
+  },
+  "slots": {
+   "type": "object",
+   "properties": {
+    "poster": {
+     "type": "object",
+     "description": "KIT 1 (2:1, ≥1600×800) · tier 1 · ratio 2.000:1 · at least 1600×800 · fallback: the \"unwrapped\" plate: linen, catalogue number, title, kind",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "poster-2x3": {
+     "type": "object",
+     "description": "KIT 1 crop 2:3 · tier 1 · ratio 0.667:1 · fallback: a crop of the plate",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "poster-1x1": {
+     "type": "object",
+     "description": "KIT 1 crop 1:1 · tier 1 · ratio 1.000:1 · fallback: a crop of the plate",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "poster-9x16": {
+     "type": "object",
+     "description": "KIT T2 phone 9:16 · tier 2 · ratio 0.562:1 · fallback: none (no surface)",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "wide": {
+     "type": "object",
+     "description": "TPL wide 660×308 (wide capsule crop) · tier 2 · master 660×308 or 1320×616 · fallback: a crop of the poster",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "profile-banner": {
+     "type": "object",
+     "description": "TPL profile-banner 1280×340 (canvas art; not in the creator kit) · tier 0 · master 1280×340 · fallback: none defined",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "backdrop-desktop": {
+     "type": "object",
+     "description": "GP §4 backdrop 1440×577 (optional) · tier 0 · master 1440×577 or 2880×1154 · fallback: platform night",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "backdrop-phone": {
+     "type": "object",
+     "description": "GP §4 backdrop 390×826 (optional) · tier 0 · master 390×826 or 780×1652 · fallback: platform night",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "icon-46": {
+     "type": "object",
+     "description": "KIT 2 icon 46 (92×92) · tier 1 · master 92×92 · fallback: the catalogue number on a linen square",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "emblem-30": {
+     "type": "object",
+     "description": "KIT 3 emblem 30 (60×60) · tier 1 · master 60×60 · fallback: the catalogue number on a linen square",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "chip-64": {
+     "type": "object",
+     "description": "KIT T2 chip 64 (TPL master 128×128; Home draws 64×64, a 64×48 variant exists on the surface list) · tier 2 · master 128×128 or 64×64 or 64×48 or 128×96 · fallback: the icon",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "title-lockup": {
+     "type": "object",
+     "description": "KIT T2 title lockup (fixed-size pieces) · tier 2 · fallback: Bricolage in the strip",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      },
+      "min_width_px": {
+       "type": [
+        "integer",
+        "null"
+       ],
+       "description": "the smallest width the lockup may be drawn at"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "key-still": {
+     "type": "object",
+     "description": "KIT 4 key still 720×352 · tier 1 · master 720×352 · fallback: a centred poster crop, \"Back to <name>\"",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "result-still": {
+     "type": "object",
+     "description": "KIT 5 result still 1600×352 · tier 1 · master 1600×352 · fallback: a poster crop, \"You played for N minutes.\"",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "share-card": {
+     "type": "object",
+     "description": "KIT T2 share card 1200×630 · tier 2 · master 1200×630 · fallback: the poster (or plate) at 2:1 on the right, title on night, linen bar",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "cover": {
+     "type": "object",
+     "description": "SDK cover 16:9 (Publish: 1920×1080) — Q3 · tier 0 · ratio 1.778:1 · fallback: none",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "cover-clean": {
+     "type": "object",
+     "description": "platform answer 3: a clean no-text 16:9 cover held beside the lettered one — Q3 · tier 0 · master 1920×1080 · fallback: none",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "featured": {
+     "type": "object",
+     "description": "FEAT slot canvas 1268×440 (≈2.9:1); editorial commission · tier 2 · ratio 2.882:1 · at least 1268×440 · fallback: not eligible (editorial commission)",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "voice-sheet": {
+     "type": "object",
+     "description": "KIT T2 voice sheet (rants, hits, the verb, yes/no lines) · tier 2 · fallback: none",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "living-poster": {
+     "type": "object",
+     "description": "KIT T2 scene module to living-poster/CONTRACT.md · tier 2 · fallback: the tier-1 still (poster), else the unwrapped plate",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      },
+      "contract": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "marker-next": {
+     "type": "object",
+     "description": "KIT 9 marker ≤48×48, two poses · tier 1 · at most 48×48 · fallback: a lilac diamond, open (next) / filled (held)",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "marker-held": {
+     "type": "object",
+     "description": "KIT 9 marker ≤48×48, two poses · tier 1 · at most 48×48 · fallback: a lilac diamond, open (next) / filled (held)",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "living-poster-parts": {
+     "type": "object",
+     "description": "version B of the living poster: a parts kit (living-poster/PARTS.md); the harness reads parts.json",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      },
+      "spec": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    }
+   },
+   "patternProperties": {
+    "^seal-.+$": {
+     "type": "object",
+     "description": "KIT 6 seals 96×96 (192 @2x) · tier 1 · master 96×96 or 192×192 · fallback: a black square with a sun diamond · one per moment, named seal-<moment as in game.json moments>",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      },
+      "states": {
+       "type": "object",
+       "description": "one file per state",
+       "properties": {
+        "earned": {
+         "type": "string"
+        },
+        "progress": {
+         "type": "string"
+        },
+        "locked": {
+         "type": "string"
+        }
+       },
+       "required": [
+        "earned",
+        "progress",
+        "locked"
+       ],
+       "additionalProperties": false
+      },
+      "kind": {
+       "enum": [
+        "feat",
+        "collection",
+        "event"
+       ]
+      },
+      "rule": {
+       "type": "string",
+       "description": "the one-line rule shown on the Achievements tab"
+      }
+     },
+     "required": [],
+     "additionalProperties": true
+    },
+    "^pass-reward-.+$": {
+     "type": "object",
+     "description": "KIT 7 pass rewards 306×243 · tier 1 · master 306×243 or 612×486 · fallback: a hatched tile with the item's name · one per pass step reward, named pass-reward-<step or reward id>",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "^store-.+$": {
+     "type": "object",
+     "description": "KIT 8 store items 400×400 · tier 1 · master 400×400 · fallback: a hatched tile with the item's name · one per drafted item, named store-<id in store.draft.json>",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "^event-banner(-.+)?$": {
+     "type": "object",
+     "description": "KIT T2 event banner 1720×600, left 45% plain · tier 2 · master 1720×600 · fallback: a card with words only (kicker, title, dates, Join)",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    },
+    "^update-closeup(-.+)?$": {
+     "type": "object",
+     "description": "KIT T2 update close-up, thumb 308×154 · tier 2 · ratio 2.000:1 · at least 308×154 · fallback: a card with words only",
+     "properties": {
+      "file": {
+       "type": "string",
+       "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+      },
+      "size": {
+       "type": "array",
+       "items": {
+        "type": "integer",
+        "minimum": 1
+       },
+       "minItems": 2,
+       "maxItems": 2,
+       "description": "[width, height] in pixels of the master file"
+      },
+      "note": {
+       "type": "string"
+      },
+      "proposal": {
+       "type": "boolean",
+       "description": "true = drafted for this round, not a live feature"
+      }
+     },
+     "required": [
+      "file"
+     ],
+     "additionalProperties": true
+    }
+   },
+   "additionalProperties": {
+    "type": "object",
+    "description": "a slot the kit does not name: kept, reported as unknown, not placed",
+    "properties": {
+     "file": {
+      "type": "string",
+      "description": "path relative to manifest.json; empty = not supplied (the platform draws its fallback)"
+     },
+     "size": {
+      "type": "array",
+      "items": {
+       "type": "integer",
+       "minimum": 1
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "description": "[width, height] in pixels of the master file"
+     },
+     "note": {
+      "type": "string"
+     },
+     "proposal": {
+      "type": "boolean",
+      "description": "true = drafted for this round, not a live feature"
+     }
+    },
+    "required": [
+     "file"
+    ],
+    "additionalProperties": true
+   }
+  },
+  "words": {
+   "type": "object",
+   "description": "the game's words (creator kit W): title ≤40, place strings ≤30 (the same text as progress.set), one verb",
+   "properties": {
+    "title": {
+     "type": "string",
+     "maxLength": 40
+    },
+    "hook": {
+     "type": "string"
+    },
+    "place_strings": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "maxLength": 30
+     }
+    },
+    "verb": {
+     "type": "string",
+     "pattern": "^[A-Za-z’'-]+[.!]?$",
+     "description": "one word"
+    },
+    "stat_nouns": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "lead": {
+     "type": "string",
+     "maxLength": 110
+    },
+    "chips": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     },
+     "maxItems": 3
+    },
+    "goal": {
+     "type": "string"
+    },
+    "tips": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "playing_word": {
+     "type": "string"
+    },
+    "hover_hint": {
+     "type": "string"
+    },
+    "own_word": {
+     "type": "string"
+    },
+    "kind": {
+     "type": "string"
+    },
+    "result_lines": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "friend_lines": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "quick_chat": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     },
+     "maxItems": 2
+    },
+    "pause_line": {
+     "type": "string"
+    },
+    "posterFocus": {
+     "type": "array",
+     "items": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+     },
+     "minItems": 2,
+     "maxItems": 2,
+     "description": "focal point (x, y) kept in view when the platform crops the poster"
+    }
+   },
+   "additionalProperties": true
+  },
+  "proposed": {
+   "type": "object",
+   "description": "proposals only: nothing here is declared",
+   "properties": {
+    "vibes": {
+     "type": "array",
+     "items": {
+      "enum": [
+       "Chaos",
+       "Cozy",
+       "Quick",
+       "Weird",
+       "Spooky",
+       "Together",
+       "Story"
+      ]
+     },
+     "maxItems": 3
+    },
+    "tags": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 24
+     },
+     "maxItems": 4
+    },
+    "memberGift": {
+     "type": [
+      "object",
+      "null"
+     ]
+    },
+    "place_string_fixes": {
+     "type": "array"
+    }
+   },
+   "additionalProperties": true
+  },
+  "measure": {
+   "type": "object",
+   "description": "tools/measure.py readings, pasted as printed",
+   "properties": {
+    "light": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "string"
+     }
+    },
+    "colour": {
+     "type": "object",
+     "propertyNames": {
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+     },
+     "additionalProperties": {
+      "type": "string"
+     },
+     "description": "keys are '#RRGGBB' (always with the #)"
+    }
+   }
+  },
+  "undecided": {
+   "type": "object",
+   "description": "every field left open because the founder has not decided it",
+   "additionalProperties": {
+    "type": "string",
+    "pattern": "^UNDECIDED \\(Q\\d+"
+   }
+  }
+ },
+ "additionalProperties": true
+}

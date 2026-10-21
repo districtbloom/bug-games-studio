@@ -1,0 +1,266 @@
+[
+ {
+  "name": "load",
+  "load": {
+   "p0": "/tmp/claude-0/-home-claude/f5687e90-63e7-5f07-9dce-8a52b890766a/scratchpad/passB/work/stills/t4/pr0_petxina.print.jpg",
+   "p1": "/tmp/claude-0/-home-claude/f5687e90-63e7-5f07-9dce-8a52b890766a/scratchpad/passB/work/stills/t4/pr1_mercat.print.jpg",
+   "p2": "/tmp/claude-0/-home-claude/f5687e90-63e7-5f07-9dce-8a52b890766a/scratchpad/passB/work/stills/t4/pr2_cim.print.jpg",
+   "p3": "/tmp/claude-0/-home-claude/f5687e90-63e7-5f07-9dce-8a52b890766a/scratchpad/passB/work/stills/t4/pr3_jardi.print.jpg",
+   "p4": "/tmp/claude-0/-home-claude/f5687e90-63e7-5f07-9dce-8a52b890766a/scratchpad/passB/work/stills/t4/pr4_escales.print.jpg",
+   "p5": "/tmp/claude-0/-home-claude/f5687e90-63e7-5f07-9dce-8a52b890766a/scratchpad/passB/work/stills/t4/pr5_cala.print.jpg"
+  }
+ },
+ {
+  "name": "G4i",
+  "w": 800,
+  "h": 400,
+  "lt": 3,
+  "shot": {
+   "hour": 12.2,
+   "slow": 0.001,
+   "tBase": 15.15,
+   "eye": [
+    [
+     6,
+     -36.9,
+     140
+    ],
+    [
+     6,
+     -36.9,
+     140
+    ]
+   ],
+   "look": [
+    [
+     -4.6,
+     -32.0,
+     129.2
+    ],
+    [
+     -4.6,
+     -32.0,
+     129.2
+    ]
+   ],
+   "lens": 70
+  }
+ },
+ {
+  "name": "G4j",
+  "w": 800,
+  "h": 400,
+  "lt": 3,
+  "shot": {
+   "hour": 12.2,
+   "slow": 0.001,
+   "tBase": 15.15,
+   "eye": [
+    [
+     2,
+     -36.9,
+     136
+    ],
+    [
+     2,
+     -36.9,
+     136
+    ]
+   ],
+   "look": [
+    [
+     -4.6,
+     -31.8,
+     129.0
+    ],
+    [
+     -4.6,
+     -31.8,
+     129.0
+    ]
+   ],
+   "lens": 60
+  }
+ },
+ {
+  "name": "G6f",
+  "w": 800,
+  "h": 400,
+  "lt": 12.6,
+  "pins": [
+   [
+    0,
+    "p0"
+   ],
+   [
+    1,
+    "p1"
+   ],
+   [
+    2,
+    "p2"
+   ],
+   [
+    3,
+    "p3"
+   ],
+   [
+    4,
+    "p4"
+   ],
+   [
+    5,
+    "p5"
+   ]
+  ],
+  "shot": {
+   "hour": 21.7,
+   "festival": true,
+   "eye": [
+    [
+     1.5,
+     25.75,
+     -64.5
+    ],
+    [
+     1.5,
+     25.75,
+     -64.5
+    ]
+   ],
+   "look": [
+    [
+     -6,
+     28.6,
+     -38
+    ],
+    [
+     -6,
+     28.6,
+     -38
+    ]
+   ],
+   "lens": 22
+  }
+ },
+ {
+  "name": "RC7",
+  "w": 800,
+  "h": 176,
+  "lt": 3,
+  "pins": [
+   [
+    0,
+    "p0"
+   ],
+   [
+    1,
+    "p1"
+   ],
+   [
+    2,
+    "p2"
+   ],
+   [
+    3,
+    "p3"
+   ],
+   [
+    4,
+    "p4"
+   ],
+   [
+    5,
+    "p5"
+   ]
+  ],
+  "shot": {
+   "hour": 19.7,
+   "eye": [
+    [
+     -4.8,
+     25.6,
+     -66.6
+    ],
+    [
+     -4.8,
+     25.6,
+     -66.6
+    ]
+   ],
+   "look": [
+    [
+     -4.4,
+     26.75,
+     -77
+    ],
+    [
+     -4.4,
+     26.75,
+     -77
+    ]
+   ],
+   "lens": 24
+  }
+ },
+ {
+  "name": "RC8",
+  "w": 800,
+  "h": 176,
+  "lt": 3,
+  "pins": [
+   [
+    0,
+    "p0"
+   ],
+   [
+    1,
+    "p1"
+   ],
+   [
+    2,
+    "p2"
+   ],
+   [
+    3,
+    "p3"
+   ],
+   [
+    4,
+    "p4"
+   ],
+   [
+    5,
+    "p5"
+   ]
+  ],
+  "shot": {
+   "hour": 19.9,
+   "eye": [
+    [
+     -4.8,
+     25.6,
+     -66.6
+    ],
+    [
+     -4.8,
+     25.6,
+     -66.6
+    ]
+   ],
+   "look": [
+    [
+     -4.4,
+     26.75,
+     -77
+    ],
+    [
+     -4.4,
+     26.75,
+     -77
+    ]
+   ],
+   "lens": 24
+  }
+ }
+]

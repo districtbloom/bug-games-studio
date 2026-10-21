@@ -1,0 +1,2 @@
+[{"name":"plan","w":600,"h":600,"lt":3,"shotJs":"window.fireworks=function(){return []};return {hour:16,eye:[[-5,62,-63.9],[-5,62,-63.9]],look:[[-5,0,-64],[-5,0,-64]],lens:20,festival:true};"},
+ {"name":"south","w":860,"h":300,"lt":3,"shotJs":"window.fireworks=function(){return []};return {hour:21.7,eye:[[-30,40,10],[-30,40,10]],look:[[-5,24,-60],[-5,24,-60]],lens:26,festival:true};"}]

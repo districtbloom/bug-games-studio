@@ -1,0 +1,34 @@
+[
+ {
+  "name": "s1_remei1950",
+  "w": 640,
+  "h": 320,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "PEOPLE.festival=false; const r=PEOPLE.find('remei'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.5,98+k*.05);\nconst P=r.pos, E=[P[0]+1.437,P[1]+1.62,P[2]+-4.789], L=[P[0]+0,P[1]+1,P[2]+0];\nPEOPLE.attn={id:'remei',p:[E[0],E[2]]};\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nwindow.__shot={who:'remei',P:P.slice(),E,L};\nreturn {hour:19.5,eye:[E,E],look:[L,L],lens:26};"
+ },
+ {
+  "name": "s2_tomas_ne",
+  "w": 640,
+  "h": 320,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "PEOPLE.festival=false; const r=PEOPLE.find('tomas'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.75,98+k*.05);\nconst P=r.pos, E=[P[0]+1.313,P[1]+1.62,P[2]+-2.918], L=[P[0]+0,P[1]+1.1,P[2]+0];\nPEOPLE.attn={id:'tomas',p:[E[0],E[2]]};\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nwindow.__shot={who:'tomas',P:P.slice(),E,L};\nreturn {hour:19.75,eye:[E,E],look:[L,L],lens:26};"
+ },
+ {
+  "name": "s3_aurora_w",
+  "w": 640,
+  "h": 320,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "PEOPLE.festival=false; const r=PEOPLE.find('aurora'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.75,98+k*.05);\nconst P=r.pos, E=[P[0]+-3.104,P[1]+1.62,P[2]+0.776], L=[P[0]+0,P[1]+1.1,P[2]+0];\nPEOPLE.attn={id:'aurora',p:[E[0],E[2]]};\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nwindow.__shot={who:'aurora',P:P.slice(),E,L};\nreturn {hour:19.75,eye:[E,E],look:[L,L],lens:32};"
+ },
+ {
+  "name": "s4_aurora_s",
+  "w": 640,
+  "h": 320,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "PEOPLE.festival=false; const r=PEOPLE.find('aurora'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.75,98+k*.05);\nconst P=r.pos, E=[P[0]+0.92,P[1]+1.62,P[2]+3.065], L=[P[0]+0,P[1]+1.1,P[2]+0];\nPEOPLE.attn={id:'aurora',p:[E[0],E[2]]};\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nwindow.__shot={who:'aurora',P:P.slice(),E,L};\nreturn {hour:19.75,eye:[E,E],look:[L,L],lens:32};"
+ }
+]

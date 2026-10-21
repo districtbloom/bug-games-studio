@@ -1,0 +1,6 @@
+[
+ {"name":"n204","w":800,"h":400,"lt":3,"shotJs":"const b=WORLD.brokenFace,R=norm(cross(b.D,[0,1,0]));const e=add(b.E,mul(R,-1.4));const L=add(add(b.E,mul(b.D,8.6)),mul(R,-0.7));return {hour:20.4,eye:[e,e],look:[[L[0],L[1]+0.5,L[2]],[L[0],L[1]+0.5,L[2]]],lens:32}"},
+ {"name":"n212","w":800,"h":400,"lt":3,"shotJs":"const b=WORLD.brokenFace,R=norm(cross(b.D,[0,1,0]));const e=add(b.E,mul(R,-1.4));const L=add(add(b.E,mul(b.D,8.6)),mul(R,-0.7));return {hour:21.2,eye:[e,e],look:[[L[0],L[1]+0.5,L[2]],[L[0],L[1]+0.5,L[2]]],lens:32}"},
+ {"name":"n220","w":800,"h":400,"lt":3,"shotJs":"const b=WORLD.brokenFace,R=norm(cross(b.D,[0,1,0]));const e=add(b.E,mul(R,-1.4));const L=add(add(b.E,mul(b.D,8.6)),mul(R,-0.7));return {hour:22.0,eye:[e,e],look:[[L[0],L[1]+0.5,L[2]],[L[0],L[1]+0.5,L[2]]],lens:32}"},
+ {"name":"d070","w":800,"h":400,"lt":3,"shotJs":"const b=WORLD.brokenFace,R=norm(cross(b.D,[0,1,0]));const e=add(b.E,mul(R,-1.4));const L=add(add(b.E,mul(b.D,8.6)),mul(R,-0.7));return {hour:7.2,eye:[e,e],look:[[L[0],L[1]+0.5,L[2]],[L[0],L[1]+0.5,L[2]]],lens:32}"}
+]
