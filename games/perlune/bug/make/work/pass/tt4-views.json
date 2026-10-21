@@ -1,0 +1,106 @@
+[
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": false,
+  "neb": 0.05,
+  "nodecor": true,
+  "ly": 0.45,
+  "lx": 0.35,
+  "grain": 0.01,
+  "streak": 0.45,
+  "dof": 0.35,
+  "vig": 0,
+  "light": [
+   -0.45,
+   0.7,
+   0.45
+  ],
+  "id": "a",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__S = {\"world\": \"nacre\", \"ud\": [0, 1, 0], \"lift\": 2.4, \"look\": \"away\", \"cam\": 0.0, \"pitch\": 0.0, \"dist\": 7.5, \"up\": 0.0, \"ty\": -0.6, \"side\": 0.0, \"fov\": 0.6, \"face\": 0.35, \"notdust\": true, \"camv\": [-0.8484452346748654, 0.479425538604203, -0.22425841498499569]};\nG.state = 'title';\n{ const T = window.__S, pl = planetById(T.world), U = new V3(0, 1, 0);\n  const ud = new V3(T.ud[0], T.ud[1], T.ud[2]).norm(); const C = pl.c.clone().addS(ud, pl.r + T.lift);\n  const Uc = planetById('umbra').c.clone();\n  let d; if (T.camv) d = new V3(T.camv[0], T.camv[1], T.camv[2]).norm(); else if (T.look === 'umbra') d = C.clone().sub(Uc).norm(); else { d = Uc.clone().sub(C); d.y = 0; d.norm(); }\n  rotAround(d, U, T.cam);\n  const rt0 = new V3().crossOf(d, U).norm(); if (T.pitch) rotAround(d, rt0, T.pitch);\n  const camPos = C.clone().addS(d, T.dist).addS(U, T.up);\n  const rt = new V3().crossOf(d, U).norm();\n  const fa = d.clone(); fa.y = 0; fa.norm(); rotAround(fa, U, T.face);\n  window.__C = C; window.__F = fa;\n  G.titlePos = C.clone(); G.titleFace = fa.clone();\n  G.camHook = function (CB) { G.titlePos = C.clone(); G.titleFace = fa.clone(); CB.pos.copy(camPos); CB.target.copy(C).addS(U, T.ty).addS(rt, T.side); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  if (T.notdust) { const dd = R.drawDust; R.drawDust = function (o) { if (G.state === 'title' && o.c && G.titlePos && o.c.dist(G.titlePos) < 0.01) return; return dd.call(R, o); }; }\n}\nwindow.__LO = {\"arc\": 1.4, \"a0\": -0.06, \"w0\": 0.12, \"w1\": 0.0, \"alpha\": 0.9, \"sgn\": 1, \"lean\": 0.0};\n{ const T = window.__LO, pl = planetById('nacre'), Nc = pl.c.clone();\n  window.__orbitFx = function () { const C = G.titlePos; if (!C) return;\n    const e1 = C.clone().sub(Nc); const R0 = e1.len(); e1.norm();\n    const v = R.cam.target.clone().sub(R.cam.pos).norm(); const r = new V3().crossOf(v, R.cam.up).norm();\n    let t = r.clone().addS(e1, -r.dot(e1)).norm(); rotAround(t, e1, T.lean); if (T.sgn < 0) t.neg();\n    const pts = [], pts2 = [], n = 140; for (let i = 0; i <= n; i++) { const a = T.a0 - i / n * T.arc; const p = VP.get().copy(Nc).addS(e1, Math.cos(a) * R0).addS(t, Math.sin(a) * R0); pts.push(p); pts2.push(VP.get().copy(p)); }\n    const up = (p, o) => o.copy(R.cam.pos).sub(p).norm();\n    FX.strip(pts, up, k => T.w0 + T.w1 * k, k => mixc(hex(0xfff2fb, 1.6), hex(0xff9ad5, 1.4), Math.min(1, k * 1.4)), k => T.alpha * Math.pow(1 - k, 1.1));\n    FX.strip(pts2, up, k => (T.w0 + T.w1 * k) * 0.3, hex(0xffffff, 2.2), k => T.alpha * Math.pow(1 - k, 1.8));\n  };\n  const dc = drawCreature; drawCreature = function (...a) { window.__orbitFx(); return dc(...a); };\n}\n"
+ },
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": false,
+  "neb": 0.05,
+  "nodecor": true,
+  "ly": 0.45,
+  "lx": 0.35,
+  "grain": 0.01,
+  "streak": 0.45,
+  "dof": 0.35,
+  "vig": 0,
+  "light": [
+   -0.45,
+   0.7,
+   0.45
+  ],
+  "id": "b",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__S = {\"world\": \"nacre\", \"ud\": [0, 1, 0], \"lift\": 3.2, \"look\": \"away\", \"cam\": 0.0, \"pitch\": 0.0, \"dist\": 8.0, \"up\": 0.0, \"ty\": -0.9, \"side\": 0.0, \"fov\": 0.6, \"face\": 0.35, \"notdust\": true, \"camv\": [-0.882772737158235, 0.40776045305957015, -0.23333175405591877]};\nG.state = 'title';\n{ const T = window.__S, pl = planetById(T.world), U = new V3(0, 1, 0);\n  const ud = new V3(T.ud[0], T.ud[1], T.ud[2]).norm(); const C = pl.c.clone().addS(ud, pl.r + T.lift);\n  const Uc = planetById('umbra').c.clone();\n  let d; if (T.camv) d = new V3(T.camv[0], T.camv[1], T.camv[2]).norm(); else if (T.look === 'umbra') d = C.clone().sub(Uc).norm(); else { d = Uc.clone().sub(C); d.y = 0; d.norm(); }\n  rotAround(d, U, T.cam);\n  const rt0 = new V3().crossOf(d, U).norm(); if (T.pitch) rotAround(d, rt0, T.pitch);\n  const camPos = C.clone().addS(d, T.dist).addS(U, T.up);\n  const rt = new V3().crossOf(d, U).norm();\n  const fa = d.clone(); fa.y = 0; fa.norm(); rotAround(fa, U, T.face);\n  window.__C = C; window.__F = fa;\n  G.titlePos = C.clone(); G.titleFace = fa.clone();\n  G.camHook = function (CB) { G.titlePos = C.clone(); G.titleFace = fa.clone(); CB.pos.copy(camPos); CB.target.copy(C).addS(U, T.ty).addS(rt, T.side); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  if (T.notdust) { const dd = R.drawDust; R.drawDust = function (o) { if (G.state === 'title' && o.c && G.titlePos && o.c.dist(G.titlePos) < 0.01) return; return dd.call(R, o); }; }\n}\nwindow.__LO = {\"arc\": 1.6, \"a0\": -0.06, \"w0\": 0.12, \"w1\": 0.0, \"alpha\": 0.9, \"sgn\": 1, \"lean\": 0.25};\n{ const T = window.__LO, pl = planetById('nacre'), Nc = pl.c.clone();\n  window.__orbitFx = function () { const C = G.titlePos; if (!C) return;\n    const e1 = C.clone().sub(Nc); const R0 = e1.len(); e1.norm();\n    const v = R.cam.target.clone().sub(R.cam.pos).norm(); const r = new V3().crossOf(v, R.cam.up).norm();\n    let t = r.clone().addS(e1, -r.dot(e1)).norm(); rotAround(t, e1, T.lean); if (T.sgn < 0) t.neg();\n    const pts = [], pts2 = [], n = 140; for (let i = 0; i <= n; i++) { const a = T.a0 - i / n * T.arc; const p = VP.get().copy(Nc).addS(e1, Math.cos(a) * R0).addS(t, Math.sin(a) * R0); pts.push(p); pts2.push(VP.get().copy(p)); }\n    const up = (p, o) => o.copy(R.cam.pos).sub(p).norm();\n    FX.strip(pts, up, k => T.w0 + T.w1 * k, k => mixc(hex(0xfff2fb, 1.6), hex(0xff9ad5, 1.4), Math.min(1, k * 1.4)), k => T.alpha * Math.pow(1 - k, 1.1));\n    FX.strip(pts2, up, k => (T.w0 + T.w1 * k) * 0.3, hex(0xffffff, 2.2), k => T.alpha * Math.pow(1 - k, 1.8));\n  };\n  const dc = drawCreature; drawCreature = function (...a) { window.__orbitFx(); return dc(...a); };\n}\n"
+ },
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": false,
+  "neb": 0.05,
+  "nodecor": true,
+  "ly": 0.45,
+  "lx": 0.35,
+  "grain": 0.01,
+  "streak": 0.45,
+  "dof": 0.35,
+  "vig": 0,
+  "light": [
+   -0.45,
+   0.7,
+   0.45
+  ],
+  "id": "c",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__S = {\"world\": \"nacre\", \"ud\": [0, 1, 0], \"lift\": 3.2, \"look\": \"away\", \"cam\": 0.0, \"pitch\": 0.0, \"dist\": 8.0, \"up\": 0.0, \"ty\": -1.2, \"side\": 0.0, \"fov\": 0.6, \"face\": 0.35, \"notdust\": true, \"camv\": [-0.7868562208806991, 0.5810351605373051, -0.2079793977314405]};\nG.state = 'title';\n{ const T = window.__S, pl = planetById(T.world), U = new V3(0, 1, 0);\n  const ud = new V3(T.ud[0], T.ud[1], T.ud[2]).norm(); const C = pl.c.clone().addS(ud, pl.r + T.lift);\n  const Uc = planetById('umbra').c.clone();\n  let d; if (T.camv) d = new V3(T.camv[0], T.camv[1], T.camv[2]).norm(); else if (T.look === 'umbra') d = C.clone().sub(Uc).norm(); else { d = Uc.clone().sub(C); d.y = 0; d.norm(); }\n  rotAround(d, U, T.cam);\n  const rt0 = new V3().crossOf(d, U).norm(); if (T.pitch) rotAround(d, rt0, T.pitch);\n  const camPos = C.clone().addS(d, T.dist).addS(U, T.up);\n  const rt = new V3().crossOf(d, U).norm();\n  const fa = d.clone(); fa.y = 0; fa.norm(); rotAround(fa, U, T.face);\n  window.__C = C; window.__F = fa;\n  G.titlePos = C.clone(); G.titleFace = fa.clone();\n  G.camHook = function (CB) { G.titlePos = C.clone(); G.titleFace = fa.clone(); CB.pos.copy(camPos); CB.target.copy(C).addS(U, T.ty).addS(rt, T.side); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  if (T.notdust) { const dd = R.drawDust; R.drawDust = function (o) { if (G.state === 'title' && o.c && G.titlePos && o.c.dist(G.titlePos) < 0.01) return; return dd.call(R, o); }; }\n}\nwindow.__LO = {\"arc\": 1.6, \"a0\": -0.06, \"w0\": 0.1, \"w1\": 0.0, \"alpha\": 0.9, \"sgn\": 1, \"lean\": -0.3};\n{ const T = window.__LO, pl = planetById('nacre'), Nc = pl.c.clone();\n  window.__orbitFx = function () { const C = G.titlePos; if (!C) return;\n    const e1 = C.clone().sub(Nc); const R0 = e1.len(); e1.norm();\n    const v = R.cam.target.clone().sub(R.cam.pos).norm(); const r = new V3().crossOf(v, R.cam.up).norm();\n    let t = r.clone().addS(e1, -r.dot(e1)).norm(); rotAround(t, e1, T.lean); if (T.sgn < 0) t.neg();\n    const pts = [], pts2 = [], n = 140; for (let i = 0; i <= n; i++) { const a = T.a0 - i / n * T.arc; const p = VP.get().copy(Nc).addS(e1, Math.cos(a) * R0).addS(t, Math.sin(a) * R0); pts.push(p); pts2.push(VP.get().copy(p)); }\n    const up = (p, o) => o.copy(R.cam.pos).sub(p).norm();\n    FX.strip(pts, up, k => T.w0 + T.w1 * k, k => mixc(hex(0xfff2fb, 1.6), hex(0xff9ad5, 1.4), Math.min(1, k * 1.4)), k => T.alpha * Math.pow(1 - k, 1.1));\n    FX.strip(pts2, up, k => (T.w0 + T.w1 * k) * 0.3, hex(0xffffff, 2.2), k => T.alpha * Math.pow(1 - k, 1.8));\n  };\n  const dc = drawCreature; drawCreature = function (...a) { window.__orbitFx(); return dc(...a); };\n}\n"
+ },
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": false,
+  "neb": 0.05,
+  "nodecor": true,
+  "ly": 0.45,
+  "lx": 0.35,
+  "grain": 0.01,
+  "streak": 0.45,
+  "dof": 0.35,
+  "vig": 0,
+  "light": [
+   -0.45,
+   0.7,
+   0.45
+  ],
+  "id": "d",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__S = {\"world\": \"nacre\", \"ud\": [0, 1, 0], \"lift\": 4.0, \"look\": \"away\", \"cam\": 0.0, \"pitch\": 0.0, \"dist\": 8.5, \"up\": 0.0, \"ty\": -0.8, \"side\": 0.6, \"fov\": 0.6, \"face\": 0.35, \"notdust\": true, \"camv\": [-0.8484452346748654, 0.479425538604203, -0.22425841498499569]};\nG.state = 'title';\n{ const T = window.__S, pl = planetById(T.world), U = new V3(0, 1, 0);\n  const ud = new V3(T.ud[0], T.ud[1], T.ud[2]).norm(); const C = pl.c.clone().addS(ud, pl.r + T.lift);\n  const Uc = planetById('umbra').c.clone();\n  let d; if (T.camv) d = new V3(T.camv[0], T.camv[1], T.camv[2]).norm(); else if (T.look === 'umbra') d = C.clone().sub(Uc).norm(); else { d = Uc.clone().sub(C); d.y = 0; d.norm(); }\n  rotAround(d, U, T.cam);\n  const rt0 = new V3().crossOf(d, U).norm(); if (T.pitch) rotAround(d, rt0, T.pitch);\n  const camPos = C.clone().addS(d, T.dist).addS(U, T.up);\n  const rt = new V3().crossOf(d, U).norm();\n  const fa = d.clone(); fa.y = 0; fa.norm(); rotAround(fa, U, T.face);\n  window.__C = C; window.__F = fa;\n  G.titlePos = C.clone(); G.titleFace = fa.clone();\n  G.camHook = function (CB) { G.titlePos = C.clone(); G.titleFace = fa.clone(); CB.pos.copy(camPos); CB.target.copy(C).addS(U, T.ty).addS(rt, T.side); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  if (T.notdust) { const dd = R.drawDust; R.drawDust = function (o) { if (G.state === 'title' && o.c && G.titlePos && o.c.dist(G.titlePos) < 0.01) return; return dd.call(R, o); }; }\n}\nwindow.__LO = {\"arc\": 2.0, \"a0\": -0.06, \"w0\": 0.1, \"w1\": 0.0, \"alpha\": 0.9, \"sgn\": 1, \"lean\": 0.5};\n{ const T = window.__LO, pl = planetById('nacre'), Nc = pl.c.clone();\n  window.__orbitFx = function () { const C = G.titlePos; if (!C) return;\n    const e1 = C.clone().sub(Nc); const R0 = e1.len(); e1.norm();\n    const v = R.cam.target.clone().sub(R.cam.pos).norm(); const r = new V3().crossOf(v, R.cam.up).norm();\n    let t = r.clone().addS(e1, -r.dot(e1)).norm(); rotAround(t, e1, T.lean); if (T.sgn < 0) t.neg();\n    const pts = [], pts2 = [], n = 140; for (let i = 0; i <= n; i++) { const a = T.a0 - i / n * T.arc; const p = VP.get().copy(Nc).addS(e1, Math.cos(a) * R0).addS(t, Math.sin(a) * R0); pts.push(p); pts2.push(VP.get().copy(p)); }\n    const up = (p, o) => o.copy(R.cam.pos).sub(p).norm();\n    FX.strip(pts, up, k => T.w0 + T.w1 * k, k => mixc(hex(0xfff2fb, 1.6), hex(0xff9ad5, 1.4), Math.min(1, k * 1.4)), k => T.alpha * Math.pow(1 - k, 1.1));\n    FX.strip(pts2, up, k => (T.w0 + T.w1 * k) * 0.3, hex(0xffffff, 2.2), k => T.alpha * Math.pow(1 - k, 1.8));\n  };\n  const dc = drawCreature; drawCreature = function (...a) { window.__orbitFx(); return dc(...a); };\n}\n"
+ }
+]

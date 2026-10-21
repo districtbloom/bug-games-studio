@@ -1,0 +1,42 @@
+{
+  "game": "Perlune",
+  "note": "Round-2 proposals for the design pass: names and looks only. Nothing here is declared in the game or in game.json; no prices, no counts, no dates. The game has no game.json yet, so 'moments' are proposed too: each is something the current build already records.",
+  "moments": [
+    {"id": "bead", "name": "Bead", "kind": "feat", "rule": "Change into the Bead: a glass mantle closes around you.", "glyph": "a pearl inside an offset glass shell"},
+    {"id": "halo", "name": "Halo", "kind": "feat", "rule": "Change into the Chimera and grow a halo.", "glyph": "a tilted ring floating over a bead"},
+    {"id": "nova", "name": "Nova", "kind": "feat", "rule": "Change into the Nova: a small star lights inside you.", "glyph": "a four-point star inside a bead"},
+    {"id": "bell", "name": "The Bell", "kind": "feat", "rule": "Unmake the Bell of Nacre, the first world's heart.", "glyph": "a bell"},
+    {"id": "geode", "name": "The Geode", "kind": "feat", "rule": "Find the Geode and open its heart.", "glyph": "a cracked six-sided crystal"},
+    {"id": "star", "name": "A Star", "kind": "feat", "rule": "Reach the Eclipse and end a journey as a star.", "glyph": "a dark disc in a broken ring of rays"},
+    {"id": "resonances", "name": "Every Resonance", "kind": "collection", "rule": "Find all ten resonances.", "glyph": "two linked rings"},
+    {"id": "forms", "name": "Four Forms", "kind": "collection", "rule": "Become each of the four final forms.", "glyph": "four beads on one orbit"},
+    {"id": "constellation", "name": "The Constellation", "kind": "collection", "rule": "Light every star of the constellation.", "glyph": "three stars joined by lines"}
+  ],
+  "store": {
+    "verb": "absorbed",
+    "verb_look": "a bead of liquid pearl lands in the tile's lower-left corner and closes into a small pearl seal with one ripple",
+    "items": [
+      {"id": "opal", "name": "Opal", "kind": "skin", "look": "the droplet's body turns milky opal with flecks of colour"},
+      {"id": "smoke-glass", "name": "Smoke Glass", "kind": "skin", "look": "the droplet's body turns to smoked violet glass; the eyes stay bright"},
+      {"id": "glass-halo", "name": "Glass Halo", "kind": "trim", "look": "the halo the droplet grows is clear cyan glass instead of gold light"},
+      {"id": "ribbon-trail", "name": "Ribbon Trail", "kind": "trail", "look": "a pink-to-cyan ribbon curls on the ground behind the droplet"},
+      {"id": "moonlet", "name": "Pearl Moonlet", "kind": "companion", "look": "a tiny pearl moon orbits the droplet; it never fires and never helps"}
+    ]
+  },
+  "pass": {
+    "name": "Pearl Orbit",
+    "step_unit": "a world woken",
+    "step_unit_look": "a world whose heart falls and whose colour floods back",
+    "rewards": [
+      {"id": "mote-trail", "row": "free", "name": "Mote Trail", "look": "a few pink dust motes follow the droplet"},
+      {"id": "pearl-crest", "row": "free", "name": "Pearl Crest", "look": "the glass crest on the droplet's head turns to pearl"},
+      {"id": "nacre-skin", "row": "pass", "name": "Nacre", "look": "a mother-of-pearl body"},
+      {"id": "prism-halo", "row": "pass", "name": "Prism Halo", "look": "the halo splits light into a ring of colours"},
+      {"id": "ringlet", "row": "pass", "name": "Ringlet", "look": "a small ring of pearl dust circles the droplet; no effect"},
+      {"id": "eclipse-blink", "row": "bug.pass", "name": "Eclipse Blink", "look": "an emote: the droplet's eyes become two tiny eclipses for a moment"}
+    ],
+    "marker": "a matter gem from the world: next = spinning over the next cell, held = settled into a pearl ring"
+  },
+  "update": {"id": "metamorphosis", "name": "Metamorphosis", "status": "in the build (round three)", "look": "close-up of the instant the droplet becomes the Chimera: the gold halo and tall glass crest arrive, a ring of light runs out across the ground"},
+  "event": {"id": "lantern-night", "name": "Lantern Night", "line": "The Eclipse's shadow falls on every world. Carry your light.", "shared_goal": "wake worlds together", "count": "UNDECIDED", "dates": "UNDECIDED", "look": "a world gone dark except the pool of light around the droplet (Umbra's own darkness, cast on Nacre)"}
+}
