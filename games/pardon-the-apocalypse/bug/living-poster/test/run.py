@@ -37,16 +37,16 @@ SHOTS = {
   **{f'react_{int(t*100):03d}': dict(w=760, h=380, steps=[idle(.5), dict(mode='react', dur=t)]) for t in [.05, .12, .25, .5, .79]},
   **{f'enter_{int(t*100):03d}': dict(w=760, h=380, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=t)]) for t in [.1, .25, .4, .55, .69]},
   # the loop
-  **{f'loop_{int(t*100):03d}': dict(w=760, h=380, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for t in [.1, .2, .4, .8, 1.15, 1.5, 1.7, 1.95, 2.3, 2.9, 3.1, 3.45, 4.0, 4.8, 5.2, 5.9, 6.3, 6.8, 6.98]},
+  **{f'loop_{int(t*100):03d}': dict(w=760, h=380, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for t in [.1, .2, .4, .8, 1.15, 1.5, 1.7, 1.95, 2.3, 2.9, 3.1, 3.45, 3.7, 4.0, 4.3, 4.8, 5.2, 5.9, 6.3, 6.8, 6.98]},
   'loop_900x640_330': dict(w=900, h=640, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=3.3)]),
   'loop_900x640_440': dict(w=900, h=640, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=4.4)]),
-  **{f'loopN_{w}x{h}_{int(t*100):03d}': dict(w=w, h=h, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for (w, h) in [(150, 370), (140, 305), (120, 300)] for t in [.1, .4, .8, 1.5, 1.95, 2.9, 3.45, 4.0, 5.2, 6.3, 6.98]},
+  **{f'loopN_{w}x{h}_{int(t*100):03d}': dict(w=w, h=h, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for (w, h) in [(150, 370), (140, 305), (120, 300)] for t in [.1, .4, .8, 1.5, 1.95, 2.9, 3.45, 4.0, 4.3, 5.2, 6.3, 6.98]},
   **{f'loopW_1000x150_{int(t*100):03d}': dict(w=1000, h=150, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for t in [.1, .4, 1.5, 1.95, 2.9, 4.0, 5.2, 6.98]},
   **{f'held_{w}x{h}': dict(w=w, h=h, steps=[idle(.5)]) for (w, h) in [(120, 300), (1000, 150)]},
   **{f'squeezedN_{w}x{h}': dict(w=w, h=h, steps=[idle(.5), dict(mode='squeezed', dur=2.0, squeeze=.8)]) for (w, h) in [(150, 370), (140, 305), (120, 300), (1000, 150)]},
   'loop_560x380_220': dict(w=560, h=380, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=2.2)]),
   # the largest scale (900x640 at dpr 2: 10 device px a pixel) for the guarded-colour audit
-  **{f'big_loop_{int(t*100):03d}': dict(w=900, h=640, dpr=2, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for t in [.15, .5, 1.95, 2.4, 3.1, 3.5, 5.0, 6.6]},
+  **{f'big_loop_{int(t*100):03d}': dict(w=900, h=640, dpr=2, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for t in [.15, .5, 1.95, 2.4, 3.1, 3.5, 4.0, 4.3, 5.0, 6.6]},
   'big_held': dict(w=900, h=640, dpr=2, steps=[idle(.5)]),
   'big_squeezed': dict(w=420, h=640, dpr=2, steps=[idle(.5), dict(mode='squeezed', dur=2.0, squeeze=.8)]),
   # back to idle after the loop: the settle
