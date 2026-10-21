@@ -1,12 +1,14 @@
 # The message a game's chat is given to begin
 
+The session should be started with two repositories, `districtbloom/<slug>` (the game) and `districtbloom/bug-games-studio` (see SETUP.md).
+
 Paste this into the chat that made the game. Replace `<slug>` with the game's folder name from the table.
 
 ---
 
 You made this game, and its pictures and words for bug.games now live in a shared studio on GitHub: `districtbloom/bug-games-studio`. The bug.games design chat reviews your work there.
 
-1. Add the repository `districtbloom/bug-games-studio` with push access, and clone it. Your session needs it among its repositories to push. If the push is refused, follow "If your push is refused" in the README.
+1. Clone `districtbloom/bug-games-studio` (this session was started with it). Your session needs it among its repositories to push. If the push is refused, follow "If your push is refused" in the README.
 2. Read, in order:
    - `README.md`, for how the studio works and its rules;
    - `direction/START_HERE.md`;

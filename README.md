@@ -20,6 +20,7 @@ games/<slug>/
   ROUND.md                  where the game is, and what's asked in the current round
   reviews/round-<n>/        the design chat's verdicts: REVIEW.md, review.json, and the review sheets
 START-MESSAGE.md            the message a game chat is given to begin
+SETUP.md                    how accounts, repositories and sessions are set up so every chat pushes by itself
 ```
 
 ## How a round works
