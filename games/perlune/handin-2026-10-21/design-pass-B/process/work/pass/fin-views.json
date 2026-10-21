@@ -1,0 +1,58 @@
+[
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [
+   "umbra"
+  ],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": 0.1,
+  "neb": 0.04,
+  "nodecor": true,
+  "ly": 0.25,
+  "lx": 0.0,
+  "grain": 0.01,
+  "streak": 0.45,
+  "dof": 0.25,
+  "vig": 0,
+  "light": [
+   -0.6,
+   0.45,
+   -0.55
+  ],
+  "id": "ground-bug",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__S = {\"world\": \"nacre\", \"ud\": [-0.2768, 0.9578, -0.0772], \"lift\": 5.5, \"look\": \"umbra\", \"cam\": 0.0, \"pitch\": 0.0, \"dist\": 10.5, \"up\": 0.0, \"ty\": 0.08, \"side\": 0.0, \"fov\": 0.22, \"face\": 0.0, \"notdust\": true, \"camv\": null};\nG.state = 'title';\n{ const T = window.__S, pl = planetById(T.world), U = new V3(0, 1, 0);\n  const ud = new V3(T.ud[0], T.ud[1], T.ud[2]).norm(); const C = pl.c.clone().addS(ud, pl.r + T.lift);\n  const Uc = planetById('umbra').c.clone();\n  let d; if (T.camv) d = new V3(T.camv[0], T.camv[1], T.camv[2]).norm(); else if (T.look === 'umbra') d = C.clone().sub(Uc).norm(); else { d = Uc.clone().sub(C); d.y = 0; d.norm(); }\n  rotAround(d, U, T.cam);\n  const rt0 = new V3().crossOf(d, U).norm(); if (T.pitch) rotAround(d, rt0, T.pitch);\n  const camPos = C.clone().addS(d, T.dist).addS(U, T.up);\n  const rt = new V3().crossOf(d, U).norm();\n  const fa = d.clone(); fa.y = 0; fa.norm(); rotAround(fa, U, T.face);\n  window.__C = C; window.__F = fa;\n  G.titlePos = C.clone(); G.titleFace = fa.clone();\n  G.camHook = function (CB) { G.titlePos = C.clone(); G.titleFace = fa.clone(); CB.pos.copy(camPos); CB.target.copy(C).addS(U, T.ty).addS(rt, T.side); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  if (T.notdust) { const dd = R.drawDust; R.drawDust = function (o) { if (G.state === 'title' && o.c && G.titlePos && o.c.dist(G.titlePos) < 0.01) return; return dd.call(R, o); }; }\n}\n{ const da = R.drawAtmo, um = planetById('umbra');\n  R.drawAtmo = function (c, r, col, pw, it) { if (c === um.c) { if (Math.abs(r - um.r * 1.9) < 0.5) return da.call(R, c, r, col, 16.000000, it * 0.763636);\n    if (Math.abs(r - um.r * 3.0) < 0.5) return da.call(R, c, r, col, 10.000000, it * 0.857143); return da.call(R, c, r, col, pw, it * 0.200000); } return da.call(R, c, r, col, pw, it); }; }\n{ const dp = R.drawPlanet; R.drawPlanet = function (pl, geo, pp, rip, dim) { return dp.call(R, pl, geo, pp, rip, pl.id === 'umbra' ? dim * 0.150000 : dim); }; }drawCreature = function () {}; drawCreatureDust = function () {};"
+ },
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [
+   "umbra"
+  ],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": 0.1,
+  "neb": 0.04,
+  "nodecor": true,
+  "ly": 0.1,
+  "lx": 0.0,
+  "grain": 0.01,
+  "streak": 0.45,
+  "dof": 0.25,
+  "vig": 0,
+  "light": [
+   -0.6,
+   0.45,
+   -0.55
+  ],
+  "id": "eclipse-blink",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__S = {\"world\": \"nacre\", \"ud\": [-0.2768, 0.9578, -0.0772], \"lift\": 5.5, \"look\": \"umbra\", \"cam\": 0.0, \"pitch\": 0.0, \"dist\": 10.2, \"up\": 0.0, \"ty\": 0.1, \"side\": 0.0, \"fov\": 0.22, \"face\": 0.0, \"notdust\": true, \"camv\": null};\nG.state = 'title';\n{ const T = window.__S, pl = planetById(T.world), U = new V3(0, 1, 0);\n  const ud = new V3(T.ud[0], T.ud[1], T.ud[2]).norm(); const C = pl.c.clone().addS(ud, pl.r + T.lift);\n  const Uc = planetById('umbra').c.clone();\n  let d; if (T.camv) d = new V3(T.camv[0], T.camv[1], T.camv[2]).norm(); else if (T.look === 'umbra') d = C.clone().sub(Uc).norm(); else { d = Uc.clone().sub(C); d.y = 0; d.norm(); }\n  rotAround(d, U, T.cam);\n  const rt0 = new V3().crossOf(d, U).norm(); if (T.pitch) rotAround(d, rt0, T.pitch);\n  const camPos = C.clone().addS(d, T.dist).addS(U, T.up);\n  const rt = new V3().crossOf(d, U).norm();\n  const fa = d.clone(); fa.y = 0; fa.norm(); rotAround(fa, U, T.face);\n  window.__C = C; window.__F = fa;\n  G.titlePos = C.clone(); G.titleFace = fa.clone();\n  G.camHook = function (CB) { G.titlePos = C.clone(); G.titleFace = fa.clone(); CB.pos.copy(camPos); CB.target.copy(C).addS(U, T.ty).addS(rt, T.side); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  if (T.notdust) { const dd = R.drawDust; R.drawDust = function (o) { if (G.state === 'title' && o.c && G.titlePos && o.c.dist(G.titlePos) < 0.01) return; return dd.call(R, o); }; }\n}\n{ const da = R.drawAtmo, um = planetById('umbra');\n  R.drawAtmo = function (c, r, col, pw, it) { if (c === um.c) { if (Math.abs(r - um.r * 1.9) < 0.5) return da.call(R, c, r, col, 16.000000, it * 0.763636);\n    if (Math.abs(r - um.r * 3.0) < 0.5) return da.call(R, c, r, col, 10.000000, it * 0.857143); return da.call(R, c, r, col, pw, it * 0.200000); } return da.call(R, c, r, col, pw, it); }; }\n{ const dp = R.drawPlanet; R.drawPlanet = function (pl, geo, pp, rip, dim) { return dp.call(R, pl, geo, pp, rip, pl.id === 'umbra' ? dim * 0.150000 : dim); }; }\nwindow.__wrapDC = function (hook, post) {\n  const dc0 = window.__keep.dc, PUT = Mesh.prototype.put, names = ['sphere', 'ball', 'oct', 'torus', 'ring', 'cone', 'gem'];\n  drawCreature = function (pos, n, face, opts) {\n    window.__dcPos = pos.clone();\n    if (hook) for (const k of names) { const m = M[k]; m.put = function (...a) { return hook(k, m, a, (...b) => PUT.apply(m, b)); }; }\n    const r = dc0(pos, n, face, opts);\n    if (hook) for (const k of names) delete M[k].put;\n    if (post) { const q = new Q(); creatureFrame(pos, n, face, q); post(pos, n, face, opts || {}, q); }\n    return r;\n  };\n};\nwindow.__same = (c, h) => { const x = hex(h); return Math.abs(c[0] - x[0]) + Math.abs(c[1] - x[1]) + Math.abs(c[2] - x[2]) < 1e-4; };\nwindow.__EE = {\"rim\": \"#fff4e6\", \"rimEmit\": 2.6, \"glow\": \"#ffb52e\", \"glowEmit\": 0.0, \"rays\": 3.0, \"round\": 1.0, \"rimR\": 0.98, \"fwd\": 0.09, \"big\": 1.35, \"lift\": 0.05};\nwindow.__eyes = [];\n__wrapDC(function (k, m, a, put) {\n  if (k === 'sphere' && a[3] === BLACK) { const s = a[2], E = window.__EE; const r = Math.max(s.x, s.y * 0.82) ; const sx = (s.x + (r - s.x) * E.round) * E.big, sy = (s.y + (r - s.y) * E.round) * E.big;\n    window.__eyes.push({ p: a[0].clone(), r: Math.max(sx, sy) }); const cen = window.__dcPos; const nn0 = cen ? a[0].clone().sub(cen).norm() : new V3(0, 0, 0); const pe = a[0].clone().addS(nn0, (E.lift || 0) * Math.max(sx, sy) / 0.17);\n    window.__eyes[window.__eyes.length - 1].p = pe.clone(); return put(pe, a[1], new V3(sx, sy, s.z * E.big), BLACK, MAT.GLOW, 0); }\n  if (k === 'ball' && a[4] === MAT.GLOW && __same(a[3], 0xffffff)) return; // the catchlights give way to the rims\n  return put(...a);\n}, function (pos, n, face, o, q) {\n  const E = window.__EE, eyes = window.__eyes.splice(0), sc = (o.scale ?? P.scale);\n  const fq = q.clone().mul(new Q().axisAngle(new V3(1, 0, 0), Math.PI / 2));\n  for (const e of eyes) { const nn = e.p.clone().sub(pos).norm(); const p = e.p.clone().addS(nn, E.fwd * sc);\n    M.ring.put(p, fq, e.r * E.rimR, hex(parseInt(E.rim.slice(1), 16)), MAT.GLOW, E.rimEmit);\n    if (E.glowEmit > 0) M.torus.put(p.clone().addS(nn, -0.01 * sc), fq, e.r * (E.rimR + 0.16), hex(parseInt(E.glow.slice(1), 16)), MAT.GLOW, E.glowEmit);\n    if (E.rays > 0) drawSunburst(p, e.r * 1.25, e.r * 2.6, E.rays, 0); }\n});\n"
+ }
+]

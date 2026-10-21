@@ -1,0 +1,12 @@
+{"shots":[
+ {"name":"s-120x90","w":120,"h":90,"rm":true,"warm":400},
+ {"name":"s-140x305","w":140,"h":305,"rm":true,"warm":0},
+ {"name":"s-577x163","w":577,"h":163,"rm":true,"warm":0},
+ {"name":"s-260x367","w":260,"h":367,"rm":true,"warm":0},
+ {"name":"s-150x177","w":150,"h":177,"rm":true,"warm":0},
+ {"name":"s-740x370","w":740,"h":370,"rm":true,"warm":0},
+ {"name":"s-900x640","w":900,"h":640,"rm":true,"warm":200},
+ {"name":"s-600x400","w":600,"h":400,"rm":true,"warm":0},
+ {"name":"s-400x400","w":400,"h":400,"rm":true,"warm":0},
+ {"name":"s-90x70","w":90,"h":70,"rm":true,"warm":0}
+]}

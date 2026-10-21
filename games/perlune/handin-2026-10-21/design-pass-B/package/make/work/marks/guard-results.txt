@@ -1,0 +1,18 @@
+icon-46.png 92x92  zone = bottom 17 px
+  ember guarded  0.00% (caution  0.00%) · in zone  0.00% · largest solid block 0x0px
+  lilac guarded  2.69% (caution 18.14%) · in zone  3.71% · largest solid block 2x2px
+  sun   guarded  0.00% (caution  0.00%) · in zone  0.00% · largest solid block 0x0px
+  mint  guarded  1.61% (caution  6.85%) · in zone  4.86% · largest solid block 2x2px
+  map -> /home/claude/passB/work/marks/guard-icon-46.png
+emblem-30.png 60x60  zone = bottom 11 px
+  ember guarded  0.00% (caution  0.00%) · in zone  0.00% · largest solid block 0x0px
+  lilac guarded  3.64% (caution 18.83%) · in zone  3.94% · largest solid block 2x2px
+  sun   guarded  0.00% (caution  0.00%) · in zone  0.00% · largest solid block 0x0px
+  mint  guarded  1.97% (caution  8.08%) · in zone  4.09% · largest solid block 2x2px
+  map -> /home/claude/passB/work/marks/guard-emblem-30.png
+chip-64.png 128x128  zone = bottom 23 px
+  ember guarded  0.00% (caution  0.48%) · in zone  0.00% · largest solid block 0x0px
+  lilac guarded  1.84% (caution 11.99%) · in zone  1.94% · largest solid block 2x2px
+  sun   guarded  0.15% (caution  0.48%) · in zone  0.00% · largest solid block 1x1px
+  mint  guarded  0.73% (caution  4.47%) · in zone  0.78% · largest solid block 2x2px
+  map -> /home/claude/passB/work/marks/guard-chip-64.png

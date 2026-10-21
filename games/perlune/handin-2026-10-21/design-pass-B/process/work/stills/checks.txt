@@ -1,0 +1,64 @@
+== key-still.png
+   ember all 0.20% zone 0.00% block 7x7px
+   lilac all 0.01% zone 0.00% block 1x1px
+   sun all 1.39% zone 0.00% block 20x20px
+   mint all 0.00% zone 0.00% block 0x0px
+/tmp/claude-0/-home-claude/abf4d099-0c77-5d2d-a155-12d3f9d77b55/scratchpad/packB/bug-games-design-pass-B/tools/measure.py:39: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  px = list(im.getdata())
+key-still.png: L 0.126 C 0.191  dark
+== result-still.png
+   ember all 0.00% zone 0.00% block 0x0px
+   lilac all 0.38% zone 0.00% block 11x11px
+   sun all 0.00% zone 0.00% block 0x0px
+   mint all 0.00% zone 0.00% block 0x0px
+/tmp/claude-0/-home-claude/abf4d099-0c77-5d2d-a155-12d3f9d77b55/scratchpad/packB/bug-games-design-pass-B/tools/measure.py:39: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  px = list(im.getdata())
+result-still.png: L 0.177 C 0.042  dark
+== gallery/01.png
+   ember all 0.00% zone 0.00% block 1x1px
+   lilac all 0.69% zone 0.00% block 20x20px
+   sun all 0.00% zone 0.00% block 0x0px
+   mint all 0.00% zone 0.00% block 1x1px
+/tmp/claude-0/-home-claude/abf4d099-0c77-5d2d-a155-12d3f9d77b55/scratchpad/packB/bug-games-design-pass-B/tools/measure.py:39: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  px = list(im.getdata())
+gallery/01.png: L 0.287 C 0.063  mid
+== gallery/02.png
+   ember all 0.01% zone 0.00% block 5x5px
+   lilac all 0.55% zone 0.00% block 16x16px
+   sun all 1.11% zone 0.00% block 21x21px
+   mint all 0.00% zone 0.00% block 3x3px
+/tmp/claude-0/-home-claude/abf4d099-0c77-5d2d-a155-12d3f9d77b55/scratchpad/packB/bug-games-design-pass-B/tools/measure.py:39: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  px = list(im.getdata())
+gallery/02.png: L 0.212 C 0.107  mid
+== gallery/03.png
+   ember all 0.00% zone 0.00% block 0x0px
+   lilac all 2.13% zone 0.01% block 17x17px
+   sun all 0.00% zone 0.00% block 0x0px
+   mint all 0.01% zone 0.00% block 1x1px
+/tmp/claude-0/-home-claude/abf4d099-0c77-5d2d-a155-12d3f9d77b55/scratchpad/packB/bug-games-design-pass-B/tools/measure.py:39: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  px = list(im.getdata())
+gallery/03.png: L 0.168 C 0.096  dark
+== gallery/04.png
+   ember all 0.19% zone 0.00% block 11x11px
+   lilac all 0.03% zone 0.00% block 5x5px
+   sun all 1.88% zone 0.00% block 18x18px
+   mint all 0.00% zone 0.00% block 1x1px
+/tmp/claude-0/-home-claude/abf4d099-0c77-5d2d-a155-12d3f9d77b55/scratchpad/packB/bug-games-design-pass-B/tools/measure.py:39: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  px = list(im.getdata())
+gallery/04.png: L 0.165 C 0.176  dark
+== gallery/05.png
+   ember all 0.01% zone 0.00% block 6x6px
+   lilac all 0.04% zone 0.00% block 3x3px
+   sun all 0.21% zone 0.00% block 12x12px
+   mint all 0.03% zone 0.00% block 2x2px
+/tmp/claude-0/-home-claude/abf4d099-0c77-5d2d-a155-12d3f9d77b55/scratchpad/packB/bug-games-design-pass-B/tools/measure.py:39: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  px = list(im.getdata())
+gallery/05.png: L 0.154 C 0.13  dark
+== gallery/06.png
+   ember all 0.01% zone 0.00% block 1x1px
+   lilac all 0.30% zone 0.00% block 7x7px
+   sun all 0.23% zone 0.00% block 7x7px
+   mint all 0.00% zone 0.00% block 1x1px
+/tmp/claude-0/-home-claude/abf4d099-0c77-5d2d-a155-12d3f9d77b55/scratchpad/packB/bug-games-design-pass-B/tools/measure.py:39: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  px = list(im.getdata())
+gallery/06.png: L 0.092 C 0.098  dark

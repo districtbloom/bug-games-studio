@@ -1,0 +1,27 @@
+[
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [
+   "umbra"
+  ],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": 0.2,
+  "neb": 0.03,
+  "nodecor": true,
+  "ly": 0.9,
+  "lx": -0.6,
+  "light": [
+   -0.6,
+   0.45,
+   -0.55
+  ],
+  "id": "tall",
+  "cleared": "2",
+  "js": "G.state='title'; window.__tt = { world: 'nacre', ud: [-0.2768,0.9578,-0.0772], lift: 5.5, cam: -0.13, face: -0.2, dist: 5.8, up: 2.6, ty: 1.2, fov: 0.95, side: 0.28, scale: 1.0 };\n{ const T=window.__tt, pl=planetById(T.world), U=new V3(0,1,0);\n  const ud=T.ud ? new V3(T.ud[0],T.ud[1],T.ud[2]).norm() : U.clone();\n  const C=pl.c.clone().addS(ud, pl.r + T.lift);\n  const E=planetById('umbra').c.clone().sub(C); E.y=0; E.norm();\n  const fc=E.clone().neg(); rotAround(fc, U, T.cam);\n  const fa=fc.clone(); rotAround(fa, U, T.face);\n  const rt=new V3().crossOf(fc,U).norm();\n  window.__ttC=C; window.__ttF=fa;\n  G.camHook=function(CB){ G.titlePos=C.clone(); G.titleFace=fa.clone(); CB.pos.copy(C).addS(fc,T.dist).addS(U,T.up); CB.target.copy(C).addS(U,T.ty).addS(rt,T.side); CB.up.set(0,1,0); CB.fov=T.fov; return 1; };\n  if (T.scale !== 1.0) { const dc=drawCreature; drawCreature=function(p,n,f,o){ return dc(p,n,f,Object.assign({},o||{},{scale:T.scale})); }; }\n}"
+ }
+]

@@ -1,0 +1,33 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Absorbed test</title>
+<style>
+  body { margin: 0; background: #14111c; color: #c8c4d2; font: 13px/1.4 monospace; }
+  .row { display: flex; gap: 24px; padding: 20px; align-items: flex-end; }
+  .tile { position: relative; width: 400px; height: 400px; }
+  .tile canvas, .tile img { position: absolute; left: 0; top: 0; width: 400px; height: 400px; }
+  .s169 { position: relative; width: 169px; height: 169px; } .s169 img, .s169 canvas { position: absolute; left: 0; top: 0; width: 169px; height: 169px; }
+  .s40 { position: relative; width: 40px; height: 40px; } .s40 img, .s40 canvas { position: absolute; left: 0; top: 0; width: 40px; height: 40px; }
+</style></head>
+<body>
+<div class="row">
+  <div class="tile" id="big"><img id="tileImg" src="../../bug/store/opal.png"><canvas id="ov" width="400" height="400"></canvas></div>
+  <div class="s169"><img src="../../bug/store/opal.png"><canvas id="ov169" width="338" height="338"></canvas></div>
+  <div class="s40"><img src="../../bug/store/opal.png"><canvas id="ov40" width="80" height="80"></canvas></div>
+</div>
+<div class="row" id="info">click the tile to play once</div>
+<script src="../../bug/reward/absorbed.js"></script>
+<script>
+  const ov = document.getElementById('ov'), ctx = ov.getContext('2d');
+  function frame(t) { ctx.clearRect(0, 0, 400, 400); BUG_REWARD.draw(ctx, 400, 400, t); }
+  function small(id, css) { const c = document.getElementById(id), x = c.getContext('2d'); x.setTransform(c.width / css, 0, 0, c.width / css, 0, 0); x.clearRect(0, 0, css, css); BUG_REWARD.held(x, css, css); }
+  // play once: starts at once, ends on the held frame; records how long it really took
+  window.play = function () { return new Promise(res => { const t0 = performance.now(); let n = 0;
+    (function f(now) { const t = Math.min(1, (now - t0) / BUG_REWARD.ms); frame(t); n++;
+      if (t < 1) requestAnimationFrame(f); else { const ms = performance.now() - t0; document.getElementById('info').textContent = 'played once in ' + ms.toFixed(0) + ' ms, ' + n + ' frames; verb: ' + BUG_REWARD.verb; res({ ms, n }); } })(t0); }); };
+  window.seek = frame;
+  // the held frame alone, on a transparent canvas, as PNG data
+  window.heldPNG = function (W, H) { const c = document.createElement('canvas'); c.width = W; c.height = H; BUG_REWARD.held(c.getContext('2d'), W, H); return c.toDataURL('image/png'); };
+  document.getElementById('big').onclick = () => play();
+  small('ov169', 169); small('ov40', 40); frame(1);
+</script>
+</body></html>
