@@ -1,0 +1,207 @@
+{
+  "game": "Out of Scope",
+  "status": "Round-2 design proposals: names and looks only. Nothing is declared, nothing is in game.json, no prices.",
+  "store": [
+    {
+      "id": "cobalt-glove",
+      "name": "Cobalt glove",
+      "kind": "skin (worn)",
+      "look": "Your drag hand (the game's pointing hand) in a cobalt nitrile glove from Priya's clinic.",
+      "at_40px": "a cobalt pointing hand with a white cuff"
+    },
+    {
+      "id": "tank-globe",
+      "name": "Tank snow globe",
+      "kind": "companion",
+      "look": "A desk snow globe of blue water (two of the game's blues, kept off the platform's mint) with Kickback's grey fin circling inside.",
+      "at_40px": "a round glass ball of blue water on a black base, one fin"
+    },
+    {
+      "id": "marker-trail",
+      "name": "Marker trail",
+      "kind": "trail",
+      "look": "Thrown proof leaves a rough hot-pink marker scribble behind it.",
+      "at_40px": "a pink loop behind a flying white slip"
+    },
+    {
+      "id": "googly-eyes",
+      "name": "Googly eyes",
+      "kind": "stickers",
+      "look": "A sticker sheet of Bcc-style eyes to put on your evidence cards.",
+      "at_40px": "a white card with two big black-and-white eyes"
+    },
+    {
+      "id": "ok-mug",
+      "name": "Office mug",
+      "kind": "companion",
+      "look": "A cream office mug with the game's rubber stamp printed on it in one red ink, no letters.",
+      "at_40px": "a cream mug with a red stamp print"
+    }
+  ],
+  "owned_mark": {
+    "verb": "stamped",
+    "look": "A red rubber stamp thunks onto the tile's lower corner and lifts, leaving an ink box with a tick. Under 900 ms, ends on the held frame."
+  },
+  "pass": {
+    "name": "Night Shift",
+    "step_unit": "a lie broken (each lie you break in a case moves you one step)",
+    "marker": {
+      "object": "the rubber stamp",
+      "next": "raised over the next cell",
+      "held": "pressed down on the last earned cell"
+    },
+    "grounds": {
+      "free": "Gordon's office desk: brown wood with a ruled sheet",
+      "pass": "the dark office in the cracked screen's acid light",
+      "bug": "the navy night window with the city"
+    },
+    "rewards": [
+      {
+        "id": "sticky-pad",
+        "row": "free",
+        "name": "Sticky pad",
+        "kind": "stickers",
+        "look": "Torn sticky notes for the case board."
+      },
+      {
+        "id": "paperclip-trail",
+        "row": "free",
+        "name": "Paper-clip trail",
+        "kind": "trail",
+        "look": "Thrown proof trails a chain of paper clips."
+      },
+      {
+        "id": "desk-lamp",
+        "row": "pass",
+        "name": "Desk lamp",
+        "kind": "companion",
+        "look": "Gordon's red office lamp on your desk."
+      },
+      {
+        "id": "envelope-trail",
+        "row": "pass",
+        "name": "Envelope trail",
+        "kind": "trail",
+        "look": "Thrown proof trails little envelopes."
+      },
+      {
+        "id": "pinstripe-glove",
+        "row": "pass",
+        "name": "Pinstripe glove",
+        "kind": "skin (worn)",
+        "look": "Your drag hand in Regent's pinstripe."
+      },
+      {
+        "id": "night-window",
+        "row": "bug",
+        "name": "Night window",
+        "kind": "desk backdrop",
+        "look": "The night city behind your desk."
+      }
+    ]
+  },
+  "update": {
+    "version": "UNDECIDED (the build has no version number; the picture is saved as updates/case-02.png)",
+    "change": "Case 02's new verb: the scissors cut relay-7 and envelopes spill out of the cut pipe."
+  },
+  "event": {
+    "id": "mail-day",
+    "name": "Mail Day",
+    "look": "The office at dawn as wave two sends: a pink morning sky in the window, envelopes pouring through the dark office like weather, Bcc riding the stream.",
+    "seal": "a postmark (three wavy cancel lines) over an envelope, in the event outline (a perforated postage stamp)"
+  },
+  "moments_proposed": {
+    "note": "There is no game.json yet. These are proposed moments, each one an achievement already in the build (ACH in hub.js). Nothing new was added to the game. The build has 16; these 12 are proposed, and Bought a bomb, One dollar, Paper hat and Snoop are left out.",
+    "outlines": {
+      "feat": "round rubber-stamp ring",
+      "collection": "dog-eared file card",
+      "event": "perforated postage stamp"
+    },
+    "list": [
+      {
+        "id": "case-closed",
+        "name": "Case closed",
+        "ach": "closed1",
+        "kind": "feat",
+        "glyph": "Regent's paper hat, knocked off and crumpled"
+      },
+      {
+        "id": "return-to-sender",
+        "name": "Return to sender",
+        "ach": "closed2",
+        "kind": "feat",
+        "glyph": "an envelope with a hooked return arrow"
+      },
+      {
+        "id": "clean-hands",
+        "name": "Clean hands",
+        "ach": "clean",
+        "kind": "feat",
+        "glyph": "an open, empty hand"
+      },
+      {
+        "id": "untouchable",
+        "name": "Untouchable",
+        "ach": "perfect",
+        "kind": "feat",
+        "glyph": "a rubber stamp cracked in two"
+      },
+      {
+        "id": "no-wellness-checks",
+        "name": "No wellness checks",
+        "ach": "nohints",
+        "kind": "feat",
+        "glyph": "Halo's pill, eyes shut, halo dark"
+      },
+      {
+        "id": "swatter",
+        "name": "Swatter",
+        "ach": "swatter",
+        "kind": "feat",
+        "glyph": "a rubber stamp knocked flying"
+      },
+      {
+        "id": "dont-tap-the-glass",
+        "name": "Don't tap the glass",
+        "ach": "glass",
+        "kind": "feat",
+        "glyph": "a shark fin above a tank's water line"
+      },
+      {
+        "id": "early-bird",
+        "name": "Early bird",
+        "ach": "early",
+        "kind": "feat",
+        "glyph": "Deadline's fuse pinched out, one curl of smoke"
+      },
+      {
+        "id": "cross-examiner",
+        "name": "Cross-examiner",
+        "ach": "cross",
+        "kind": "feat",
+        "glyph": "one big Bcc eye with a crack across it"
+      },
+      {
+        "id": "one-cut",
+        "name": "One cut",
+        "ach": "pipe",
+        "kind": "feat",
+        "glyph": "open scissors over a cut cable"
+      },
+      {
+        "id": "read-the-backs",
+        "name": "Read the backs",
+        "ach": "backs",
+        "kind": "collection",
+        "glyph": "a slip flipped over, corner curled"
+      },
+      {
+        "id": "archivist",
+        "name": "Archivist",
+        "ach": "archivist",
+        "kind": "collection",
+        "glyph": "the case-board trash lid lifted, a crumpled draft inside"
+      }
+    ]
+  }
+}

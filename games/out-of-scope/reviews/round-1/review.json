@@ -1,0 +1,119 @@
+{
+ "game": "out-of-scope",
+ "arm": "A",
+ "slots": {
+  "poster": {
+   "verdict": "approved",
+   "note": "Empty suit in the screen's light: one character, one source (the cracked CRT), stage register, and it holds in every wall shape and at 90x70. My scan: no guarded block, lowest guarded pixel 182 px above the bottom at 1600x800. The hat's 'OK' stays legible down to the column; it's part of the costume, not title lettering, so it's allowed.",
+   "rule": "PD-3.1"
+  },
+  "focus": {
+   "verdict": "approved",
+   "note": "0.39,0.32 sits on Regent's face; the 577x163 strip, the 140x305 column, the half plate and a 4:3 crop all keep face, hat and stamp.",
+   "rule": "PD-3.1"
+  },
+  "icon": {
+   "verdict": "approved",
+   "note": "Drawn for 46 (head, crescents, grin, hat with red box). It reads at once beside Carbon, Inkstrike and Typos on night and on linen.",
+   "rule": "PD-3.7"
+  },
+  "emblem": {
+   "verdict": "approved",
+   "note": "A different drawing from the icon: hat and grin with an acid sliver, fewer parts, no text. It holds on both grounds at 30 px.",
+   "rule": "PD-3.7"
+  },
+  "chip": {
+   "verdict": "approved",
+   "note": "Chest-up Regent with stamp raised. More parts than the icon, fewer than the poster, and it reads at 64.",
+   "rule": "PD-3.7"
+  },
+  "keyStill": {
+   "verdict": "approved",
+   "note": "The stamp hovers over the last unsigned slip in the poster's light, with no text, and it reads at 132x66. It measures light (L 0.56) against the mid poster, and the desk's dry-brush hatch is noisy, but neither breaks a rule.",
+   "rule": "PD-3.8"
+  },
+  "result": {
+   "verdict": "approved",
+   "note": "The lie breaking, with Regent shocked and his hat popping. It sits in the middle 720 (only ~20 px of CRT spills over), has no text or numbers, and has the poster's finish.",
+   "rule": "PD-3.8"
+  },
+  "gallery": {
+   "verdict": "needs-changes",
+   "note": "Slide 04 loses its subject: Kickback and his tank are cut at the bottom-left of the central 4:3, and a third of the frame is empty evidence slots, so 'hides the proof in his tank' doesn't show. Swap in the line-up 'Don't tap the glass' capture you already have, or recrop around the tank. Also loosen slide 01, whose bubbles are cut mid-word at both edges.",
+   "rule": "PD-3.5"
+  },
+  "seals": {
+   "verdict": "needs-changes",
+   "note": "12 moments + the event, all three states, and the three outlines are distinct at 32 px. But at 32 px the not-yet case-closed is a right-pointing triangle in a ring (a Play button), and not-yet dont-tap-the-glass reads as a warning triangle. Keep the hat's brim and box, and the water band, in the grey line art.",
+   "rule": "PD-3.11"
+  },
+  "store": {
+   "verdict": "approved",
+   "note": "Five looks-only items, one per tile, on the world's own desk-and-light ground. All read at 40 px and in greyscale, with calm top corners and no name, price or gold.",
+   "rule": "PD-3.9"
+  },
+  "passTile": {
+   "verdict": "approved",
+   "note": "'NIGHT SHIFT' in the title face on the night window, with the stamp over the desk. Readable from 80 px, no price, and no guarded fills.",
+   "rule": "PD-3.10"
+  },
+  "passGrounds": {
+   "verdict": "approved",
+   "note": "Desk wood, the acid pocket and the navy city differ clearly, with no lettering. Sun-guarded windows are kept tiny.",
+   "rule": "PD-3.10"
+  },
+  "marker": {
+   "verdict": "approved",
+   "note": "The rubber stamp, drawn for 48: raised (next) and pressed with ink squeeze (held). It counts nothing and reads on all three grounds.",
+   "rule": "CK-9 · RETURN"
+  },
+  "passRewards": {
+   "verdict": "approved",
+   "note": "Six rewards read at 120 px on their row grounds, with no dimming and no counts. Night-window is navy on the navy bug ground and separates only by its frame and moon. Acceptable, but watch it.",
+   "rule": "PD-3.10"
+  },
+  "owned": {
+   "verdict": "approved",
+   "note": "Verb 'stamped': a red ink box with a tick in the lower-right. It plays in 560 ms, has reduced motion, and its held frame reads at 40 px on every tile. No gold or glow.",
+   "rule": "PD-3.9"
+  },
+  "update": {
+   "verdict": "approved",
+   "note": "Case 02's scissors cutting the mail pipe and spilling envelopes: one change, in the build, no text or version. At 104x52 it is only just readable; a tighter crop on the scissors would help.",
+   "rule": "PD-3.12"
+  },
+  "event": {
+   "verdict": "approved",
+   "note": "Mail Day at dawn, with Bcc riding a storm of envelopes. Visibly different from the poster, the left 45% is a single flat dark colour, and the right 55% tells it alone. The event seal is a distinct perforated stamp.",
+   "rule": "PD-3.14"
+  },
+  "living": {
+   "verdict": "approved",
+   "note": "I ran it myself at 900x640, 900x150, 120x640 and 120x90, plus react, enter, loop and squeezed. No errors, it recomposes without bars, anchor() stays on the head, and the held frame matches the poster. Frame time was 3.5 ms at 600x400 on this software canvas, over the ~2 ms budget; it needs a GPU check.",
+   "rule": "PD-3.2"
+  },
+  "backdrop": {
+   "verdict": "approved",
+   "note": "Gordon's office at rest: one light, a hard desk floor, phone composed separately, and the poster leads over it. Optional fix: the empty CEO chair has no back or arms and reads as a headstone at page size.",
+   "rule": "PD-3.6"
+  },
+  "share": {
+   "verdict": "approved",
+   "note": "The poster's register, Regent at ~0.71 W, the lockup on plain void at left and a quiet floor band. It matches the wall at 270 px.",
+   "rule": "PD-3.15"
+  },
+  "phone": {
+   "verdict": "approved",
+   "note": "Recomposed for 9:16 (Regent large, CRT low right), not a blind crop. Same image and register.",
+   "rule": "PD-2 #19"
+  },
+  "lockup": {
+   "verdict": "approved",
+   "note": "The title screen's Tabloid face with the cobalt offset and an ink edge for linen. Minimum width of 92 px stated and true on both grounds.",
+   "rule": "PD-4"
+  }
+ },
+ "overall": "A strong, coherent pass: every slot except video is present at the right size, made fresh in the game's own marker-line style, under one acid CRT light, and the poster survives every wall shape. Two slots need work: gallery slide 04 loses Kickback and his tank, and two not-yet seals read as generic triangles (one a Play button) at 32 px.",
+ "copying": "n/a (arm A)",
+ "made": "Code. The game's own SVG drawing functions (suitB, sharkB, ghostB, OL/ST helpers, rough/brush filters) were composed in new scenes, rendered in headless Chromium from the current build and downsampled with Lanczos. The gallery is fresh frame-frozen captures of real play. The moving poster is a Canvas 2D module replaying path data extracted from the same code."
+}
