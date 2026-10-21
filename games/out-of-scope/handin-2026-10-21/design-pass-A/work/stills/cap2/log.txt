@@ -1,0 +1,64 @@
+{"case":1,"beat":1,"ev":["slip_hr","slip_it","slip_fac","slip_fin"],"caught":[],"tank":null,"modal":false,"cine":false,"phase":"play"}
+impossible {"case":1,"beat":1,"ev":["slip_hr","slip_it","slip_fac","slip_fin","locker","impossible"],"caught":[],"tank":null,"modal":false,"cine":false,"phase":"play"}
+grab A1-q1-tank-said 2.56 s
+grab A2-q1-tank-quiet 2.12 s
+grab A3-q1-break 2.64 s
+grab A3-q1-break+150 3.3 s
+grab A3-q1-break+200 2.44 s
+Q2 {"case":1,"beat":2,"ev":["slip_hr","slip_it","slip_fac"],"caught":[],"tank":"slip_fin","modal":false,"cine":false,"phase":"play"}
+grab B1-q2-kickback-says 2.3 s
+grab B2-q2-flip-fac 1.93 s
+grab B2-q2-flip-fac+120 1.76 s
+grab B2-q2-flip-fac+90 1.65 s
+grab B2-q2-flip-fac+90 1.98 s
+grab B3-q2-flipped-all 1.55 s
+grab B4-q2-catch-halo 1.62 s
+grab B4-q2-catch-halo+130 1.99 s
+grab B4-q2-catch-halo+130 1.78 s
+grab B4-q2-catch-halo+150 1.78 s
+grab B4-q2-catch-halo+200 1.7 s
+grab B5-q2-catch-regent 1.93 s
+grab B5-q2-catch-regent+120 1.73 s
+grab B5-q2-catch-regent+230 1.65 s
+grab B5-q2-catch-regent+200 1.79 s
+  deal: no
+grab B7-q2-glass1 2.05 s
+grab B7-q2-glass1+400 2.4 s
+grab B7-q2-glass2 2.04 s
+grab B7-q2-glass2+550 2.56 s
+grab B8-q2-spat 2.25 s
+tank {"case":1,"beat":2,"ev":["slip_hr","slip_it","slip_fac","slip_fin"],"caught":["halo","regent"],"tank":null,"modal":false,"cine":false,"phase":"play"}
+grab B6-q2-catch-deadline 2.6 s
+grab B9-q2-catch-kickback 2.6 s
+grab B10-q2-catch-bcc 3.23 s
+after Q2 {"case":1,"beat":2,"ev":["slip_hr","slip_it","slip_fac","slip_fin","session","mail_bye","mail_fri"],"caught":["halo","regent","deadline","kickback","bcc"],"tank":null,"modal":false,"cine":false,"phase":"play"}
+Q3 {"case":1,"beat":3,"ev":["slip_it","notice","session"],"caught":["halo","regent","deadline","kickback","bcc"],"tank":null,"modal":false,"cine":false,"phase":"play"}
+grab C1-door 5.49 s
+grab C1-door+700 4.14 s
+pre-break3 {"case":1,"beat":3,"ev":["slip_it","notice","session","policy","badge"],"caught":["halo","regent","deadline","kickback","bcc"],"tank":null,"modal":false,"cine":false,"phase":"play"}
+  pause retry 30
+grab C2-q3-break 2.57 s
+grab C4-finale 4.26 s
+grab C4-finale+150 3.57 s
+grab C4-finale+150 3.35 s
+grab C4-finale+200 3.31 s
+grab C4-finale+250 4.17 s
+prog: {"cases":{"1":{"done":true,"cred":100,"hints":0,"deals":0,"stopAt":947.7600000000369,"at":1792505467950}},"ach":["glass","closed1","clean","perfect","nohints","early"]}
+grab D1-clinic 7.45 s
+grab D1-clinic+120 4.79 s
+grab D1-clinic+120 4.49 s
+grab D1-clinic+150 5.03 s
+C2 {"case":2,"beat":1,"ev":["c2_mail_mv","c2_mail_pb","c2_booking"],"caught":[],"tank":null,"modal":false,"cine":false,"phase":"play"}
+  deal: no
+C2 Q2 {"case":2,"beat":2,"ev":["c2_mail_mv","c2_mail_pb","c2_relay"],"caught":[],"tank":null,"modal":false,"cine":false,"phase":"play"}
+C2 Q3 {"case":2,"beat":3,"ev":["c2_wave2","c2_relay","c2_sched"],"caught":[],"tank":null,"modal":false,"cine":false,"phase":"play"}
+grab E1-hover-relay7 1.64 s
+grab E2-cut 4.52 s
+grab E2-cut+100 4.02 s
+grab E2-cut+100 6.71 s
+grab E2-cut+100 3.55 s
+grab E2-cut+120 3.25 s
+grab E2-cut+200 3.17 s
+grab E2-cut+300 2.98 s
+end {"case":2,"beat":3,"ev":["c2_wave2","c2_relay","c2_sched","c2_bounce"],"caught":[],"tank":null,"modal":false,"cine":false,"phase":"play"}
+["A1-q1-tank-said", "A2-q1-tank-quiet", "A3-q1-break", "A3-q1-break+150", "A3-q1-break+200", "B1-q2-kickback-says", "B2-q2-flip-fac", "B2-q2-flip-fac+120", "B2-q2-flip-fac+90", "B2-q2-flip-fac+90", "B3-q2-flipped-all", "B4-q2-catch-halo", "B4-q2-catch-halo+130", "B4-q2-catch-halo+130", "B4-q2-catch-halo+150", "B4-q2-catch-halo+200", "B5-q2-catch-regent", "B5-q2-catch-regent+120", "B5-q2-catch-regent+230", "B5-q2-catch-regent+200", "B7-q2-glass1", "B7-q2-glass1+400", "B7-q2-glass2", "B7-q2-glass2+550", "B8-q2-spat", "B6-q2-catch-deadline", "B9-q2-catch-kickback", "B10-q2-catch-bcc", "C1-door", "C1-door+700", "C2-q3-break", "C4-finale", "C4-finale+150", "C4-finale+150", "C4-finale+200", "C4-finale+250", "D1-clinic", "D1-clinic+120", "D1-clinic+120", "D1-clinic+150", "E1-hover-relay7", "E2-cut", "E2-cut+100", "E2-cut+100", "E2-cut+100", "E2-cut+120", "E2-cut+200", "E2-cut+300"]

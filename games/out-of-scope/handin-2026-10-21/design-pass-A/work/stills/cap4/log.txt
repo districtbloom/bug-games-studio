@@ -1,0 +1,15 @@
+Q2 {"case":1,"beat":2,"ev":["slip_hr","slip_it","slip_fac"],"caught":[],"tank":"slip_fin","modal":false,"cine":false,"phase":"play"}
+grab H-halo+580 2.81 s
+grab H-halo+630 2.71 s
+grab H-halo+680 2.99 s
+grab H-halo+730 2.92 s
+  deal: no
+grab D-deadline+570 2.92 s
+grab D-deadline+610 3.82 s
+grab D-deadline+650 3.55 s
+grab D-deadline+690 3.49 s
+grab D-deadline+740 3.11 s
+grab D-deadline+800 3.34 s
+grab D-deadline+880 3.64 s
+end {"case":1,"beat":2,"ev":["slip_hr","slip_it","slip_fac"],"caught":["halo","regent","deadline"],"tank":"slip_fin","modal":false,"cine":false,"phase":"play"}
+["H-halo+580", "H-halo+630", "H-halo+680", "H-halo+730", "D-deadline+570", "D-deadline+610", "D-deadline+650", "D-deadline+690", "D-deadline+740", "D-deadline+800", "D-deadline+880"]

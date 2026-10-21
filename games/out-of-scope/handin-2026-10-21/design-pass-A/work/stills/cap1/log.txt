@@ -1,0 +1,41 @@
+{"case":1,"beat":1,"ev":["slip_hr","slip_it","slip_fac","slip_fin"],"caught":[],"tank":null,"modal":false,"cine":false,"phase":"play"}
+impossible {"case":1,"beat":1,"ev":["slip_hr","slip_it","slip_fac","slip_fin","locker","impossible"],"caught":[],"tank":null,"modal":false,"cine":false,"phase":"play"}
+grab A1-q1-tank-said 2.37 s
+grab A2-q1-tank-quiet 2.16 s
+grab A3-q1-break 2.98 s
+Q2 {"case":1,"beat":2,"ev":["slip_hr","slip_it","slip_fac"],"caught":[],"tank":"slip_fin","modal":false,"cine":false,"phase":"play"}
+grab B1-q2-kickback-says 1.76 s
+grab B2-q2-flip-fac 2.2 s
+grab B3-q2-flipped-all 1.8 s
+grab B4-q2-catch-halo 3.71 s
+grab B5-q2-catch-regent 3.04 s
+  deal: no
+grab B6-q2-catch-deadline 2.3 s
+grab B7-q2-glass1 2.04 s
+grab B7-q2-glass2 1.77 s
+grab B8-q2-spat 1.98 s
+tank {"case":1,"beat":2,"ev":["slip_hr","slip_it","slip_fac","session","slip_fin"],"caught":["halo","regent","deadline"],"tank":null,"modal":false,"cine":false,"phase":"play"}
+grab B9-q2-catch-kickback 3.34 s
+grab B10-q2-catch-bcc 2.22 s
+after Q2 {"case":1,"beat":2,"ev":["slip_hr","slip_it","slip_fac","session","slip_fin","mail_bye","mail_fri"],"caught":["halo","regent","deadline","kickback","bcc"],"tank":null,"modal":false,"cine":false,"phase":"play"}
+Q3 {"case":1,"beat":3,"ev":["slip_it","notice","session"],"caught":["halo","regent","deadline","kickback","bcc"],"tank":null,"modal":false,"cine":false,"phase":"play"}
+grab C1-door 5.37 s
+pre-break3 {"case":1,"beat":3,"ev":["slip_it","notice","session","policy","badge"],"caught":["halo","regent","deadline","kickback","bcc"],"tank":null,"modal":false,"cine":false,"phase":"play"}
+grab C2-q3-break 10.28 s
+grab C3-c3-shocked 3.75 s
+grab C4-finale-1520 4.31 s
+grab C5-finale-b 3.59 s
+grab C6-finale-c 4.75 s
+grab C7-finale-late 2.63 s
+prog: {"cases":{"1":{"done":true,"cred":100,"hints":0,"deals":0,"stopAt":947.1164000000025,"at":1792504590192}},"ach":["glass","closed1","clean","perfect","nohints","early"]}
+grab D1-clinic-2780 5.74 s
+grab D2-clinic-b 2.26 s
+C2 {"case":2,"beat":1,"ev":["c2_mail_mv","c2_mail_pb","c2_booking"],"caught":[],"tank":null,"modal":false,"cine":false,"phase":"play"}
+  deal: no
+C2 Q2 {"case":2,"beat":2,"ev":["c2_mail_mv","c2_mail_pb","c2_relay"],"caught":[],"tank":null,"modal":false,"cine":false,"phase":"play"}
+C2 Q3 {"case":2,"beat":3,"ev":["c2_wave2","c2_relay","c2_sched"],"caught":[],"tank":null,"modal":false,"cine":false,"phase":"play"}
+grab E1-hover-relay7 2.24 s
+grab E2-cut-760 4.31 s
+grab E3-cut-b 1.52 s
+end {"case":2,"beat":3,"ev":["c2_wave2","c2_relay","c2_sched","c2_bounce"],"caught":[],"tank":null,"modal":false,"cine":false,"phase":"play"}
+["A1-q1-tank-said", "A2-q1-tank-quiet", "A3-q1-break", "B1-q2-kickback-says", "B2-q2-flip-fac", "B3-q2-flipped-all", "B4-q2-catch-halo", "B5-q2-catch-regent", "B6-q2-catch-deadline", "B7-q2-glass1", "B7-q2-glass2", "B8-q2-spat", "B9-q2-catch-kickback", "B10-q2-catch-bcc", "C1-door", "C2-q3-break", "C3-c3-shocked", "C4-finale-1520", "C5-finale-b", "C6-finale-c", "C7-finale-late", "D1-clinic-2780", "D2-clinic-b", "E1-hover-relay7", "E2-cut-760", "E3-cut-b"]

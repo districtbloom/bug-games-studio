@@ -1,0 +1,4 @@
+[
+ {"js": ["src/common.js", "src/poster.js", "src/stills.js"], "expr": "STILLS.key(720,352)", "out": "bug/key-still.png", "w": 720, "h": 352, "dpr": 2, "final": [720, 352], "hexes": "work/stills/key-still.hex"},
+ {"js": ["src/common.js", "src/poster.js", "src/stills.js"], "expr": "STILLS.result(1600,352)", "out": "bug/result-still.png", "w": 1600, "h": 352, "dpr": 2, "final": [1600, 352], "hexes": "work/stills/result-still.hex"}
+]

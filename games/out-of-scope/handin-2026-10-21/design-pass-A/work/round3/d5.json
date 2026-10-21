@@ -1,0 +1,3 @@
+[{"js":["src/common.js","src/poster.js","src/round3-type.js","src/round3.js"],"expr":"R3.backdrop(1440,577)","out":"work/round3/bd2.png","w":1440,"h":577,"dpr":1},
+ {"js":["src/common.js","src/poster.js","src/round3-type.js","src/round3.js"],"expr":"R3.backdrop(1440,577,{steps:[[1.1,DP.TOXIC,.12],[.86,DP.TOXIC,.26],[.66,DP.TOXIC,.55],[.5,DP.TOXIC,1],[.36,'#b6f03c',1],[.24,DP.ACID,1]],L:{src:[1440+420,380]}})","out":"work/round3/bd2m.png","w":1440,"h":577,"dpr":1},
+ {"js":["src/common.js","src/poster.js","src/round3-type.js","src/round3.js"],"expr":"R3.backdrop(390,826)","out":"work/round3/bp2.png","w":390,"h":826,"dpr":1}]

@@ -1,0 +1,52 @@
+bug/seals/case-closed-earned.png: 192x192  guarded px 23 (0.06%)  caution px 2896 (7.86%)
+  guarded by role: {'mint': 11, 'ember': 12}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+bug/seals/return-to-sender-earned.png: 192x192  guarded px 90 (0.24%)  caution px 3163 (8.58%)
+  guarded by role: {'mint': 37, 'sun': 26, 'ember': 27}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+bug/seals/clean-hands-earned.png: 192x192  guarded px 124 (0.34%)  caution px 2905 (7.88%)
+  guarded by role: {'mint': 14, 'ember': 25, 'sun': 11, 'lilac': 74}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+bug/seals/untouchable-earned.png: 192x192  guarded px 117 (0.32%)  caution px 3781 (10.26%)
+  guarded by role: {'ember': 108, 'sun': 9}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+bug/seals/no-wellness-checks-earned.png: 192x192  guarded px 2 (0.01%)  caution px 4393 (11.92%)
+  guarded by role: {'mint': 2}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+bug/seals/swatter-earned.png: 192x192  guarded px 50 (0.14%)  caution px 4184 (11.35%)
+  guarded by role: {'mint': 1, 'ember': 45, 'sun': 4}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+bug/seals/dont-tap-the-glass-earned.png: 192x192  guarded px 161 (0.44%)  caution px 7340 (19.91%)
+  guarded by role: {'mint': 150, 'lilac': 2, 'ember': 9}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+bug/seals/early-bird-earned.png: 192x192  guarded px 16 (0.04%)  caution px 3487 (9.46%)
+  guarded by role: {'mint': 14, 'ember': 2}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+bug/seals/cross-examiner-earned.png: 192x192  guarded px 5 (0.01%)  caution px 3436 (9.32%)
+  guarded by role: {'mint': 4, 'ember': 1}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+bug/seals/one-cut-earned.png: 192x192  guarded px 20 (0.05%)  caution px 3052 (8.28%)
+  guarded by role: {'mint': 16, 'sun': 1, 'ember': 3}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+bug/seals/read-the-backs-earned.png: 192x192  guarded px 2 (0.01%)  caution px 1831 (4.97%)
+  guarded by role: {'mint': 2}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+bug/seals/archivist-earned.png: 192x192  guarded px 31 (0.08%)  caution px 2162 (5.86%)
+  guarded by role: {'mint': 28, 'ember': 3}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+bug/seals/mail-day-earned.png: 192x192  guarded px 2 (0.01%)  caution px 1463 (3.97%)
+  guarded by role: {'mint': 2}
+  ok: no guarded block of 24x24
+  RESULT: PASS

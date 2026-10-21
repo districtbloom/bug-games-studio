@@ -1,0 +1,25 @@
+#pkw{position:fixed;left:0;top:0;z-index:99999}
+.pk{position:relative;overflow:hidden;background:#0b0a0e}
+.pk svg{overflow:visible;display:block}
+.pk>div{position:absolute}
+.pk-bg{position:absolute;inset:0;width:100%;height:100%}
+.pk-a svg,.pk-mon svg,.pk-slip svg,.pk-env svg{width:100%;height:100%}
+.pk-a{filter:drop-shadow(10px 12px 0 rgba(0,0,0,.5))}
+.pk-mon{filter:drop-shadow(0 0 70px rgba(230,255,46,.32)) drop-shadow(14px 16px 0 rgba(0,0,0,.55))}
+.pk-slip{filter:drop-shadow(8px 8px 0 rgba(0,0,0,.6))}
+.pk-env{width:86px;height:60px;filter:drop-shadow(5px 5px 0 rgba(0,0,0,.5))}
+.emerge{-webkit-mask-image:linear-gradient(to bottom,#000 55%,rgba(0,0,0,.35) 68%,transparent 80%);mask-image:linear-gradient(to bottom,#000 55%,rgba(0,0,0,.35) 68%,transparent 80%)}
+.emerge-r{-webkit-mask-image:linear-gradient(to left,#000 62%,rgba(0,0,0,.4) 82%,transparent 97%);mask-image:linear-gradient(to left,#000 62%,rgba(0,0,0,.4) 82%,transparent 97%)}
+/* poster 2:1 (design 1600x800) */
+.pk-poster .pk-mon{left:500px;top:205px;width:600px;height:490px;transform:rotate(-4deg)}
+.pk-poster .p-regent{left:628px;top:14px;width:352px;height:507px;transform:rotate(-6deg)}
+.pk-poster .p-kick{left:275px;top:250px;width:350px;height:433px;transform:rotate(-24deg) scaleX(-1)}
+.pk-poster .p-halo{left:360px;top:44px;width:230px;height:230px;transform:rotate(-12deg)}
+.pk-poster .p-bcc{left:985px;top:300px;width:300px;height:375px;transform:rotate(12deg)}
+.pk-poster .p-bomb{left:1240px;top:430px;width:270px;height:338px;transform:rotate(14deg)}
+.pk-poster .s1{left:1050px;top:96px;width:300px;height:92px;transform:rotate(10deg)}
+.pk-poster .s2{left:140px;top:130px;width:250px;height:77px;transform:rotate(-11deg)}
+.pk-poster .s3{left:150px;top:560px;width:240px;height:74px;transform:rotate(7deg)}
+.pk-poster .e1{left:1000px;top:22px;transform:rotate(18deg)}.pk-poster .e2{left:540px;top:84px;transform:rotate(-20deg)}
+.pk-poster .e3{left:440px;top:330px;transform:rotate(14deg) scale(.8)}.pk-poster .e4{left:1150px;top:300px;transform:rotate(-16deg) scale(.85)}
+.pk-poster .e5{left:860px;top:660px;transform:rotate(24deg) scale(.7)}

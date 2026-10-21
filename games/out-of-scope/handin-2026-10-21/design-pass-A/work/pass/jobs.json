@@ -1,0 +1,36 @@
+[
+ {
+  "js": [
+   "src/common.js",
+   "src/pass.js"
+  ],
+  "expr": "PASS.marker('next')",
+  "out": "bug/marker-next.png",
+  "w": 48,
+  "h": 48,
+  "dpr": 4,
+  "final": [
+   48,
+   48
+  ],
+  "alpha": true,
+  "hexes": "work/pass/marker-next.hex"
+ },
+ {
+  "js": [
+   "src/common.js",
+   "src/pass.js"
+  ],
+  "expr": "PASS.marker('held')",
+  "out": "bug/marker-held.png",
+  "w": 48,
+  "h": 48,
+  "dpr": 4,
+  "final": [
+   48,
+   48
+  ],
+  "alpha": true,
+  "hexes": "work/pass/marker-held.hex"
+ }
+]

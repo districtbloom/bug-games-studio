@@ -1,0 +1,2 @@
+[{"js":["src/common.js","src/poster.js","src/round3-type.js","src/round3.js"],"expr":"R3.lockupSheet([90,120,180,300,560],{edge:60})","out":"work/round3/lk2a.png","w":1450,"h":760,"dpr":1},
+ {"js":["src/common.js","src/poster.js","src/round3-type.js","src/round3.js"],"expr":"R3.lockupSheet([90,120,180,300,560],{edge:100})","out":"work/round3/lk2b.png","w":1450,"h":760,"dpr":1}]

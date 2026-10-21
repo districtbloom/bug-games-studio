@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stamped preview</title>
+<link rel="stylesheet" href="stamped.css">
+<style>
+  :root{--bg:#0b0910;--fg:#f1ece4;--mut:#a69fb6}
+  @media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#f1ece4;--fg:#15131a;--mut:#5a5668}}
+  body{margin:0;padding:24px 16px;background:var(--bg);color:var(--fg);font:15px/1.4 system-ui,sans-serif}
+  .row{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-end}
+  .tile{background:#050407 center/cover no-repeat;border-radius:10px;overflow:hidden}
+  .t169{width:169px;height:169px}.t338{width:338px;height:338px}.t40{width:40px;height:40px;border-radius:6px}
+  figure{margin:0}figcaption{margin-top:6px;color:var(--mut);font-size:13px}
+  button{margin-top:20px;font:inherit;padding:8px 16px;border-radius:8px;border:1px solid var(--mut);background:transparent;color:var(--fg);cursor:pointer}
+</style></head><body>
+<div class="row">
+  <figure><div class="tile t338" id="big" style="background-image:url(../store/tank-globe.png)"></div><figcaption>store tile, 338 px</figcaption></figure>
+  <figure><div class="tile t169" id="mid" style="background-image:url(../store/tank-globe.png)"></div><figcaption>page size, 169 px</figcaption></figure>
+  <figure><div class="tile t40" id="small" style="background-image:url(../store/tank-globe.png)"></div><figcaption>held, 40 px</figcaption></figure>
+</div>
+<button id="again" type="button">Play again</button>
+<script src="stamped.js"></script>
+<script>
+  const big = document.getElementById('big'), mid = document.getElementById('mid'), small = document.getElementById('small');
+  function go() { OOSStamped.clear(big); OOSStamped.clear(mid); OOSStamped.play(big); OOSStamped.play(mid); }
+  OOSStamped.held(small);
+  document.getElementById('again').addEventListener('click', go);
+  if (!/[?&]still/.test(location.search)) go();
+</script>
+</body></html>

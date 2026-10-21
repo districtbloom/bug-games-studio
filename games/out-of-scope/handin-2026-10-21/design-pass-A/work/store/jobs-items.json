@@ -1,0 +1,82 @@
+[
+ {
+  "js": [
+   "src/common.js",
+   "src/store.js"
+  ],
+  "expr": "STORE.item('cobalt-glove')",
+  "out": "work/store/item-cobalt-glove.png",
+  "w": 400,
+  "h": 400,
+  "dpr": 2,
+  "final": [
+   400,
+   400
+  ],
+  "alpha": true
+ },
+ {
+  "js": [
+   "src/common.js",
+   "src/store.js"
+  ],
+  "expr": "STORE.item('tank-globe')",
+  "out": "work/store/item-tank-globe.png",
+  "w": 400,
+  "h": 400,
+  "dpr": 2,
+  "final": [
+   400,
+   400
+  ],
+  "alpha": true
+ },
+ {
+  "js": [
+   "src/common.js",
+   "src/store.js"
+  ],
+  "expr": "STORE.item('marker-trail')",
+  "out": "work/store/item-marker-trail.png",
+  "w": 400,
+  "h": 400,
+  "dpr": 2,
+  "final": [
+   400,
+   400
+  ],
+  "alpha": true
+ },
+ {
+  "js": [
+   "src/common.js",
+   "src/store.js"
+  ],
+  "expr": "STORE.item('googly-eyes')",
+  "out": "work/store/item-googly-eyes.png",
+  "w": 400,
+  "h": 400,
+  "dpr": 2,
+  "final": [
+   400,
+   400
+  ],
+  "alpha": true
+ },
+ {
+  "js": [
+   "src/common.js",
+   "src/store.js"
+  ],
+  "expr": "STORE.item('ok-mug')",
+  "out": "work/store/item-ok-mug.png",
+  "w": 400,
+  "h": 400,
+  "dpr": 2,
+  "final": [
+   400,
+   400
+  ],
+  "alpha": true
+ }
+]

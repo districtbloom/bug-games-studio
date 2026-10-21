@@ -1,0 +1,4 @@
+[{"js":["src/common.js","src/poster.js","src/round3-type.js","src/round3.js"],"expr":"R3.backdrop(1440,577)","out":"bug/backdrop.png","w":1440,"h":577,"dpr":2,"final":[1440,577],"hexes":"work/round3/backdrop.hex"},
+ {"js":["src/common.js","src/poster.js","src/round3-type.js","src/round3.js"],"expr":"R3.backdrop(390,826)","out":"bug/backdrop-phone.png","w":390,"h":826,"dpr":3,"final":[390,826],"hexes":"work/round3/backdrop-phone.hex"},
+ {"js":["src/common.js","src/poster.js","src/round3-type.js","src/round3.js"],"expr":"R3.share(1200,630)","out":"bug/share-card.png","w":1200,"h":630,"dpr":2,"final":[1200,630],"hexes":"work/round3/share-card.hex"},
+ {"js":["src/common.js","src/poster.js","src/round3-type.js","src/round3.js"],"expr":"R3.lockup(1200)","out":"bug/title-lockup.png","w":1200,"h":934,"dpr":2,"final":[1200,934],"alpha":true,"hexes":"work/round3/title-lockup.hex"}]

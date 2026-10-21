@@ -1,0 +1,49 @@
+Out of Scope · living poster (bug/living-poster/outofscope.js) · check numbers
+=================================================================================
+
+Harness  (pack living-poster/harness.py + tools/shot.mjs, 1440x900)
+  seq 500 1500 3000 3500 4200 4500 7000 10000 12400 ms : errors []
+  rm (reduced motion)                                   : errors []
+
+Frame time at 600x400, 300 calls each, inside the harness page (board running alongside), dpr 1.
+Machine: headless Chromium 141, canvas on SwiftShader (software, no GPU), 2 cores.
+  frame() script time (Canvas 2D records; raster deferred):
+    base {"idle":{"avg":4.043,"median":0.1,"p95":0.4},"loop":{"avg":1.611,"median":0.1,"p95":0.3},"squeezed":{"avg":4.856,"median":0.2,"p95":0.4},"idle-resizing":{"avg":5.368,"median":0.3,"p95":0.7},"enter-late":{"avg":7.614,"median":0.3,"p95":0.5},"buildMs":35.1,"dpr":1}
+  frame() + raster forced every call (1 px getImageData in the test page, worst case for a software canvas):
+    base {"idle":{"avg":4.991,"median":4.4,"p95":6.4},"loop":{"avg":3.502,"median":3.4,"p95":4.5},"squeezed":{"avg":6.091,"median":5.3,"p95":7.9},"idle-resizing":{"avg":5.887,"median":4.7,"p95":7.9},"enter-late":{"avg":10.235,"median":9.1,"p95":14.5},"buildMs":57,"dpr":1}
+  -> script: 0.1-0.3 ms median, p95 <= 0.7 ms in every mode.
+  -> with software raster each frame: 4.4 ms idle, 3.4 loop, 5.3 squeezed; 9.1 ms in the 0.26 s CRT refresh wipe
+     at the end of the enter (both scenes are drawn). Geometry is built once per page and shared by every plate (35-57 ms).
+
+Luminance trace at 30 fps, 300x200 (mean frame luminance 0..1, largest frame-to-frame step):
+  idle         {'frames': 900, 'meanLum': 0.314, 'min': 0.3068, 'max': 0.3166, 'maxStepDelta': 0.0042, 'maxPixelsFlipped': '3.6%'}
+  loop         {'frames': 361, 'meanLum': 0.2083, 'min': 0.1623, 'max': 0.2592, 'maxStepDelta': 0.0551, 'maxPixelsFlipped': '10.34%'}
+  squeezed     {'frames': 181, 'meanLum': 0.3247, 'min': 0.3156, 'max': 0.3303, 'maxStepDelta': 0.0029, 'maxPixelsFlipped': '6.66%'}
+  react+enter  {'frames': 46, 'meanLum': 0.3369, 'min': 0.198, 'max': 0.5594, 'maxStepDelta': 0.1875, 'maxPixelsFlipped': '43.89%'}
+  idle never moves more than 0.004 between frames (no brightening flash, no whole-frame shift); the screen flicker is
+  a scanline roll, a dark roll bar and a sideways tear every 4.7 s, all inside the glass; the LED blinks at 0.6 Hz.
+  react+enter: the 0.43 s camera push into the glass and the one CRT refresh wipe into the game (a single event).
+
+Light band (pack tools/measure.py light):
+  bug/poster.png                         L 0.346  C 0.247  mid
+  held frame (rm, 1600x800 at 1.5x)      L 0.337  C 0.246  mid
+
+Platform colours (tools/colours.py image), every frame sampled at 900x640 (the grown plate) and the held frame at 2400x1200:
+      6 enter-900x640 FAIL
+      9 enter-900x640 PASS
+     31 idle-900x640 PASS
+     25 loop-900x640 PASS
+     17 react-900x640 PASS
+     13 squeezed-900x640 PASS
+guarded flat blocks of 24x24 px or more: none in any frame
+held 2400x1200:
+  note: 18094 caution px in the bottom 146 px
+  caption strip (bottom 26px): mean 30, std 40.1 (calm = low std)
+  RESULT: PASS
+
+
+  The 6 enter frames that fail are 0.35-0.60 s of the camera push: as the camera zooms toward the glass, Regent's gold
+  buttons and anti-aliased red-ink-on-acid edges sweep down through the bottom 146 px for about a quarter second.
+  On plates 400 px tall or less the held composition itself (the poster scaled) puts his gold buttons and the CRT's LED
+  edge inside the bottom 146 px; the lead's poster has the same geometry at those wall sizes and is checked at its
+  delivered size, and so is this held frame (2400x1200: PASS).
