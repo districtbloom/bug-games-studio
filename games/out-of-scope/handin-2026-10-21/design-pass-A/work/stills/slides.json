@@ -1,0 +1,86 @@
+[
+ {
+  "n": 1,
+  "src": "cap4/D-deadline+610.png",
+  "origin": [
+   200,
+   400
+  ],
+  "dpr": 5,
+  "crop": [
+   650,
+   490,
+   680
+  ]
+ },
+ {
+  "n": 2,
+  "src": "cap3/F2-flip-hr+230.png",
+  "origin": [
+   900,
+   0
+  ],
+  "dpr": 5,
+  "crop": [
+   943,
+   25,
+   400
+  ]
+ },
+ {
+  "n": 3,
+  "src": "cap2/D1-clinic.png",
+  "origin": [
+   0,
+   0
+  ],
+  "dpr": 3,
+  "crop": [
+   6,
+   104,
+   1428
+  ]
+ },
+ {
+  "n": 4,
+  "src": "cap2/A2-q1-tank-quiet.png",
+  "origin": [
+   0,
+   0
+  ],
+  "dpr": 3,
+  "crop": [
+   740,
+   428,
+   700
+  ]
+ },
+ {
+  "n": 5,
+  "src": "cap2/E2-cut+100.png",
+  "origin": [
+   0,
+   0
+  ],
+  "dpr": 3,
+  "crop": [
+   60,
+   60,
+   1340
+  ]
+ },
+ {
+  "n": 6,
+  "src": "cap2/C4-finale+250.png",
+  "origin": [
+   0,
+   0
+  ],
+  "dpr": 3,
+  "crop": [
+   39,
+   112,
+   1380
+  ]
+ }
+]

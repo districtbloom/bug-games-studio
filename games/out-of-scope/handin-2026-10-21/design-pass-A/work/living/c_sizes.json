@@ -1,0 +1,12 @@
+[{"label":"rm 760x380","w":760,"h":380,"at":0,"rm":true,"anchor":true},
+{"label":"rm 600x400","w":600,"h":400,"at":0,"rm":true,"anchor":true},
+{"label":"rm 400x400","w":400,"h":400,"at":0,"rm":true,"anchor":true},
+{"label":"rm 300x450","w":300,"h":450,"at":0,"rm":true,"anchor":true},
+{"label":"rm 270x480","w":270,"h":480,"at":0,"rm":true,"anchor":true},
+{"label":"rm 150x370","w":150,"h":370,"at":0,"rm":true,"anchor":true},
+{"label":"rm 120x90","w":120,"h":90,"at":0,"rm":true,"anchor":true},
+{"label":"rm 900x150","w":900,"h":150,"at":0,"rm":true,"anchor":true},
+{"label":"rm 500x380","w":500,"h":380,"at":0,"rm":true,"anchor":true},
+{"label":"rm 900x640","w":900,"h":640,"at":0,"rm":true,"anchor":true},
+{"label":"rm 120x640","w":120,"h":640,"at":0,"rm":true,"anchor":true},
+{"label":"rm 640x800","w":640,"h":800,"at":0,"rm":true,"anchor":true}]

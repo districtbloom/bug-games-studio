@@ -1,0 +1,1 @@
+base {"idle":{"avg":4.991,"median":4.4,"p95":6.4},"loop":{"avg":3.502,"median":3.4,"p95":4.5},"squeezed":{"avg":6.091,"median":5.3,"p95":7.9},"idle-resizing":{"avg":5.887,"median":4.7,"p95":7.9},"enter-late":{"avg":10.235,"median":9.1,"p95":14.5},"buildMs":57,"dpr":1}

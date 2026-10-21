@@ -1,0 +1,111 @@
+# pass group colour checks (tools/colours.py image --noplay; tools/colours.py hexes; largest all-guarded square via work/pass/guardmax.py)
+
+bug/pass/tile.png: 400x400  guarded px 401 (0.25%)  caution px 12067 (7.54%)
+  guarded by role: {'sun': 308, 'ember': 93}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+  bug/pass/tile.png: guarded 0.3%  largest all-guarded square 3x3
+
+bug/pass/ground-free.png: 306x243  guarded px 0 (0.00%)  caution px 2 (0.00%)
+  RESULT: PASS
+  bug/pass/ground-free.png: guarded 0.0%  largest all-guarded square 0x0
+
+bug/pass/ground-pass.png: 306x243  guarded px 34 (0.05%)  caution px 10998 (14.79%)
+  guarded by role: {'mint': 34}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+  bug/pass/ground-pass.png: guarded 0.0%  largest all-guarded square 3x3
+
+bug/pass/ground-bug.png: 306x243  guarded px 0 (0.00%)  caution px 43 (0.06%)
+  RESULT: PASS
+  bug/pass/ground-bug.png: guarded 0.0%  largest all-guarded square 0x0
+
+bug/marker-next.png: 48x48  guarded px 9 (0.39%)  caution px 198 (8.59%)
+  guarded by role: {'ember': 8, 'sun': 1}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+  bug/marker-next.png: guarded 0.4%  largest all-guarded square 1x1
+
+bug/marker-held.png: 48x48  guarded px 15 (0.65%)  caution px 240 (10.42%)
+  guarded by role: {'ember': 15}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+  bug/marker-held.png: guarded 0.7%  largest all-guarded square 1x1
+
+bug/pass/sticky-pad.png: 306x243  guarded px 6487 (8.72%)  caution px 3838 (5.16%)
+  guarded by role: {'sun': 6485, 'lilac': 2}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+  bug/pass/sticky-pad.png: guarded 8.7%  largest all-guarded square 10x10
+
+bug/pass/paperclip-trail.png: 306x243  guarded px 40 (0.05%)  caution px 2375 (3.19%)
+  guarded by role: {'mint': 28, 'sun': 9, 'ember': 2, 'lilac': 1}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+  bug/pass/paperclip-trail.png: guarded 0.1%  largest all-guarded square 2x2
+
+bug/pass/desk-lamp.png: 306x243  guarded px 59 (0.08%)  caution px 3953 (5.32%)
+  guarded by role: {'ember': 55, 'sun': 4}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+  bug/pass/desk-lamp.png: guarded 0.1%  largest all-guarded square 1x1
+
+bug/pass/envelope-trail.png: 306x243  guarded px 53 (0.07%)  caution px 904 (1.22%)
+  guarded by role: {'ember': 13, 'sun': 40}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+  bug/pass/envelope-trail.png: guarded 0.1%  largest all-guarded square 1x1
+
+bug/pass/pinstripe-glove.png: 306x243  guarded px 42 (0.06%)  caution px 941 (1.27%)
+  guarded by role: {'sun': 42}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+  bug/pass/pinstripe-glove.png: guarded 0.1%  largest all-guarded square 5x5
+
+bug/pass/night-window.png: 306x243  guarded px 60 (0.08%)  caution px 688 (0.93%)
+  guarded by role: {'sun': 60}
+  ok: no guarded block of 24x24
+  RESULT: PASS
+  bug/pass/night-window.png: guarded 0.1%  largest all-guarded square 3x3
+
+## hexes used in the markup (not-free lines only)
+### desk-lamp
+#d4141c  ember  15.8 · lilac  47.4 · sun  48.3 · mint  70.4  -> caution
+not free: #d4141c caution (15.8)
+### envelope-trail
+#d4141c  ember  15.8 · lilac  47.4 · sun  48.3 · mint  70.4  -> caution
+not free: #d4141c caution (15.8)
+### ground-bug
+#ffd35a  ember  39.5 · lilac  53.9 · sun   2.9 · mint  33.7  -> GUARDED
+not free: #ffd35a GUARDED (2.9)
+### ground-free
+not free: none
+### ground-pass
+#39e07a  ember  72.4 · lilac  47.4 · sun  36.2 · mint  13.5  -> caution
+not free: #39e07a caution (13.5)
+### marker-held
+#d4141c  ember  15.8 · lilac  47.4 · sun  48.3 · mint  70.4  -> caution
+not free: #d4141c caution (15.8)
+### marker-next
+#d4141c  ember  15.8 · lilac  47.4 · sun  48.3 · mint  70.4  -> caution
+not free: #d4141c caution (15.8)
+### night-window
+#ffd35a  ember  39.5 · lilac  53.9 · sun   2.9 · mint  33.7  -> GUARDED
+not free: #ffd35a GUARDED (2.9)
+### paperclip-trail
+#39e07a  ember  72.4 · lilac  47.4 · sun  36.2 · mint  13.5  -> caution
+#c58b4a  ember  21.3 · lilac  44.9 · sun  19.2 · mint  41.0  -> caution
+#dba463  ember  24.1 · lilac  43.7 · sun  13.1 · mint  37.3  -> caution
+#ff8a1f  ember  17.2 · lilac  46.8 · sun  20.7 · mint  49.9  -> caution
+not free: #39e07a caution (13.5), #c58b4a caution (19.2), #dba463 caution (13.1), #ff8a1f caution (17.2)
+### pinstripe-glove
+#ffc400  ember  38.7 · lilac  56.2 · sun   5.1 · mint  37.8  -> GUARDED
+not free: #ffc400 GUARDED (5.1)
+### sticky-pad
+#ffe94a  ember  48.8 · lilac  60.1 · sun  11.1 · mint  31.8  -> GUARDED
+not free: #ffe94a GUARDED (11.1)
+### tile
+#39e07a  ember  72.4 · lilac  47.4 · sun  36.2 · mint  13.5  -> caution
+#d4141c  ember  15.8 · lilac  47.4 · sun  48.3 · mint  70.4  -> caution
+#ffd35a  ember  39.5 · lilac  53.9 · sun   2.9 · mint  33.7  -> GUARDED
+not free: #39e07a caution (13.5), #d4141c caution (15.8), #ffd35a GUARDED (2.9)

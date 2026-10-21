@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92" width="92" height="92">
+  <defs>
+    <filter id="r" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".09" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="1.6" xChannelSelector="R" yChannelSelector="G"/></filter>
+    <radialGradient id="g" cx="50%" cy="58%" r="55%"><stop offset="0" stop-color="#e6ff2e" stop-opacity=".95"/><stop offset=".55" stop-color="#39e07a" stop-opacity=".35"/><stop offset="1" stop-color="#050806" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="92" height="92" fill="#0b0a0e"/>
+  <!-- the monitor they got out of -->
+  <g filter="url(#r)">
+    <path d="M10 26 Q46 22 82 26 Q85 48 83 72 Q46 75 9 72 Q7 48 10 26 Z" fill="#f3eee4" stroke="#15131a" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M17 32 Q46 29 75 32 Q77 49 75 65 Q46 67 17 65 Q15 49 17 32 Z" fill="#050806" stroke="#15131a" stroke-width="3"/>
+    <path d="M17 32 Q46 29 75 32 Q77 49 75 65 Q46 67 17 65 Q15 49 17 32 Z" fill="url(#g)"/>
+    <path d="M38 74 L54 74 L56 81 L36 81 Z" fill="#e3dccb" stroke="#15131a" stroke-width="3.5" stroke-linejoin="round"/>
+    <path d="M27 80 Q46 78 65 80 L66 86 Q46 84 26 86 Z" fill="#d6cfbd" stroke="#15131a" stroke-width="3.5" stroke-linejoin="round"/>
+  </g>
+  <!-- Regent's paper hat, worn by the monitor -->
+  <g filter="url(#r)">
+    <path d="M21 31 L41 1 L72 25 Z" fill="#fffbea" stroke="#15131a" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M41 1 L44 27" stroke="#c9c1ad" stroke-width="2"/>
+    <path d="M16 29 L75 22 L77 30 L18 37 Z" fill="#fffbea" stroke="#15131a" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M44 13 L56 11.5 L57 18 L45 19.5 Z" fill="none" stroke="#15131a" stroke-width="2.6" stroke-linejoin="round"/>
+  </g>
+  <!-- the grin inside -->
+  <path d="M27 44 Q33 36 39 44 M53 44 Q59 36 65 44" fill="none" stroke="#e6ff2e" stroke-width="5" stroke-linecap="round"/>
+  <path d="M24 48 Q46 66 68 48 Q64 61 46 63 Q28 61 24 48 Z" fill="#fff" stroke="#15131a" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M32 53 L34 60 M39 55 L40 62 M46 56 L46 63 M53 55 L52 62 M60 53 L58 60" stroke="#15131a" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

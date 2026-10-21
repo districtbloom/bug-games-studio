@@ -1,0 +1,34 @@
+{
+ "idle": {
+  "frames": 900,
+  "meanLum": 0.314,
+  "min": 0.3068,
+  "max": 0.3166,
+  "maxStepDelta": 0.0042,
+  "maxPixelsFlipped": "3.6%"
+ },
+ "loop": {
+  "frames": 361,
+  "meanLum": 0.2083,
+  "min": 0.1623,
+  "max": 0.2592,
+  "maxStepDelta": 0.0551,
+  "maxPixelsFlipped": "10.34%"
+ },
+ "squeezed": {
+  "frames": 181,
+  "meanLum": 0.3247,
+  "min": 0.3156,
+  "max": 0.3303,
+  "maxStepDelta": 0.0029,
+  "maxPixelsFlipped": "6.66%"
+ },
+ "react+enter": {
+  "frames": 46,
+  "meanLum": 0.3369,
+  "min": 0.198,
+  "max": 0.5594,
+  "maxStepDelta": 0.1875,
+  "maxPixelsFlipped": "43.89%"
+ }
+}

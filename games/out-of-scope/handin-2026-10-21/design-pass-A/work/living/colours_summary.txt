@@ -1,0 +1,11 @@
+      6 enter-900x640 FAIL
+      9 enter-900x640 PASS
+     31 idle-900x640 PASS
+     25 loop-900x640 PASS
+     17 react-900x640 PASS
+     13 squeezed-900x640 PASS
+blocks:
+held 2400x1200:
+  note: 18094 caution px in the bottom 146 px
+  caption strip (bottom 26px): mean 30, std 40.1 (calm = low std)
+  RESULT: PASS

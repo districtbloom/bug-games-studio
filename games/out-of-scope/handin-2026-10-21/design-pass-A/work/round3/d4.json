@@ -1,0 +1,2 @@
+[{"js":["src/common.js","src/poster.js","src/round3-type.js","src/round3.js"],"expr":"R3.share(1200,630,{L:{spread:2.2,mw:320,mx:955,face:.71,lw:400}})","out":"work/round3/sc3.png","w":1200,"h":630,"dpr":1},
+ {"js":["src/common.js","src/poster.js","src/round3-type.js","src/round3.js"],"expr":"R3.share(1200,630,{L:{spread:2.2,mw:340,mx:930,face:.70,lw:400,R:500}})","out":"work/round3/sc3b.png","w":1200,"h":630,"dpr":1}]

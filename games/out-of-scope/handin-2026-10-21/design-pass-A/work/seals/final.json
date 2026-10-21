@@ -1,0 +1,639 @@
+[
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('case-closed','earned')",
+"out": "bug/seals/case-closed-earned.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true,
+"hexes": "work/seals/case-closed-earned.hex"
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('return-to-sender','earned')",
+"out": "bug/seals/return-to-sender-earned.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true,
+"hexes": "work/seals/return-to-sender-earned.hex"
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('clean-hands','earned')",
+"out": "bug/seals/clean-hands-earned.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true,
+"hexes": "work/seals/clean-hands-earned.hex"
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('untouchable','earned')",
+"out": "bug/seals/untouchable-earned.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true,
+"hexes": "work/seals/untouchable-earned.hex"
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('no-wellness-checks','earned')",
+"out": "bug/seals/no-wellness-checks-earned.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true,
+"hexes": "work/seals/no-wellness-checks-earned.hex"
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('swatter','earned')",
+"out": "bug/seals/swatter-earned.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true,
+"hexes": "work/seals/swatter-earned.hex"
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('dont-tap-the-glass','earned')",
+"out": "bug/seals/dont-tap-the-glass-earned.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true,
+"hexes": "work/seals/dont-tap-the-glass-earned.hex"
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('early-bird','earned')",
+"out": "bug/seals/early-bird-earned.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true,
+"hexes": "work/seals/early-bird-earned.hex"
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('cross-examiner','earned')",
+"out": "bug/seals/cross-examiner-earned.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true,
+"hexes": "work/seals/cross-examiner-earned.hex"
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('one-cut','earned')",
+"out": "bug/seals/one-cut-earned.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true,
+"hexes": "work/seals/one-cut-earned.hex"
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('read-the-backs','earned')",
+"out": "bug/seals/read-the-backs-earned.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true,
+"hexes": "work/seals/read-the-backs-earned.hex"
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('archivist','earned')",
+"out": "bug/seals/archivist-earned.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true,
+"hexes": "work/seals/archivist-earned.hex"
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('mail-day','earned')",
+"out": "bug/seals/mail-day-earned.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true,
+"hexes": "work/seals/mail-day-earned.hex"
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('case-closed','progress')",
+"out": "bug/seals/case-closed-progress.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('return-to-sender','progress')",
+"out": "bug/seals/return-to-sender-progress.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('clean-hands','progress')",
+"out": "bug/seals/clean-hands-progress.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('untouchable','progress')",
+"out": "bug/seals/untouchable-progress.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('no-wellness-checks','progress')",
+"out": "bug/seals/no-wellness-checks-progress.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('swatter','progress')",
+"out": "bug/seals/swatter-progress.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('dont-tap-the-glass','progress')",
+"out": "bug/seals/dont-tap-the-glass-progress.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('early-bird','progress')",
+"out": "bug/seals/early-bird-progress.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('cross-examiner','progress')",
+"out": "bug/seals/cross-examiner-progress.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('one-cut','progress')",
+"out": "bug/seals/one-cut-progress.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('read-the-backs','progress')",
+"out": "bug/seals/read-the-backs-progress.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('archivist','progress')",
+"out": "bug/seals/archivist-progress.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('mail-day','progress')",
+"out": "bug/seals/mail-day-progress.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('case-closed','locked')",
+"out": "bug/seals/case-closed-locked.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('return-to-sender','locked')",
+"out": "bug/seals/return-to-sender-locked.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('clean-hands','locked')",
+"out": "bug/seals/clean-hands-locked.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('untouchable','locked')",
+"out": "bug/seals/untouchable-locked.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('no-wellness-checks','locked')",
+"out": "bug/seals/no-wellness-checks-locked.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('swatter','locked')",
+"out": "bug/seals/swatter-locked.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('dont-tap-the-glass','locked')",
+"out": "bug/seals/dont-tap-the-glass-locked.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('early-bird','locked')",
+"out": "bug/seals/early-bird-locked.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('cross-examiner','locked')",
+"out": "bug/seals/cross-examiner-locked.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('one-cut','locked')",
+"out": "bug/seals/one-cut-locked.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('read-the-backs','locked')",
+"out": "bug/seals/read-the-backs-locked.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('archivist','locked')",
+"out": "bug/seals/archivist-locked.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+},
+{
+"js": [
+"src/common.js",
+"src/seals.js"
+],
+"expr": "SEALS.one('mail-day','locked')",
+"out": "bug/seals/mail-day-locked.png",
+"w": 192,
+"h": 192,
+"dpr": 2,
+"final": [
+192,
+192
+],
+"alpha": true
+}
+]

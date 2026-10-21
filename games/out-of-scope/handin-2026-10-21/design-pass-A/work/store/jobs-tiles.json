@@ -1,0 +1,82 @@
+[
+ {
+  "js": [
+   "src/common.js",
+   "src/store.js"
+  ],
+  "expr": "STORE.tile('cobalt-glove')",
+  "out": "bug/store/cobalt-glove.png",
+  "w": 400,
+  "h": 400,
+  "dpr": 2,
+  "final": [
+   400,
+   400
+  ],
+  "hexes": "work/store/cobalt-glove.hex"
+ },
+ {
+  "js": [
+   "src/common.js",
+   "src/store.js"
+  ],
+  "expr": "STORE.tile('tank-globe')",
+  "out": "bug/store/tank-globe.png",
+  "w": 400,
+  "h": 400,
+  "dpr": 2,
+  "final": [
+   400,
+   400
+  ],
+  "hexes": "work/store/tank-globe.hex"
+ },
+ {
+  "js": [
+   "src/common.js",
+   "src/store.js"
+  ],
+  "expr": "STORE.tile('marker-trail')",
+  "out": "bug/store/marker-trail.png",
+  "w": 400,
+  "h": 400,
+  "dpr": 2,
+  "final": [
+   400,
+   400
+  ],
+  "hexes": "work/store/marker-trail.hex"
+ },
+ {
+  "js": [
+   "src/common.js",
+   "src/store.js"
+  ],
+  "expr": "STORE.tile('googly-eyes')",
+  "out": "bug/store/googly-eyes.png",
+  "w": 400,
+  "h": 400,
+  "dpr": 2,
+  "final": [
+   400,
+   400
+  ],
+  "hexes": "work/store/googly-eyes.hex"
+ },
+ {
+  "js": [
+   "src/common.js",
+   "src/store.js"
+  ],
+  "expr": "STORE.tile('ok-mug')",
+  "out": "bug/store/ok-mug.png",
+  "w": 400,
+  "h": 400,
+  "dpr": 2,
+  "final": [
+   400,
+   400
+  ],
+  "hexes": "work/store/ok-mug.hex"
+ }
+]
