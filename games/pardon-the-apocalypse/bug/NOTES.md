@@ -50,6 +50,7 @@
 
 Branch `pardon-the-apocalypse/round-2`, from ROUND.md and `reviews/round-1/REVIEW.md`. Every other approved picture is unchanged. The entries under **Pictures** further down are from round 1; for the files listed here, this section takes precedence.
 
+- **Poster, tall, square, second pass (founder, 21 Oct: "uplift chaos, like everything's burning and machines"):** Carmody Street is now on fire, with the game's `pxFire` on the roofs and in the windows, dithered smoke and embers. Kindly's mini drones fill the sky, and a second revving scooter joins the street. Code: `work/r2poster/scene3.js`, `p3.js`. The audits pass: no flat guarded block (two blazes were shrunk until the 24 px rule held), and nothing guarded in the bottom 26 + 120 px. Light band: dark (L 0.177). *(lead)*
 - **Poster, tall, square (PD-3.1, founder 20 Oct):** reworked to show the premise. Kindly's swarm is over the city, a scanning drone and a revving scooter come for Wren, and she throws an egg. The egg is relit from the up-right, and the focus is now 0.42, 0.50. *(lead)*
 - **Phone poster 9:16:** recomposed from the new poster, the same one image. *(round3b)*
 - **Share card (PD-3.15, PD-4):** the title is restacked so its smallest letters are 12 px at the 270 px preview, and the art is redrawn from the new poster. *(round3b)*
