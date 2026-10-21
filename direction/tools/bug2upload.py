@@ -7,7 +7,7 @@ Reads games/<slug>/bug/ (pictures by the direction's file names) and the
 game's words.json (default: games/<slug>/bug/words.json), and writes:
 
     <out>/index.html   the game build
-    <out>/bug/...      every picture, plus publish.json and words.json
+    <out>/bug/...      every picture, the moving poster's module, publish.json and words.json
     <out>/game.json    the page fields the platform reads, from words.json
 
 The platform fills its art slots from bug/ by file name, so game.json names
@@ -22,7 +22,7 @@ from pathlib import Path
 STUDIO = Path(__file__).resolve().parents[2]
 RASTER = {".png", ".jpg", ".jpeg", ".webp"}
 KEEP = RASTER | {".json"}
-SKIP_DIRS = {"checks", "living-poster", "reward", "make"}  # code modules and working files, not slots yet
+SKIP_DIRS = {"checks", "reward", "make"}  # code modules and working files, not slots yet
 INPUTS = {"keyboard", "mouse", "gamepad", "touch"}
 
 def undecided(v):
@@ -130,7 +130,13 @@ def main():
     copied = 0
     for f in sorted(bug.rglob("*")):
         rel = f.relative_to(bug)
-        if not f.is_file() or rel.parts[0] in SKIP_DIRS or f.suffix.lower() not in KEEP:
+        if not f.is_file() or rel.parts[0] in SKIP_DIRS:
+            continue
+        # the moving poster: its one module, not its test harness
+        living = rel.parts[0] == "living-poster"
+        if living and not (len(rel.parts) == 2 and f.suffix == ".js"):
+            continue
+        if not living and f.suffix.lower() not in KEEP:
             continue
         if f.suffix == ".json" and rel.name not in ("publish.json",):
             continue
