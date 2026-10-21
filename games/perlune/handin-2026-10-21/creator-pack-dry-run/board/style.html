@@ -1,0 +1,105 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Perlune style sheet</title>
+<style>
+@font-face{font-family:Brico;src:url(file:///tmp/claude-0/-home-claude/abf4d099-0c77-5d2d-a155-12d3f9d77b55/scratchpad/pack/creator-pack/living-poster/tools/fonts/BricolageGrotesque-Bold.ttf);font-weight:700}
+@font-face{font-family:Brico;src:url(file:///tmp/claude-0/-home-claude/abf4d099-0c77-5d2d-a155-12d3f9d77b55/scratchpad/pack/creator-pack/living-poster/tools/fonts/BricolageGrotesque-Regular.ttf);font-weight:400}
+@font-face{font-family:DMMono;src:url(file:///tmp/claude-0/-home-claude/abf4d099-0c77-5d2d-a155-12d3f9d77b55/scratchpad/pack/creator-pack/living-poster/tools/fonts/DMMono-Regular.ttf)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:1800px;background:#000;color:#ece6f2;font:400 17px/1.45 Brico,sans-serif;padding:56px}
+h1{font:700 52px/1 Brico;letter-spacing:-.01em}
+h2{font:700 26px/1 Brico;margin:0 0 18px;display:flex;gap:14px;align-items:baseline}
+h2 small,.k{font:400 12px/1 DMMono;letter-spacing:.12em;color:#9a91a8;text-transform:uppercase}
+.sub{color:#b8afc6;margin-top:12px;max-width:1300px}
+section{margin-top:56px;padding-top:28px;border-top:1px solid #2a2433}
+.refs{display:grid;grid-template-columns:1fr 1fr 0.6fr;gap:16px 16px;align-items:start}
+.ref img{width:100%;display:block}
+.ref.tall{grid-row:span 2}
+.ref .cap{margin-top:8px;font:400 13px/1.4 DMMono;color:#b8afc6}
+.ref .cap b{color:#ece6f2;font-weight:400}
+.rules{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 36px}
+.rule h3{font:700 19px Brico;margin-bottom:8px}
+.rule p,.rule li{color:#d6cfe0;font-size:16px}
+.rule ul{padding-left:18px}
+.never li{color:#ffb7c9}
+.pal{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.sw{background:#0c0a12;border:1px solid #2a2433}
+.sw .c{height:74px}
+.sw .t{padding:10px 12px;font:400 12px/1.5 DMMono;color:#c9c1d6}
+.sw .t b{display:block;font:700 15px Brico;color:#fff;margin-bottom:2px}
+.g{color:#ff9db0}.ca{color:#ffd2a0}.fr{color:#9ff0c8}
+.pil{display:grid;grid-template-columns:1.55fr 1fr 1fr;gap:28px;align-items:start}
+.box{background:#0c0a12;border:1px solid #2a2433;padding:16px}
+.box img{display:block}
+.row{display:flex;gap:14px;align-items:flex-end;flex-wrap:wrap;margin-top:12px}
+.row figure{font:400 11px DMMono;color:#9a91a8}
+.row figure img{margin-bottom:6px}
+.note{font:400 13px/1.5 DMMono;color:#c9c1d6;margin-top:12px}
+.px{image-rendering:pixelated}
+.lett{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;align-items:center}
+.lett img{width:100%}
+</style></head><body>
+<h1>Perlune · style sheet</h1>
+<div class="k" style="margin-top:14px">bug.games creator pack v0.2 · stage 1 of 3 · dry run · 19 Oct 2026</div>
+<p class="sub">Perlune looks like glossy sculpture floating in a neon-lined night: a droplet of liquid metal, glass and magnetic dust with two big eyes, tiny ringed worlds, and the Eclipse at the centre of everything. Everything in the game is drawn by its own WebGL renderer; this sheet is read from that renderer's key art, cover and frames, and every rule below is one the renderer already follows.</p>
+
+<section><h2>Reference frames <small>from the game's own key art, cover and play</small></h2>
+<div class="refs">
+ <div class="ref"><img src="img/ref-keyart-169.png"><div class="cap"><b>1 · Key art 16:9.</b> The one image: the droplet in front, the Eclipse behind its head like a halo, Nacre's rings arcing across.</div></div>
+ <div class="ref"><img src="img/ref-cover.jpg"><div class="cap"><b>2 · Cover, with lettering.</b> The title, the three-lineage eyebrow, the tagline, the iridescent button shape.</div></div>
+ <div class="ref tall" style="grid-row:span 2"><img src="img/ref-keyart-916.png"><div class="cap"><b>3 · Key art 9:16.</b> The same image stacked: Eclipse above, droplet below, horizon at the foot.</div></div>
+ <div class="ref"><img src="img/ref-vista.jpg"><div class="cap"><b>4 · Worlds.</b> Tiny ringed planets, pearl-dust rings, contour-line sky, the Eclipse's sunburst.</div></div>
+ <div class="ref"><img src="img/ref-star.jpg"><div class="cap"><b>5 · Light.</b> The finale star: emissive cores, sunburst rays, bloom, thin orbit lines.</div></div>
+ <div class="ref"><img src="img/ref-cathedra.jpg"><div class="cap"><b>6 · In play.</b> A planet surface with banded contour fills, glass shards, and dust motes, under the tilt-shift lens.</div></div>
+ <div class="lett" style="grid-column:span 2"><img src="img/lettering.jpg"><div class="note">The cover's lettering (reference 2). The game's own title face (Tilt Prism, loaded from Google Fonts in the build) cannot be fetched in this workspace, so the key art and cover use TeX Gyre Adventor Bold as the stand-in; Poppins and DejaVu Sans Mono stand in for Syne and Martian Mono. Near Play, a price or a selected state, the sweep's cream and lilac stops become peach #FFC2A8 and violet #8F6BFF (measured free).</div></div>
+</div></section>
+
+<section><h2>The rules of the look</h2>
+<div class="rules">
+ <div class="rule"><h3>Line</h3><ul><li>No ink outlines, ever. Forms are made by light: a bright thin-film rim (fresnel) and a silhouette against night.</li><li>Lines exist only as light: neon contour lines in the sky (thin, glowing, pink / cyan / pearl), contour bands on planets, ribbons, orbit hairlines, sunburst rays.</li></ul></div>
+ <div class="rule"><h3>Fill</h3><ul><li>Glossy materials, never flat: liquid pearl-chrome (the droplet), pearl, clear glass, obsidian with a coloured rim, pure emissive glow.</li><li>Every shiny surface mirrors one procedural "studio": a dark violet sky, a cyan band, a pale horizon line. Planets: banded fills that follow the terrain.</li></ul></div>
+ <div class="rule"><h3>Texture</h3><ul><li>Smooth gradients, fine film grain, star specks and dust motes.</li><li>Nothing else: no paper, hatching, crayon, pixels, halftone or photo texture.</li></ul></div>
+ <div class="rule"><h3>Lighting</h3><ul><li>Key light from the upper left, behind the viewer; wrap light on planets.</li><li>Bloom on emissive parts only (the halo, eye catchlights, the Eclipse rim, rays); horizontal anamorphic streaks on the hottest highlights.</li><li>The miniature lens: subject sharp, near and far soft (tilt-shift or round depth of field).</li></ul></div>
+ <div class="rule"><h3>Subject and framing</h3><ul><li>The droplet is always the subject: one round body, two big dark oval eyes with one white catchlight each. Only the droplet has a face.</li><li>The one image: the Eclipse behind its head like a halo. Worlds are tiny: a horizon curve is always in reach.</li><li>Night everywhere, never black-black: void #05040A to nebula #2A0B4D.</li></ul></div>
+ <div class="rule"><h3>Lettering</h3><ul><li>"PERLUNE" in heavy geometric capitals, tracked +4 %, filled with the iridescent sweep pink → cyan → cream → lilac, with a small cyan / magenta split and a soft violet glow.</li><li>Eyebrow: mono capitals, wide tracking, in the three lineage colours. Tagline: light geometric capitals, wide tracking, warm white.</li><li>Title lettering only where allowed (cover, share card, lockup), never on a plate that can shrink below ~200 px.</li></ul></div>
+</div>
+
+<div class="rule never" style="margin-top:28px"><h3>What never appears</h3><ul style="columns:2;column-gap:48px"><li>Outlines, flat cartoon fills, pixel art, paper or crayon textures, photographs.</li><li>A face on anything but the droplet; enemies are faceless sculptures with one hostile glow.</li><li>Text, numbers or prices in stills, seals, tiles or rewards; any HUD or menu chrome.</li><li>Halo gold, eclipse gold or resonance violet as a flat, button-like fill, or within 120 px of Play, a price or a selected state (tiles, rewards, marker and small marks use the near-UI set).</li><li>Gold as "earned" on a seal (the platform's sun says earned).</li><li>Rounded frames (the platform draws sharp corners); fog or glow over everything; gore.</li><li>Another game's art, characters, names or words.</li></ul></div>
+</section>
+
+<section><h2>Palette <small>measured with tools/measure.py · ΔE2000 to ember #FF5A36 · lilac #C4B5FF · sun #FFCB57</small></h2>
+<div class="k" style="margin-bottom:12px">Key art set · posters, stills, backdrops, banners</div>
+<div class="pal">
+ <div class="sw"><div class="c" style="background:#05040A;border-bottom:1px solid #2a2433"></div><div class="t"><b>#05040A</b>Void · the ground of every plate<br><span class="fr">ember 55.2 · lilac 69.1 · sun 81.4 free</span></div></div>
+ <div class="sw"><div class="c" style="background:#2A0B4D"></div><div class="t"><b>#2A0B4D</b>Nebula · sky depth<br><span class="fr">56.3 · 62.2 · 90.4 free</span></div></div>
+ <div class="sw"><div class="c" style="background:#F4F8FF"></div><div class="t"><b>#F4F8FF</b>Pearl · the droplet's body<br><span class="fr">40.8 · 21.4 · 31.1 free</span></div></div>
+ <div class="sw"><div class="c" style="background:#5FF3FF"></div><div class="t"><b>#5FF3FF</b>Glass · rims, the glass lineage<br><span class="fr">59.6 · 34.2 · 43.0 free</span></div></div>
+ <div class="sw"><div class="c" style="background:#FF2E88"></div><div class="t"><b>#FF2E88</b>Dust · contour lines, the dust lineage<br><span class="fr">25.7 · 32.9 · 57.7 free</span></div></div>
+ <div class="sw"><div class="c" style="background:#FF9AD5"></div><div class="t"><b>#FF9AD5</b>Nacre · the pearl world, sweep stop<br><span class="ca">32.7 · lilac 18.8 caution · 52.2</span></div></div>
+ <div class="sw"><div class="c" style="background:#FF3FB4"></div><div class="t"><b>#FF3FB4</b>Eclipse magenta · rays, rims<br><span class="fr">32.4 · 28.2 · 62.4 free</span></div></div>
+ <div class="sw"><div class="c" style="background:linear-gradient(90deg,#FFD27A,#ffe9b8)"></div><div class="t"><b>#FFD27A</b>Halo gold · the halo, chrome lineage<br><span class="g">sun 4.1 GUARDED</span></div></div>
+ <div class="sw"><div class="c" style="background:radial-gradient(circle at 30% 50%,#FFB52E,#6a3a10)"></div><div class="t"><b>#FFB52E</b>Eclipse gold · ring and rays<br><span class="g">sun 6.8 GUARDED</span></div></div>
+ <div class="sw"><div class="c" style="background:linear-gradient(90deg,#B28CFF,#5b3a8a)"></div><div class="t"><b>#B28CFF</b>Resonance violet · eclipse aura<br><span class="g">lilac 11.1 GUARDED</span></div></div>
+</div>
+<div class="k" style="margin:22px 0 12px">Near-UI set · icon, emblem, chip, marker, seals, store tiles, pass rewards, lockup (all measured free)</div>
+<div class="pal">
+ <div class="sw"><div class="c" style="background:#FFC2A8"></div><div class="t"><b>#FFC2A8</b>Peach-gold · replaces both golds<br><span class="fr">23.3 · 32.5 · sun 21.2 free</span></div></div>
+ <div class="sw"><div class="c" style="background:#8F6BFF"></div><div class="t"><b>#8F6BFF</b>Violet · replaces resonance violet<br><span class="fr">45.0 · lilac 20.7 · 67.1 free</span></div></div>
+ <div class="sw"><div class="c" style="background:#FF8FC8"></div><div class="t"><b>#FF8FC8</b>Pink · replaces Nacre pink<br><span class="fr">30.8 · lilac 20.9 · 52.2 free</span></div></div>
+ <div class="sw"><div class="c" style="background:#9FF6FF"></div><div class="t"><b>#9FF6FF</b>Pale glass · sweep stop, highlights<br><span class="fr">55.0 · 29.5 · 39.8 free</span></div></div>
+ <div class="sw"><div class="c" style="background:#FFF6E8"></div><div class="t"><b>#FFF6E8</b>Warm white · halo core, catchlights<br><span class="fr">37.9 · 31.9 · 22.8 free</span></div></div>
+</div>
+<p class="note">The iridescent sweep's own stops: #FF9AD5 (lilac 18.8 caution) · #9FF6FF (free) · #FFE6A8 (sun 11.2 GUARDED) · #C9A8FF (lilac 4.3 GUARDED). They stay on the key art and cover, as gradients and glows, never as flat fills. Ferrum's orange #FF7A2B measures ember 10.7 GUARDED: it stays inside planet art, never near a button.</p>
+</section>
+
+<section><h2>Pilot assets <small>new, made in this style</small></h2>
+<div class="pil">
+ <div class="box"><div class="k">poster · 2:1 master 1600×800 · no lettering · bottom 52 px (26 shown) plain</div><img src="img/poster.png" style="width:100%;margin-top:10px">
+  <div class="row"><figure><img src="img/po180.png"><br>180×90</figure><figure><img src="img/sq90.png"><br>90×70 crop</figure><figure><img class="px" src="img/sq90x3.png" width="270"><br>90×70 crop at 3×</figure></div>
+  <p class="note">Rendered in the game's own engine with a posed camera, a cleared scene and the sky's contour lines at half strength, then finished: vignette, plain strip. light: L 0.177 C 0.079 dark. The Eclipse's guarded golds sit in the middle of the plate, more than 15 % in from the right edge where the hero's info rail starts.</p></div>
+ <div class="box"><div class="k">icon-46 · 92×92 · drawn for 46</div><div class="row"><img class="px" src="img/icon-x4.png" width="368"></div>
+  <div class="row"><figure><img src="img/icon-46.png"><br>92 master</figure><figure><img src="img/icon-1x-night.png"><br>46 on night</figure><figure><img src="img/icon-1x-linen.png"><br>46 on linen</figure></div>
+  <p class="note">Last survivors only: the head, two eyes, the halo, the Eclipse behind. Drawn with the game's material maths ported from its shader (studio reflection, thin film, specular), at 8× and reduced. Near-UI set only: halo #FFC2A8, rim #FF3FB4, aura #8F6BFF. light: L 0.323 C 0.216 mid.</p></div>
+ <div class="box"><div class="k">store item · 400×400 · Glass halo (look)</div><img src="img/store-halo-glass.png" style="width:100%;margin-top:10px">
+  <div class="row"><figure><img src="img/store40.png"><br>40 px</figure><figure><img class="px" src="img/store40x4.png" width="160"><br>40 px at 4×</figure><figure><img src="img/store-grey.png" width="160"><br>greyscale</figure></div>
+  <p class="note">A trim, not the identity core: the halo the droplet grows at its third stage turns to clear cyan glass (#7FE8FF, free). Rendered in the engine on Nacre's ground, sky quieted, scenery cleared. No gold, no lilac, nothing near the price row. price: UNDECIDED (Q1). The game would have to build this look.</p></div>
+</div></section>
+</body></html>

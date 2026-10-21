@@ -1,0 +1,8 @@
+{"shots":[
+ {"name":"band-held","w":800,"h":400,"rm":true,"warm":400},
+ {"name":"band-idle","w":800,"h":400,"warm":0,"timeline":[["idle",6,{}]]},
+ {"name":"band-react","w":800,"h":400,"warm":0,"timeline":[["react",0.5,{"hover":{"x":560,"y":150},"grow":1}]]},
+ {"name":"band-loop2","w":800,"h":400,"warm":0,"timeline":[["react",0.8,{"grow":1}],["enter",0.7,{"grow":1}],["loop",2.2,{"grow":1}]]},
+ {"name":"band-loop5","w":800,"h":400,"warm":0,"timeline":[["react",0.8,{"grow":1}],["enter",0.7,{"grow":1}],["loop",5.3,{"grow":1}]]},
+ {"name":"band-sq","w":800,"h":400,"warm":0,"timeline":[["squeezed",3,{"squeeze":0.8}]]}
+]}

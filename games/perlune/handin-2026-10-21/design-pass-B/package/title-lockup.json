@@ -1,0 +1,6 @@
+{
+ "file": "title-lockup.png",
+ "min_width_px": 120,
+ "font": "TeX Gyre Adventor Bold",
+ "note": "The in-game title face is Tilt Prism, which cannot be fetched here; this lockup is set in the lettering the game already published on its cover and trailers. Re-set it in Tilt Prism once the font file is supplied."
+}

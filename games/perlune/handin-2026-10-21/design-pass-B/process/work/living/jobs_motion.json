@@ -1,0 +1,6 @@
+{"shots":[
+ {"name":"idle","w":600,"h":300,"warm":400,"every":0.5,"timeline":[["idle",14,{}]]},
+ {"name":"hover","w":600,"h":400,"warm":0,"every":0.1,"timeline":[["idle",0.5,{}],["react",0.8,{"hover":{"x":420,"y":150},"grow":1}],["enter",0.7,{"grow":1}],["loop",6.6,{"grow":1}],["idle",1.2,{}]]},
+ {"name":"sq","w":270,"h":370,"warm":0,"every":0.5,"timeline":[["squeezed",6,{"squeezeTo":1,"squeezeIn":1.5,"wTo":120,"hTo":280}]]},
+ {"name":"cue","w":420,"h":370,"warm":0,"every":0.1,"events":[[1.0,{"type":"cue"}],[3.0,{"type":"hit","x":150,"y":160}],[4.6,{"type":"shake","amount":1}]],"timeline":[["idle",5.5,{}]]}
+]}

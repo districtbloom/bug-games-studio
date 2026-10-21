@@ -1,0 +1,112 @@
+[
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": false,
+  "neb": 0.0,
+  "nodecor": true,
+  "ly": 0.25,
+  "lx": 0.0,
+  "grain": 0.0,
+  "streak": 0.45,
+  "dof": 0.0,
+  "vig": 0,
+  "bg": false,
+  "light": [
+   -0.45,
+   0.7,
+   0.45
+  ],
+  "id": "next",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__MK = {\"pose\": \"next\", \"matte\": false, \"spin\": 0.6, \"gem\": 0.5, \"col\": \"0xffc6ea\", \"emit\": 1.4, \"ring\": 0.62, \"tilt\": 1.15, \"glint\": true, \"swoosh\": true, \"dist\": 4.0, \"fov\": 0.5};\nG.state = 'title';\nR.drawPlanet = function () {}; R.drawAtmo = function () {}; drawRingBits = function () {}; drawRingDust = function () {}; R.drawDust = function () {}; drawSunburst = function () {}; drawDecor = function () {};\n{ const T = window.__MK, C = new V3(600, 300, 600), Y = new V3(0, 1, 0), F = new V3(0, 0, 1);\n  G.titlePos = C.clone(); G.titleFace = F.clone();\n  G.camHook = function (CB) { CB.pos.copy(C).addS(F, T.dist).addS(Y, T.pose === 'held' ? T.dist * 0.42 : T.dist * 0.08); CB.target.copy(C).addS(Y, T.pose === 'held' ? -0.04 : 0); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  const W = hex(0xffffff), mc = hex(parseInt(T.col), 2.2);\n  const put = (mesh, p, q, s, c, mat, e, seed) => T.matte ? mesh.put(p, q, s, W, MAT.GLOW, 1.0) : mesh.put(p, q, s, c, mat, e, 0, 0, seed || 0);\n  drawCreature = function () {\n    const ax = new V3(0.3, 1, 0.2).norm();\n    if (T.pose === 'next') {\n      const q = new Q().axisAngle(ax, T.spin);\n      if (T.swoosh && !T.matte) for (let i = 1; i <= 2; i++) { const qi = new Q().axisAngle(ax, T.spin - i * 0.42); M.gem0.put(C, qi, T.gem * (1 + i * 0.07), mc, MAT.GLOW, T.emit * (0.32 / i)); }\n      put(M.gem0, C, q, T.gem, mc, MAT.GLOW, T.emit);\n      if (T.glint) { const g = C.clone().add(new V3(T.gem * 0.62, T.gem * 0.66, T.gem * 0.5)); const gs = T.gem;\n        for (let i = 0; i < 2; i++) { const qg = new Q().axisAngle(F, i * Math.PI / 2 + 0.25); put(M.oct, g, qg, new V3(gs * 0.06, gs * 0.62, gs * 0.06), hex(0xfff2d0), MAT.GLOW, 6); }\n        put(M.ball, g, new Q(), gs * 0.1, W, MAT.GLOW, 8); }\n    } else {\n      const q = new Q().axisAngle(ax, T.spin);\n      const rq = new Q().axisAngle(new V3(1, 0, 0), 0.0);\n      put(M.torus, C.clone().addS(Y, -T.gem * 0.42), rq, T.ring, hex(0xfff2fb), MAT.PEARL, 0.06, 0.3);\n      put(M.gem0, C.clone().addS(Y, -T.gem * 0.05), q, T.gem * 0.86, mc, MAT.GLOW, T.emit * 0.8);\n    }\n  };\n}\n"
+ },
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": false,
+  "neb": 0.0,
+  "nodecor": true,
+  "ly": 0.25,
+  "lx": 0.0,
+  "grain": 0.0,
+  "streak": 0.0,
+  "dof": 0.0,
+  "vig": 0,
+  "bg": false,
+  "light": [
+   -0.45,
+   0.7,
+   0.45
+  ],
+  "bloom": 0.0,
+  "id": "nextM",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__MK = {\"pose\": \"next\", \"matte\": true, \"spin\": 0.6, \"gem\": 0.5, \"col\": \"0xffc6ea\", \"emit\": 1.4, \"ring\": 0.62, \"tilt\": 1.15, \"glint\": true, \"swoosh\": true, \"dist\": 4.0, \"fov\": 0.5};\nG.state = 'title';\nR.drawPlanet = function () {}; R.drawAtmo = function () {}; drawRingBits = function () {}; drawRingDust = function () {}; R.drawDust = function () {}; drawSunburst = function () {}; drawDecor = function () {};\n{ const T = window.__MK, C = new V3(600, 300, 600), Y = new V3(0, 1, 0), F = new V3(0, 0, 1);\n  G.titlePos = C.clone(); G.titleFace = F.clone();\n  G.camHook = function (CB) { CB.pos.copy(C).addS(F, T.dist).addS(Y, T.pose === 'held' ? T.dist * 0.42 : T.dist * 0.08); CB.target.copy(C).addS(Y, T.pose === 'held' ? -0.04 : 0); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  const W = hex(0xffffff), mc = hex(parseInt(T.col), 2.2);\n  const put = (mesh, p, q, s, c, mat, e, seed) => T.matte ? mesh.put(p, q, s, W, MAT.GLOW, 1.0) : mesh.put(p, q, s, c, mat, e, 0, 0, seed || 0);\n  drawCreature = function () {\n    const ax = new V3(0.3, 1, 0.2).norm();\n    if (T.pose === 'next') {\n      const q = new Q().axisAngle(ax, T.spin);\n      if (T.swoosh && !T.matte) for (let i = 1; i <= 2; i++) { const qi = new Q().axisAngle(ax, T.spin - i * 0.42); M.gem0.put(C, qi, T.gem * (1 + i * 0.07), mc, MAT.GLOW, T.emit * (0.32 / i)); }\n      put(M.gem0, C, q, T.gem, mc, MAT.GLOW, T.emit);\n      if (T.glint) { const g = C.clone().add(new V3(T.gem * 0.62, T.gem * 0.66, T.gem * 0.5)); const gs = T.gem;\n        for (let i = 0; i < 2; i++) { const qg = new Q().axisAngle(F, i * Math.PI / 2 + 0.25); put(M.oct, g, qg, new V3(gs * 0.06, gs * 0.62, gs * 0.06), hex(0xfff2d0), MAT.GLOW, 6); }\n        put(M.ball, g, new Q(), gs * 0.1, W, MAT.GLOW, 8); }\n    } else {\n      const q = new Q().axisAngle(ax, T.spin);\n      const rq = new Q().axisAngle(new V3(1, 0, 0), 0.0);\n      put(M.torus, C.clone().addS(Y, -T.gem * 0.42), rq, T.ring, hex(0xfff2fb), MAT.PEARL, 0.06, 0.3);\n      put(M.gem0, C.clone().addS(Y, -T.gem * 0.05), q, T.gem * 0.86, mc, MAT.GLOW, T.emit * 0.8);\n    }\n  };\n}\n"
+ },
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": false,
+  "neb": 0.0,
+  "nodecor": true,
+  "ly": 0.25,
+  "lx": 0.0,
+  "grain": 0.0,
+  "streak": 0.45,
+  "dof": 0.0,
+  "vig": 0,
+  "bg": false,
+  "light": [
+   -0.45,
+   0.7,
+   0.45
+  ],
+  "id": "held",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__MK = {\"pose\": \"held\", \"matte\": false, \"spin\": 0.6, \"gem\": 0.5, \"col\": \"0xffc6ea\", \"emit\": 1.4, \"ring\": 0.62, \"tilt\": 1.15, \"glint\": true, \"swoosh\": true, \"dist\": 4.0, \"fov\": 0.5};\nG.state = 'title';\nR.drawPlanet = function () {}; R.drawAtmo = function () {}; drawRingBits = function () {}; drawRingDust = function () {}; R.drawDust = function () {}; drawSunburst = function () {}; drawDecor = function () {};\n{ const T = window.__MK, C = new V3(600, 300, 600), Y = new V3(0, 1, 0), F = new V3(0, 0, 1);\n  G.titlePos = C.clone(); G.titleFace = F.clone();\n  G.camHook = function (CB) { CB.pos.copy(C).addS(F, T.dist).addS(Y, T.pose === 'held' ? T.dist * 0.42 : T.dist * 0.08); CB.target.copy(C).addS(Y, T.pose === 'held' ? -0.04 : 0); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  const W = hex(0xffffff), mc = hex(parseInt(T.col), 2.2);\n  const put = (mesh, p, q, s, c, mat, e, seed) => T.matte ? mesh.put(p, q, s, W, MAT.GLOW, 1.0) : mesh.put(p, q, s, c, mat, e, 0, 0, seed || 0);\n  drawCreature = function () {\n    const ax = new V3(0.3, 1, 0.2).norm();\n    if (T.pose === 'next') {\n      const q = new Q().axisAngle(ax, T.spin);\n      if (T.swoosh && !T.matte) for (let i = 1; i <= 2; i++) { const qi = new Q().axisAngle(ax, T.spin - i * 0.42); M.gem0.put(C, qi, T.gem * (1 + i * 0.07), mc, MAT.GLOW, T.emit * (0.32 / i)); }\n      put(M.gem0, C, q, T.gem, mc, MAT.GLOW, T.emit);\n      if (T.glint) { const g = C.clone().add(new V3(T.gem * 0.62, T.gem * 0.66, T.gem * 0.5)); const gs = T.gem;\n        for (let i = 0; i < 2; i++) { const qg = new Q().axisAngle(F, i * Math.PI / 2 + 0.25); put(M.oct, g, qg, new V3(gs * 0.06, gs * 0.62, gs * 0.06), hex(0xfff2d0), MAT.GLOW, 6); }\n        put(M.ball, g, new Q(), gs * 0.1, W, MAT.GLOW, 8); }\n    } else {\n      const q = new Q().axisAngle(ax, T.spin);\n      const rq = new Q().axisAngle(new V3(1, 0, 0), 0.0);\n      put(M.torus, C.clone().addS(Y, -T.gem * 0.42), rq, T.ring, hex(0xfff2fb), MAT.PEARL, 0.06, 0.3);\n      put(M.gem0, C.clone().addS(Y, -T.gem * 0.05), q, T.gem * 0.86, mc, MAT.GLOW, T.emit * 0.8);\n    }\n  };\n}\n"
+ },
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": false,
+  "neb": 0.0,
+  "nodecor": true,
+  "ly": 0.25,
+  "lx": 0.0,
+  "grain": 0.0,
+  "streak": 0.0,
+  "dof": 0.0,
+  "vig": 0,
+  "bg": false,
+  "light": [
+   -0.45,
+   0.7,
+   0.45
+  ],
+  "bloom": 0.0,
+  "id": "heldM",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__MK = {\"pose\": \"held\", \"matte\": true, \"spin\": 0.6, \"gem\": 0.5, \"col\": \"0xffc6ea\", \"emit\": 1.4, \"ring\": 0.62, \"tilt\": 1.15, \"glint\": true, \"swoosh\": true, \"dist\": 4.0, \"fov\": 0.5};\nG.state = 'title';\nR.drawPlanet = function () {}; R.drawAtmo = function () {}; drawRingBits = function () {}; drawRingDust = function () {}; R.drawDust = function () {}; drawSunburst = function () {}; drawDecor = function () {};\n{ const T = window.__MK, C = new V3(600, 300, 600), Y = new V3(0, 1, 0), F = new V3(0, 0, 1);\n  G.titlePos = C.clone(); G.titleFace = F.clone();\n  G.camHook = function (CB) { CB.pos.copy(C).addS(F, T.dist).addS(Y, T.pose === 'held' ? T.dist * 0.42 : T.dist * 0.08); CB.target.copy(C).addS(Y, T.pose === 'held' ? -0.04 : 0); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  const W = hex(0xffffff), mc = hex(parseInt(T.col), 2.2);\n  const put = (mesh, p, q, s, c, mat, e, seed) => T.matte ? mesh.put(p, q, s, W, MAT.GLOW, 1.0) : mesh.put(p, q, s, c, mat, e, 0, 0, seed || 0);\n  drawCreature = function () {\n    const ax = new V3(0.3, 1, 0.2).norm();\n    if (T.pose === 'next') {\n      const q = new Q().axisAngle(ax, T.spin);\n      if (T.swoosh && !T.matte) for (let i = 1; i <= 2; i++) { const qi = new Q().axisAngle(ax, T.spin - i * 0.42); M.gem0.put(C, qi, T.gem * (1 + i * 0.07), mc, MAT.GLOW, T.emit * (0.32 / i)); }\n      put(M.gem0, C, q, T.gem, mc, MAT.GLOW, T.emit);\n      if (T.glint) { const g = C.clone().add(new V3(T.gem * 0.62, T.gem * 0.66, T.gem * 0.5)); const gs = T.gem;\n        for (let i = 0; i < 2; i++) { const qg = new Q().axisAngle(F, i * Math.PI / 2 + 0.25); put(M.oct, g, qg, new V3(gs * 0.06, gs * 0.62, gs * 0.06), hex(0xfff2d0), MAT.GLOW, 6); }\n        put(M.ball, g, new Q(), gs * 0.1, W, MAT.GLOW, 8); }\n    } else {\n      const q = new Q().axisAngle(ax, T.spin);\n      const rq = new Q().axisAngle(new V3(1, 0, 0), 0.0);\n      put(M.torus, C.clone().addS(Y, -T.gem * 0.42), rq, T.ring, hex(0xfff2fb), MAT.PEARL, 0.06, 0.3);\n      put(M.gem0, C.clone().addS(Y, -T.gem * 0.05), q, T.gem * 0.86, mc, MAT.GLOW, T.emit * 0.8);\n    }\n  };\n}\n"
+ }
+]

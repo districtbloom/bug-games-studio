@@ -1,0 +1,132 @@
+[
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": false,
+  "neb": 0.05,
+  "nodecor": true,
+  "ly": 0.35,
+  "lx": 0.7,
+  "grain": 0.01,
+  "streak": 0.45,
+  "dof": 0.55,
+  "vig": 0,
+  "light": [
+   -0.45,
+   0.7,
+   0.45
+  ],
+  "id": "mote",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__S = {\"world\": \"nacre\", \"ud\": [-0.2768, 0.9578, -0.0772], \"lift\": 5.5, \"look\": \"away\", \"cam\": 0.0, \"pitch\": 0.0, \"dist\": 6.4, \"up\": 0.0, \"ty\": 0.1, \"side\": 0.05, \"fov\": 0.6, \"face\": 0.5, \"notdust\": true, \"camv\": null};\nG.state = 'title';\n{ const T = window.__S, pl = planetById(T.world), U = new V3(0, 1, 0);\n  const ud = new V3(T.ud[0], T.ud[1], T.ud[2]).norm(); const C = pl.c.clone().addS(ud, pl.r + T.lift);\n  const Uc = planetById('umbra').c.clone();\n  let d; if (T.camv) d = new V3(T.camv[0], T.camv[1], T.camv[2]).norm(); else if (T.look === 'umbra') d = C.clone().sub(Uc).norm(); else { d = Uc.clone().sub(C); d.y = 0; d.norm(); }\n  rotAround(d, U, T.cam);\n  const rt0 = new V3().crossOf(d, U).norm(); if (T.pitch) rotAround(d, rt0, T.pitch);\n  const camPos = C.clone().addS(d, T.dist).addS(U, T.up);\n  const rt = new V3().crossOf(d, U).norm();\n  const fa = d.clone(); fa.y = 0; fa.norm(); rotAround(fa, U, T.face);\n  window.__C = C; window.__F = fa;\n  G.titlePos = C.clone(); G.titleFace = fa.clone();\n  G.camHook = function (CB) { G.titlePos = C.clone(); G.titleFace = fa.clone(); CB.pos.copy(camPos); CB.target.copy(C).addS(U, T.ty).addS(rt, T.side); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  if (T.notdust) { const dd = R.drawDust; R.drawDust = function (o) { if (G.state === 'title' && o.c && G.titlePos && o.c.dist(G.titlePos) < 0.01) return; return dd.call(R, o); }; }\n}\n\nwindow.__wrapDC = function (hook, post) {\n  const dc0 = window.__keep.dc, PUT = Mesh.prototype.put, names = ['sphere', 'ball', 'oct', 'torus', 'ring', 'cone', 'gem'];\n  drawCreature = function (pos, n, face, opts) {\n    if (hook) for (const k of names) { const m = M[k]; m.put = function (...a) { return hook(k, m, a, (...b) => PUT.apply(m, b)); }; }\n    const r = dc0(pos, n, face, opts);\n    if (hook) for (const k of names) delete M[k].put;\n    if (post) { const q = new Q(); creatureFrame(pos, n, face, q); post(pos, n, face, opts || {}, q); }\n    return r;\n  };\n};\nwindow.__same = (c, h) => { const x = hex(h); return Math.abs(c[0] - x[0]) + Math.abs(c[1] - x[1]) + Math.abs(c[2] - x[2]) < 1e-4; };\nwindow.__MT = {\"n\": 7, \"pts\": [[-1.05, -0.5, 0.35], [-1.32, -0.2, 0.95], [-1.45, 0.22, 1.45], [-1.85, 0.1, 1.8], [-1.95, 0.55, 2.1], [-2.3, 0.42, 2.4], [-2.35, 0.8, 2.7]], \"size\": 0.16, \"emit\": 2.0, \"strip\": 0.0};\n__wrapDC(null, function (pos, n, face, o, q) {\n  const L = window.__MT, sc = (o.scale ?? P.scale), T = R.time, ps = [];\n  for (let i = 0; i < L.pts.length; i++) { const d = L.pts[i]; ps.push(local(pos, q, sc, d[0], d[1], -d[2], new V3())); }\n  for (let i = 0; i < ps.length; i++) { const k = 1 - i / ps.length;\n    M.oct.put(ps[i], new Q().axisAngle(new V3(Math.sin(i * 2.1), 1, Math.cos(i * 1.3)).norm(), T * 6 + i * 1.7).mul(new Q().axisAngle(new V3(1, 0, 0), 0.6 + i * 0.9)), L.size * sc * (0.55 + 0.45 * k), hex(0xff5c9a), MAT.GLOW, L.emit * (0.6 + 0.4 * k)); }\n  if (L.strip > 0) { const up = (p, o2) => o2.copy(R.cam.pos).sub(p).norm(); const pp = [local(pos, q, sc, -0.55, -0.1, -0.35, VP.get())].concat(ps.map(p => VP.get().copy(p)));\n    FX.strip(pp, up, t => sc * 0.07 * (1 - t * 0.7), hex(0xff5c9a, 1.4), t => L.strip * (1 - t)); }\n});\n"
+ },
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": false,
+  "neb": 0.05,
+  "nodecor": true,
+  "ly": 0.6,
+  "lx": 0.0,
+  "grain": 0.01,
+  "streak": 0.45,
+  "dof": 0.4,
+  "vig": 0,
+  "light": [
+   -0.45,
+   0.7,
+   0.45
+  ],
+  "id": "r1",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__S = {\"world\": \"nacre\", \"ud\": [0, 1, 0], \"lift\": 2.4, \"look\": \"away\", \"cam\": 0.0, \"pitch\": 0.0, \"dist\": 6.2, \"up\": 0.0, \"ty\": 0.0, \"side\": 0.0, \"fov\": 0.6, \"face\": 0.0, \"notdust\": true, \"camv\": [-0.824219167056799, 0.5226872289306592, -0.21785505587198367]};\nG.state = 'title';\n{ const T = window.__S, pl = planetById(T.world), U = new V3(0, 1, 0);\n  const ud = new V3(T.ud[0], T.ud[1], T.ud[2]).norm(); const C = pl.c.clone().addS(ud, pl.r + T.lift);\n  const Uc = planetById('umbra').c.clone();\n  let d; if (T.camv) d = new V3(T.camv[0], T.camv[1], T.camv[2]).norm(); else if (T.look === 'umbra') d = C.clone().sub(Uc).norm(); else { d = Uc.clone().sub(C); d.y = 0; d.norm(); }\n  rotAround(d, U, T.cam);\n  const rt0 = new V3().crossOf(d, U).norm(); if (T.pitch) rotAround(d, rt0, T.pitch);\n  const camPos = C.clone().addS(d, T.dist).addS(U, T.up);\n  const rt = new V3().crossOf(d, U).norm();\n  const fa = d.clone(); fa.y = 0; fa.norm(); rotAround(fa, U, T.face);\n  window.__C = C; window.__F = fa;\n  G.titlePos = C.clone(); G.titleFace = fa.clone();\n  G.camHook = function (CB) { G.titlePos = C.clone(); G.titleFace = fa.clone(); CB.pos.copy(camPos); CB.target.copy(C).addS(U, T.ty).addS(rt, T.side); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  if (T.notdust) { const dd = R.drawDust; R.drawDust = function (o) { if (G.state === 'title' && o.c && G.titlePos && o.c.dist(G.titlePos) < 0.01) return; return dd.call(R, o); }; }\n}\n\nwindow.__wrapDC = function (hook, post) {\n  const dc0 = window.__keep.dc, PUT = Mesh.prototype.put, names = ['sphere', 'ball', 'oct', 'torus', 'ring', 'cone', 'gem'];\n  drawCreature = function (pos, n, face, opts) {\n    if (hook) for (const k of names) { const m = M[k]; m.put = function (...a) { return hook(k, m, a, (...b) => PUT.apply(m, b)); }; }\n    const r = dc0(pos, n, face, opts);\n    if (hook) for (const k of names) delete M[k].put;\n    if (post) { const q = new Q(); creatureFrame(pos, n, face, q); post(pos, n, face, opts || {}, q); }\n    return r;\n  };\n};\nwindow.__same = (c, h) => { const x = hex(h); return Math.abs(c[0] - x[0]) + Math.abs(c[1] - x[1]) + Math.abs(c[2] - x[2]) < 1e-4; };\nwindow.__RL = {\"rad\": 1.35, \"tx\": 0.3, \"tz\": -0.5, \"beads\": 30, \"bead\": 0.085, \"emit\": 0.05};\n__wrapDC(null, function (pos, n, face, o, q) {\n  const L = window.__RL, sc = (o.scale ?? P.scale), T = R.time;\n  const rq = q.clone().mul(new Q().axisAngle(new V3(0, 0, 1), L.tz)).mul(new Q().axisAngle(new V3(1, 0, 0), L.tx));\n  const c = pos.clone();\n  M.ring.put(c, rq, sc * L.rad, hex(0xfff2fb), MAT.PEARL, L.emit, 0, 0, 0.2);\n  for (let i = 0; i < L.beads; i++) { const a = i / L.beads * TAU + 0.4, p = new V3(Math.cos(a) * L.rad * sc, 0, Math.sin(a) * L.rad * sc).applyQ(rq).add(c);\n    M.ball.put(p, q, sc * L.bead * (0.8 + 0.4 * ((i * 7) % 5) / 4), hex(0xfff2fb), MAT.PEARL, 0.08, 0, 0, i * 0.37); }\n});\n"
+ },
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": false,
+  "neb": 0.05,
+  "nodecor": true,
+  "ly": 0.6,
+  "lx": 0.0,
+  "grain": 0.01,
+  "streak": 0.45,
+  "dof": 0.4,
+  "vig": 0,
+  "light": [
+   -0.45,
+   0.7,
+   0.45
+  ],
+  "id": "r2",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__S = {\"world\": \"nacre\", \"ud\": [0, 1, 0], \"lift\": 2.4, \"look\": \"away\", \"cam\": 0.0, \"pitch\": 0.0, \"dist\": 6.2, \"up\": 0.0, \"ty\": 0.0, \"side\": 0.0, \"fov\": 0.6, \"face\": 0.0, \"notdust\": true, \"camv\": [-0.824219167056799, 0.5226872289306592, -0.21785505587198367]};\nG.state = 'title';\n{ const T = window.__S, pl = planetById(T.world), U = new V3(0, 1, 0);\n  const ud = new V3(T.ud[0], T.ud[1], T.ud[2]).norm(); const C = pl.c.clone().addS(ud, pl.r + T.lift);\n  const Uc = planetById('umbra').c.clone();\n  let d; if (T.camv) d = new V3(T.camv[0], T.camv[1], T.camv[2]).norm(); else if (T.look === 'umbra') d = C.clone().sub(Uc).norm(); else { d = Uc.clone().sub(C); d.y = 0; d.norm(); }\n  rotAround(d, U, T.cam);\n  const rt0 = new V3().crossOf(d, U).norm(); if (T.pitch) rotAround(d, rt0, T.pitch);\n  const camPos = C.clone().addS(d, T.dist).addS(U, T.up);\n  const rt = new V3().crossOf(d, U).norm();\n  const fa = d.clone(); fa.y = 0; fa.norm(); rotAround(fa, U, T.face);\n  window.__C = C; window.__F = fa;\n  G.titlePos = C.clone(); G.titleFace = fa.clone();\n  G.camHook = function (CB) { G.titlePos = C.clone(); G.titleFace = fa.clone(); CB.pos.copy(camPos); CB.target.copy(C).addS(U, T.ty).addS(rt, T.side); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  if (T.notdust) { const dd = R.drawDust; R.drawDust = function (o) { if (G.state === 'title' && o.c && G.titlePos && o.c.dist(G.titlePos) < 0.01) return; return dd.call(R, o); }; }\n}\n\nwindow.__wrapDC = function (hook, post) {\n  const dc0 = window.__keep.dc, PUT = Mesh.prototype.put, names = ['sphere', 'ball', 'oct', 'torus', 'ring', 'cone', 'gem'];\n  drawCreature = function (pos, n, face, opts) {\n    if (hook) for (const k of names) { const m = M[k]; m.put = function (...a) { return hook(k, m, a, (...b) => PUT.apply(m, b)); }; }\n    const r = dc0(pos, n, face, opts);\n    if (hook) for (const k of names) delete M[k].put;\n    if (post) { const q = new Q(); creatureFrame(pos, n, face, q); post(pos, n, face, opts || {}, q); }\n    return r;\n  };\n};\nwindow.__same = (c, h) => { const x = hex(h); return Math.abs(c[0] - x[0]) + Math.abs(c[1] - x[1]) + Math.abs(c[2] - x[2]) < 1e-4; };\nwindow.__RL = {\"rad\": 1.35, \"tx\": 1.2, \"tz\": -0.35, \"beads\": 30, \"bead\": 0.085, \"emit\": 0.05};\n__wrapDC(null, function (pos, n, face, o, q) {\n  const L = window.__RL, sc = (o.scale ?? P.scale), T = R.time;\n  const rq = q.clone().mul(new Q().axisAngle(new V3(0, 0, 1), L.tz)).mul(new Q().axisAngle(new V3(1, 0, 0), L.tx));\n  const c = pos.clone();\n  M.ring.put(c, rq, sc * L.rad, hex(0xfff2fb), MAT.PEARL, L.emit, 0, 0, 0.2);\n  for (let i = 0; i < L.beads; i++) { const a = i / L.beads * TAU + 0.4, p = new V3(Math.cos(a) * L.rad * sc, 0, Math.sin(a) * L.rad * sc).applyQ(rq).add(c);\n    M.ball.put(p, q, sc * L.bead * (0.8 + 0.4 * ((i * 7) % 5) / 4), hex(0xfff2fb), MAT.PEARL, 0.08, 0, 0, i * 0.37); }\n});\n"
+ },
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": false,
+  "neb": 0.05,
+  "nodecor": true,
+  "ly": 0.6,
+  "lx": 0.0,
+  "grain": 0.01,
+  "streak": 0.45,
+  "dof": 0.4,
+  "vig": 0,
+  "light": [
+   -0.45,
+   0.7,
+   0.45
+  ],
+  "id": "r3",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__S = {\"world\": \"nacre\", \"ud\": [0, 1, 0], \"lift\": 2.4, \"look\": \"away\", \"cam\": 0.0, \"pitch\": 0.0, \"dist\": 6.2, \"up\": 0.0, \"ty\": 0.0, \"side\": 0.0, \"fov\": 0.6, \"face\": 0.0, \"notdust\": true, \"camv\": [-0.824219167056799, 0.5226872289306592, -0.21785505587198367]};\nG.state = 'title';\n{ const T = window.__S, pl = planetById(T.world), U = new V3(0, 1, 0);\n  const ud = new V3(T.ud[0], T.ud[1], T.ud[2]).norm(); const C = pl.c.clone().addS(ud, pl.r + T.lift);\n  const Uc = planetById('umbra').c.clone();\n  let d; if (T.camv) d = new V3(T.camv[0], T.camv[1], T.camv[2]).norm(); else if (T.look === 'umbra') d = C.clone().sub(Uc).norm(); else { d = Uc.clone().sub(C); d.y = 0; d.norm(); }\n  rotAround(d, U, T.cam);\n  const rt0 = new V3().crossOf(d, U).norm(); if (T.pitch) rotAround(d, rt0, T.pitch);\n  const camPos = C.clone().addS(d, T.dist).addS(U, T.up);\n  const rt = new V3().crossOf(d, U).norm();\n  const fa = d.clone(); fa.y = 0; fa.norm(); rotAround(fa, U, T.face);\n  window.__C = C; window.__F = fa;\n  G.titlePos = C.clone(); G.titleFace = fa.clone();\n  G.camHook = function (CB) { G.titlePos = C.clone(); G.titleFace = fa.clone(); CB.pos.copy(camPos); CB.target.copy(C).addS(U, T.ty).addS(rt, T.side); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  if (T.notdust) { const dd = R.drawDust; R.drawDust = function (o) { if (G.state === 'title' && o.c && G.titlePos && o.c.dist(G.titlePos) < 0.01) return; return dd.call(R, o); }; }\n}\n\nwindow.__wrapDC = function (hook, post) {\n  const dc0 = window.__keep.dc, PUT = Mesh.prototype.put, names = ['sphere', 'ball', 'oct', 'torus', 'ring', 'cone', 'gem'];\n  drawCreature = function (pos, n, face, opts) {\n    if (hook) for (const k of names) { const m = M[k]; m.put = function (...a) { return hook(k, m, a, (...b) => PUT.apply(m, b)); }; }\n    const r = dc0(pos, n, face, opts);\n    if (hook) for (const k of names) delete M[k].put;\n    if (post) { const q = new Q(); creatureFrame(pos, n, face, q); post(pos, n, face, opts || {}, q); }\n    return r;\n  };\n};\nwindow.__same = (c, h) => { const x = hex(h); return Math.abs(c[0] - x[0]) + Math.abs(c[1] - x[1]) + Math.abs(c[2] - x[2]) < 1e-4; };\nwindow.__RL = {\"rad\": 1.35, \"tx\": 0.75, \"tz\": 0.45, \"beads\": 30, \"bead\": 0.085, \"emit\": 0.05};\n__wrapDC(null, function (pos, n, face, o, q) {\n  const L = window.__RL, sc = (o.scale ?? P.scale), T = R.time;\n  const rq = q.clone().mul(new Q().axisAngle(new V3(0, 0, 1), L.tz)).mul(new Q().axisAngle(new V3(1, 0, 0), L.tx));\n  const c = pos.clone();\n  M.ring.put(c, rq, sc * L.rad, hex(0xfff2fb), MAT.PEARL, L.emit, 0, 0, 0.2);\n  for (let i = 0; i < L.beads; i++) { const a = i / L.beads * TAU + 0.4, p = new V3(Math.cos(a) * L.rad * sc, 0, Math.sin(a) * L.rad * sc).applyQ(rq).add(c);\n    M.ball.put(p, q, sc * L.bead * (0.8 + 0.4 * ((i * 7) % 5) / 4), hex(0xfff2fb), MAT.PEARL, 0.08, 0, 0, i * 0.37); }\n});\n"
+ },
+ {
+  "world": "nacre",
+  "form": 2,
+  "solo": true,
+  "keep": [],
+  "noRings": [
+   "umbra"
+  ],
+  "ownRings": false,
+  "sunburst": false,
+  "neb": 0.05,
+  "nodecor": true,
+  "ly": 0.6,
+  "lx": 0.0,
+  "grain": 0.01,
+  "streak": 0.45,
+  "dof": 0.4,
+  "vig": 0,
+  "light": [
+   -0.45,
+   0.7,
+   0.45
+  ],
+  "id": "r4",
+  "js": "\n(function(){ const W = window;\n  if (!W.__keep) W.__keep = { dc: drawCreature, dcd: drawCreatureDust, sph: M.sphere.put, ball: M.ball.put, oct: M.oct.put, torus: M.torus.put, ring: M.ring.put, gem0: M.gem0.put };\n  const K = W.__keep; drawCreature = K.dc; drawCreatureDust = K.dcd;\n  M.sphere.put = K.sph; M.ball.put = K.ball; M.oct.put = K.oct; M.torus.put = K.torus; M.ring.put = K.ring; M.gem0.put = K.gem0;\n  P.motes = []; G.state = 'play'; G.titlePos = null; G.titleFace = null; W.__extra = null;\n})();\nwindow.__S = {\"world\": \"nacre\", \"ud\": [0, 1, 0], \"lift\": 2.4, \"look\": \"away\", \"cam\": 0.0, \"pitch\": 0.0, \"dist\": 6.2, \"up\": 0.0, \"ty\": 0.0, \"side\": 0.0, \"fov\": 0.6, \"face\": 0.0, \"notdust\": true, \"camv\": [-0.824219167056799, 0.5226872289306592, -0.21785505587198367]};\nG.state = 'title';\n{ const T = window.__S, pl = planetById(T.world), U = new V3(0, 1, 0);\n  const ud = new V3(T.ud[0], T.ud[1], T.ud[2]).norm(); const C = pl.c.clone().addS(ud, pl.r + T.lift);\n  const Uc = planetById('umbra').c.clone();\n  let d; if (T.camv) d = new V3(T.camv[0], T.camv[1], T.camv[2]).norm(); else if (T.look === 'umbra') d = C.clone().sub(Uc).norm(); else { d = Uc.clone().sub(C); d.y = 0; d.norm(); }\n  rotAround(d, U, T.cam);\n  const rt0 = new V3().crossOf(d, U).norm(); if (T.pitch) rotAround(d, rt0, T.pitch);\n  const camPos = C.clone().addS(d, T.dist).addS(U, T.up);\n  const rt = new V3().crossOf(d, U).norm();\n  const fa = d.clone(); fa.y = 0; fa.norm(); rotAround(fa, U, T.face);\n  window.__C = C; window.__F = fa;\n  G.titlePos = C.clone(); G.titleFace = fa.clone();\n  G.camHook = function (CB) { G.titlePos = C.clone(); G.titleFace = fa.clone(); CB.pos.copy(camPos); CB.target.copy(C).addS(U, T.ty).addS(rt, T.side); CB.up.set(0, 1, 0); CB.fov = T.fov; return 1; };\n  if (T.notdust) { const dd = R.drawDust; R.drawDust = function (o) { if (G.state === 'title' && o.c && G.titlePos && o.c.dist(G.titlePos) < 0.01) return; return dd.call(R, o); }; }\n}\n\nwindow.__wrapDC = function (hook, post) {\n  const dc0 = window.__keep.dc, PUT = Mesh.prototype.put, names = ['sphere', 'ball', 'oct', 'torus', 'ring', 'cone', 'gem'];\n  drawCreature = function (pos, n, face, opts) {\n    if (hook) for (const k of names) { const m = M[k]; m.put = function (...a) { return hook(k, m, a, (...b) => PUT.apply(m, b)); }; }\n    const r = dc0(pos, n, face, opts);\n    if (hook) for (const k of names) delete M[k].put;\n    if (post) { const q = new Q(); creatureFrame(pos, n, face, q); post(pos, n, face, opts || {}, q); }\n    return r;\n  };\n};\nwindow.__same = (c, h) => { const x = hex(h); return Math.abs(c[0] - x[0]) + Math.abs(c[1] - x[1]) + Math.abs(c[2] - x[2]) < 1e-4; };\nwindow.__RL = {\"rad\": 1.25, \"tx\": 1.35, \"tz\": 0.0, \"beads\": 30, \"bead\": 0.085, \"emit\": 0.05};\n__wrapDC(null, function (pos, n, face, o, q) {\n  const L = window.__RL, sc = (o.scale ?? P.scale), T = R.time;\n  const rq = q.clone().mul(new Q().axisAngle(new V3(0, 0, 1), L.tz)).mul(new Q().axisAngle(new V3(1, 0, 0), L.tx));\n  const c = pos.clone();\n  M.ring.put(c, rq, sc * L.rad, hex(0xfff2fb), MAT.PEARL, L.emit, 0, 0, 0.2);\n  for (let i = 0; i < L.beads; i++) { const a = i / L.beads * TAU + 0.4, p = new V3(Math.cos(a) * L.rad * sc, 0, Math.sin(a) * L.rad * sc).applyQ(rq).add(c);\n    M.ball.put(p, q, sc * L.bead * (0.8 + 0.4 * ((i * 7) % 5) / 4), hex(0xfff2fb), MAT.PEARL, 0.08, 0, 0, i * 0.37); }\n});\n"
+ }
+]
