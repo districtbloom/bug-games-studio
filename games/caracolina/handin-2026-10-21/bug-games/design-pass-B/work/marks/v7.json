@@ -1,0 +1,7 @@
+[
+ {"name":"i0","fn":"drawIcon","M":92},
+ {"name":"i1","fn":"drawIcon","M":92,"v":{"pal":{"halo":"#e7a3a8","shade":"#e7a3a8"}}},
+ {"name":"c1","fn":"drawChip","M":128,"v":{"pal":{"halo":"#e7a3a8","shade":"#e7a3a8"}}},
+ {"name":"e1","fn":"drawEmblem","M":60,"v":{"pal":{"halo":"#e7a3a8","shade":"#e7a3a8"}}},
+ {"name":"c0","fn":"drawChip","M":128,"v":{"pal":{"halo":"#c890a0","shade":"#dcb0b0"}}}
+]

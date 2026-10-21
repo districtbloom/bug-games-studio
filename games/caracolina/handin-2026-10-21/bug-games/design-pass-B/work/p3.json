@@ -1,0 +1,6 @@
+[
+ {"name":"u1","w":1000,"h":500,"lt":5,"shotJs":"const h=19.7,d=lightAt(h).sunDisc,c=WORLD.floatingRock,D=80;const e=[c[0]-d[0]*D,7,c[2]-d[2]*D-16];return {hour:h,eye:[e,e],look:[[c[0],c[1]+6,c[2]],[c[0],c[1]+6,c[2]]],lens:45}"},
+ {"name":"u2","w":1000,"h":500,"lt":5,"shotJs":"const h=19.7,d=lightAt(h).sunDisc,c=WORLD.floatingRock,D=80;const e=[c[0]-d[0]*D,7,c[2]-d[2]*D-28];return {hour:h,eye:[e,e],look:[[c[0],c[1]+6,c[2]],[c[0],c[1]+6,c[2]]],lens:45}"},
+ {"name":"u3","w":1000,"h":500,"lt":5,"shotJs":"const h=19.6,d=lightAt(h).sunDisc,c=WORLD.floatingRock,D=95;const e=[c[0]-d[0]*D,12,c[2]-d[2]*D-22];return {hour:h,eye:[e,e],look:[[c[0],c[1]+5,c[2]],[c[0],c[1]+5,c[2]]],lens:50}"},
+ {"name":"u4","w":1000,"h":500,"lt":5,"shotJs":"const h=19.75,d=lightAt(h).sunDisc,c=WORLD.floatingRock,D=110;const e=[c[0]-d[0]*D,10,c[2]-d[2]*D-30];return {hour:h,eye:[e,e],look:[[c[0],c[1]+6,c[2]],[c[0],c[1]+6,c[2]]],lens:60}"}
+]

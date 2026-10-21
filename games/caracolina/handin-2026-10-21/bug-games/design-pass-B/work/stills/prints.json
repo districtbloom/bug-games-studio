@@ -1,0 +1,8 @@
+[
+ {"name":"pr0_petxina","w":600,"h":400,"lt":3,"keep":"p0","shot":{"hour":19.66,"eye":[[11.6,-2.6,37.3],[11.6,-2.6,37.3]],"look":[[-3.1,0.4,39.4],[-3.1,0.4,39.4]],"lens":35}},
+ {"name":"pr1_mercat","w":600,"h":400,"lt":3,"keep":"p1","shotJs":"const f=WORLD.lemon;const e=[f[0]+6.2,f[1]+1.56,f[2]+3.2];return {hour:12.2,lemon:true,eye:[e,e],look:[[f[0],f[1]+2.4,f[2]],[f[0],f[1]+2.4,f[2]]],lens:35}"},
+ {"name":"pr2_cim","w":600,"h":400,"lt":3,"keep":"p2","shot":{"hour":12.1,"eye":[[-12.5,25.6,-57.5],[-12.5,25.6,-57.5]],"look":[[-4,31.5,-65],[-4,31.5,-65]],"lens":26}},
+ {"name":"pr3_jardi","w":600,"h":400,"lt":3,"keep":"p3","shotJs":"const b=WORLD.brokenFace,L=add(b.E,mul(b.D,10));return {hour:13.6,eye:[b.E,b.E],look:[L,L],lens:35}"},
+ {"name":"pr4_escales","w":600,"h":400,"lt":3,"keep":"p4","shotJs":"const y=walkY(21.6,37.8)+1.56;const e=[21.6,y,37.8];return {hour:17.2,eye:[e,e],look:[[33,1.5,54],[33,1.5,54]],lens:35}"},
+ {"name":"pr5_cala","w":600,"h":400,"lt":3,"keep":"p5","shotJs":"const y=(walkY(24,136)??-38.4)+1.56;const e=[23.2,y,136];return {hour:18.7,eye:[e,e],look:[[24,-24,159],[24,-24,159]],lens:35}"}
+]

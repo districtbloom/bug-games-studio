@@ -1,0 +1,34 @@
+[
+ {
+  "name": "S1_l58",
+  "w": 600,
+  "h": 315,
+  "lt": 5,
+  "png": true,
+  "shotJs": "const h=19.8,d=lightAt(h).sunDisc,c=[24,-20,159],D=130;const e=[c[0]-d[0]*D,-35,c[2]-d[2]*D];const L=58,A=1.9047619047619047,tW=12*A/L,tH=12/L;const tc=[c[0]-e[0],c[2]-e[2]];const yc=Math.atan2(tc[0],-tc[1]);const al=Math.atan((0.73-.5)*2*tW);const yaw=yc-al;const p=Math.atan((0.76-.5)*2*tH);const look=[e[0]+Math.sin(yaw)*Math.cos(p)*10,e[1]+Math.sin(p)*10,e[2]-Math.cos(yaw)*Math.cos(p)*10];return {hour:h,eye:[e,e],look:[look,look],lens:L}"
+ },
+ {
+  "name": "S2_l48",
+  "w": 600,
+  "h": 315,
+  "lt": 5,
+  "png": true,
+  "shotJs": "const h=19.8,d=lightAt(h).sunDisc,c=[24,-20,159],D=130;const e=[c[0]-d[0]*D,-35,c[2]-d[2]*D];const L=48,A=1.9047619047619047,tW=12*A/L,tH=12/L;const tc=[c[0]-e[0],c[2]-e[2]];const yc=Math.atan2(tc[0],-tc[1]);const al=Math.atan((0.74-.5)*2*tW);const yaw=yc-al;const p=Math.atan((0.7-.5)*2*tH);const look=[e[0]+Math.sin(yaw)*Math.cos(p)*10,e[1]+Math.sin(p)*10,e[2]-Math.cos(yaw)*Math.cos(p)*10];return {hour:h,eye:[e,e],look:[look,look],lens:L}"
+ },
+ {
+  "name": "T1_l30",
+  "w": 270,
+  "h": 480,
+  "lt": 5,
+  "png": true,
+  "shotJs": "const h=19.8,d=lightAt(h).sunDisc,c=[24,-20,159],D=130;const e=[c[0]-d[0]*D,-35,c[2]-d[2]*D];const L=30,A=0.5625,tW=12*A/L,tH=12/L;const tc=[c[0]-e[0],c[2]-e[2]];const yc=Math.atan2(tc[0],-tc[1]);const al=Math.atan((0.5-.5)*2*tW);const yaw=yc-al;const p=Math.atan((0.58-.5)*2*tH);const look=[e[0]+Math.sin(yaw)*Math.cos(p)*10,e[1]+Math.sin(p)*10,e[2]-Math.cos(yaw)*Math.cos(p)*10];return {hour:h,eye:[e,e],look:[look,look],lens:L}"
+ },
+ {
+  "name": "T2_l34",
+  "w": 270,
+  "h": 480,
+  "lt": 5,
+  "png": true,
+  "shotJs": "const h=19.8,d=lightAt(h).sunDisc,c=[24,-20,159],D=130;const e=[c[0]-d[0]*D,-35,c[2]-d[2]*D];const L=34,A=0.5625,tW=12*A/L,tH=12/L;const tc=[c[0]-e[0],c[2]-e[2]];const yc=Math.atan2(tc[0],-tc[1]);const al=Math.atan((0.47-.5)*2*tW);const yaw=yc-al;const p=Math.atan((0.6-.5)*2*tH);const look=[e[0]+Math.sin(yaw)*Math.cos(p)*10,e[1]+Math.sin(p)*10,e[2]-Math.cos(yaw)*Math.cos(p)*10];return {hour:h,eye:[e,e],look:[look,look],lens:L}"
+ }
+]

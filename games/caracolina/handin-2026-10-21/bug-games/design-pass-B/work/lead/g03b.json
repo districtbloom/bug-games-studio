@@ -1,0 +1,5 @@
+[
+ {"name":"h1","w":800,"h":400,"lt":3,"shotJs":"const b=WORLD.brokenFace,R=norm(cross(b.D,[0,1,0]));let e=add(add(b.E,mul(R,-1.4)),mul(b.D,-3.0));e=[e[0],e[1]-0.7,e[2]];const L=add(add(b.E,mul(b.D,8.6)),mul(R,-0.7));return {hour:14.0,eye:[e,e],look:[[L[0],L[1]+0.9,L[2]],[L[0],L[1]+0.9,L[2]]],lens:30}"},
+ {"name":"h2","w":800,"h":400,"lt":3,"shotJs":"const b=WORLD.brokenFace,R=norm(cross(b.D,[0,1,0]));let e=add(add(b.E,mul(R,-3.2)),mul(b.D,-3.5));e=[e[0],e[1]-0.6,e[2]];const L=add(add(b.E,mul(b.D,8.6)),mul(R,-0.7));return {hour:14.0,eye:[e,e],look:[[L[0],L[1]+0.9,L[2]],[L[0],L[1]+0.9,L[2]]],lens:30}"},
+ {"name":"h3","w":800,"h":400,"lt":3,"shotJs":"const b=WORLD.brokenFace,R=norm(cross(b.D,[0,1,0]));let e=add(add(b.E,mul(R,0.8)),mul(b.D,-3.5));e=[e[0],e[1]-0.6,e[2]];const L=add(add(b.E,mul(b.D,8.6)),mul(R,-0.7));return {hour:14.0,eye:[e,e],look:[[L[0],L[1]+0.9,L[2]],[L[0],L[1]+0.9,L[2]]],lens:30}"}
+]

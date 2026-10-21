@@ -1,0 +1,6 @@
+[
+ {"name":"v1","w":1000,"h":500,"lt":5,"shotJs":"const h=19.95,d=lightAt(h).sunDisc,c=WORLD.floatingRock,D=90;const e=[c[0]-d[0]*D,26,c[2]-d[2]*D];return {hour:h,eye:[e,e],look:[[c[0],c[1]+8,c[2]],[c[0],c[1]+8,c[2]]],lens:42}"},
+ {"name":"v2","w":1000,"h":500,"lt":5,"shotJs":"const h=19.85,d=lightAt(h).sunDisc,c=WORLD.floatingRock,D=70;const e=[c[0]-d[0]*D,22,c[2]-d[2]*D+4];return {hour:h,eye:[e,e],look:[[c[0],c[1]+6,c[2]],[c[0],c[1]+6,c[2]]],lens:38}"},
+ {"name":"w1","w":1000,"h":500,"lt":5,"shot":{"hour":22.2,"eye":[[72,1.5,166],[72,1.5,166]],"look":[[24,5,159],[24,5,159]],"lens":34}},
+ {"name":"w2","w":1000,"h":500,"lt":5,"shot":{"hour":21.4,"eye":[[64,0.5,178],[64,0.5,178]],"look":[[24,6,159],[24,6,159]],"lens":38}}
+]

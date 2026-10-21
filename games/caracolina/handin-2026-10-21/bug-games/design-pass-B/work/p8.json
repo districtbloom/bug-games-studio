@@ -1,0 +1,6 @@
+[
+ {"name":"M1","w":1000,"h":500,"lt":5,"shotJs":"const h=19.7,d=lightAt(h).sunDisc,c=[24,-20,159],D=90;const e=[c[0]-d[0]*D,-33,c[2]-d[2]*D];return {hour:h,eye:[e,e],look:[c,c],lens:36}"},
+ {"name":"M2","w":1000,"h":500,"lt":5,"shotJs":"const h=19.8,d=lightAt(h).sunDisc,c=[24,-20,159],D=100;const e=[c[0]-d[0]*D,-34,c[2]-d[2]*D];return {hour:h,eye:[e,e],look:[c,c],lens:40}"},
+ {"name":"M3","w":1000,"h":500,"lt":5,"shotJs":"const h=19.6,d=lightAt(h).sunDisc,c=[24,-20,159],D=85;const e=[c[0]-d[0]*D,-31,c[2]-d[2]*D];return {hour:h,eye:[e,e],look:[[c[0],c[1]+2,c[2]],[c[0],c[1]+2,c[2]]],lens:34}"},
+ {"name":"M4","w":1000,"h":500,"lt":5,"shotJs":"const h=19.9,d=lightAt(h).sunDisc,c=[24,-20,159],D=110;const e=[c[0]-d[0]*D,-35,c[2]-d[2]*D];return {hour:h,eye:[e,e],look:[c,c],lens:44}"}
+]

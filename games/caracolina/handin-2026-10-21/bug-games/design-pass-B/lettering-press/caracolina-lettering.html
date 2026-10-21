@@ -1,0 +1,100 @@
+<title>Caracolina lettering press</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Kalam:wght@400;700&family=Alegreya+Sans:wght@400;800&display=swap">
+<style>
+/* layout: one sketchbook page; the press runs once on load and lays each proof on the page */
+:root {
+  --paper: #f3ead7; --ink: #1d1a33; --ink2: #4a4466; --cobalt: #2a55b8; --rule: rgba(42, 85, 184, .14); --proof: #e8dbbf;
+  --display: 'Caprasimo', Georgia, serif; --hand: 'Kalam', 'Alegreya Sans', cursive; --ui: 'Alegreya Sans', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper: #1b1a2a; --ink: #efe8d8; --ink2: #b9b2c9; --cobalt: #8fa8ec; --rule: rgba(143, 168, 236, .14); --proof: #2a2840; color-scheme: dark } }
+:root[data-theme="dark"] { --paper: #1b1a2a; --ink: #efe8d8; --ink2: #b9b2c9; --cobalt: #8fa8ec; --rule: rgba(143, 168, 236, .14); --proof: #2a2840; color-scheme: dark }
+body { background: var(--paper) repeating-linear-gradient(transparent 0 31px, var(--rule) 31px 32px); color: var(--ink); font-family: var(--ui); }
+main { max-width: 980px; margin: 0 auto; padding-block: 32px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 22px; }
+h1 { font-family: var(--display); font-weight: 400; color: var(--cobalt); font-size: clamp(30px, 6vw, 46px); margin: 0; text-wrap: balance; }
+.lede { font-family: var(--hand); font-size: 20px; color: var(--ink2); margin: 0; max-width: 62ch; }
+#state { font-family: var(--ui); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; color: var(--ink2); }
+.proofs { display: grid; gap: 18px; }
+figure { margin: 0; display: grid; gap: 8px; }
+figure img { width: 100%; background: var(--proof) repeating-conic-gradient(rgba(0,0,0,.05) 0 25%, transparent 0 50%) 0 0 / 24px 24px; }
+figcaption { font-family: var(--hand); font-size: 17px; color: var(--ink2); min-width: 0; overflow-wrap: anywhere; }
+</style>
+
+<main>
+  <h1>Caracolina lettering press</h1>
+  <p class="lede">This page sets the game's title, the pass name and the event name with the game's own lettering code and fonts, and keeps each proof in this page's files for the design pass.</p>
+  <p id="state" role="status">Setting type…</p>
+  <section class="proofs" id="proofs" aria-live="polite"></section>
+</main>
+
+<script>
+(() => {
+  const PI = Math.PI;
+  const C = { cobalt: '#2a55b8', tile: '#fbf8f1', coral: '#e8653a', ink: '#1d1a33', shadow: 'rgba(29,26,51,.25)' };
+  const sstate = t => { document.getElementById('state').textContent = t; };
+
+  /* the game's title lettering (src/studio_main.js drawTitle), drawn on its own: no veil, no taglines */
+  function title(fs) {
+    const pad = Math.round(fs * .28), probe = document.createElement('canvas').getContext('2d');
+    probe.font = `400 ${fs}px Caprasimo, Georgia, serif`;
+    const t1 = 'Carac', t2 = 'lina', w1 = probe.measureText(t1).width, w2 = probe.measureText(t2).width, gap = fs * .62;
+    const W = Math.ceil(w1 + gap + w2 + pad * 2), H = Math.ceil(fs * 1.12 + pad * 2);
+    const cv = document.createElement('canvas'); cv.width = W; cv.height = H; const x = cv.getContext('2d'); const k = fs / 190;
+    const x0 = pad, y0 = pad + fs * .86;
+    x.font = probe.font; x.textBaseline = 'alphabetic'; x.lineJoin = 'round';
+    x.fillStyle = C.shadow; x.fillText(t1, x0 + 6 * k, y0 + 14 * k); x.fillText(t2, x0 + w1 + gap + 6 * k, y0 + 14 * k);
+    x.lineWidth = 16 * k; x.strokeStyle = C.tile; x.strokeText(t1, x0, y0); x.strokeText(t2, x0 + w1 + gap, y0);
+    x.fillStyle = C.cobalt; x.fillText(t1, x0, y0); x.fillText(t2, x0 + w1 + gap, y0);
+    const cx = x0 + w1 + gap * .57, cy = y0 - fs * .28;
+    const spiral = (col, lw) => { x.strokeStyle = col; x.lineWidth = lw; x.lineCap = 'round'; x.beginPath();
+      const N = 120, th1 = 4.6 * PI, b = Math.log(44 / 1.6) / th1;
+      for (let i = 0; i <= N; i++) { const th = i / N * th1, r = 1.6 * Math.exp(b * th) * fs * .0068, px = cx + r * Math.cos(th + 1.2), py = cy + r * Math.sin(th + 1.2) * .96; i ? x.lineTo(px, py) : x.moveTo(px, py); }
+      x.stroke(); };
+    spiral(C.tile, 24 * k); spiral(C.coral, 11 * k);
+    return cv;
+  }
+
+  /* a name in the game's place-tile manner: Caprasimo in cobalt with the white tile outline */
+  function name(text, fs, fill, outline) {
+    const pad = Math.round(fs * .3), probe = document.createElement('canvas').getContext('2d');
+    probe.font = `400 ${fs}px Caprasimo, Georgia, serif`;
+    const w = probe.measureText(text).width, W = Math.ceil(w + pad * 2), H = Math.ceil(fs * 1.2 + pad * 2);
+    const cv = document.createElement('canvas'); cv.width = W; cv.height = H; const x = cv.getContext('2d'); const k = fs / 100;
+    const y0 = pad + fs * .9; x.font = probe.font; x.lineJoin = 'round';
+    x.fillStyle = C.shadow; x.fillText(text, pad + 3 * k, y0 + 7 * k);
+    x.lineWidth = 9 * k; x.strokeStyle = outline; x.strokeText(text, pad, y0);
+    x.fillStyle = fill; x.fillText(text, pad, y0);
+    return cv;
+  }
+
+  const blobOf = cv => new Promise(res => cv.toBlob(res, 'image/png'));
+
+  async function run() {
+    try { await Promise.all(['400 200px Caprasimo', '400 40px Kalam', "800 26px 'Alegreya Sans'"].map(f => document.fonts.load(f))); } catch (e) {}
+    if (!document.fonts.check('400 200px Caprasimo')) { sstate('The game’s fonts did not load, so nothing was set. Reload the page to try again.'); return; }
+    const proofs = [
+      ['title-lockup', title(420), 'The title, as the game sets it'],
+      ['title-lockup-min', title(64), 'The title at its smallest proof'],
+      ['pass-name', name('Sketchbook pass', 150, C.cobalt, C.tile), 'The pass name'],
+      ['event-name', name('The Festival of the Shell', 120, C.tile, C.cobalt), 'The event name, for night art'],
+    ];
+    const host = document.getElementById('proofs');
+    for (const [, cv, cap] of proofs) {
+      const f = document.createElement('figure'); const im = new Image(); im.alt = cap; im.src = cv.toDataURL('image/png');
+      const c = document.createElement('figcaption'); c.textContent = `${cap} · ${cv.width}×${cv.height}`; f.append(im, c); host.append(f);
+    }
+    const assets = window.claude && window.claude.use ? await window.claude.use('assets') : null;
+    if (!assets) { sstate('Proofs set. Only the page’s owner can keep them, so they were not saved from this view.'); return; }
+    sstate('Proofs set. Keeping them…');
+    const index = {};
+    try {
+      for (const [label, cv] of proofs) { const r = await assets.upload(await blobOf(cv)); index[label] = { id: r.id, w: cv.width, h: cv.height }; }
+      await assets.upload(new Blob([JSON.stringify({ press: 'caracolina-lettering', made: new Date().toISOString(), proofs: index })], { type: 'application/json' }), { type: 'application/json' });
+      sstate('Proofs set and kept. You can close this page.');
+    } catch (e) { sstate('The proofs are set but could not be kept (' + (e && e.code || 'error') + '). Reload the page to try again.'); }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+})();
+</script>

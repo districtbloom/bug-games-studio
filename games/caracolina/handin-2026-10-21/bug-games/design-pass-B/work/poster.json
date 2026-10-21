@@ -1,0 +1,5 @@
+[
+ {"name":"poster","w":2400,"h":1200,"lt":5,"png":true,"shotJs":"const h=19.85,d=lightAt(h).sunDisc,c=[24,-20,159],D=120;const e=[c[0]-d[0]*D,-35.5,c[2]-d[2]*D];const L=[c[0],c[1],c[2]+14];return {hour:h,eye:[e,e],look:[L,L],lens:48}"},
+ {"name":"poster-2x3","w":1200,"h":1800,"lt":5,"png":true,"shotJs":"const h=19.85,d=lightAt(h).sunDisc,c=[24,-20,159],D=120;const e=[c[0]-d[0]*D,-35.5,c[2]-d[2]*D];const L=[c[0],c[1]-1,c[2]+3];return {hour:h,eye:[e,e],look:[L,L],lens:38}"},
+ {"name":"poster-1x1","w":1600,"h":1600,"lt":5,"png":true,"shotJs":"const h=19.85,d=lightAt(h).sunDisc,c=[24,-20,159],D=120;const e=[c[0]-d[0]*D,-35.5,c[2]-d[2]*D];const L=[c[0],c[1],c[2]+6];return {hour:h,eye:[e,e],look:[L,L],lens:42}"}
+]

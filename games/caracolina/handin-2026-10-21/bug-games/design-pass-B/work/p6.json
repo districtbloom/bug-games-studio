@@ -1,0 +1,6 @@
+[
+ {"name":"y1","w":1000,"h":500,"lt":5,"shotJs":"const h=19.75,d=lightAt(h).sunDisc,c=WORLD.floatingRock,D=105;const e=[c[0]-d[0]*D+6,8,c[2]-d[2]*D+32];const L=[c[0]+d[0]*16,c[1]+1.5+d[1]*16,c[2]+d[2]*16];return {hour:h,eye:[e,e],look:[L,L],lens:74}"},
+ {"name":"y2","w":1000,"h":500,"lt":5,"shotJs":"const h=19.7,d=lightAt(h).sunDisc,c=WORLD.floatingRock,D=115;const e=[c[0]-d[0]*D+4,9,c[2]-d[2]*D+38];const L=[c[0]+d[0]*14,c[1]+1+d[1]*14,c[2]+d[2]*14];return {hour:h,eye:[e,e],look:[L,L],lens:80}"},
+ {"name":"y3","w":1000,"h":500,"lt":5,"shotJs":"const h=19.85,d=lightAt(h).sunDisc,c=WORLD.floatingRock,D=105;const e=[c[0]-d[0]*D+6,8,c[2]-d[2]*D+32];const L=[c[0]+d[0]*16,c[1]+1.5+d[1]*16,c[2]+d[2]*16];return {hour:h,eye:[e,e],look:[L,L],lens:74}"},
+ {"name":"y4","w":1000,"h":500,"lt":5,"shotJs":"const h=19.8,d=lightAt(h).sunDisc,c=WORLD.floatingRock,D=95;const e=[c[0]-d[0]*D+5,10,c[2]-d[2]*D+30];const L=[c[0]+d[0]*12,c[1]+.5+d[1]*12,c[2]+d[2]*12];return {hour:h,eye:[e,e],look:[L,L],lens:66}"}
+]

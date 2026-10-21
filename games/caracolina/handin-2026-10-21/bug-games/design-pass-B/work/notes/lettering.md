@@ -1,0 +1,18 @@
+### bug/title-lockup.png · NOT MADE in this pass (also the share card's title and the pass tile's name)
+- **Shows:** nothing yet.
+- **Made:** prepared, not finished.
+  - The game sets its title with its own code (`src/studio_main.js`, `drawTitle`): Caprasimo in cobalt with a white tile outline, and a coral snail-shell spiral for the "o". Its hand lettering is Kalam.
+  - Those fonts load from Google Fonts in the browser. This sandbox can't load them; an earlier font download was refused, and I did not route around it.
+  - So I published a private page, "Caracolina lettering press". It runs the game's title code in a real browser with the real fonts and keeps four transparent PNG proofs in the page's own file store:
+    - the title lockup, about 2.3k px wide;
+    - a 64 px-size proof for the minimum width;
+    - "Sketchbook pass";
+    - "The Festival of the Shell".
+  - The page only runs when it is open in the owner's app, and it was not opened before hand-back. Its file store was still empty at the last check.
+- **Agent:** the lead.
+- **Check:** none possible yet.
+- **Couldn't:** no title lettering anywhere in this zip.
+  - `share-card.png` is the art with its left half plain and ready for the title; the art-only copy is the same file.
+  - `pass/tile.png` has a blank label for the pass name.
+  - The event banner carries no lockup, which is optional.
+  - **To finish:** open the lettering press page once. I then read the proofs and add `title-lockup.png` (with its minimum width stated), the share card's title and the pass name, as the next version of this zip.

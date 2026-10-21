@@ -1,0 +1,34 @@
+[
+ {
+  "name": "p1_behind",
+  "w": 800,
+  "h": 400,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "\nPEOPLE.festival=false;\nconst r=PEOPLE.find('remei'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.75,98+k*.05);\nPEOPLE.attn={id:'remei',p:[3.899,32.002]};\nif(!true) PEOPLE.attn=null;\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nreturn {\"hour\": 19.75, \"eye\": [[3.899, -2.65, 32.002], [3.899, -2.65, 32.002]], \"look\": [[1.6, -3.0, 33.6], [1.6, -3.0, 33.6]], \"lens\": 40};\n"
+ },
+ {
+  "name": "p2_east",
+  "w": 800,
+  "h": 400,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "\nPEOPLE.festival=false;\nconst r=PEOPLE.find('remei'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.75,98+k*.05);\nPEOPLE.attn={id:'remei',p:[4.207,32.579]};\nif(!true) PEOPLE.attn=null;\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nreturn {\"hour\": 19.75, \"eye\": [[4.207, -2.65, 32.579], [4.207, -2.65, 32.579]], \"look\": [[1.6, -3.0, 33.6], [1.6, -3.0, 33.6]], \"lens\": 40};\n"
+ },
+ {
+  "name": "p3_west",
+  "w": 800,
+  "h": 400,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "\nPEOPLE.festival=false;\nconst r=PEOPLE.find('remei'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.75,98+k*.05);\nPEOPLE.attn={id:'remei',p:[-1.186,33.879]};\nif(!true) PEOPLE.attn=null;\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nreturn {\"hour\": 19.75, \"eye\": [[-1.186, -2.65, 33.879], [-1.186, -2.65, 33.879]], \"look\": [[1.6, -3.0, 33.6], [1.6, -3.0, 33.6]], \"lens\": 40};\n"
+ },
+ {
+  "name": "p4_wide",
+  "w": 800,
+  "h": 400,
+  "lt": 2.0,
+  "png": false,
+  "shotJs": "\nPEOPLE.festival=false;\nconst r=PEOPLE.find('remei'); r.visible=false; r.entry=-1; r.attnK=0;\nfor(let k=0;k<30;k++) PEOPLE.update(.05,19.75,98+k*.05);\nPEOPLE.attn={id:'remei',p:[4.3,30.0]};\nif(!true) PEOPLE.attn=null;\nfor(let k=0;k<40;k++) PEOPLE.attend(.05);\nreturn {\"hour\": 19.75, \"eye\": [[4.3, -2.6, 30.0], [4.3, -2.6, 30.0]], \"look\": [[1.6, -3.0, 33.6], [1.6, -3.0, 33.6]], \"lens\": 26};\n"
+ }
+]

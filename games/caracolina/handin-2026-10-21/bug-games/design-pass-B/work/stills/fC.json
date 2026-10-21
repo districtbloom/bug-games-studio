@@ -1,0 +1,208 @@
+[
+ {
+  "name": "load",
+  "load": {
+   "p0": "/tmp/claude-0/-home-claude/f5687e90-63e7-5f07-9dce-8a52b890766a/scratchpad/passB/work/stills/t4/pr0_petxina.print.jpg",
+   "p1": "/tmp/claude-0/-home-claude/f5687e90-63e7-5f07-9dce-8a52b890766a/scratchpad/passB/work/stills/t4/pr1_mercat.print.jpg",
+   "p2": "/tmp/claude-0/-home-claude/f5687e90-63e7-5f07-9dce-8a52b890766a/scratchpad/passB/work/stills/t4/pr2_cim.print.jpg",
+   "p3": "/tmp/claude-0/-home-claude/f5687e90-63e7-5f07-9dce-8a52b890766a/scratchpad/passB/work/stills/t4/pr3_jardi.print.jpg",
+   "p4": "/tmp/claude-0/-home-claude/f5687e90-63e7-5f07-9dce-8a52b890766a/scratchpad/passB/work/stills/t4/pr4_escales.print.jpg",
+   "p5": "/tmp/claude-0/-home-claude/f5687e90-63e7-5f07-9dce-8a52b890766a/scratchpad/passB/work/stills/t4/pr5_cala.print.jpg"
+  }
+ },
+ {
+  "name": "G4k",
+  "w": 800,
+  "h": 400,
+  "lt": 3,
+  "shot": {
+   "hour": 12.2,
+   "slow": 0.001,
+   "tBase": 14.925,
+   "eye": [
+    [
+     -22,
+     -36.8,
+     127.5
+    ],
+    [
+     -22,
+     -36.8,
+     127.5
+    ]
+   ],
+   "look": [
+    [
+     -6,
+     -33.2,
+     129.2
+    ],
+    [
+     -6,
+     -33.2,
+     129.2
+    ]
+   ],
+   "lens": 45
+  }
+ },
+ {
+  "name": "G4l",
+  "w": 800,
+  "h": 400,
+  "lt": 3,
+  "shot": {
+   "hour": 12.2,
+   "slow": 0.001,
+   "tBase": 15.0,
+   "eye": [
+    [
+     -16,
+     -36.8,
+     117.5
+    ],
+    [
+     -16,
+     -36.8,
+     117.5
+    ]
+   ],
+   "look": [
+    [
+     -5.5,
+     -32.4,
+     129.2
+    ],
+    [
+     -5.5,
+     -32.4,
+     129.2
+    ]
+   ],
+   "lens": 55
+  }
+ },
+ {
+  "name": "06",
+  "w": 1600,
+  "h": 800,
+  "lt": 12.6,
+  "png": true,
+  "pins": [
+   [
+    0,
+    "p0"
+   ],
+   [
+    1,
+    "p1"
+   ],
+   [
+    2,
+    "p2"
+   ],
+   [
+    3,
+    "p3"
+   ],
+   [
+    4,
+    "p4"
+   ],
+   [
+    5,
+    "p5"
+   ]
+  ],
+  "shot": {
+   "hour": 21.7,
+   "festival": true,
+   "eye": [
+    [
+     1.5,
+     25.75,
+     -64.5
+    ],
+    [
+     1.5,
+     25.75,
+     -64.5
+    ]
+   ],
+   "look": [
+    [
+     -6,
+     28.6,
+     -38
+    ],
+    [
+     -6,
+     28.6,
+     -38
+    ]
+   ],
+   "lens": 22
+  }
+ },
+ {
+  "name": "result-still",
+  "w": 1600,
+  "h": 352,
+  "lt": 3,
+  "png": true,
+  "pins": [
+   [
+    0,
+    "p0"
+   ],
+   [
+    1,
+    "p1"
+   ],
+   [
+    2,
+    "p2"
+   ],
+   [
+    3,
+    "p3"
+   ],
+   [
+    4,
+    "p4"
+   ],
+   [
+    5,
+    "p5"
+   ]
+  ],
+  "shot": {
+   "hour": 19.62,
+   "eye": [
+    [
+     -4.8,
+     25.6,
+     -66.6
+    ],
+    [
+     -4.8,
+     25.6,
+     -66.6
+    ]
+   ],
+   "look": [
+    [
+     -4.4,
+     26.75,
+     -77
+    ],
+    [
+     -4.4,
+     26.75,
+     -77
+    ]
+   ],
+   "lens": 24
+  }
+ }
+]

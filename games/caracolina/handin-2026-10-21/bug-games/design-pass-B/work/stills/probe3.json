@@ -1,0 +1,5 @@
+[
+ {"name":"court","probe":"const rows=[];for(let z=-12;z<=12;z+=1){let r='';for(let x=-12;x<=12;x+=1){const y=walkY(x,z);r+=y===null?'#':(Math.abs(y)<1.5?'.':(y>0?'+':'-'));}rows.push(z+' '+r);}return rows"},
+ {"name":"people","probe":"const out={};for(const [h,ids] of [[18.05,['remei','aurora','jaume','tinta']],[12.2,['rosalia','bernat','amb2','amb3']],[19.0,['quim']],[21.7,['aurora','remei','dolors']]]){PEOPLE.festival=h>21;for(const w of PEOPLE.list){w.entry=-1;w.visible=false;w.pos=null;w.state='hidden';}for(let k=0;k<40;k++)PEOPLE.update(.05,h,100+k*.05);for(const id of ids){const w=PEOPLE.find(id);out[h+':'+id]=w&&w.visible?{p:w.pos.map(v=>+v.toFixed(2)),f:w.face.map(v=>+v.toFixed(2)),s:w.state}:null;}}PEOPLE.festival=false;return out"},
+ {"name":"mercat","probe":"const rows=[];for(let z=-24;z<=-4;z+=1){let r='';for(let x=34;x<=58;x+=1){const y=walkY(x,z);r+=y===null?'#':'.';}rows.push(z+' '+r);}return rows"}
+]

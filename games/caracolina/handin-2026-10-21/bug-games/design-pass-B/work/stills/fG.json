@@ -1,0 +1,18 @@
+[
+ {
+  "name": "03a",
+  "w": 1600,
+  "h": 800,
+  "lt": 3,
+  "png": true,
+  "shotJs": "const b=WORLD.brokenFace,R=norm(cross(b.D,[0,1,0]));const e=add(b.E,mul(R,-1.4));const L=add(add(b.E,mul(b.D,8.6)),mul(R,-0.7));return {hour:17.0,eye:[e,e],look:[[L[0],L[1]+0.5,L[2]],[L[0],L[1]+0.5,L[2]]],lens:32}"
+ },
+ {
+  "name": "03g",
+  "w": 1600,
+  "h": 800,
+  "lt": 3,
+  "png": true,
+  "shotJs": "const b=WORLD.brokenFace,R=norm(cross(b.D,[0,1,0]));const e=add(b.E,mul(R,-1.4));const L=add(add(b.E,mul(b.D,8.6)),mul(R,-0.7));return {hour:14.0,eye:[e,e],look:[[L[0],L[1]+1.7,L[2]],[L[0],L[1]+1.7,L[2]]],lens:30}"
+ }
+]

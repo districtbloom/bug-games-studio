@@ -1,0 +1,6 @@
+[
+ {"name":"key_4k","w":3840,"lt":9.5,"shot":{"hour":18.8,"title":true,"eye":[[-8,20,-9],[-8,20,-9]],"look":[[10,11,55],[10,11,55]],"lens":26}},
+ {"name":"print_aurora","w":1600,"lt":5,"shot":{"hour":9.3,"eye":[[-2.3,1.55,-2.11],[-2.3,1.55,-2.11]],"look":[[-4.35,1.35,-1.15],[-4.35,1.35,-1.15]],"lens":34,"dof":{"f":2.3,"ap":5},"residentsOnly":true}},
+ {"name":"print_jardi","w":1600,"lt":5,"shotJs":"return {hour:17.9, eye:[[-58.6,JY_+1.62,1.1],[-58.6,JY_+1.62,1.1]], lookDir:true}"},
+ {"name":"print_festival","w":1600,"lt":2.6,"shot":{"hour":21.6,"festival":true,"friends":true,"eye":[[-12.2,26,-57],[-12.2,26,-57]],"look":[[12,31.8,-49.6],[12,31.8,-49.6]],"lens":26}}
+]
