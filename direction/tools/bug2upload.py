@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Turn a game's studio folder into the folder the games connector uploads.
 
-    python3 direction/tools/bug2upload.py <slug> --build <game.html> --out <dir> [--words <words.json>]
+    python3 direction/tools/bug2upload.py <slug> --build <game.html> --out <dir> [--words <words.json>] [--money <money.json>]
 
 Reads games/<slug>/bug/ (pictures by the direction's file names) and the
 game's words.json (default: games/<slug>/bug/words.json), and writes:
@@ -13,7 +13,8 @@ game's words.json (default: games/<slug>/bug/words.json), and writes:
 The platform fills its art slots from bug/ by file name, so game.json names
 no pictures except the cover (the 2:1 poster). Moments whose rule is
 UNDECIDED, empty control lists and every price stay out: nothing is declared
-that the game has not decided. Prints what it left out and why.
+that the game has not decided, unless --money names a file that declares
+products, pass and events (a mock, or prices he has said yes to). Prints what it left out and why.
 """
 import argparse, json, re, shutil, sys
 from pathlib import Path
@@ -109,6 +110,7 @@ def main():
     ap.add_argument("--build", required=True, help="the game's built single-file html")
     ap.add_argument("--out", required=True)
     ap.add_argument("--words", help="words.json (default: the studio's bug/words.json)")
+    ap.add_argument("--money", help="a JSON file with products, pass and events to declare (e.g. direction/mocks/<slug>.money.json)")
     a = ap.parse_args()
 
     bug = STUDIO / "games" / a.slug / "bug"
@@ -146,6 +148,12 @@ def main():
             break
     else:
         notes.append("no poster: the page has no cover")
+    if a.money:
+        money = json.loads(Path(a.money).read_text())
+        for k in ("products", "pass", "events"):
+            if k in money:
+                g[k] = money[k]
+        notes.append(f"declared {', '.join(k for k in ('products', 'pass', 'events') if k in money)} from {a.money}: {money.get('status', '')[:60]}")
     seals = seals_art(bug, g.get("moments", []), notes)
     if seals:
         g["art"] = seals

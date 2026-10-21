@@ -1,0 +1,34 @@
+{
+  "status": "MOCK for local testing (21 Oct). Prices sit inside the PROPOSED ranges in the vault's design/canvas/docs/kit/pricing.json (2026-10-20.proposed); dates, the pass length and the event goal are made up. Not a decision: nothing here goes to the dev site or live without his yes.",
+  "products": [
+    { "id": "biscuit-tape", "name": "Taped Biscuit", "description": "Skin · silver tape, an X across the lid", "price": 300, "kind": "durable" },
+    { "id": "pigeon-pal", "name": "Little Pope", "description": "Companion · Sal's palest pigeon rides the lid", "price": 400, "kind": "durable" },
+    { "id": "fog-trail", "name": "Fog trail", "description": "Trail · the fog follows Wren's heels", "price": 150, "kind": "durable" },
+    { "id": "hot-sauce-sticker", "name": "Nuclear Grandma", "description": "Sticker · La Palomita's hot sauce, on Biscuit's side", "price": 100, "kind": "durable" },
+    { "id": "wave-emote", "name": "Wave", "description": "Emote · the bus driver's wave", "price": 150, "kind": "durable" }
+  ],
+  "pass": {
+    "id": "long-way-home",
+    "name": "The Long Way Home",
+    "price": 950,
+    "days": 30,
+    "steps": [
+      { "free": { "id": "rosemary-sprig", "name": "Rosemary sprig" } },
+      { "pass": { "id": "cable-bell", "name": "Car 17's bell" } },
+      { "free": { "id": "walkie-chirp", "name": "Channel 3" } },
+      { "pass": { "id": "tart-sticker", "name": "Egg tart" } },
+      { "free": { "id": "pigeon-feather", "name": "Ethel's feather" } }
+    ],
+    "memberReward": { "step": 3, "id": "night-shift-lamp", "name": "Night Shift lamp" }
+  },
+  "events": [
+    {
+      "id": "long-table",
+      "name": "The Long Table",
+      "text": "On the night Kindly's smile is off, Carmody Street carries its tables out and eats one long dinner down the hill.",
+      "startsAt": "2026-10-21T18:00:00Z",
+      "endsAt": "2026-10-28T06:00:00Z",
+      "goal": { "label": "places set", "target": 5000, "perPlayer": 12 }
+    }
+  ]
+}
