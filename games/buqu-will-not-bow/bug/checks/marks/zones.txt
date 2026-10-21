@@ -1,0 +1,12 @@
+bug/icon-46.png: 92x92
+  nearest: ember 20.1 (#e6aa9e) · lilac 20.9 (#daacb4) · sun 20.6 (#ffe9d7) · mint 20.5 (#dcdfd4)
+  pixels: guarded 0 (0.00%), caution 0 (0.00%)
+  largest non-free patch: 0 px, box 0
+bug/emblem-30.png: 60x60
+  nearest: ember 20.9 (#edb0a3) · lilac 22.8 (#dedbdb) · sun 22.7 (#ffdcce) · mint 20.5 (#dcdfd4)
+  pixels: guarded 0 (0.00%), caution 0 (0.00%)
+  largest non-free patch: 0 px, box 0
+bug/chip-64.png: 128x128
+  nearest: ember 20.4 (#ecaea0) · lilac 20.5 (#d3a8b1) · sun 20.9 (#d5cbbc) · mint 20.5 (#dcdfd4)
+  pixels: guarded 0 (0.00%), caution 0 (0.00%)
+  largest non-free patch: 0 px, box 0

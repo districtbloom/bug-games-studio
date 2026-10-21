@@ -1,0 +1,50 @@
+{
+  "game": "Buqu Will Not Bow",
+  "note": "Round-2 proposals for the design pass: names and looks only. Nothing here is declared in game.json (the game has none yet), nothing is added to the game, and there are no prices.",
+  "store": [
+    { "id": "jade-trail", "name": "Jade trail", "kind": "trail", "look": "Buqu's paint trail laid in jade and turquoise tesserae instead of vermilion.", "read40": "one bold green arc of tiles" },
+    { "id": "peony-pin", "name": "Peony hairpin", "kind": "trim", "look": "A pink peony pinned into his white topknot.", "read40": "a pink flower on a white bun" },
+    { "id": "crane-companion", "name": "Crane companion", "kind": "companion", "look": "A red-crowned crane that flies beside him.", "read40": "a white bird, black wingtips, crimson crown" },
+    { "id": "fish-kite", "name": "Fish kite", "kind": "trim", "look": "A paper carp kite tied to the end of his braid.", "read40": "a striped turquoise fish on a line" }
+  ],
+  "ownedMark": { "verb": "Laid", "ownWord": "Laid", "look": "The last tessera is pressed into the grout at the tile's corner; the held frame is a small inset tile in the bottom-right corner." },
+  "pass": {
+    "id": "long-wall",
+    "name": "The Long Wall",
+    "stepUnit": "a span",
+    "stepUnitLook": "one stretch of wall between two watchtowers",
+    "rows": {
+      "free": "cream paper grout, the ground the game lays its tiles on",
+      "pass": "jade-hill contour courses",
+      "bug": "the Last Gate's dusk indigo"
+    },
+    "rewards": [
+      { "id": "plum-trail", "name": "Plum-blossom trail", "track": "free", "look": "a trail of pale pink plum petals" },
+      { "id": "jade-tassel", "name": "Jade tassel", "track": "free", "look": "a jade bead and tassel on the end of his braid" },
+      { "id": "lotus-chop", "name": "Lotus chop", "track": "free", "look": "his seal stamps a lotus instead of a square" },
+      { "id": "magpie-companion", "name": "Magpie companion", "track": "pass", "look": "a black-and-white magpie that flies with him" },
+      { "id": "cloud-ribbon", "name": "Cloud ribbon", "track": "pass", "look": "a cloud-scroll ribbon tied into the braid" },
+      { "id": "indigo-trail", "name": "Indigo trail", "track": "pass", "look": "a trail of deep indigo glaze" },
+      { "id": "lantern-pin", "name": "Lantern hairpin", "track": "pass", "look": "a small paper lantern pinned in the topknot" },
+      { "id": "moon-pin", "name": "Moon hairpin", "track": "bug.pass member reward", "look": "a crescent-moon hairpin" }
+    ],
+    "marker": { "object": "a paper lantern", "next": "swinging on its cord over the next span", "held": "set down on the last earned span, lit" },
+    "price": "not set (this pass sets no prices)",
+    "days": "not set"
+  },
+  "update": { "version": "v5", "change": "Imperial fireworks now fizzle out when they hit a wall instead of grinding against it.", "inBuild": true },
+  "event": { "id": "lantern-night", "name": "Lantern Night", "look": "The whole wall hung with paper lanterns under a night sky; Buqu flies through the strings.", "status": "proposal: the game has no events" },
+  "moments": {
+    "status": "proposal: the game has no game.json, so no declared moments. These are the game's own milestones (first reach of each zone, and every hidden seal).",
+    "list": [
+      { "name": "Valley of Parting Clouds", "slug": "valley-of-parting-clouds", "kind": "feat" },
+      { "name": "Jade Gorge", "slug": "jade-gorge", "kind": "feat" },
+      { "name": "Stair of a Thousand Eaves", "slug": "stair-of-a-thousand-eaves", "kind": "feat" },
+      { "name": "The Wind Gate", "slug": "the-wind-gate", "kind": "feat" },
+      { "name": "Mirror Lake", "slug": "mirror-lake", "kind": "feat" },
+      { "name": "The Last Gate", "slug": "the-last-gate", "kind": "feat" },
+      { "name": "The Unpainted Edge", "slug": "the-unpainted-edge", "kind": "feat" },
+      { "name": "Every hidden seal", "slug": "every-hidden-seal", "kind": "collection" }
+    ]
+  }
+}

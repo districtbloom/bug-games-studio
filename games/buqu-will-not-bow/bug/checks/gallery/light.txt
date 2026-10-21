@@ -1,0 +1,6 @@
+/home/claude/buqu/bug/gallery/01.png: L 0.814 C 0.294  light
+/home/claude/buqu/bug/gallery/02.png: L 0.762 C 0.328  light
+/home/claude/buqu/bug/gallery/03.png: L 0.767 C 0.34  light
+/home/claude/buqu/bug/gallery/04.png: L 0.81 C 0.301  light
+/home/claude/buqu/bug/gallery/05.png: L 0.418 C 0.308  mid
+/home/claude/buqu/bug/gallery/06.png: L 0.904 C 0.119  light

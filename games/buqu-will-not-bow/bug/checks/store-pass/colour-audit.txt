@@ -1,0 +1,95 @@
+bug/store/crane-companion.png
+    ember guarded  0.00% (largest 0px ) caution   0.0% (largest 7px 4x2)
+    lilac guarded  0.05% (largest 26px 10x5) caution   8.5% (largest 146px 14x15)
+    sun guarded  0.00% (largest 0px ) caution   0.0% (largest 14px 6x3)
+    mint guarded  1.15% (largest 35px 11x25) caution   2.7% (largest 128px 46x30)
+bug/store/fish-kite.png
+    ember guarded  0.00% (largest 0px ) caution   1.1% (largest 165px 15x16)
+    lilac guarded  1.44% (largest 127px 16x13) caution   7.7% (largest 160px 12x20)
+    sun guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    mint guarded  0.00% (largest 0px ) caution   1.1% (largest 39px 27x7)
+bug/store/jade-trail.png
+    ember guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    lilac guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    sun guarded  0.00% (largest 0px ) caution   0.9% (largest 292px 28x12)
+    mint guarded  0.29% (largest 6px 3x4) caution   2.0% (largest 65px 16x14)
+bug/store/peony-pin.png
+    ember guarded  0.00% (largest 0px ) caution   0.2% (largest 30px 5x8)
+    lilac guarded  0.00% (largest 0px ) caution   7.0% (largest 197px 18x20)
+    sun guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    mint guarded  1.29% (largest 39px 15x25) caution   3.8% (largest 130px 55x12)
+bug/pass/cloud-ribbon.png
+    ember guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    lilac guarded  0.42% (largest 10px 6x3) caution   2.8% (largest 148px 17x14)
+    sun guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    mint guarded  4.16% (largest 26px 23x4) caution  12.1% (largest 100px 38x18)
+bug/pass/ground-bug.png
+    ember guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    lilac guarded  0.56% (largest 19px 19x1) caution  10.1% (largest 75px 23x11)
+    sun guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    mint guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+bug/pass/ground-free.png
+    ember guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    lilac guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    sun guarded  0.00% (largest 0px ) caution   0.7% (largest 391px 23x18)
+    mint guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+bug/pass/ground-pass.png
+    ember guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    lilac guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    sun guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    mint guarded  4.72% (largest 26px 23x4) caution  13.0% (largest 100px 38x18)
+bug/pass/indigo-trail.png
+    ember guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    lilac guarded  0.42% (largest 11px 11x1) caution   1.4% (largest 6px 4x3)
+    sun guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    mint guarded  4.43% (largest 26px 23x4) caution  13.9% (largest 100px 38x18)
+bug/pass/jade-tassel.png
+    ember guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    lilac guarded  0.00% (largest 0px ) caution   0.0% (largest 12px 4x4)
+    sun guarded  0.00% (largest 0px ) caution   0.7% (largest 391px 23x18)
+    mint guarded  0.54% (largest 9px 9x1) caution   3.7% (largest 675px 44x71)
+bug/pass/lantern-pin.png
+    ember guarded  0.00% (largest 0px ) caution   0.2% (largest 5px 3x3)
+    lilac guarded  0.00% (largest 0px ) caution   1.7% (largest 69px 10x12)
+    sun guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    mint guarded  3.38% (largest 26px 23x4) caution  10.6% (largest 100px 38x18)
+bug/pass/lotus-chop.png
+    ember guarded  0.00% (largest 0px ) caution   4.7% (largest 48px 10x10)
+    lilac guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    sun guarded  0.00% (largest 0px ) caution   0.3% (largest 28px 11x18)
+    mint guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+bug/pass/magpie-companion.png
+    ember guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    lilac guarded  0.20% (largest 9px 9x1) caution   0.8% (largest 38px 9x7)
+    sun guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    mint guarded  3.93% (largest 26px 23x4) caution  11.5% (largest 100px 38x18)
+bug/pass/moon-pin.png
+    ember guarded  0.00% (largest 0px ) caution   0.1% (largest 13px 4x5)
+    lilac guarded  0.64% (largest 19px 19x1) caution  11.0% (largest 75px 23x11)
+    sun guarded  0.00% (largest 0px ) caution   0.1% (largest 20px 6x5)
+    mint guarded  0.00% (largest 0px ) caution   0.4% (largest 101px 20x13)
+bug/pass/plum-trail.png
+    ember guarded  0.00% (largest 0px ) caution   0.2% (largest 4px 3x2)
+    lilac guarded  0.00% (largest 0px ) caution   0.9% (largest 44px 8x9)
+    sun guarded  0.00% (largest 0px ) caution   0.7% (largest 391px 23x18)
+    mint guarded  0.00% (largest 0px ) caution   0.0% (largest 1px 1x1)
+bug/pass/tile.png
+    ember guarded  0.00% (largest 0px ) caution   0.0% (largest 4px 4x1)
+    lilac guarded  0.00% (largest 0px ) caution   7.9% (largest 64px 8x8)
+    sun guarded  0.00% (largest 0px ) caution   1.0% (largest 107px 16x8)
+    mint guarded  1.03% (largest 22px 5x17) caution   4.2% (largest 130px 37x23)
+bug/marker-held.png
+    ember guarded  0.00% (largest 0px ) caution  10.9% (largest 12px 3x8)
+    lilac guarded  0.00% (largest 0px ) caution   8.3% (largest 6px 4x3)
+    sun guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    mint guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+bug/marker-next.png
+    ember guarded  0.00% (largest 0px ) caution  10.1% (largest 6px 1x6)
+    lilac guarded  0.00% (largest 0px ) caution   6.7% (largest 6px 4x2)
+    sun guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    mint guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+bug/reward-held.png
+    ember guarded  0.00% (largest 0px ) caution   5.0% (largest 47px 38x2)
+    lilac guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    sun guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )
+    mint guarded  0.00% (largest 0px ) caution   0.0% (largest 0px )

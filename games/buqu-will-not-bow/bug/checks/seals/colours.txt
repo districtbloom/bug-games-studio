@@ -1,0 +1,27 @@
+valley-of-parting-clouds-earned: #dbe7db 3.8% mint 17.9; #57bdc9 2.5% mint 18.8; #dbe1d5 2.9% mint 19.4; #e1e7db 1.2% mint 19.7
+valley-of-parting-clouds-progress: all glazes >= 20 from ember/lilac/sun/mint
+valley-of-parting-clouds-locked: all glazes >= 20 from ember/lilac/sun/mint
+jade-gorge-earned: #dbe7d5 3.9% mint 17.1; #dbe7db 3.7% mint 17.9; #2da569 1.4% mint 18.9; #dbe1d5 7.8% mint 19.4; #e1e7db 1.3% mint 19.7
+jade-gorge-progress: all glazes >= 20 from ember/lilac/sun/mint
+jade-gorge-locked: all glazes >= 20 from ember/lilac/sun/mint
+stair-of-a-thousand-eaves-earned: #dbe7db 3.7% mint 17.9; #57bdc9 2.4% mint 18.8; #dbe1d5 3.3% mint 19.4; #e1e7db 1.3% mint 19.7
+stair-of-a-thousand-eaves-progress: all glazes >= 20 from ember/lilac/sun/mint
+stair-of-a-thousand-eaves-locked: all glazes >= 20 from ember/lilac/sun/mint
+the-wind-gate-earned: #dbe7db 4.3% mint 17.9; #dbe1d5 3.3% mint 19.4; #e1e7db 0.8% mint 19.7
+the-wind-gate-progress: all glazes >= 20 from ember/lilac/sun/mint
+the-wind-gate-locked: all glazes >= 20 from ember/lilac/sun/mint
+mirror-lake-earned: #dbe7d5 1.7% mint 17.1; #dbe7db 4.3% mint 17.9; #dbe1d5 10.7% mint 19.4; #e1e7db 0.8% mint 19.7
+mirror-lake-progress: all glazes >= 20 from ember/lilac/sun/mint
+mirror-lake-locked: all glazes >= 20 from ember/lilac/sun/mint
+the-last-gate-earned: #f3e1c3 0.6% sun 17.0; #e1d5b7 1.2% sun 17.2; #f9edc9 0.6% sun 17.4; #ffedcf 0.7% sun 17.8; #e1cfb7 0.6% sun 17.9; #dbe7db 4.6% mint 17.9
+the-last-gate-progress: all glazes >= 20 from ember/lilac/sun/mint
+the-last-gate-locked: all glazes >= 20 from ember/lilac/sun/mint
+the-unpainted-edge-earned: #dbe7db 4.3% mint 17.9; #dbe1d5 3.3% mint 19.4; #e1e7db 0.8% mint 19.7
+the-unpainted-edge-progress: all glazes >= 20 from ember/lilac/sun/mint
+the-unpainted-edge-locked: all glazes >= 20 from ember/lilac/sun/mint
+every-hidden-seal-earned: #dbe7d5 3.1% mint 17.1; #2da569 0.7% mint 18.9; #dbe1d5 14.7% mint 19.4
+every-hidden-seal-progress: all glazes >= 20 from ember/lilac/sun/mint
+every-hidden-seal-locked: all glazes >= 20 from ember/lilac/sun/mint
+lantern-night-earned: #f38193 0.5% ember 19.6
+lantern-night-progress: all glazes >= 20 from ember/lilac/sun/mint
+lantern-night-locked: all glazes >= 20 from ember/lilac/sun/mint
