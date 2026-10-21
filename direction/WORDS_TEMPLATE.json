@@ -1,0 +1,44 @@
+{
+  "_read_me": "The page's words. Fill every field from the game as it is. Anything not decided: \"UNDECIDED\". Delete this line.",
+
+  "title": "",
+  "hook": "the one line under the title: what you do and against what, at most 110 characters",
+  "playing_word": "",
+  "hover_hint": { "desktop": "Hover to …", "phone": "Tap to …" },
+  "echo": "#RRGGBB",
+
+  "description": "2–3 sentences: what it is and how you play",
+  "goal": "one line",
+  "tips": ["", "", ""],
+
+  "genre": "",
+  "players": "1",
+  "coop": false,
+  "minutes": 0,
+  "inputs": ["keyboard"],
+  "mood": "",
+  "tags": ["", "", ""],
+  "contentNote": "",
+
+  "controls": {
+    "keyboard": [{ "key": "", "action": "", "note": "" }],
+    "mouse": [],
+    "gamepad": [],
+    "touch": []
+  },
+
+  "moments": [{ "name": "", "rule": "", "kind": "feat" }],
+
+  "captions": { "gallery/01.png": "" },
+
+  "place_strings": [""],
+
+  "verb": "",
+  "stat_nouns": [""],
+  "own_word": "",
+  "bought_line": "",
+  "result_lines": [""],
+  "friend_lines": ["", ""],
+  "quick_chat": ["", ""],
+  "pause_line": ""
+}

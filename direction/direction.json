@@ -1,0 +1,1713 @@
+{
+ "version": 3,
+ "source": "Every line traces to the design docs on the bug.games canvas (docs/DECISIONS.md, PUBLISH_DIRECTION, CREATOR_KIT, GUIDE, BOARD_RULES, POSTER_PRINCIPLES, GAMEPAGE, RETURN, HOME_V2, the living-poster CONTRACT, wall.py). Each slot's sources list the doc and its status label. Grounded 20 Oct 2026.",
+ "levels": {
+  "live": {
+   "title": "Needed to go live",
+   "sub": "bug.games' own checks. Fix anything marked ✕ before you publish."
+  },
+  "foryou": {
+   "title": "Needed for For You and a full page",
+   "sub": "Without these the game still plays from a link, but it isn't shown on For You and its page uses plain placeholders."
+  },
+  "optional": {
+   "title": "Optional: makes it shine",
+   "sub": "Nice to have. Nothing breaks without them."
+  },
+  "later": {
+   "title": "When you add more",
+   "sub": "Only needed once the game sells something, has a pass, ships an update or runs an event."
+  },
+  "design": {
+   "title": "Store, pass, updates and events · design only",
+   "sub": "For this pass, only the pictures. Nothing goes into the game's code or game.json, nothing is declared and no prices are set. Your chat proposes the items first."
+  },
+  "words": {
+   "title": "The page's words",
+   "sub": "Every line on the page that the game writes: the hero, About, controls, details, the seals' names and rules, gallery captions and the game's own voice. No pictures. Numbers, reviews, friends and prices are bug.games'."
+  }
+ },
+ "slots": [
+  {
+   "key": "poster",
+   "level": "foryou",
+   "rule": "PD-3.1",
+   "label": "For You poster",
+   "what": "The one picture people see on For You, on the game page and in lists.",
+   "size": "2:1, at least 1600×800, plus tall (2:3) and square versions, or a moving poster that lays out",
+   "file": "bug/poster.png, plus bug/poster-2x3.png and bug/poster-1x1.png",
+   "must": [
+    "One image you can name in five words, on the game's own ground, edge to edge",
+    "It shows what the game is about: who you are and what you're up against, not only a character's mood",
+    "One character in one moment, or one object in one light",
+    "A register chosen for the wall: silhouette (one shape holds the world), stage (one lit pocket in the dark) or edition (printed lettering is the art)",
+    "Two to four inks, one of them the game's own",
+    "The game's own look (medium, line, light, characters), but not the key art itself: no title, buttons, full cast or busy background",
+    "Light that visibly comes from a source in the picture",
+    "A clear focal path at rest: detail lives where the eye lands",
+    "Tall (2:3) and square versions in which the one image still holds; recompose them if a crop loses it",
+    "Reads at 90×70"
+   ],
+   "never": [
+    "Title lettering, numbers, prices, a HUD, a play button, badges, a frame, a border or a vignette (lettering only on an approved Edition poster, on a plate never squeezed below ~200 px)",
+    "Anything important in the bottom 26 px (the caption strip) or a busy bottom-left corner (the stamps sit there)",
+    "Ember, lilac or sun as a flat block of 24×24 or more, or within 120 px of the caption strip, where Play appears",
+    "Changing the game's own colours to pass a check"
+   ],
+   "check": "Preview it at 740×370, 260×367, 150×177 and 90×70, and in every wall shape (wall.py). Measure its light band (measure.py light): no light poster beside a light one, no loud beside loud.",
+   "sources": [
+    {
+     "line": "2:1, at least 1600×800",
+     "source": "docs/PUBLISH_DIRECTION.md §2 #1; docs/CREATOR_KIT.md tier 1 #1",
+     "status": "PROVEN"
+    },
+    {
+     "line": "plus tall (2:3) and square versions, or a moving poster that lays out",
+     "source": "docs/CREATOR_KIT.md tier 1 #1 (\"with tall (2:3) and square crops or a module that lays out\"); §Bible 6 (\"2:1, 2:3, 1:1 and 9:16 crops\")",
+     "status": "PROPOSED as a required kit; PROVEN in parts (13 bibles)"
+    },
+    {
+     "line": "One image you can name in five words…",
+     "source": "docs/PUBLISH_DIRECTION.md §3.1; docs/POSTER_PRINCIPLES.md principle 1",
+     "status": "PROVEN"
+    },
+    {
+     "line": "One character in one moment, or one object in one light",
+     "source": "docs/PUBLISH_DIRECTION.md §3.1",
+     "status": "PROVEN"
+    },
+    {
+     "line": "A register chosen for the wall…",
+     "source": "docs/POSTER_PRINCIPLES.md principle 2; docs/GUIDE.md §3.3",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Two to four inks, one of them the game's own",
+     "source": "docs/PUBLISH_DIRECTION.md §3.1; docs/CREATOR_KIT.md #1; docs/POSTER_PRINCIPLES.md principle 3",
+     "status": "PROVEN"
+    },
+    {
+     "line": "The game's own look … not the key art itself",
+     "source": "docs/PUBLISH_DIRECTION.md §3.1; docs/POSTER_PRINCIPLES.md principle 8",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Light that visibly comes from a source",
+     "source": "docs/PUBLISH_DIRECTION.md §3.1 (Dot pilot review)",
+     "status": "ADOPTED 20 Oct"
+    },
+    {
+     "line": "A clear focal path at rest",
+     "source": "docs/POSTER_PRINCIPLES.md principle 6; docs/CREATOR_KIT.md §Bible 6",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Tall (2:3) and square versions…",
+     "source": "docs/CREATOR_KIT.md #1 and §Bible 6 (\"what moves in narrow crops\")",
+     "status": "PROPOSED"
+    },
+    {
+     "line": "Reads at 90×70",
+     "source": "docs/PUBLISH_DIRECTION.md §3.1; docs/POSTER_PRINCIPLES.md principle 1; docs/CREATOR_KIT.md self-check 1",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Title lettering, numbers, prices…",
+     "source": "docs/PUBLISH_DIRECTION.md §3.1, §4; docs/GUIDE.md §3.7; docs/POSTER_PRINCIPLES.md principle 5",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Anything important in the bottom 26 px … bottom-left corner",
+     "source": "docs/PUBLISH_DIRECTION.md §3.1; docs/POSTER_PRINCIPLES.md principle 9; docs/BOARD_RULES.md rule 4 (stamps)",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Ember, lilac or sun as a flat block…",
+     "source": "docs/PUBLISH_DIRECTION.md §3.1, §3.4; docs/GUIDE.md §3.8",
+     "status": "PROVEN 13/13"
+    },
+    {
+     "line": "Changing the game's own colours to pass a check",
+     "source": "docs/PUBLISH_DIRECTION.md §3.1 (Dot pilot review)",
+     "status": "ADOPTED 20 Oct"
+    },
+    {
+     "line": "Preview it at 740×370, 260×367, 150×177 and 90×70",
+     "source": "docs/CREATOR_KIT.md #1 \"How it's checked\"",
+     "status": "PROPOSED"
+    },
+    {
+     "line": "every wall shape (wall.py)",
+     "source": "docs/PUBLISH_DIRECTION.md §3.1 checks; kit/tools/wall.py",
+     "status": "PROVEN tool"
+    },
+    {
+     "line": "light band … no light beside light, no loud beside loud",
+     "source": "docs/GUIDE.md §3.4; docs/CREATOR_KIT.md self-check 4",
+     "status": "PROPOSED thresholds; PROVEN intent"
+    },
+    {
+     "line": "It shows what the game is about: who you are and what you're up against, not only a character's mood",
+     "source": "Founder, 20 Oct 23:13, on the live For You board",
+     "status": "DECIDED"
+    }
+   ]
+  },
+  {
+   "key": "focus",
+   "level": "foryou",
+   "rule": "PD-3.1",
+   "needs": "poster",
+   "label": "Focus point",
+   "what": "The spot that must stay in view when the wall reshapes the poster: compressed plates crop around it, open plates grow from it.",
+   "size": "x and y, 0–1",
+   "file": "bug/publish.json as {\"focus\":{\"x\":…,\"y\":…}}",
+   "must": [
+    "The one image survives every wall shape around this point, from a 3.5:1 strip (577×163) to a 1:2.2 column (140×305)",
+    "It sits on the character or the one object, not on empty ground",
+    "It still holds where the poster is shown 4:3 (the phone game page) and as a half plate (the phone wall)"
+   ],
+   "never": [],
+   "check": "Run wall.py with --focus x,y and look at every shape; then crop the poster to 4:3 around the point.",
+   "sources": [
+    {
+     "line": "The one image survives every wall shape…",
+     "source": "docs/PUBLISH_DIRECTION.md §3.1; kit/tools/wall.py (\"from a 3.5:1 strip to a 1:2 column\")",
+     "status": "PROVEN"
+    },
+    {
+     "line": "It sits on the character or the one object",
+     "source": "docs/BOARD_RULES.md Motion (\"compressed plates crop around their character (focal crop)\"); living-poster/CONTRACT.md (lb/CONTRACT.md) anchor()",
+     "status": "PROVEN 13/13"
+    },
+    {
+     "line": "4:3 on the phone game page; half plates on the phone wall",
+     "source": "docs/GAMEPAGE.md §3 Phone (\"poster 4:3 full width\"); docs/HOME_V2.md (\"phone mosaic … full 2:1 plates and pairs of halves\")",
+     "status": "OBSERVED"
+    },
+    {
+     "line": "wall.py with --focus",
+     "source": "kit/tools/wall.py",
+     "status": "PROVEN tool"
+    },
+    {
+     "line": "crop to 4:3",
+     "source": "docs/GAMEPAGE.md §3 Phone",
+     "status": "OBSERVED"
+    }
+   ]
+  },
+  {
+   "key": "line",
+   "level": "foryou",
+   "rule": "Founder 20 Oct",
+   "label": "One-line pitch",
+   "what": "One sentence of what you do in the game. It replaces the verb on the For You strip when a plate opens.",
+   "size": "one sentence, at most 70 characters",
+   "file": "bug/publish.json as {\"line\":\"…\"}",
+   "must": [
+    "What the player does, in the game's own words, plain",
+    "Fits 70 characters"
+   ],
+   "never": [
+    "Superlatives, prices or other games' names"
+   ],
+   "check": "Read it aloud: would a stranger know what they'd be doing?",
+   "sources": [
+    {
+     "line": "One sentence of what you do instead of the verb",
+     "source": "Founder, 20 Oct 23:13, on the live For You board",
+     "status": "DECIDED"
+    }
+   ]
+  },
+  {
+   "key": "icon",
+   "level": "foryou",
+   "rule": "PD-3.7",
+   "label": "Icon",
+   "what": "The small square in rows, Continue, Inbox and the Wallet. Shown at 46 px.",
+   "size": "92×92, drawn for 46",
+   "file": "bug/icon-46.png",
+   "must": [
+    "Drawn for 46, not the poster shrunk: name the 2–3 last survivors (a head, eyes, one hot colour) and draw only those",
+    "Square with sharp corners, never masked",
+    "Reads at 1× on night and on linen, beside three other games' marks"
+   ],
+   "never": [
+    "Full bodies, fine lines, text or a scene",
+    "A shape that reads as a generic symbol: a blob, a gem, wifi, a letter, a gear"
+   ],
+   "check": "Look at it at 1× on night and on linen, and at 4× with hard pixels, beside three other games' icons.",
+   "sources": [
+    {
+     "line": "Drawn for 46 … last survivors",
+     "source": "docs/PUBLISH_DIRECTION.md §3.7; docs/CREATOR_KIT.md #2; docs/GUIDE.md §6",
+     "status": "PROVEN 13/13"
+    },
+    {
+     "line": "Square with sharp corners, never masked",
+     "source": "docs/PUBLISH_DIRECTION.md §3.7 (Dot pilot review)",
+     "status": "ADOPTED 20 Oct"
+    },
+    {
+     "line": "Reads at 1× on night and on linen…",
+     "source": "docs/PUBLISH_DIRECTION.md §3.7; docs/CREATOR_KIT.md self-check 6",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Full bodies, fine lines, text or a scene",
+     "source": "docs/CREATOR_KIT.md #2; docs/PUBLISH_DIRECTION.md §3.7",
+     "status": "PROVEN"
+    },
+    {
+     "line": "A generic symbol…",
+     "source": "docs/PUBLISH_DIRECTION.md §3.7; docs/GUIDE.md §6 failure table",
+     "status": "PROVEN"
+    },
+    {
+     "line": "1× night and linen, 4× hard pixels",
+     "source": "docs/GUIDE.md §6; docs/CREATOR_KIT.md #2",
+     "status": "PROVEN"
+    }
+   ]
+  },
+  {
+   "key": "emblem",
+   "level": "foryou",
+   "rule": "PD-3.7",
+   "label": "Emblem",
+   "what": "The tiny mark on avatars, friend lines and seal corners. Shown at 30 px.",
+   "size": "60×60, drawn for 30",
+   "file": "bug/emblem-30.png",
+   "must": [
+    "Fewer parts than the icon",
+    "Square with sharp corners, never masked",
+    "Reads at 1× on night and on linen"
+   ],
+   "never": [
+    "The icon scaled down",
+    "Text, fine lines or a scene",
+    "A generic symbol"
+   ],
+   "check": "Look at it at 30 px, 1× on night and on linen, and at 4× with hard pixels.",
+   "sources": [
+    {
+     "line": "Fewer parts than the icon",
+     "source": "docs/PUBLISH_DIRECTION.md §3.7; docs/CREATOR_KIT.md #3",
+     "status": "PROVEN 13/13"
+    },
+    {
+     "line": "Square … never masked",
+     "source": "docs/PUBLISH_DIRECTION.md §3.7",
+     "status": "ADOPTED 20 Oct"
+    },
+    {
+     "line": "Reads at 1× on night and on linen",
+     "source": "docs/CREATOR_KIT.md #3",
+     "status": "PROVEN"
+    },
+    {
+     "line": "The icon scaled down",
+     "source": "docs/CREATOR_KIT.md #3",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Text, fine lines or a scene; a generic symbol",
+     "source": "docs/PUBLISH_DIRECTION.md §3.7",
+     "status": "PROVEN"
+    },
+    {
+     "line": "30 px check",
+     "source": "docs/CREATOR_KIT.md #3 (\"Same as 2, at 30\")",
+     "status": "PROVEN"
+    }
+   ]
+  },
+  {
+   "key": "keyStill",
+   "level": "foryou",
+   "rule": "PD-3.8",
+   "plan": "which moment it shows",
+   "label": "Continue picture",
+   "what": "\"The world as you left it\": the Continue card on Home (360×176) and on the game page (132×66).",
+   "size": "720×352",
+   "file": "bug/key-still.png",
+   "must": [
+    "One moment of tension: the world as you left it",
+    "The subject in the middle",
+    "The same finish as the poster; a daylight scene still gets one light drawn in the style"
+   ],
+   "never": [
+    "Numbers, names or buttons",
+    "A flat render"
+   ],
+   "check": "Look at it in the Continue card at 360×176 and at 132×66.",
+   "sources": [
+    {
+     "line": "720×352 (shown 360×176)",
+     "source": "docs/CREATOR_KIT.md #4; docs/RETURN.md asset list 1",
+     "status": "PROVEN 3 pilots"
+    },
+    {
+     "line": "132×66 on the game page",
+     "source": "docs/GAMEPAGE.md §4 hook cont",
+     "status": "OBSERVED"
+    },
+    {
+     "line": "One moment of tension",
+     "source": "docs/PUBLISH_DIRECTION.md §3.8; docs/GUIDE.md §2 Continue row",
+     "status": "PROVEN 3 pilots"
+    },
+    {
+     "line": "The subject in the middle",
+     "source": "docs/PUBLISH_DIRECTION.md §3.8; docs/CREATOR_KIT.md #4",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Same finish; daylight gets one light",
+     "source": "docs/PUBLISH_DIRECTION.md §3.8 (Dot sketch review)",
+     "status": "ADOPTED 20 Oct"
+    },
+    {
+     "line": "Numbers, names or buttons",
+     "source": "docs/PUBLISH_DIRECTION.md §3.8; docs/CREATOR_KIT.md #4",
+     "status": "PROVEN"
+    },
+    {
+     "line": "A flat render",
+     "source": "docs/PUBLISH_DIRECTION.md §3.8 (\"Flat renders fail\")",
+     "status": "ADOPTED 20 Oct"
+    },
+    {
+     "line": "Preview in the Continue card",
+     "source": "docs/CREATOR_KIT.md #4 (\"Preview in the Continue card at 1280 and 390\")",
+     "status": "PROPOSED"
+    }
+   ]
+  },
+  {
+   "key": "result",
+   "level": "foryou",
+   "rule": "PD-3.8",
+   "label": "Result picture",
+   "what": "The payoff behind the session result (shown about 800×176). The platform prints every word and number over it.",
+   "size": "1600×352, subject in the middle 720×352",
+   "file": "bug/result-still.png",
+   "must": [
+    "The game's payoff moment",
+    "The subject in the middle 720×352",
+    "The same finish as the poster"
+   ],
+   "never": [
+    "Any text or numbers at all; a sign in the world becomes a shape",
+    "A count or a price baked in (it goes stale and can lie)"
+   ],
+   "check": "Preview it with the platform's headline and numbers over it.",
+   "sources": [
+    {
+     "line": "1600×352, subject in the middle 720×352",
+     "source": "docs/PUBLISH_DIRECTION.md §3.8; docs/CREATOR_KIT.md #5; docs/RETURN.md asset list 2",
+     "status": "PROVEN 3 pilots"
+    },
+    {
+     "line": "shown about 800×176",
+     "source": "docs/GUIDE.md §2 Session result; docs/RETURN.md",
+     "status": "PROVEN 3 pilots"
+    },
+    {
+     "line": "The game's payoff moment",
+     "source": "docs/PUBLISH_DIRECTION.md §3.8",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Same finish",
+     "source": "docs/PUBLISH_DIRECTION.md §3.8",
+     "status": "ADOPTED 20 Oct"
+    },
+    {
+     "line": "No text or numbers; signs become shapes",
+     "source": "docs/PUBLISH_DIRECTION.md §3.8, §4",
+     "status": "PROVEN"
+    },
+    {
+     "line": "A count or a price baked in",
+     "source": "docs/CREATOR_KIT.md #5",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Preview with the platform's numbers over it",
+     "source": "docs/CREATOR_KIT.md #5",
+     "status": "PROPOSED"
+    }
+   ]
+  },
+  {
+   "key": "gallery",
+   "level": "foryou",
+   "rule": "PD-3.5",
+   "plan": "which 6 features (at least 3), in what order, with a caption of ≤60 characters each",
+   "min": 3,
+   "label": "Gallery",
+   "what": "The pictures people flick through under the poster before they press Play. Each one shows one feature.",
+   "size": "2:1, 1600×800, subject inside the central 4:3",
+   "file": "bug/gallery/01.png … 06.png",
+   "must": [
+    "Up to 6 feature slides, one feature each (6 fills the strip; at least 3), in an order that tells the game: the core loop, a second mechanic, a place, a character, together (only if co-op), the payoff",
+    "A real moment from the current build, staged with the game's own renderer and finished like the poster",
+    "The subject inside the central 4:3: the phone shows a 4:3 crop",
+    "Slides that vary: different places, scales or characters",
+    "The bottom 26 px calm",
+    "Alt text that says what happens"
+   ],
+   "never": [
+    "Text added to the picture: titles, taglines, arrows, NEW badges, ratings, prices (the game's own HUD in real play may stay)",
+    "A plain engine screenshot that loses the look",
+    "The poster again",
+    "Menus, settings or loading screens",
+    "A moment that doesn't exist yet"
+   ],
+   "check": "Look at each at 100 px wide next to its central 4:3 crop: the subject must read in both.",
+   "sources": [
+    {
+     "line": "3–6 feature slides … in an order that tells the game",
+     "source": "docs/DECISIONS.md 20 Oct (gallery shape approved: \"3–6 slides of one feature each\"); docs/PUBLISH_DIRECTION.md §3.5.1–2",
+     "status": "DECIDED 20 Oct"
+    },
+    {
+     "line": "A real moment from the current build",
+     "source": "docs/PUBLISH_DIRECTION.md §3.5.4",
+     "status": "DECIDED shape; PROPOSED details"
+    },
+    {
+     "line": "The subject inside the central 4:3",
+     "source": "docs/PUBLISH_DIRECTION.md §3.5.5; docs/GAMEPAGE.md §3 Phone",
+     "status": "PROPOSED size"
+    },
+    {
+     "line": "Slides that vary",
+     "source": "docs/PUBLISH_DIRECTION.md §3.5.5",
+     "status": "PROPOSED"
+    },
+    {
+     "line": "The bottom 26 px calm",
+     "source": "docs/PUBLISH_DIRECTION.md §3.5.5",
+     "status": "PROPOSED"
+    },
+    {
+     "line": "Alt text",
+     "source": "docs/PUBLISH_DIRECTION.md §3.5.7",
+     "status": "PROPOSED"
+    },
+    {
+     "line": "No added text; HUD in play may stay",
+     "source": "docs/PUBLISH_DIRECTION.md §3.5.3, §4",
+     "status": "DECIDED (no added text)"
+    },
+    {
+     "line": "Never: engine screenshot, poster again, menus, PROPOSAL moments",
+     "source": "docs/PUBLISH_DIRECTION.md §3.5 Never, §3.5.4",
+     "status": "PROPOSED"
+    },
+    {
+     "line": "100 px thumbnail; central 4:3",
+     "source": "docs/PUBLISH_DIRECTION.md §3.5 Checks",
+     "status": "PROPOSED"
+    },
+    {
+     "line": "Up to 6 feature slides, one feature each (6 fills the strip; at least 3), in an order that tells the game: the core loop, a second mechanic, a place, a character, together (only if co-op), the payoff",
+     "source": "Founder, 20 Oct 13:45",
+     "status": "DECIDED"
+    }
+   ]
+  },
+  {
+   "key": "seals",
+   "level": "foryou",
+   "rule": "PD-3.11",
+   "plan": "the one glyph for each moment",
+   "label": "Achievement seals",
+   "what": "One badge per moment in the game, on the page, the result and the profile.",
+   "size": "192×192 master each (96 shown; 48–64 on the page), three states",
+   "file": "bug/seals/<moment>-earned.png, -progress.png, -locked.png",
+   "must": [
+    "One seal per moment in game.json (up to 12)",
+    "An outline by kind: feat, collection or event, the three distinct at 32 px",
+    "One glyph inside, with thick strokes",
+    "Three states drawn in the world: earned (the world's lit state), in progress (dimmer inside the art), not yet (a quiet grey ring and the symbol)"
+   ],
+   "never": [
+    "Text or numbers inside",
+    "Gold for earned",
+    "A padlock",
+    "More than one hot accent",
+    "A glyph that reads as something generic at 32 px"
+   ],
+   "check": "Put all seals in a 32 px strip, in all three states, the not-yet state included: no glyph may read as a letter, a play button or a warning sign.",
+   "sources": [
+    {
+     "line": "192 master; 96 shown",
+     "source": "docs/PUBLISH_DIRECTION.md §2 #15; docs/CREATOR_KIT.md #6 (\"96×96 per achievement (192 @2x)\")",
+     "status": "PROVEN 11/13"
+    },
+    {
+     "line": "48–64 on the page",
+     "source": "docs/GAMEPAGE.md §4 hook seal",
+     "status": "OBSERVED"
+    },
+    {
+     "line": "One seal per moment",
+     "source": "docs/PUBLISH_DIRECTION.md §3.11",
+     "status": "PROVEN"
+    },
+    {
+     "line": "An outline by kind",
+     "source": "docs/PUBLISH_DIRECTION.md §3.11; docs/CREATOR_KIT.md #6; docs/GUIDE.md §2",
+     "status": "PROVEN 11/13"
+    },
+    {
+     "line": "One glyph, thick strokes",
+     "source": "docs/PUBLISH_DIRECTION.md §3.11",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Three states in the world",
+     "source": "docs/PUBLISH_DIRECTION.md §3.11; docs/GUIDE.md §9.1",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Not yet: grey ring, no padlock",
+     "source": "docs/GUIDE.md §6",
+     "status": "PROVEN (3 games)"
+    },
+    {
+     "line": "Never: text, gold, padlock, >1 hot accent, generic glyph",
+     "source": "docs/PUBLISH_DIRECTION.md §3.11; docs/CREATOR_KIT.md #6",
+     "status": "PROVEN"
+    },
+    {
+     "line": "32 px strip, three states",
+     "source": "docs/PUBLISH_DIRECTION.md §3.11 check; docs/CREATOR_KIT.md self-check 7",
+     "status": "PROVEN"
+    }
+   ]
+  },
+  {
+   "key": "store",
+   "level": "later",
+   "rule": "PD-3.9",
+   "when": "products",
+   "plan": "how each item reads at 40 px",
+   "label": "Store pictures",
+   "what": "One picture for each thing the game sells, in the store row and the Wallet.",
+   "size": "400×400 master each (shown 40–169 px)",
+   "file": "bug/store/<product id>.png",
+   "must": [
+    "One item per tile, centred, on the world's own ground, in the game's medium",
+    "Shown as itself or worn, whichever reads better at 40 px",
+    "Looks only: trims, skins, companions, emotes, trails, stickers",
+    "Calm top corners (NEW and YOURS sit there)",
+    "Its own reward verb for the owned mark, different from every other world's"
+   ],
+   "never": [
+    "The game's identity core",
+    "Anything that helps the buyer win",
+    "A name, price, count, x2, rarity glow or gold",
+    "Ember, lilac or sun as fills"
+   ],
+   "check": "Look at each at 40 px, as a black fill and in greyscale.",
+   "sources": [
+    {
+     "line": "400×400 master + a 40 px read",
+     "source": "docs/CREATOR_KIT.md #8; docs/PUBLISH_DIRECTION.md §2 #11",
+     "status": "PROVEN 13/13"
+    },
+    {
+     "line": "shown 40–169 px",
+     "source": "docs/GAMEPAGE.md §4 hook store",
+     "status": "OBSERVED"
+    },
+    {
+     "line": "One item per tile, on the world's ground, in the medium",
+     "source": "docs/PUBLISH_DIRECTION.md §3.9; docs/GUIDE.md §2 Store items",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Itself or worn, whichever reads at 40 px",
+     "source": "docs/PUBLISH_DIRECTION.md §3.9",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Looks only",
+     "source": "docs/PUBLISH_DIRECTION.md §3.9; docs/CREATOR_KIT.md #8",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Calm top corners",
+     "source": "docs/PUBLISH_DIRECTION.md §3.9 (NEW and YOURS stamps)",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Its own reward verb",
+     "source": "docs/GUIDE.md §5; docs/CREATOR_KIT.md self-check 9",
+     "status": "PROVEN 13 distinct; collision test PROPOSED"
+    },
+    {
+     "line": "Never: identity core, helps win, name/price/count/x2/glow/gold, guarded fills",
+     "source": "docs/PUBLISH_DIRECTION.md §3.9; docs/CREATOR_KIT.md #8; docs/GUIDE.md §2",
+     "status": "PROVEN"
+    },
+    {
+     "line": "40 px, black fill, greyscale",
+     "source": "docs/PUBLISH_DIRECTION.md §3.9; docs/CREATOR_KIT.md #8",
+     "status": "PROVEN"
+    }
+   ],
+   "wordsLine": "Words: each item's name and a kind line ('Skin · the dots go pale'), plus one subtitle for the store row ('Skins for the sea'). No prices."
+  },
+  {
+   "key": "passTile",
+   "level": "later",
+   "rule": "PD-3.10",
+   "when": "pass",
+   "label": "Pass tile",
+   "what": "The pass's own tile, first in the store row.",
+   "size": "400×400",
+   "file": "bug/pass/tile.png",
+   "must": [
+    "The pass name may be lettered here: the tile never shrinks below its card",
+    "The world's own ground, like the store tiles"
+   ],
+   "never": [
+    "A price or count",
+    "Guarded colours as fills"
+   ],
+   "check": "Preview it at the store row's sizes, 40 to 169 px.",
+   "sources": [
+    {
+     "line": "400×400",
+     "source": "docs/GAME_RECORD.md (store('pass')); docs/GAMEPAGE.md §4 hook store(id) \"id pass = pass tile\"",
+     "status": "OBSERVED"
+    },
+    {
+     "line": "The pass name may be lettered: the tile never shrinks below its card",
+     "source": "docs/PUBLISH_DIRECTION.md §3.10",
+     "status": "PROVEN (13 bibles)"
+    },
+    {
+     "line": "The world's own ground, like the store tiles",
+     "source": "docs/PUBLISH_DIRECTION.md §3.9 (store tiles on the world's ground)",
+     "status": "PROVEN (by extension)"
+    },
+    {
+     "line": "Never a price or count",
+     "source": "docs/PUBLISH_DIRECTION.md §3.10 Never; §4",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Never guarded colours as fills",
+     "source": "docs/PUBLISH_DIRECTION.md §3.4 (applies to every slot)",
+     "status": "PROVEN"
+    }
+   ],
+   "wordsLine": "Words: the pass name, its step unit in the world (a swim, a bout, a frame) and one sentence on what the pass is. No price."
+  },
+  {
+   "key": "passGrounds",
+   "level": "later",
+   "rule": "PD-3.10",
+   "when": "pass",
+   "label": "Pass row grounds",
+   "what": "The three grounds the rewards sit on, so free, pass and bug.pass rows read as tiers.",
+   "size": "drawn under each 306×243 reward, three: free, pass, bug.pass",
+   "file": "bug/pass/ground-free.png, ground-pass.png, ground-bug.png",
+   "must": [
+    "Free, pass and bug.pass rows on the world's own grounds",
+    "Three that differ clearly; the platform adds a sun outline to the bug.pass row"
+   ],
+   "never": [
+    "Numbers or lettering",
+    "Guarded colours as fills"
+   ],
+   "check": "Preview the rail with the platform's mint, lilac and sun states on all three rows.",
+   "sources": [
+    {
+     "line": "Free, pass and bug.pass rows on the world's own grounds",
+     "source": "docs/PUBLISH_DIRECTION.md §3.10; docs/GUIDE.md §2 Pass (Miradouro enamel/sky/blue hour…); docs/CREATOR_KIT.md #7",
+     "status": "PROVEN (13 bibles)"
+    },
+    {
+     "line": "The platform adds a sun outline to the bug.pass row",
+     "source": "docs/PUBLISH_DIRECTION.md §3.10; docs/GUIDE.md §2",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Separate files at 306×243",
+     "source": "PROPOSED in panel/AUDIT.md G3; the page hook rw(item, ground, tier, state) draws item and ground together",
+     "status": "PROPOSED"
+    },
+    {
+     "line": "Never numbers or lettering",
+     "source": "docs/PUBLISH_DIRECTION.md §3.10 Never (\"a count or price on reward art\"); §4",
+     "status": "PROVEN (counts); lettering by extension"
+    },
+    {
+     "line": "Never guarded colours as fills",
+     "source": "docs/PUBLISH_DIRECTION.md §3.4",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Rail preview with mint/lilac/sun states",
+     "source": "docs/CREATOR_KIT.md #7",
+     "status": "PROPOSED"
+    }
+   ]
+  },
+  {
+   "key": "marker",
+   "level": "later",
+   "rule": "CK-9 · RETURN",
+   "when": "pass",
+   "label": "Pass marker",
+   "what": "The little figure that shows where you are on the pass rail, on Continue and the result.",
+   "size": "up to 48×48, two poses: next and held",
+   "file": "bug/marker-next.png and bug/marker-held.png",
+   "must": [
+    "One object from the world, drawn for 48 px (a paper clip, photo brackets, a spider on silk)",
+    "Two poses: next (rides over the next cell) and held (sits on the last earned cell)"
+   ],
+   "never": [
+    "Anything that counts or holds a number"
+   ],
+   "check": "Preview it on the rail in both poses.",
+   "sources": [
+    {
+     "line": "≤48×48, two poses",
+     "source": "docs/CREATOR_KIT.md #9; docs/RETURN.md \"The marker\"; docs/PUBLISH_DIRECTION.md §2 #14",
+     "status": "PROPOSAL (3 pilots)"
+    },
+    {
+     "line": "One object from the world",
+     "source": "docs/CREATOR_KIT.md #9",
+     "status": "PROPOSED"
+    },
+    {
+     "line": "next / held",
+     "source": "docs/RETURN.md",
+     "status": "PROPOSAL"
+    },
+    {
+     "line": "Never anything that counts",
+     "source": "docs/CREATOR_KIT.md #9; docs/RETURN.md (\"It never counts anything\")",
+     "status": "PROPOSAL"
+    },
+    {
+     "line": "Rail preview, both poses",
+     "source": "docs/CREATOR_KIT.md #9",
+     "status": "PROPOSED"
+    }
+   ]
+  },
+  {
+   "key": "passRewards",
+   "level": "later",
+   "rule": "PD-3.10",
+   "when": "pass",
+   "label": "Pass rewards",
+   "what": "A picture for each reward on the pass: the pass card, the rail on Continue, the result and the Wallet.",
+   "size": "306×243, the item centred in a 243 square",
+   "file": "bug/pass/<reward id>.png",
+   "must": [
+    "Full art at rest; the tier shown by the world's own ground, never by dimming",
+    "The step unit in the game's world: a sunset, a bout, a frame, a creature caught",
+    "Reads at about 120 px, where the page shows it"
+   ],
+   "never": [
+    "A count or price on reward art",
+    "Dimming future steps with a veil (the world may draw its own \"not yet\" inside the art)",
+    "Crumbs as a reward (not for now)"
+   ],
+   "check": "Look at each reward at the size the page shows it, about 120 px.",
+   "plan": "the list of reward items and the step unit",
+   "sources": [
+    {
+     "line": "306×243, item centred in a 243 square",
+     "source": "docs/PUBLISH_DIRECTION.md §2 #12 (PROPOSED reconciliation); docs/CREATOR_KIT.md #7 (\"306×243 per step\")",
+     "status": "PROVEN bibles; size PROPOSED"
+    },
+    {
+     "line": "one per reward item vs one per step",
+     "source": "panel/AUDIT.md G2; docs/CREATOR_KIT.md #7 says per step; the 13 roster pages reuse one drawing per item",
+     "status": "UNDECIDED (founder)"
+    },
+    {
+     "line": "Full art at rest; tier by ground",
+     "source": "docs/CREATOR_KIT.md #7; docs/GUIDE.md §8, §9.1",
+     "status": "PROPOSED rule (platform never dims)"
+    },
+    {
+     "line": "The step unit",
+     "source": "docs/PUBLISH_DIRECTION.md §3.10; docs/GUIDE.md §2",
+     "status": "PROVEN (13 bibles)"
+    },
+    {
+     "line": "about 120 px",
+     "source": "docs/GAMEPAGE.md §4 hook rw 118–123",
+     "status": "OBSERVED"
+    },
+    {
+     "line": "Never a count or price",
+     "source": "docs/PUBLISH_DIRECTION.md §3.10; docs/GUIDE.md §9.2",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Never a veil",
+     "source": "docs/PUBLISH_DIRECTION.md §3.10; docs/GUIDE.md §9.1",
+     "status": "PROPOSED"
+    },
+    {
+     "line": "Crumbs as rewards (Night Swim's rail draws crumb amounts)",
+     "source": "panel/AUDIT.md; upload kit Q6",
+     "status": "UNDECIDED (founder)"
+    },
+    {
+     "line": "Crumbs as a reward (not for now)",
+     "source": "Founder, 20 Oct 13:45",
+     "status": "DECIDED"
+    }
+   ],
+   "wordsLine": "Words: a short name for each reward."
+  },
+  {
+   "key": "owned",
+   "level": "later",
+   "rule": "PD-3.9",
+   "when": "sells",
+   "label": "Owned mark",
+   "what": "The world's own mark on something a player owns, played once after they buy it.",
+   "size": "an overlay on the store tile (169 px on the page), under 900 ms",
+   "file": "bug/reward/ (a code module) or bug/reward-held.png",
+   "must": [
+    "The world's own mark (stapled, inked, wrapped, found): the reward verb, distinct from every other world's",
+    "Starts at once, plays once in under 900 ms and ends on the held frame"
+   ],
+   "never": [
+    "Gold or a rarity glow"
+   ],
+   "sources": [
+    {
+     "line": "overlay 169 px; p = 1 is the held mark",
+     "source": "docs/GAMEPAGE.md §4 hook reward(id, p)",
+     "status": "OBSERVED"
+    },
+    {
+     "line": "The world's own mark; the reward verb",
+     "source": "docs/PUBLISH_DIRECTION.md §3.9 Owned; docs/GUIDE.md §2, §5",
+     "status": "PROVEN 13 distinct"
+    },
+    {
+     "line": "Starts at once, once, under 900 ms, held frame",
+     "source": "docs/PUBLISH_DIRECTION.md §3.9 Owned; docs/GAMEPAGE.md §3 fixed rules (\"< 1 s\")",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Never gold or a rarity glow",
+     "source": "docs/PUBLISH_DIRECTION.md §3.9 Never (store items)",
+     "status": "PROVEN (by extension)"
+    }
+   ],
+   "check": "Watch it once on a store tile; the held frame must read at 40 px.",
+   "wordsLine": "Words: the own word and bought line (see The game's voice)."
+  },
+  {
+   "key": "update",
+   "level": "later",
+   "rule": "PD-3.12",
+   "when": "update",
+   "plan": "the one change it shows",
+   "label": "Update picture",
+   "what": "One close-up per update: the Updates tab, the gallery's New slide, Home and the followers' Inbox.",
+   "size": "2:1, 1600×800, subject inside the central 4:3 (PROPOSED), plus a 308×154 thumbnail",
+   "file": "bug/updates/<version>.png",
+   "must": [
+    "A close-up of what changed inside the world, the way the game draws it",
+    "One change per picture",
+    "The same light and medium as the poster",
+    "Readable at 104×52"
+   ],
+   "never": [
+    "The poster with a flag or NEW on it",
+    "A version number, date or the word update",
+    "A change that isn't in the build"
+   ],
+   "check": "Look at it at 104×52.",
+   "sources": [
+    {
+     "line": "2:1 1600×800, central 4:3",
+     "source": "docs/PUBLISH_DIRECTION.md §2 #16, §3.12",
+     "status": "PROVEN close-ups; size PROPOSED"
+    },
+    {
+     "line": "308×154 thumbnail",
+     "source": "docs/CREATOR_KIT.md tier 2 (\"update close-ups (+ a 308×154 thumbnail)\"); upload kit",
+     "status": "PROVEN in bibles"
+    },
+    {
+     "line": "One file or two",
+     "source": "panel/AUDIT.md G7",
+     "status": "UNDECIDED (founder)"
+    },
+    {
+     "line": "A close-up of what changed; one change; same light; 104×52",
+     "source": "docs/PUBLISH_DIRECTION.md §3.12; docs/GUIDE.md §2 Updates",
+     "status": "PROVEN (13 bibles)"
+    },
+    {
+     "line": "Never the poster with a flag; no version/date/'update'; nothing not built",
+     "source": "docs/PUBLISH_DIRECTION.md §3.12, §4",
+     "status": "PROVEN"
+    }
+   ],
+   "wordsLine": "Words: a title of at most about 40 characters in the game's voice ('The Second Lamp') and the change in one line. A next update only if it's really on the roadmap; its date is UNDECIDED."
+  },
+  {
+   "key": "event",
+   "level": "later",
+   "rule": "PD-3.14",
+   "when": "event",
+   "label": "Event banner and seal",
+   "what": "The banner for a live event, on Home and the game page.",
+   "size": "1720×600 (shown 860×300), the left 45% kept for the copy; plus a 192×192 event seal in three states",
+   "file": "bug/events/<event id>-banner.png and bug/seals/<event id>-earned.png, -progress.png, -locked.png",
+   "must": [
+    "The world on a special day or night, visibly different from the poster",
+    "The left 45% kept for the platform's words and Join; whether it's plain, dark or darkened is the game's choice",
+    "The subject in the right 55%",
+    "A title lockup is allowed, never over the brightest part",
+    "An event seal with the event-kind outline, distinct from the moment seals at 32 px"
+   ],
+   "never": [
+    "Key art reused with new lettering",
+    "Hot colours where Join sits",
+    "A counter painted into the art"
+   ],
+   "check": "Cover the left 45%: the right 55% tells it alone, and can be cropped to sit beside the copy.",
+   "sources": [
+    {
+     "line": "1720×600, shown 860×300",
+     "source": "docs/PUBLISH_DIRECTION.md §3.14; docs/GUIDE.md §9.5",
+     "status": "PROPOSED standard (bibles range 1.9:1–2.9:1)"
+    },
+    {
+     "line": "Left 45% for copy, subject in the right 55%",
+     "source": "docs/PUBLISH_DIRECTION.md §3.14; docs/GUIDE.md §9.5 (\"kept plain\"); docs/CREATOR_KIT.md tier 2 (\"kept dark\"); docs/GUIDE.md §2 (\"darkened\")",
+     "status": "PROVEN (13 bibles); wording differs"
+    },
+    {
+     "line": "The world on a special day or night",
+     "source": "docs/PUBLISH_DIRECTION.md §3.14",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Event seal with the event-kind outline",
+     "source": "docs/PUBLISH_DIRECTION.md §3.11, §3.14; docs/CREATOR_KIT.md #6",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Never key art with new lettering; hot colours where Join sits; a painted counter",
+     "source": "docs/PUBLISH_DIRECTION.md §3.14",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Title lockup allowed, never over the brightest part",
+     "source": "docs/PUBLISH_DIRECTION.md §3.14; docs/GUIDE.md §3.7",
+     "status": "PROVEN"
+    },
+    {
+     "line": "The left 45% kept for the platform's words and Join; whether it's plain, dark or darkened is the game's choice",
+     "source": "Founder, 20 Oct 13:45",
+     "status": "DECIDED"
+    }
+   ],
+   "wordsLine": "Words: the event's name, one or two sentences on what everyone does together, and the counter's unit ('letters found'). Any target number is UNDECIDED unless the founder sets it."
+  },
+  {
+   "key": "living",
+   "level": "optional",
+   "rule": "PD-3.2",
+   "label": "Moving poster",
+   "what": "The poster, alive, drawn by the game's own code at whatever size the wall gives it. Up to 4 move on For You at once.",
+   "size": "a code module (contract §3.2)",
+   "file": "bug/living-poster/",
+   "must": [
+    "Recomposes for any plate, from about 120×90 to about 900×640, very wide, very tall or tiny: never stretched, never empty bars",
+    "An anchor() on the character, so every crop keeps it in view",
+    "Idle with pauses (live 2.5–6 s, hold 1.5–5 s), one reaction on focus, an enter into a 4–8 s loop that returns to the held pose",
+    "A squeezed reaction in its own world for when a neighbour opens, and one throwable",
+    "The game's own renderer and drawing code, at the world's own gait",
+    "The held frame is the poster; reduced motion shows it still",
+    "Squeezed, very narrow and very wide plates keep the character in view, recomposed for that shape, never sliding off the edge",
+    "Its seam moment fits the game: a toss, a shot, a beam, a splash or a grab in the game's own verb, declared with acts",
+    "The loop shows the game's premise, the conflict a player would recognise"
+   ],
+   "never": [
+    "Animated type, prices, counts or Play",
+    "Changing the poster's light band: no brightening flashes, no whole-frame colour shifts",
+    "Flashing faster than 3 a second or pulsing the whole frame",
+    "Running while off screen, or more than about 2 ms a frame"
+   ],
+   "check": "Run it in the harness at tiny, tall and wide sizes and squeezed; time a frame; the held still matches the poster.",
+   "sources": [
+    {
+     "line": "Recomposes for any plate, ~120×90 to ~900×640",
+     "source": "living-poster/CONTRACT.md (lb/CONTRACT.md) (w, h \"change continuously … MUST recompose for any aspect\")",
+     "status": "PROVEN 13/13"
+    },
+    {
+     "line": "anchor()",
+     "source": "living-poster/CONTRACT.md (lb/CONTRACT.md); docs/PUBLISH_DIRECTION.md §3.2; docs/BOARD_RULES.md \"Adding a completely different game\" 1",
+     "status": "PROVEN 13/13"
+    },
+    {
+     "line": "Idle with pauses, reaction, enter, 4–8 s loop",
+     "source": "docs/PUBLISH_DIRECTION.md §3.2; docs/BOARD_RULES.md Motion; docs/CREATOR_KIT.md tier 2",
+     "status": "DECIDED 20 Oct; contract PROVEN 13/13"
+    },
+    {
+     "line": "Squeezed reaction, one throwable",
+     "source": "docs/PUBLISH_DIRECTION.md §3.2; living-poster/CONTRACT.md (lb/CONTRACT.md)",
+     "status": "PROVEN 13/13"
+    },
+    {
+     "line": "The game's own renderer, its gait",
+     "source": "docs/PUBLISH_DIRECTION.md §3.2; docs/GUIDE.md §7",
+     "status": "DECIDED 20 Oct"
+    },
+    {
+     "line": "Held frame is the poster; reduced motion",
+     "source": "docs/PUBLISH_DIRECTION.md §3.2; docs/POSTER_PRINCIPLES.md principle 7; docs/GUIDE.md §7",
+     "status": "PROVEN 13/13"
+    },
+    {
+     "line": "Never: animated type/prices/Play; light band; flashes; off screen; ~2 ms",
+     "source": "docs/PUBLISH_DIRECTION.md §3.2 Never and \"Colour and light\"; docs/GUIDE.md §7",
+     "status": "DECIDED 20 Oct"
+    },
+    {
+     "line": "Harness at tiny, tall, wide; frame time",
+     "source": "docs/PUBLISH_DIRECTION.md §3.2 Checks; docs/BOARD_RULES.md step 4; living-poster/CONTRACT.md (lb/CONTRACT.md)",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Squeezed, very narrow and very wide plates keep the character in view, recomposed for that shape, never sliding off the edge",
+     "source": "Founder, 20 Oct 23:13, on the live For You board",
+     "status": "DECIDED"
+    },
+    {
+     "line": "Its seam moment fits the game: a toss, a shot, a beam, a splash or a grab in the game's own verb, declared with acts",
+     "source": "Founder, 20 Oct 23:13, on the live For You board",
+     "status": "DECIDED"
+    },
+    {
+     "line": "The loop shows the game's premise, the conflict a player would recognise",
+     "source": "Founder, 20 Oct 23:13, on the live For You board",
+     "status": "DECIDED"
+    }
+   ]
+  },
+  {
+   "key": "backdrop",
+   "level": "optional",
+   "rule": "PD-3.6",
+   "label": "Page backdrop",
+   "what": "The world behind the top of the game page.",
+   "size": "1440×577, and 390×826 for phone",
+   "file": "bug/backdrop.png and bug/backdrop-phone.png",
+   "must": [
+    "The world's own place at rest, with one light",
+    "It ends in a hard edge or a floor scene (a floor that runs under the hero sets foot)",
+    "Desktop and phone composed separately, not cropped"
+   ],
+   "never": [
+    "Text",
+    "A second focal point that competes with the poster",
+    "Animation: the backdrop is a still",
+    "The platform's colours near the info rail"
+   ],
+   "check": "Put the poster over it: the poster still leads.",
+   "sources": [
+    {
+     "line": "1440×577 and 390×826",
+     "source": "docs/PUBLISH_DIRECTION.md §3.6; docs/GAMEPAGE.md §4 hook backdrop",
+     "status": "OBSERVED 13/13; PROPOSED mandatory"
+    },
+    {
+     "line": "Place at rest, one light; hard edge or floor; separate compositions",
+     "source": "docs/PUBLISH_DIRECTION.md §3.6; docs/GAMEPAGE.md §3 Stage",
+     "status": "OBSERVED"
+    },
+    {
+     "line": "Never text; second focal point; animation; colours of meaning near the rail",
+     "source": "docs/PUBLISH_DIRECTION.md §3.6; docs/GAMEPAGE.md fixed rules",
+     "status": "OBSERVED"
+    },
+    {
+     "line": "Check: the poster still leads",
+     "source": "docs/PUBLISH_DIRECTION.md §3.6 Never (\"a second focal point\")",
+     "status": "derived"
+    }
+   ]
+  },
+  {
+   "key": "share",
+   "level": "optional",
+   "rule": "PD-3.15",
+   "label": "Share card",
+   "what": "The picture people see when someone shares a link to the game.",
+   "size": "1200×630",
+   "file": "bug/share-card.png",
+   "must": [
+    "The poster's register, so a 270 px link preview still matches the wall",
+    "The art on the right, the subject at about 0.7–0.76 of the width; the left 40–50% plain for the title",
+    "The one place the game's title lettering sits on the art",
+    "The bottom band quiet: the platform adds a linen bug.games bar",
+    "Lettering at least ~12 px letter height at the 270 px link preview"
+   ],
+   "never": [
+    "Player names",
+    "Ember (the platform's play colour)"
+   ],
+   "check": "Look at it 270 px wide. Measure the smallest letters at 270 px wide: at least ~12 px.",
+   "sources": [
+    {
+     "line": "1200×630",
+     "source": "docs/PUBLISH_DIRECTION.md §3.15; docs/GUIDE.md §2",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Register; 270 px",
+     "source": "docs/PUBLISH_DIRECTION.md §3.15",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Subject 0.7–0.76; left 40–50% plain",
+     "source": "docs/PUBLISH_DIRECTION.md §3.15",
+     "status": "PROVEN"
+    },
+    {
+     "line": "The one place for title lettering",
+     "source": "docs/PUBLISH_DIRECTION.md §3.15, §4; docs/GUIDE.md §2, §3.7",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Bottom band quiet; bar height",
+     "source": "docs/PUBLISH_DIRECTION.md §3.15",
+     "status": "UNDECIDED (bar height)"
+    },
+    {
+     "line": "Never player names; never ember",
+     "source": "docs/PUBLISH_DIRECTION.md §3.15; docs/GUIDE.md §8",
+     "status": "PROVEN (names); PROPOSED (no ember)"
+    },
+    {
+     "line": "Lettering at least ~12 px letter height at the 270 px link preview",
+     "source": "docs/CREATOR_KIT.md self-check 3 (\"none smaller than ~12 px letter height\"); round-1 review, 20 Oct: 3 of 5 share cards failed at 270 px",
+     "status": "PROVEN (kit rule)"
+    }
+   ]
+  },
+  {
+   "key": "chip",
+   "level": "optional",
+   "rule": "PD-3.7",
+   "label": "Chip",
+   "what": "The mark on Home chips. Shown at 64 px.",
+   "size": "128×128, drawn for 64",
+   "file": "bug/chip-64.png",
+   "must": [
+    "Drawn for 64: more parts than the icon, fewer than the poster",
+    "Square with sharp corners, never masked"
+   ],
+   "never": [
+    "The poster shrunk",
+    "Text"
+   ],
+   "check": "Look at it at 64 px, 1× on night and on linen.",
+   "sources": [
+    {
+     "line": "Drawn for 64 … more parts than the icon",
+     "source": "docs/PUBLISH_DIRECTION.md §3.7 (\"each mark has fewer parts than the one above it\"); docs/GUIDE.md §6",
+     "status": "PROVEN 13/13 (chip optional)"
+    },
+    {
+     "line": "Square … never masked",
+     "source": "docs/PUBLISH_DIRECTION.md §3.7",
+     "status": "ADOPTED 20 Oct"
+    },
+    {
+     "line": "The poster shrunk; text",
+     "source": "docs/PUBLISH_DIRECTION.md §3.7",
+     "status": "PROVEN"
+    },
+    {
+     "line": "1× on night and linen",
+     "source": "docs/GUIDE.md §6",
+     "status": "PROVEN"
+    }
+   ]
+  },
+  {
+   "key": "video",
+   "level": "optional",
+   "rule": "PD-3.5b",
+   "label": "Gameplay video",
+   "what": "Real play, cut together: on the game page and on social media.",
+   "size": "16:9, 20–45 s, under 20 MiB",
+   "file": "bug/video/gameplay.mp4",
+   "must": [
+    "The very first frame is already gameplay: open on an early powerful moment",
+    "Real play from the current build, HUD on, lightly cut",
+    "Makes sense muted"
+   ],
+   "never": [
+    "A logo, black screen or title card at the start",
+    "Cinematics presented as play, or features not built yet",
+    "Prices, the store, review quotes or other games"
+   ],
+   "check": "Watch the first 2 seconds muted: do they hook?",
+   "sources": [
+    {
+     "line": "16:9, 20–45 s",
+     "source": "docs/PUBLISH_DIRECTION.md §3.5b cuts table",
+     "status": "DECIDED 20 Oct; details PROPOSED"
+    },
+    {
+     "line": "under 20 MiB",
+     "source": "vault MSG-to-design-chat-2026-10-20-late (keep the 20 MiB cap); connector upload limit",
+     "status": "DECIDED for now"
+    },
+    {
+     "line": "First frame is gameplay; real play; HUD on; muted",
+     "source": "docs/PUBLISH_DIRECTION.md §3.5b",
+     "status": "DECIDED 20 Oct"
+    },
+    {
+     "line": "Never logo/black/title; cinematics; prices, store, quotes, other games",
+     "source": "docs/PUBLISH_DIRECTION.md §3.5b Never",
+     "status": "PROPOSED"
+    },
+    {
+     "line": "First 2 seconds hook",
+     "source": "docs/PUBLISH_DIRECTION.md §3.5b Checks",
+     "status": "PROPOSED"
+    }
+   ]
+  },
+  {
+   "key": "phone",
+   "level": "optional",
+   "rule": "PD-2 #19 · CK §Bible 6",
+   "label": "Phone poster",
+   "what": "The poster for phone shares and stories.",
+   "size": "9:16, 1080×1920 (PROPOSED)",
+   "file": "bug/poster-9x16.png",
+   "must": [
+    "Recomposed for 9:16 around the one image, not a blind crop of the 2:1 poster"
+   ],
+   "never": [],
+   "check": "Compare it with the 2:1 poster: the same one image, the same register.",
+   "sources": [
+    {
+     "line": "1080×1920; phone shares; fallback poster crop",
+     "source": "docs/PUBLISH_DIRECTION.md §2 #19",
+     "status": "PROPOSED"
+    },
+    {
+     "line": "9:16 crop: what moves in narrow crops",
+     "source": "docs/CREATOR_KIT.md §Bible 6; tier 2 (\"phone 9:16\")",
+     "status": "PROVEN in bibles"
+    },
+    {
+     "line": "Check: same one image, same register",
+     "source": "derived from docs/PUBLISH_DIRECTION.md §3.1",
+     "status": "UNSOURCED (no check in the sources)"
+    }
+   ]
+  },
+  {
+   "key": "lockup",
+   "level": "optional",
+   "rule": "PD-4",
+   "label": "Title lettering",
+   "what": "The game's name in its own lettering: on the share card and the end of the gameplay video.",
+   "size": "PNG or SVG, with its smallest readable width",
+   "file": "bug/title-lockup.png",
+   "must": [
+    "The game's own lettering, with its minimum size stated",
+    "Letters at least 12 to 18 px tall wherever it appears",
+    "No letters under ~12 px letter height wherever it's shown; state its minimum width"
+   ],
+   "never": [
+    "On the For You poster (only an approved Edition poster)",
+    "On any plate that can squeeze below about 200 px wide"
+   ],
+   "check": "Look at it at its smallest width.",
+   "sources": [
+    {
+     "line": "A title lockup for fixed-size pieces, with minimum sizes",
+     "source": "docs/CREATOR_KIT.md tier 2 Lettering; docs/GUIDE.md §3.7",
+     "status": "PROVEN"
+    },
+    {
+     "line": "12–18 px letter height; ~200 px plates",
+     "source": "docs/GUIDE.md §3.7; docs/CREATOR_KIT.md self-check 3",
+     "status": "PROVEN"
+    },
+    {
+     "line": "Share card and video end card",
+     "source": "docs/PUBLISH_DIRECTION.md §3.15, §3.5b",
+     "status": "PROVEN / PROPOSED"
+    },
+    {
+     "line": "Never on the For You poster",
+     "source": "docs/PUBLISH_DIRECTION.md §4",
+     "status": "PROVEN"
+    },
+    {
+     "line": "No letters under ~12 px letter height",
+     "source": "docs/CREATOR_KIT.md self-check 3 (\"none smaller than ~12 px letter height\"); round-1 review, 20 Oct: 3 of 5 share cards failed at 270 px",
+     "status": "PROVEN (kit rule)"
+    }
+   ]
+  },
+  {
+   "key": "wHero",
+   "label": "Title, one line and hover words",
+   "rule": "GP-3.2",
+   "what": "The words in the hero beside the poster: the title, the one line under it, the word for people playing now ('1,418 swimming') and the hint on the poster.",
+   "size": "title ≤ 40 characters · one line ≤ 110 characters · one word · two short hints",
+   "file": "game.json title and hook · bug/words.json playing_word, hover_hint {desktop, phone}, echo",
+   "must": [
+    "A title that fits one line at 42 px (the page steps it down to 28 before it ever cuts it)",
+    "One line that says what you do and against what, in the game's verbs, at most 110 characters",
+    "A playing word in the world ('swimming', 'filing', 'hunting'), not 'playing'",
+    "A hover hint and a tap hint that say what the poster does when you touch it ('Hover to wake the whale' / 'Tap to wake the whale')",
+    "A hover echo colour for the hard shadow of a lifted tile"
+   ],
+   "never": [
+    "Superlatives, other games' names or prices",
+    "An echo colour that is ember, lilac or sun"
+   ],
+   "check": "Read the title and the one line aloud to someone who has never seen the game: can they say what they'd do?",
+   "example": "Night Swim · 'A whale made of stars swims past a lighthouse, collecting letters. The beam finds them first.' · swimming · Hover to wake the whale",
+   "sources": [
+    {
+     "line": "Title Bricolage 42, one line, stepped to 28; one line at most 3 lines, the build warns past 110",
+     "source": "GAMEPAGE (page-contract) §3.2",
+     "status": "DECIDED"
+    },
+    {
+     "line": "title ≤40",
+     "source": "CREATOR_KIT W",
+     "status": "PROVEN"
+    },
+    {
+     "line": "playingWord, hint/hintM, echo (never ember/lilac/sun)",
+     "source": "GAMEPAGE (page-contract) data knobs",
+     "status": "DECIDED"
+    },
+    {
+     "line": "hook: say what the game IS; no superlatives, other games' names or prices",
+     "source": "SDK game.json (sdk_docs)",
+     "status": "DECIDED"
+    }
+   ],
+   "level": "words",
+   "words": true
+  },
+  {
+   "key": "wAbout",
+   "label": "About: what it is, the goal, tips",
+   "rule": "PD-3.13",
+   "what": "The About tab: two or three sentences on what it is and how you play, the goal in one line, and three tips.",
+   "size": "2–3 sentences · 1 line · 3 tips",
+   "file": "game.json description · bug/words.json goal, tips",
+   "must": [
+    "Say what the player does, in the game's verbs, in plain words",
+    "The goal fits one line",
+    "Three tips a first-time player can use, each one sentence"
+   ],
+   "never": [
+    "Superlatives, other games' names or prices",
+    "Game-speak ('level', 'enemies'), guilt or a stack of exclamation marks",
+    "Pictures: About is words and controls only"
+   ],
+   "check": "Does the paragraph alone tell a stranger how to start?",
+   "example": "Night Swim · goal 'Spell NIGHT in one swim. Then swim on.' · tip 'Letters drift in from the right. The beam finds them first.'",
+   "sources": [
+    {
+     "line": "What it is and how to play 2–3 sentences; goal one line; no pictures",
+     "source": "PUBLISH_DIRECTION §3.13",
+     "status": "DECIDED"
+    },
+    {
+     "line": "tips are page data",
+     "source": "GAMEPAGE (page-contract) REQUIRED_DATA",
+     "status": "OBSERVED"
+    },
+    {
+     "line": "Never game-speak, guilt, exclamation stacks",
+     "source": "CREATOR_KIT W",
+     "status": "PROVEN"
+    }
+   ],
+   "level": "words",
+   "words": true
+  },
+  {
+   "key": "wControls",
+   "label": "Controls, for every input",
+   "rule": "PD-3.13",
+   "what": "The controls on the About tab, per input (Keys · Gamepad · Touch): the key, the action word, a short note.",
+   "size": "every control, for every input the game declares",
+   "file": "game.json inputs and controls · bug/words.json controls {keyboard, mouse, gamepad, touch: [{key, action, note}]}",
+   "must": [
+    "Every control in game.json, for every input in inputs",
+    "Touch is listed whenever inputs includes touch",
+    "The action is one or two words in the game's verbs; the note is a few words on when or how",
+    "Only controls the game really has"
+   ],
+   "never": [
+    "A control the build doesn't have",
+    "Long notes: on phone the controls show two-up without notes"
+   ],
+   "check": "Play with each input using only this list.",
+   "example": "Night Swim · Space · Swallow · Open wide when a letter is in the beam",
+   "sources": [
+    {
+     "line": "Controls per input: key, action word, short note; every control for every input; touch whenever inputs has touch",
+     "source": "PUBLISH_DIRECTION §3.13",
+     "status": "DECIDED"
+    },
+    {
+     "line": "phone shows controls two-up without notes",
+     "source": "GAMEPAGE (page-contract) §3 phone",
+     "status": "DECIDED"
+    },
+    {
+     "line": "controls [{key, action}], inputs",
+     "source": "SDK game.json (sdk_docs)",
+     "status": "DECIDED"
+    }
+   ],
+   "level": "words",
+   "words": true
+  },
+  {
+   "key": "wDetails",
+   "label": "Details and tags",
+   "rule": "PD-3.13",
+   "what": "'All details' on About, and the three tags and player count in the hero.",
+   "size": "genre · players · minutes · inputs · content note · mood · up to 5 tags (the hero shows 3)",
+   "file": "game.json genre, players, coop, minutes, inputs, contentNote, mood, tags",
+   "must": [
+    "Tags in the game's own words, 2–24 characters each; put the three that say most first",
+    "coop only when people play in one session together",
+    "A content note when the game has flashing lights or anything a player should know first",
+    "A mood word from the platform's list"
+   ],
+   "never": [
+    "Superlatives, other games' names or prices in tags",
+    "'Co-op' for a game where people only see each other's times or ghosts"
+   ],
+   "check": "Would the three tags alone sort the game onto the right shelf?",
+   "example": "Night Swim · Arcade · Quiet · Solo · 1 player · ~15 min",
+   "sources": [
+    {
+     "line": "All details: genre, players, length, inputs, content note",
+     "source": "PUBLISH_DIRECTION §3.13",
+     "status": "DECIDED"
+    },
+    {
+     "line": "tags up to five, 2–24 chars, in your words; coop; mood vocabulary; contentNote",
+     "source": "SDK game.json (sdk_docs)",
+     "status": "DECIDED"
+    },
+    {
+     "line": "3 tags in the info rail",
+     "source": "GAMEPAGE (page-contract) §3.2",
+     "status": "DECIDED"
+    }
+   ],
+   "level": "words",
+   "words": true
+  },
+  {
+   "key": "wMoments",
+   "label": "Seal names and rules",
+   "rule": "PD-3.11",
+   "what": "Each seal's name (the moment) under it in mono caps, and the one-line rule the plate shows when a player selects it.",
+   "size": "≤ 12 moments, in play order; the page shows 8 · one rule line each · a kind each",
+   "file": "game.json moments · bug/words.json moments [{name, rule, kind: feat | collection | event}]",
+   "must": [
+    "Names in the world's words, short enough for mono caps under a seal",
+    "A rule that says exactly what to do, in one line",
+    "A kind for each, matching the seal's outline"
+   ],
+   "never": [
+    "A moment the game can't report",
+    "Rarity, progress or dates: those are bug.games'"
+   ],
+   "check": "Read the 8 names in a row: do they tell the game's story in order?",
+   "example": "Night Swim · NIGHT · 'Spell N, I, G, H, T in one swim.' · feat",
+   "sources": [
+    {
+     "line": "8 seals with names in mono caps; the plate shows name, rule, progress, rarity",
+     "source": "PUBLISH_DIRECTION §3.11",
+     "status": "OBSERVED"
+    },
+    {
+     "line": "moments ≤12 in play order",
+     "source": "SDK game.json (sdk_docs)",
+     "status": "DECIDED"
+    },
+    {
+     "line": "seal kind feat|collection|event and rule",
+     "source": "manifest.schema.json words (slots.seal)",
+     "status": "PROPOSED"
+    }
+   ],
+   "level": "words",
+   "words": true
+  },
+  {
+   "key": "wCaptions",
+   "label": "Gallery captions",
+   "rule": "PD-3.5",
+   "what": "The caption under the gallery's main picture. bug.games writes the first half (the slide kind); the game writes the rest.",
+   "size": "one caption per slide, ≤ about 60 characters after the kind",
+   "file": "bug/words.json captions {\"gallery/01.png\": \"…\"}",
+   "must": [
+    "What you see, in the game's words, plain and in its own verbs"
+   ],
+   "never": [
+    "Text that the picture needs in order to make sense"
+   ],
+   "check": "Read the six captions without the pictures: do they walk through the game?",
+   "example": "Night Swim · 'In the game · the whale, the beam, the letters'",
+   "sources": [
+    {
+     "line": "Every caption reads <kind> · <what you see, in the game's words>; the game writes the second half, at most about 60 characters",
+     "source": "PUBLISH_DIRECTION §3.5",
+     "status": "DECIDED"
+    }
+   ],
+   "level": "words",
+   "words": true
+  },
+  {
+   "key": "wContinue",
+   "label": "Place strings",
+   "rule": "KIT-W",
+   "what": "Where a player is, as the game says it. It shows on the Continue card and the phone play bar.",
+   "size": "each ≤ 30 characters",
+   "file": "bug/words.json place_strings (the same text the code sends with progress.set)",
+   "must": [
+    "The same text the game sends with progress.set",
+    "In the world's terms ('Swim 4', 'Round 2 of 3')"
+   ],
+   "never": [
+    "Longer than 30 characters: list a longer one as a proposed fix, don't change the code in this pass"
+   ],
+   "check": "Does each one tell a returning player where they'll land?",
+   "example": "Night Swim · Swim 4",
+   "sources": [
+    {
+     "line": "place string ≤30, the same text as progress.set",
+     "source": "CREATOR_KIT W",
+     "status": "PROVEN"
+    },
+    {
+     "line": "progress.set labels the Continue card",
+     "source": "SDK game.json (sdk_docs)",
+     "status": "DECIDED"
+    }
+   ],
+   "level": "words",
+   "words": true
+  },
+  {
+   "key": "wVoice",
+   "label": "The game's voice",
+   "rule": "KIT-W",
+   "what": "Small lines bug.games prints in the game's voice: the owned word on store tiles, the line after a buy, the result headline, friend lines, quick chat and the pause line.",
+   "size": "one verb · stat nouns · own word · bought line · 2–3 result lines · 2 friend lines · ≤ 2 quick-chat lines · 1 pause line",
+   "file": "bug/words.json verb, stat_nouns, own_word, bought_line, result_lines, friend_lines, quick_chat, pause_line",
+   "must": [
+    "Your world's verbs ('worked', 'stayed', 'hunted', 'Found', 'Filed')",
+    "An own word for what owned looks like in the world",
+    "Stat nouns the result screen can count ('letters', 'swims')"
+   ],
+   "never": [
+    "Game-speak ('level', 'enemies'), guilt or exclamation stacks",
+    "Streak or scarcity words, 'teardown' or 'Fair Play'"
+   ],
+   "check": "Put each line next to the poster: same world, same voice?",
+   "example": "Night Swim · own word Found · bought line 'Found for you: '",
+   "sources": [
+    {
+     "line": "one verb, stat nouns; world's verbs; never game-speak, guilt, exclamation stacks",
+     "source": "CREATOR_KIT W",
+     "status": "PROVEN"
+    },
+    {
+     "line": "no 'teardown', 'Fair Play', streak or scarcity words",
+     "source": "CREATOR_KIT self-check 11",
+     "status": "PROVEN"
+    },
+    {
+     "line": "ownWord, boughtLine",
+     "source": "GAMEPAGE (page-contract) data knobs",
+     "status": "DECIDED"
+    },
+    {
+     "line": "result_lines, friend_lines, quick_chat ≤2, pause_line",
+     "source": "manifest.schema.json words",
+     "status": "PROPOSED"
+    }
+   ],
+   "level": "words",
+   "words": true
+  }
+ ],
+ "tools": {
+  "text": "The checks name two small Python tools from the bug.games kit: wall.py (puts the poster on the real wall and in every shape) and measure.py (colour zones and light band). Get them at https://github.com/yelnurk123/bug-games-art-pilot/tree/main/kit/tools (Python 3 + Pillow). wall.py saves its two images next to the poster file, so run it on a copy outside bug/. If you can't run them, do the same check by eye and say so."
+ },
+ "scopes": {
+  "design": {
+   "label": "Design pass",
+   "exclude": [
+    "video"
+   ],
+   "designOnly": [
+    "store",
+    "passTile",
+    "passGrounds",
+    "marker",
+    "passRewards",
+    "owned",
+    "update",
+    "event"
+   ],
+   "line": "This is a design pass: make the pictures and write the page's words only. Don't add anything to the game's code or game.json, don't declare products or a pass, and don't set any prices. Propose the store items, pass rewards, one update and one event first, by name, look and words, and write them to bug/design.json as {\"store\":{\"sub\":\"…\",\"items\":[{\"id\",\"name\",\"kind\",\"look\"}]},\"pass\":{\"name\",\"unit\",\"desc\",\"rewards\":[{\"id\",\"name\"}]},\"update\":{\"version\",\"title\",\"change\"},\"event\":{\"id\",\"name\",\"text\",\"unit\"}}. Write every other word on the page to bug/words.json, including drafts of what would go in game.json (title, hook, description, controls, moments, tags).",
+   "source": "Founder, 20 Oct 14:03: \"instead of coding the achievements and monetization items into the game this experiment could focus purely on creating the full range of design assets\"; \"excluding creation of trailer\"",
+   "wordsInclude": true
+  }
+ },
+ "wordsNotes": {
+  "homes": "Words that game.json already holds (title, hook, description, genre, minutes, players, coop, inputs, controls, moments, mood, tags, contentNote) live there. The rest go in bug/words.json. In a design pass nothing is written to game.json: draft all of them in bug/words.json under the same names, and they move into game.json after the yes to publish.",
+  "platform": "catalogue number, maker and crew handles, loved %, review count and reviews, how many are playing, friends, followers, Shape it requests, 'built from player requests', prices and crumbs, pass step and days left, event count and end time, dates, versions on cards, rarity and progress, NEW and YOURS, 'Nothing you can buy beats other players', More like this and its line, the ticker.",
+  "kicker": "The kicker above the title is the latest update's version and title; it comes from the update's words, not a separate line.",
+  "source": "Page-contract build.py REQUIRED_DATA (every field the page reads), GAMEPAGE §3, PUBLISH_DIRECTION §3.5, §3.9–3.14, CREATOR_KIT W, the SDK's game.json and manifest.schema.json words."
+ }
+}
