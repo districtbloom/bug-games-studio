@@ -1,0 +1,193 @@
+{
+  "title": "Miracle Thieves",
+  "hook": "Four broke wizards rob a cathedral that hoards miracles, crack its vault and run home before the grates shut.",
+  "playing_word": "robbing",
+  "hover_hint": {
+    "desktop": "Hover to break in",
+    "phone": "Tap to break in"
+  },
+  "echo": "#2b2459",
+  "description": "Four broke wizards rob a cathedral that hoards miracles, alone or with up to three friends who can drop in mid-heist. You only move and dash: your spells fire by themselves, every pick changes how your magic behaves, and frost, fire, sparks, ink and bells set each other off. Wheel the displaced relics home, hold the Reliquary, break the wax seals, face the Custodian of Lesser Miracles, then run for the Service Yard before the grates shut.",
+  "goal": "Crack the Vault of Lesser Miracles and get a thief home to the Service Yard.",
+  "tips": [
+    "Bring every displaced relic home to the wheelbarrow and the galleries open early; the clock is only a fallback.",
+    "The Custodian's bells ring before every attack, so listen, and dash when they toll.",
+    "A fallen friend turns into a ghost: stand beside them for a couple of seconds to bring them back."
+  ],
+  "genre": "Co-op survivors",
+  "players": "1–4",
+  "coop": true,
+  "minutes": 7,
+  "inputs": [
+    "keyboard",
+    "touch",
+    "gamepad"
+  ],
+  "mood": "thrilling",
+  "tags": [
+    "Co-op heist",
+    "Wizards",
+    "Spell reactions",
+    "Drop-in friends",
+    "Daily heist"
+  ],
+  "contentNote": "Cartoon magic, crowds of foes and bright flashes. Settings offer Reduced flashing, which stops full-screen flashes and calms the rest, and a camera-shake slider that goes down to off.",
+  "controls": {
+    "keyboard": [
+      {
+        "key": "WASD / Arrows",
+        "action": "Move",
+        "note": "Spells cast themselves; ZQSD works too"
+      },
+      {
+        "key": "Space / Shift",
+        "action": "Dash",
+        "note": "Out of a tight spot"
+      },
+      {
+        "key": "1 · 2 · 3",
+        "action": "Pick",
+        "note": "One of three cards"
+      },
+      {
+        "key": "Esc / P",
+        "action": "Pause",
+        "note": "Menu and settings"
+      },
+      {
+        "key": "Enter / Space",
+        "action": "Break In",
+        "note": "On the title, as your wizard"
+      }
+    ],
+    "mouse": [
+      {
+        "key": "Click a card",
+        "action": "Pick",
+        "note": "When your magic grows"
+      },
+      {
+        "key": "Click ❚❚",
+        "action": "Pause",
+        "note": "Top of the screen"
+      }
+    ],
+    "gamepad": [
+      {
+        "key": "Left stick",
+        "action": "Move",
+        "note": "Spells cast themselves"
+      },
+      {
+        "key": "A",
+        "action": "Dash",
+        "note": "Out of a tight spot"
+      },
+      {
+        "key": "Start",
+        "action": "Pause",
+        "note": "Menu and settings"
+      }
+    ],
+    "touch": [
+      {
+        "key": "Drag, left side",
+        "action": "Move",
+        "note": "A thumb-stick opens where you touch"
+      },
+      {
+        "key": "DASH",
+        "action": "Dash",
+        "note": "Bottom right"
+      },
+      {
+        "key": "Tap a card",
+        "action": "Pick",
+        "note": "When your magic grows"
+      },
+      {
+        "key": "❚❚",
+        "action": "Pause",
+        "note": "Menu and settings"
+      }
+    ]
+  },
+  "moments": [
+    {
+      "name": "Into the Cloister",
+      "rule": "Start a heist: in through the service entrance.",
+      "kind": "feat"
+    },
+    {
+      "name": "The Custodian Wakes",
+      "rule": "Be in the heist when the Custodian wakes.",
+      "kind": "feat"
+    },
+    {
+      "name": "A Miracle Stolen",
+      "rule": "Win a heist: at least one thief gets home with a miracle.",
+      "kind": "feat"
+    },
+    {
+      "name": "Nobody Left Behind",
+      "rule": "Bring back 5 friends' ghosts yourself, over any heists.",
+      "kind": "collection"
+    },
+    {
+      "name": "All Seals Broken",
+      "rule": "Break all three wax seals in one heist.",
+      "kind": "feat"
+    },
+    {
+      "name": "Public Nuisance",
+      "rule": "Win a heist at Notorious (notoriety 3) or higher.",
+      "kind": "feat"
+    },
+    {
+      "name": "Least Favourite Thieves",
+      "rule": "Win a heist at Legendary (notoriety 5).",
+      "kind": "feat"
+    }
+  ],
+  "captions": {
+    "gallery/01.png": "Pim in the Pale Cloister, his bolts loose on the Pew Mites",
+    "gallery/02.png": "Frost meets fire in a crowd, and the Steam shoves them all",
+    "gallery/03.png": "The Reliquary Galleries, and the gold circle to hold",
+    "gallery/04.png": "The Custodian of Lesser Miracles, awake in the court",
+    "gallery/05.png": "One thief a ghost, and the others coming to fetch them",
+    "gallery/06.png": "The getaway: home through the alarm-lit cathedral"
+  },
+  "place_strings": [
+    "Service Yard · level {n}",
+    "Pale Cloister · level {n}",
+    "Reliquary Galleries · level {n}",
+    "Processional Court · level {n}",
+    "Processional Court · level {n} · the Custodian",
+    "Stole a miracle",
+    "Souls confiscated — try again"
+  ],
+  "verb": "robbed",
+  "stat_nouns": [
+    "miracles",
+    "seals",
+    "duets",
+    "rescues",
+    "foes felled"
+  ],
+  "own_word": "Pocketed",
+  "bought_line": "Pocketed for you: ",
+  "result_lines": [
+    "Miracle stolen. The cathedral has already filed a complaint.",
+    "Everyone's out, miracle in hand.",
+    "Confiscated. Your souls are filed under Pending."
+  ],
+  "friend_lines": [
+    "Robbing a cathedral. There's room in the wheelbarrow.",
+    "Drop in mid-heist. The cathedral won't mind. It will, but still."
+  ],
+  "quick_chat": [
+    "Coming for your ghost.",
+    "Relics first, then the vault."
+  ],
+  "pause_line": "Heist on hold. The cathedral is catching up on its filing."
+}
