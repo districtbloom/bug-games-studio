@@ -16,7 +16,7 @@
   "genre": "Story RPG",
   "players": "1",
   "coop": false,
-  "minutes": "UNDECIDED",
+  "minutes": 35,
   "inputs": ["keyboard", "mouse", "touch"],
   "mood": "homely",
   "tags": ["turn-based story", "a very polite AI", "a dozen eggs", "San Francisco", "thank the machines"],
