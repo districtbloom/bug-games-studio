@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pardon living poster · test plate</title>
+<style>body{margin:0;background:#141019}canvas{display:block}</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>const BUG_MODS = {};</script>
+<script src="../pardon.js"></script>
+<script>
+// A deterministic test plate: drives one module instance on a virtual clock (dt = 1/60) through a list of steps,
+// exactly the way the board calls it (ctx scaled to CSS px, clipped to the plate), and returns the canvas pixels.
+window.errs = [];
+window.addEventListener('error', (e) => window.errs.push(String(e.message)));
+function seeded(n) { let s = n || 7; return () => { s = (s * 16807) % 2147483647; return (s - 1) / 2147483646; }; }
+window.run = function (o) {
+  const w = o.w, h = o.h, dpr = o.dpr || 1, cv = document.getElementById('c');
+  cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); cv.style.width = w + 'px'; cv.style.height = h + 'px';
+  const ctx = cv.getContext('2d'), emits = [];
+  if (o.noOffscreen) { window.OffscreenCanvas = undefined; BUG_MODS.pardon._L = null; }
+  if (o.items) { // the throwable, as the board's overlay draws it: item(ctx, x, y, t, angle), at several angles
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.fillStyle = '#141019'; ctx.fillRect(0, 0, w, h);
+    o.items.forEach((a, i) => BUG_MODS.pardon.items.egg(ctx, 30 + i * 44, h / 2, i * .1, a));
+    return { url: cv.toDataURL('image/png'), emits: [], anchor: { x: 0, y: 0 }, frames: 1, times: [0], hashes: [], lum: [] };
+  }
+  const inst = BUG_MODS.pardon.create({ rnd: seeded(o.seed || 7), emit: (e) => emits.push(e) });
+  const dt = 1 / 60; let t = 0, n = 0; const times = [], hashes = [], lum = [];
+  for (const st of o.steps) {
+    const frames = Math.max(1, Math.round((st.dur || 0) / dt));
+    for (let i = 0; i < frames; i++) {
+      const mt = i * dt;
+      if (st.on && i === 0) for (const e of [].concat(st.on)) inst.on(e);
+      if (st.onAt) for (const [at, e] of st.onAt) if (i === Math.round(at / dt)) inst.on(e);
+      let ww = st.w || w, hh = st.h || h;
+      if (st.resize) { const [w0, h0, w1, h1, per] = st.resize, q = .5 - .5 * Math.cos(t / per * Math.PI * 2); ww = Math.round(w0 + (w1 - w0) * q); hh = Math.round(h0 + (h1 - h0) * q); }
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.save(); ctx.beginPath(); ctx.rect(0, 0, ww, hh); ctx.clip();
+      const t0 = performance.now();
+      if (o.baseline) { ctx.fillStyle = '#120c22'; ctx.fillRect(0, 0, ww, hh); } else inst.frame(ctx, { w: ww, h: hh, t, dt, mode: st.mode, mt, near: st.near || 0, hover: null, grow: st.grow || 0, squeeze: st.squeeze != null ? st.squeeze : 0, rm: !!o.rm });
+      if (o.flush) ctx.getImageData(0, 0, 1, 1);   // test only: force this frame's rasterization so its cost is counted
+      times.push(performance.now() - t0);
+      if (o.hash) { const d = ctx.getImageData(0, 0, cv.width, cv.height).data; let hh2 = 2166136261; for (let q = 0; q < d.length; q += 7) hh2 = Math.imul(hh2 ^ d[q], 16777619); hashes.push(hh2 >>> 0);
+        let L = 0; for (let q = 0; q < d.length; q += 4 * 13) L += .2126 * d[q] + .7152 * d[q + 1] + .0722 * d[q + 2]; lum.push(L / (d.length / (4 * 13)) / 255); }
+      ctx.restore(); t += dt; n++;
+    }
+  }
+  return { url: o.noImage ? null : cv.toDataURL('image/png'), emits, anchor: inst.anchor(), frames: n, times, hashes, lum };
+};
+</script>
+</body>
+</html>

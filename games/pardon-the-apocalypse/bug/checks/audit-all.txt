@@ -1,0 +1,134 @@
+backdrop-phone.png 390x826 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.02% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.09 C 0.103 dark
+   ok: no flat guarded blocks
+backdrop.png 1440x577 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.02% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.101 C 0.113 dark
+   ok: no flat guarded blocks
+chip-64.png 128x128 · ember G 0.00% c 25.98% · lilac G 0.00% c 1.56% · sun G 0.00% c 2.34% · mint G 0.00% c 0.00% · light L 0.298 C 0.257 mid
+   ok: no flat guarded blocks
+emblem-30.png 60x60 · ember G 0.00% c 15.11% · lilac G 0.00% c 2.22% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.215 C 0.228 mid
+   ok: no flat guarded blocks
+long-table-banner.png 1720x600 · ember G 0.04% c 1.68% · lilac G 0.18% c 0.49% · sun G 0.43% c 3.07% · mint G 0.04% c 0.10% · light L 0.169 C 0.109 dark
+   ok: no flat guarded blocks
+01.png 1600x800 · ember G 0.03% c 0.86% · lilac G 0.61% c 1.09% · sun G 0.02% c 0.07% · mint G 0.05% c 0.09% · light L 0.144 C 0.122 dark
+   ok: no flat guarded blocks
+02.png 1600x800 · ember G 0.03% c 0.46% · lilac G 1.02% c 1.52% · sun G 0.07% c 0.12% · mint G 0.01% c 0.04% · light L 0.145 C 0.116 dark
+   ok: no flat guarded blocks
+03.png 1600x800 · ember G 2.37% c 12.02% · lilac G 0.03% c 0.74% · sun G 0.27% c 0.90% · mint G 0.04% c 0.01% · light L 0.397 C 0.176 mid
+   ok: no flat guarded blocks
+04.png 1600x800 · ember G 0.00% c 10.14% · lilac G 0.64% c 2.46% · sun G 0.04% c 0.16% · mint G 0.25% c 0.05% · light L 0.353 C 0.146 mid
+   ok: no flat guarded blocks
+05.png 1600x800 · ember G 0.02% c 2.53% · lilac G 1.26% c 3.69% · sun G 0.61% c 8.63% · mint G 0.04% c 0.08% · light L 0.505 C 0.172 light
+   ok: no flat guarded blocks
+06.png 1600x800 · ember G 0.00% c 8.64% · lilac G 0.00% c 0.00% · sun G 0.00% c 74.47% · mint G 0.00% c 0.00% · light L 0.72 C 0.199 light
+   ok: no flat guarded blocks
+icon-46.png 92x92 · ember G 0.00% c 24.95% · lilac G 0.00% c 1.13% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.256 C 0.235 mid
+   ok: no flat guarded blocks
+key-still.png 720x352 · ember G 0.00% c 0.21% · lilac G 0.00% c 2.44% · sun G 0.00% c 0.01% · mint G 0.00% c 0.02% · light L 0.171 C 0.145 dark
+   ok: no flat guarded blocks
+marker-held.png 48x48 · ember G 0.00% c 14.07% · lilac G 0.00% c 2.26% · sun G 0.00% c 45.98% · mint G 0.00% c 0.00% · light L 0.407 C 0.175 mid
+   ok: no flat guarded blocks
+marker-next.png 48x48 · ember G 0.00% c 29.34% · lilac G 0.00% c 4.63% · sun G 0.00% c 38.61% · mint G 0.00% c 0.00% · light L 0.26 C 0.157 mid
+   ok: no flat guarded blocks
+cable-bell.png 306x243 · ember G 0.00% c 0.00% · lilac G 0.00% c 4.14% · sun G 0.00% c 0.54% · mint G 0.00% c 0.00% · light L 0.26 C 0.18 mid
+   ok: no flat guarded blocks
+ground-bug.png 306x243 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.00% · sun G 0.00% c 7.08% · mint G 0.00% c 0.00% · light L 0.303 C 0.124 mid
+   ok: no flat guarded blocks
+ground-free.png 306x243 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.107 C 0.113 dark
+   ok: no flat guarded blocks
+ground-pass.png 306x243 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.35% · mint G 0.00% c 0.00% · light L 0.191 C 0.184 dark
+   ok: no flat guarded blocks
+night-shift-lamp.png 306x243 · ember G 0.00% c 0.00% · lilac G 0.00% c 1.37% · sun G 0.00% c 4.31% · mint G 0.00% c 0.00% · light L 0.353 C 0.122 mid
+   ok: no flat guarded blocks
+pigeon-feather.png 306x243 · ember G 0.00% c 0.00% · lilac G 0.00% c 3.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.198 C 0.11 dark
+   ok: no flat guarded blocks
+rosemary-sprig.png 306x243 · ember G 0.00% c 0.00% · lilac G 0.00% c 4.45% · sun G 0.00% c 0.05% · mint G 0.00% c 0.15% · light L 0.216 C 0.123 mid
+   ok: no flat guarded blocks
+tart-sticker.png 306x243 · ember G 0.00% c 4.16% · lilac G 0.00% c 0.00% · sun G 0.00% c 3.98% · mint G 0.00% c 0.00% · light L 0.266 C 0.179 mid
+   ok: no flat guarded blocks
+tile.png 400x400 · ember G 0.16% c 7.75% · lilac G 0.00% c 1.14% · sun G 0.09% c 13.37% · mint G 0.00% c 0.00% · light L 0.276 C 0.163 mid
+   ok: no flat guarded blocks
+walkie-chirp.png 306x243 · ember G 0.00% c 0.05% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.129 C 0.111 dark
+   ok: no flat guarded blocks
+poster-1x1.png 816x816 · ember G 0.19% c 2.74% · lilac G 0.02% c 5.14% · sun G 0.13% c 0.45% · mint G 0.00% c 0.00% · light L 0.181 C 0.136 dark
+   ok: no flat guarded blocks
+poster-2x3.png 720x1080 · ember G 0.17% c 2.35% · lilac G 0.03% c 5.27% · sun G 0.11% c 0.39% · mint G 0.00% c 0.00% · light L 0.18 C 0.133 dark
+   ok: no flat guarded blocks
+poster-9x16.png 1080x1920 · ember G 0.08% c 1.09% · lilac G 0.02% c 4.80% · sun G 0.05% c 0.18% · mint G 0.00% c 0.00% · light L 0.158 C 0.12 dark
+   ok: no flat guarded blocks
+poster.png 1920x960 · ember G 0.09% c 1.23% · lilac G 0.02% c 3.06% · sun G 0.06% c 0.20% · mint G 0.00% c 0.00% · light L 0.144 C 0.124 dark
+   ok: no flat guarded blocks
+result-still.png 1600x352 · ember G 0.00% c 1.37% · lilac G 0.00% c 0.00% · sun G 0.00% c 1.04% · mint G 0.00% c 0.00% · light L 0.169 C 0.124 dark
+   ok: no flat guarded blocks
+reward-held.png 400x400 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.59% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.011 C 0.003 dark
+   ok: no flat guarded blocks
+all-twelve-earned.png 192x192 · ember G 0.00% c 45.06% · lilac G 0.00% c 2.81% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.349 C 0.191 mid
+   ok: no flat guarded blocks
+all-twelve-locked.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.238 C 0.027 mid
+   ok: no flat guarded blocks
+all-twelve-progress.png 192x192 · ember G 0.00% c 30.34% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.271 C 0.151 mid
+   ok: no flat guarded blocks
+back-on-its-wheels-earned.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 7.16% · sun G 0.00% c 0.00% · mint G 0.00% c 4.61% · light L 0.263 C 0.109 mid
+   ok: no flat guarded blocks
+back-on-its-wheels-locked.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.194 C 0.025 dark
+   ok: no flat guarded blocks
+back-on-its-wheels-progress.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 2.43% · sun G 0.00% c 0.00% · mint G 0.00% c 4.10% · light L 0.188 C 0.077 dark
+   ok: no flat guarded blocks
+gus-patch-earned.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 14.44% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.257 C 0.12 mid
+   ok: no flat guarded blocks
+gus-patch-locked.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.162 C 0.022 dark
+   ok: no flat guarded blocks
+gus-patch-progress.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 9.56% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.186 C 0.092 dark
+   ok: no flat guarded blocks
+last-stop-earned.png 192x192 · ember G 0.00% c 0.74% · lilac G 0.00% c 4.33% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.203 C 0.121 mid
+   ok: no flat guarded blocks
+last-stop-locked.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.119 C 0.019 dark
+   ok: no flat guarded blocks
+last-stop-progress.png 192x192 · ember G 0.00% c 0.40% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.123 C 0.077 dark
+   ok: no flat guarded blocks
+long-table-earned.png 192x192 · ember G 0.00% c 11.32% · lilac G 0.00% c 0.00% · sun G 0.00% c 20.06% · mint G 0.00% c 0.00% · light L 0.257 C 0.14 mid
+   ok: no flat guarded blocks
+long-table-locked.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.128 C 0.018 dark
+   ok: no flat guarded blocks
+long-table-progress.png 192x192 · ember G 0.00% c 2.34% · lilac G 0.00% c 0.00% · sun G 0.00% c 7.96% · mint G 0.00% c 0.00% · light L 0.149 C 0.079 dark
+   ok: no flat guarded blocks
+one-forty-two-earned.png 192x192 · ember G 0.00% c 29.83% · lilac G 0.00% c 2.70% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.271 C 0.153 mid
+   ok: no flat guarded blocks
+one-forty-two-locked.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.178 C 0.025 dark
+   ok: no flat guarded blocks
+one-forty-two-progress.png 192x192 · ember G 0.00% c 19.55% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.203 C 0.119 mid
+   ok: no flat guarded blocks
+sals-girls-earned.png 192x192 · ember G 0.00% c 0.06% · lilac G 0.00% c 3.76% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.224 C 0.105 mid
+   ok: no flat guarded blocks
+sals-girls-locked.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.141 C 0.02 dark
+   ok: no flat guarded blocks
+sals-girls-progress.png 192x192 · ember G 0.00% c 0.11% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.151 C 0.075 dark
+   ok: no flat guarded blocks
+thank-you-earned.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 22.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.379 C 0.192 mid
+   ok: no flat guarded blocks
+thank-you-locked.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.171 C 0.021 dark
+   ok: no flat guarded blocks
+thank-you-progress.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 10.38% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.213 C 0.099 mid
+   ok: no flat guarded blocks
+yolked-earned.png 192x192 · ember G 0.00% c 11.33% · lilac G 0.00% c 3.64% · sun G 0.00% c 7.92% · mint G 0.00% c 0.00% · light L 0.245 C 0.159 mid
+   ok: no flat guarded blocks
+yolked-locked.png 192x192 · ember G 0.00% c 0.00% · lilac G 0.00% c 0.00% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.147 C 0.021 dark
+   ok: no flat guarded blocks
+yolked-progress.png 192x192 · ember G 0.00% c 8.88% · lilac G 0.00% c 0.00% · sun G 0.00% c 5.47% · mint G 0.00% c 0.00% · light L 0.171 C 0.114 dark
+   ok: no flat guarded blocks
+share-card.png 1200x630 · ember G 0.08% c 1.08% · lilac G 0.16% c 3.24% · sun G 0.86% c 0.39% · mint G 0.00% c 0.00% · light L 0.162 C 0.128 dark
+   ok: no flat guarded blocks
+biscuit-tape.png 400x400 · ember G 0.00% c 0.00% · lilac G 0.00% c 4.82% · sun G 0.00% c 0.00% · mint G 0.00% c 0.00% · light L 0.24 C 0.119 mid
+   ok: no flat guarded blocks
+fog-trail.png 400x400 · ember G 0.23% c 3.59% · lilac G 0.00% c 5.72% · sun G 0.14% c 0.58% · mint G 0.00% c 0.00% · light L 0.167 C 0.136 dark
+   ok: no flat guarded blocks
+hot-sauce-sticker.png 400x400 · ember G 0.00% c 4.94% · lilac G 0.00% c 0.02% · sun G 0.00% c 3.75% · mint G 0.00% c 0.00% · light L 0.274 C 0.147 mid
+   ok: no flat guarded blocks
+pigeon-pal.png 400x400 · ember G 0.00% c 0.00% · lilac G 0.00% c 7.36% · sun G 0.00% c 0.06% · mint G 0.00% c 0.06% · light L 0.262 C 0.124 mid
+   ok: no flat guarded blocks
+wave-emote.png 400x400 · ember G 0.44% c 9.05% · lilac G 0.00% c 0.84% · sun G 0.53% c 0.56% · mint G 0.00% c 0.00% · light L 0.193 C 0.175 dark
+   ok: no flat guarded blocks
+title-lockup.png 906x202 · ember G 0.00% c 0.00% · lilac G 2.33% c 7.71% · sun G 18.66% c 4.85% · mint G 0.00% c 0.00% · light L 0.219 C 0.109 mid
+   ok: no flat guarded blocks
+next-thumb.png 308x154 · ember G 0.00% c 0.06% · lilac G 0.01% c 1.76% · sun G 0.00% c 0.25% · mint G 0.00% c 0.00% · light L 0.142 C 0.13 dark
+   ok: no flat guarded blocks
+next.png 1600x800 · ember G 0.00% c 0.02% · lilac G 0.01% c 2.30% · sun G 0.00% c 0.32% · mint G 0.00% c 0.00% · light L 0.142 C 0.13 dark
+   ok: no flat guarded blocks

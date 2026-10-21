@@ -1,0 +1,119 @@
+{
+ "game": "pardon-the-apocalypse",
+ "arm": "B",
+ "slots": {
+  "poster": {
+   "verdict": "approved",
+   "note": "Strong stage poster: Wren lobs an egg at Kindly's smiley moon, the only light, pink rim on her lit side, dark band (L 0.144), calm caption strip; 2:3 and 1:1 are real recompositions. Polish: the egg's highlight sits up-left, away from the smile; relight it from up-right like the marker egg.",
+   "rule": "PD-3.1"
+  },
+  "focus": {
+   "verdict": "approved",
+   "note": "0.47,0.56 keeps Wren and the egg in every wall shape, the 4:3 phone crop and the half plate. The 577x163 strip keeps only the lower half of the smile; y≈0.50 would keep its face too (optional).",
+   "rule": "PD-3.1"
+  },
+  "icon": {
+   "verdict": "approved",
+   "note": "Drawn for 46, not a shrunk poster: capped head in profile with one pink rim; reads on night and linen, hard pixels, no text or scene.",
+   "rule": "PD-3.7"
+  },
+  "emblem": {
+   "verdict": "approved",
+   "note": "Wren's red cap alone, fewer parts than the icon, reads as a cap (not a generic symbol) at 30 px on both grounds.",
+   "rule": "PD-3.7"
+  },
+  "keyStill": {
+   "verdict": "approved",
+   "note": "Real tension: Wren holds Biscuit back as the drone's pink scan ring lands one step below; subject centred, same finish, reads at 360x176 and 132x66.",
+   "rule": "PD-3.8"
+  },
+  "result": {
+   "verdict": "approved",
+   "note": "The payoff: Dolly and Wren laughing over the tarts under one pendant lamp, all inside the middle 720, no text or numbers; the stove dial's figures were painted out.",
+   "rule": "PD-3.8"
+  },
+  "gallery": {
+   "verdict": "approved",
+   "note": "Six real moments in the game's renderer (fight, thank-you, steps, Biscuit, Car 17, the dozen), varied in place, scale and light, subjects in the central 4:3, only the game's in-stage HUD on 01.",
+   "rule": "PD-3.5"
+  },
+  "seals": {
+   "verdict": "approved",
+   "note": "8 moments + 1 event, three states each (27 files); ring / bus transfer / gable read apart at 32 px, one glyph each, no gold, no padlock, no text. Weakest: last-stop's lever and the low-contrast pigeon; earned vs progress is subtle at 32.",
+   "rule": "PD-3.11"
+  },
+  "store": {
+   "verdict": "needs-changes",
+   "note": "pigeon-pal (Little Pope) reads at 40 px as plain Biscuit with a speck on top, nearly the same tile as biscuit-tape; show the pigeon itself large (or a tight crop on it on the lid) so the companion is what reads.",
+   "rule": "PD-3.9"
+  },
+  "passTile": {
+   "verdict": "approved",
+   "note": "'THE LONG WAY HOME' on a transfer ticket in the game's ptext font, Wren and Biscuit on the night street; no price or count, guarded colours only as single sprite pixels.",
+   "rule": "PD-3.10"
+  },
+  "passGrounds": {
+   "verdict": "approved",
+   "note": "Three clearly different world grounds (night pavement, Car 17 floor slats, Dolly's teal linoleum), no lettering, no guarded fills.",
+   "rule": "PD-3.10"
+  },
+  "marker": {
+   "verdict": "approved",
+   "note": "Dolly's egg rolling (next) and sitting in a carton cup (held), drawn for 48, lit from up-right, nothing that counts.",
+   "rule": "CK-9 · RETURN"
+  },
+  "passRewards": {
+   "verdict": "approved",
+   "note": "Six rewards on their row grounds, full art at rest, read at ~120 px. Tart-sticker's pale custard reads more like a bun; a warmer custard (still off sun) would help.",
+   "rule": "PD-3.10"
+  },
+  "owned": {
+   "verdict": "approved",
+   "note": "'Punched': a transfer-punch hole clipped into the tile corner, one play under 900 ms ending on the held hole; no gold or glow, the held ring is visible at 40 px.",
+   "rule": "PD-3.9"
+  },
+  "update": {
+   "verdict": "approved",
+   "note": "Gus's antenna with Pilar's walkie rings, same night light and medium as the poster, no version or 'update' lettering, reads at 104x52. Only use it if the antenna ships after launch; it is already in the build (the chat flagged this).",
+   "rule": "PD-3.12"
+  },
+  "event": {
+   "verdict": "approved",
+   "note": "The Long Table is visibly a different night (many neighbours, warm windows, Kindly's pod switched off), left 45% plain, subject right, distinct gable seal. The bulbs read as little bunting crosses and their light barely lands on the diners; worth strengthening.",
+   "rule": "PD-3.14"
+  },
+  "living": {
+   "verdict": "needs-changes",
+   "note": "On narrow plates (150x370 tested) the loop pans until Wren and the scooter both leave the frame and the plate shows only sky and houses; keep the anchor on Wren in every frame (bring the machine to her, or stack the fight vertically).",
+   "rule": "PD-3.2"
+  },
+  "backdrop": {
+   "verdict": "approved",
+   "note": "Carmody Street at rest, every window dark, one low pink glow from off right, ends on the kerb; phone composed separately; darker than the poster, so the poster leads.",
+   "rule": "PD-3.6"
+  },
+  "share": {
+   "verdict": "needs-changes",
+   "note": "At the 270 px link preview the lockup is ~136 px wide, under its own stated minimum of 344, so 'Pardon the' in the pill drops to ~3 px and only APOCALYPSE reads; enlarge the pill (or the whole lockup) for this card. Wren's 0.08% ember-near sprite pixels are acceptable.",
+   "rule": "PD-3.15 · PD-4"
+  },
+  "chip": {
+   "verdict": "approved",
+   "note": "Head-and-shoulders Wren raising an egg toward Kindly's glow: more parts than the icon, fewer than the poster, no text.",
+   "rule": "PD-3.7"
+  },
+  "phone": {
+   "verdict": "approved",
+   "note": "A true 9:16 recomposition from the poster scene code (smile on the turret, egg mid-arc), same one image and register.",
+   "rule": "PD-2 #19"
+  },
+  "lockup": {
+   "verdict": "approved",
+   "note": "The game's own lettering (gloss 'Pardon the' pill over pixel APOCALYPSE) with its minimum width stated (344 px); kept off the poster.",
+   "rule": "PD-4"
+  }
+ },
+ "overall": "One of the strongest passes: every picture is rendered inside the real build or hand-placed in the game's code and palette, with one coherent finish (pixel people, smooth gloss for Kindly, one visible light, Bayer dither) and a poster that holds on the wall and in every shape. Three fixes before it is done: the pigeon store tile, the moving poster losing Wren on narrow plates, and the title being too small on the share card at link-preview size.",
+ "copying": "none. The big pink disc behind the character recalls Gob's pink disc, but here it is Kindly's own kSmiley from the game code, the game's antagonist and colour; no moonbeam wedge, clay, ruled paper, stamps, dot whale or beams were borrowed.",
+ "made": "Rendered inside the real game build via a headless-browser render script (tools/render.py) calling the game's own drawing functions (areaCanvas, personFrame, kSmiley, drawBiscuit, drawEnemy, gloss), plus new light passes written on the game's helpers; small marks, seals and some props hand-placed as pixel maps in the game's palette. The moving poster and owned mark are hand-written JS modules with baked game sprites. Seven parallel agents plus a lead."
+}
