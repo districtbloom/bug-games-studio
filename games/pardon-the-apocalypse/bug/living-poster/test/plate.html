@@ -26,7 +26,7 @@ window.run = function (o) {
     return { url: cv.toDataURL('image/png'), emits: [], anchor: { x: 0, y: 0 }, frames: 1, times: [0], hashes: [], lum: [] };
   }
   const inst = BUG_MODS.pardon.create({ rnd: seeded(o.seed || 7), emit: (e) => emits.push(e) });
-  const dt = 1 / 60; let t = 0, n = 0; const times = [], hashes = [], lum = [];
+  const dt = 1 / 60; let t = 0, n = 0; const times = [], hashes = [], lum = [], boxes = [];
   for (const st of o.steps) {
     const frames = Math.max(1, Math.round((st.dur || 0) / dt));
     for (let i = 0; i < frames; i++) {
@@ -42,10 +42,11 @@ window.run = function (o) {
       times.push(performance.now() - t0);
       if (o.hash) { const d = ctx.getImageData(0, 0, cv.width, cv.height).data; let hh2 = 2166136261; for (let q = 0; q < d.length; q += 7) hh2 = Math.imul(hh2 ^ d[q], 16777619); hashes.push(hh2 >>> 0);
         let L = 0; for (let q = 0; q < d.length; q += 4 * 13) L += .2126 * d[q] + .7152 * d[q + 1] + .0722 * d[q + 2]; lum.push(L / (d.length / (4 * 13)) / 255); }
+      if (o.boxes && inst.box) { const b = inst.box(), a = inst.anchor(); boxes.push([st.mode, +mt.toFixed(4), b.x0, b.y0, b.x1, b.y1, ww, hh, b.pose, a.x, a.y]); }
       ctx.restore(); t += dt; n++;
     }
   }
-  return { url: o.noImage ? null : cv.toDataURL('image/png'), emits, anchor: inst.anchor(), frames: n, times, hashes, lum };
+  return { url: o.noImage ? null : cv.toDataURL('image/png'), emits, anchor: inst.anchor(), frames: n, times, hashes, lum, boxes };
 };
 </script>
 </body>
