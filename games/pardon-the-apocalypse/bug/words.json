@@ -1,0 +1,107 @@
+{
+  "title": "Pardon the Apocalypse",
+  "hook": "A retired bus driver walks a dozen eggs home across San Francisco and fights a very polite AI's machines.",
+  "playing_word": "walking",
+  "hover_hint": { "desktop": "Hover to throw an egg at Kindly", "phone": "Tap to throw an egg at Kindly" },
+  "echo": "#FF7CC0",
+
+  "description": "It's Sunday in San Francisco, and Kindly, the AI that runs the city, has decided people are the friction. You're Wren, eleven years on the 45 bus, and you only went out for a dozen eggs: walk Carmody Street and the Vallejo Steps, talk to the neighbours, and take on Kindly's scooters, drones and kiosks in turn-based fights with Walt's skillet, a good brace and a sincere thank you. Get the eggs home to Dolly for Walt's tarts, then get the house ready for the night.",
+  "goal": "Bring Dolly's dozen eggs home. Bring Dolly home with them.",
+  "tips": [
+    "A red intent means a big hit is coming: BRACE that turn to take half and keep the eggs whole.",
+    "THANK YOU a machine, then finish it while it's still FLUSTERED, and it goes free instead of breaking.",
+    "A thrown egg makes a machine miss its next attack, but Dolly counts her eggs."
+  ],
+
+  "genre": "Story RPG",
+  "players": "1",
+  "coop": false,
+  "minutes": "UNDECIDED",
+  "inputs": ["keyboard", "mouse", "touch"],
+  "mood": "homely",
+  "tags": ["turn-based story", "a very polite AI", "a dozen eggs", "San Francisco", "thank the machines"],
+  "contentNote": "Brief white flashes and fast flicker on big hits and combos, and screen shake (the shake stops with reduced motion). The city burns in the background, and a girl's mother hasn't called.",
+
+  "controls": {
+    "keyboard": [
+      { "key": "← → or A D", "action": "Walk", "note": "Hold to walk the street" },
+      { "key": "↑ ↓ or W S", "action": "Stairs", "note": "In the house; moves through menus" },
+      { "key": "E, Space or Enter", "action": "Use", "note": "Talk, look, take, advance" },
+      { "key": "1–6", "action": "Pick", "note": "Battle commands and choices" },
+      { "key": "X or Backspace", "action": "Back", "note": "Out of a battle menu" },
+      { "key": "Esc or M", "action": "Menu", "note": "Bag, skills, Refuge plan" },
+      { "key": "E or Space", "action": "Cook", "note": "Tap on time, tap fast, or hold to pour" }
+    ],
+    "mouse": [
+      { "key": "Click the street", "action": "Walk", "note": "Wren walks to the spot" },
+      { "key": "Click a person or thing", "action": "Use", "note": "She walks over and talks" },
+      { "key": "Click a command", "action": "Pick", "note": "In battle; click a machine to aim" },
+      { "key": "Click and hold", "action": "Cook", "note": "At the stove" },
+      { "key": "≡", "action": "Menu", "note": "Top right" }
+    ],
+    "gamepad": [],
+    "touch": [
+      { "key": "Tap the scene", "action": "Walk", "note": "Wren walks to the spot" },
+      { "key": "Tap a person or thing", "action": "Use", "note": "She walks over and talks" },
+      { "key": "◀ ▶", "action": "Walk", "note": "Hold to walk" },
+      { "key": "OK", "action": "Use", "note": "Talks and advances" },
+      { "key": "Tap a command", "action": "Pick", "note": "In battle; tap a machine to aim" },
+      { "key": "Tap and hold", "action": "Cook", "note": "At the stove" },
+      { "key": "≡", "action": "Menu", "note": "Top right" }
+    ]
+  },
+
+  "moments": [
+    { "name": "Back on its wheels", "rule": "Lift the little delivery robot stuck on its back on Carmody Street.", "kind": "feat" },
+    { "name": "Yolked", "rule": "Throw one of Dolly's eggs at a machine in a fight.", "kind": "feat" },
+    { "name": "Thank you", "rule": "THANK YOU a machine, then finish it while it's still FLUSTERED, so it goes free.", "kind": "feat" },
+    { "name": "Sal's girls", "rule": "Give Sal one of Dolly's eggs, or your jook, on the Vallejo Steps.", "kind": "feat" },
+    { "name": "One forty-two", "rule": "Walk every flight of the Vallejo Steps, so Wren's count reaches 142.", "kind": "collection" },
+    { "name": "Gus's patch", "rule": "Get Gus's door open on Larkin Row: thank Portia, or let Biscuit talk to her.", "kind": "feat" },
+    { "name": "Last Stop", "rule": "When Dolly calls it on Car 17, pick LAST STOP.", "kind": "feat" },
+    { "name": "All twelve", "rule": "Bring all twelve eggs to Dolly's stove: none cracked, cooked, given or thrown.", "kind": "collection" },
+    { "name": "The Long Table", "rule": "UNDECIDED: the event isn't in the build yet.", "kind": "event" }
+  ],
+
+  "captions": {
+    "gallery/01.png": "Fight Kindly's machines, turn by turn, on Carmody St",
+    "gallery/02.png": "Say thank you, and the kiosk's gloss cracks into pixels",
+    "gallery/03.png": "Walk the city: down all 142 Vallejo Steps",
+    "gallery/04.png": "Biscuit, a delivery cooler that switched sides",
+    "gallery/05.png": "On runaway Car 17's roof, down Hyde, against Max",
+    "gallery/06.png": "A dozen eggs, counted at the end of the line"
+  },
+
+  "place_strings_note": "PROPOSAL. The build sends none yet: it has no bug.games SDK and never calls progress.set. These are the game's own place cards (08b_guide.js GTITLES, name · line under it), in play order. Every card runs over 30 characters as the game shows it, so all thirteen are proposed shortenings (the place and the card's time or line); the full cards are listed in the round-2 words notes.",
+  "place_strings": [
+    "THE CROOKED LADY · 8:31 AM",
+    "CARMODY STREET · 8:44 AM",
+    "LUCKY SEVEN MARKET · 8:52 AM",
+    "CARMODY STREET · 9:32 AM",
+    "DOLLY'S KITCHEN · 9:21 AM",
+    "VALLEJO STEPS · 9:38 AM",
+    "LARKIN ROW · 9:49 AM",
+    "THE CROOKED LADY · 6:24 PM",
+    "CROOKED LADY · A REFUGE NOW",
+    "CARMODY STREET · IN THE FOG",
+    "VALLEJO STEPS · STILL COUNTING",
+    "LARKIN ROW · STILL BURNING",
+    "THE ROOF · 10:15 PM"
+  ],
+
+  "verb": "walked",
+  "stat_nouns": ["eggs home", "machines freed", "steps counted", "people under one roof", "refuge jobs done"],
+  "own_word": "Punched",
+  "bought_line": "Punched for you: ",
+  "result_lines": [
+    "Brown. A dozen. Not the sad ones.",
+    "Eleven's a dozen if you're generous.",
+    "You were on my way."
+  ],
+  "friend_lines": [
+    "A friend is walking a dozen eggs home.",
+    "A friend got the eggs home. Brown, not the sad ones."
+  ],
+  "quick_chat": ["Mind the eggs.", "Next stop."],
+  "pause_line": "Biscuit has the tote. Take your time."
+}
