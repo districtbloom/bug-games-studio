@@ -43,10 +43,22 @@
    > - what's in progress;
    > - what you'd do next.
    >
-   > Commit it. Then make two bundles and give me both files:
+   > Also write `DESIGN.md` at the root, for a new chat that has never seen this conversation:
+   > - what the game is and what it should feel like, in one page;
+   > - the rules and systems as they are now, and why they are that way;
+   > - every design decision made in this chat, with the options rejected and the reason;
+   > - the art and words direction you followed: palette, shapes, tone, what is banned;
+   > - what the designer's review said and what you changed because of it;
+   > - what you tried that did not work;
+   > - open questions you never settled.
+   > Write facts, not plans. If you are unsure whether something was decided, say so.
+   >
+   > Commit both. Then make two bundles and give me both files:
    > - `git bundle create <slug>-game.bundle --all` in the game's repository;
    > - `git bundle create <slug>-round-<n>.bundle main..<slug>/round-<n>` in the studio clone, if you have studio commits.
 
 2. **Create the empty private repository `districtbloom/<slug>`** on GitHub, or ask the main chat to.
 3. **Download both bundles to the Mac** and tell the design chat. It pushes the game's history to `districtbloom/<slug>`, pushes the round branch to the studio, and opens the pull request.
-4. **Start the game's new Code session**, in the cloud with both repositories selected, or on the PC through Orca in clones of both, and tell it: "You're the chat for <Game>. Read `HANDOFF.md`, then `START-MESSAGE.md` in the studio."
+4. **Start the game's new Code session**, in the cloud with both repositories selected, or on the PC through Orca in clones of both, and tell it: "You're the chat for <Game>. Read `HANDOFF.md` and `DESIGN.md`, then `START-MESSAGE.md` in the studio. Before doing anything, say back in a few lines what the game is and what is next." If that read-back sounds wrong, the files are wrong: the old chat is still there to ask.
+
+   Before downloading, skim `DESIGN.md` in the old chat yourself. You are the only one who saw the whole conversation; if something is missing, say "you forgot X" and it adds it.
