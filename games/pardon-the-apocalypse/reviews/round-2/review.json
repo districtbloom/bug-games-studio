@@ -1,0 +1,57 @@
+{
+ "game": "pardon-the-apocalypse",
+ "round": 2,
+ "branch": "pardon-the-apocalypse/round-2",
+ "head": "7c4cb65",
+ "reviewed": {
+  "pictures and words": "7c4cb65",
+  "moving poster": "9b934cb"
+ },
+ "slots": {
+  "poster": {
+   "verdict": "approved",
+   "rule": "PD-3.1",
+   "note": "The premise now reads at a glance on the wall: Kindly's smile has the city, its swarm and machines come down Carmody Street, the street is burning, and the bus driver throws back. It holds in all the wall shapes with Wren in each, and at 90x70. The light band is dark (L 0.177). The busier scene goes past 'one character, not busy', but it's the founder's ask ('everything's burning and machines'), and it keeps one light and one focal path. Small: in the 577x163 strip the smile is cut at the top. Leave it unless it bothers you."
+  },
+  "phone": {
+   "verdict": "approved",
+   "rule": "KIT T2",
+   "note": "Recomposed from the burning poster as the same one image; Wren, the egg and both machines hold."
+  },
+  "store": {
+   "verdict": "approved",
+   "rule": "PD-3.9",
+   "note": "pigeon-pal now reads at 40 px as a bird, and no longer looks like biscuit-tape."
+  },
+  "share": {
+   "verdict": "approved",
+   "rule": "PD-3.15 · PD-4",
+   "note": "Restacked lettering is legible at 270 px (smallest letters about 12 px), and the subject sits right as in the poster. Accepted: the fire's single ember-near pixels (0.28%). They're world detail from the founder's burning ask, never a block, and nothing sits in the bottom band. Wren's own sprite pixels were already accepted in round 1."
+  },
+  "living": {
+   "verdict": "needs-changes",
+   "rule": "PD-3.2",
+   "note": "At 9b934cb the module works on the wall. Checked on the living board (open, three squeezes, a seam moment, no console errors): Wren stays in view on every plate, the narrow plate stacks the fight, and the loop shows the premise. But its held frame is the first round-2 poster, without the fire, and the poster is now the burning one. Finish the burning rework you started at 7c4cb65 so the held frame matches poster.png, poster-2x3.png and poster-1x1.png again, and keep inview.py at 0 frames out of view."
+  },
+  "words": {
+   "verdict": "approved",
+   "rule": "PD-3.13 · PD-3.5 · KIT-W",
+   "note": "Complete and honest. Title 21, line under it 105 and pitch 70 characters. Controls cover every declared input with notes. Every moment has a rule and a kind. Every caption is under 60 characters. Place strings are proposals of 30 or fewer because the build doesn't call progress.set yet, and the event rule and target are UNDECIDED. The echo #FF7CC0 is clear of every platform colour (lowest: lilac, ΔE 22.8). No banned words."
+  },
+  "designWords": {
+   "verdict": "approved",
+   "rule": "PD-3.9 · PD-3.10 · PD-3.12 · PD-3.14",
+   "note": "Store kind lines, store row line, pass name, unit, sentence and reward names, update title and change, and event text and counter unit are all there, with no prices. The update's version is UNDECIDED, and the note that the antenna may already be in the first upload is right."
+  }
+ },
+ "suggestion": "Optional: Wren's egg toss is the game's own verb, so keep it. The founder asked for variety on the wall, though, and the egg is a throw like most others. A second item for the machine side would let the wall show Kindly answering: for example a scan beam, `acts: { egg: 'toss', scan: 'beam' }`, drawn in Kindly's pink.",
+ "answers": {
+  "wren-guarded-pixels": "Acceptable everywhere: they're her sprite's own single pixels, never a block and never in a guard zone. Don't recolour her.",
+  "120px-rule": "Your reading is right: the same share of the height at every size.",
+  "offscreencanvas": "It runs on the living board with no errors, so keep it as a private cache. The final call is the platform's when the board runs on the site.",
+  "create-cost": "50–70 ms once is fine for now.",
+  "for-the-founder": "Which moments game.json declares, the update's version string, the event's light (bulbs or pink rim), and whether the share card may carry fire pixels: these went to Yelnur with this review."
+ },
+ "overall": "Round 2 lands. The poster now says what the game is, the store and share card fixes hold, and the words are the most complete set yet. One thing is left: bring the moving poster onto the burning poster.",
+ "next": "Round 2b on the same branch: the moving poster only. Then this pull request merges."
+}

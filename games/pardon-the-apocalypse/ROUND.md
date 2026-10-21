@@ -31,3 +31,11 @@ No prices, dates or target numbers.
 ### 3. Optional: your seam moment
 
 The moving poster may set `acts: { <item>: 'toss' | 'shoot' | 'beam' | 'burst' | 'grab' }` so its moment on the wall fits the game. See `direction/CHANGELOG.md`.
+
+## Round 2 hand-back (from the game's chat, 21 Oct)
+
+Done on the branch `pardon-the-apocalypse/round-2`: all four picture asks, the words, and the optional seam moment (`acts: { egg: 'toss' }`). The changes are listed at the top of `bug/NOTES.md`, under "Round 2". The game's chat couldn't push to this repository or open a pull request: its session has no push access to `districtbloom/bug-games-studio` or any other repository. So the branch was handed to Yelnur as a git bundle, with its commits unchanged.
+
+## Round 2 review (design chat, 21 Oct)
+
+6 approved, 1 to finish. See `reviews/round-2/REVIEW.md`. Next, on the same branch: **round 2b, the moving poster only.** Rebuild it on the burning poster so the held frame matches the posters again, and keep Wren in view. Then this pull request merges.

@@ -46,12 +46,351 @@
 - **Update (1):** the roof antenna.
 - **Event (1):** *The Long Table*. Carmody Street sits down to one long dinner on the night Kindly's smile is switched off, and the street is lit by its own bulbs.
 
+## Round 2 (21 Oct): what changed
+
+Branch `pardon-the-apocalypse/round-2`, from ROUND.md and `reviews/round-1/REVIEW.md`. Every other approved picture is unchanged. The entries under **Pictures** further down are from round 1; for the files listed here, this section takes precedence.
+
+- **Poster, tall, square, second pass (founder, 21 Oct: "uplift chaos, like everything's burning and machines"):** Carmody Street is now on fire, with the game's `pxFire` on the roofs and in the windows, dithered smoke and embers. Kindly's mini drones fill the sky, and a second revving scooter joins the street. Code: `work/r2poster/scene3.js`, `p3.js`. The audits pass: no flat guarded block (two blazes were shrunk until the 24 px rule held), and nothing guarded in the bottom 26 + 120 px. Light band: dark (L 0.177). *(lead)*
+- **Poster, tall, square (PD-3.1, founder 20 Oct):** reworked to show the premise. Kindly's swarm is over the city, a scanning drone and a revving scooter come for Wren, and she throws an egg. The egg is relit from the up-right, and the focus is now 0.42, 0.50. *(lead)*
+- **Phone poster 9:16:** recomposed from the new poster, the same one image. *(round3b)*
+- **Phone poster and share card, second pass:** both are rebuilt on the burning-city poster. The share card's guarded-ember share rises from 0.08% (Wren's own pixels) to 0.28%, all of it single pixels of the game's fire and embers: no block, nothing in the bottom band. That's kept on purpose, so the card matches the poster's register. A calm-city version, with ember only on Wren, is in the work folder if bug.games rules otherwise. *(round3b)*
+- **Share card (PD-3.15, PD-4):** the title is restacked so its smallest letters are 12 px at the 270 px preview, and the art is redrawn from the new poster. *(round3b)*
+- **Title lockup:** the art is unchanged; its minimum width is restated as 496 px (lowercase 12 px). *(round3b)*
+- **Store, pigeon-pal (PD-3.9):** Little Pope is large on the lid edge, so the companion is what reads at 40 px. *(store)*
+- **Moving poster (PD-3.2):**
+  - the held frame is the new poster;
+  - Wren stays in view in every frame and plate (0 of 15,480 frames out of view);
+  - the loop shows the premise: drone splatted and freed, scooter yolked, THANK YOU, freed;
+  - `acts: { egg: 'toss' }` is declared. *(living2)*
+- **Words (round 4):**
+  - `words.json` is new;
+  - `publish.json` gains its `line`;
+  - `design.json` gains the round-2 words (kind lines, store row line, reward names, pass sentence, own word and bought line, update title and change, event text and counter unit). *(words)*
+- **Not pushed to the studio:** this session couldn't push to `districtbloom/bug-games-studio` (no push access), so the branch was handed over as a git bundle with its commits unchanged.
+
+### Poster set (lead)
+
+#### `poster.png` · `poster-2x3.png` · `poster-1x1.png` · `publish.json` focus
+- **Shows:** the premise. Kindly's smile has the city: its drone swarm streams out over the painted ladies. Its machines come down Carmody Street for the bus driver: a SCANNING Hoverly drone right in front of her and a REVVING Glyde scooter further down the street. Wren lobs one of Dolly's eggs at them. It's still a stage plate with one light: the smile.
+- **Made:** rendered from the game, in the round-1 scene code plus `posterScene2`.
+  - The machines are the game's `drawEnemy('drone', {scan:true})` and `drawEnemy('scooter', {rev:true})`. These are their own attack states, so their screens are red, not lilac.
+  - The machines are backlit by the smile behind them, so a smooth gloss shade runs over each one from the up-right. That's lighting, not a recolour, and it keeps their pale lilac body gloss off the platform's lilac.
+  - The swarm is the game's own drone pill (`drawDrones`' sprite), laid along a stream from the smile.
+  - The egg is relit from the up-right, the smile's side, as the review asked.
+  - Code: `work/r2poster/scene2.js`, `work/r2poster/p.js`.
+- **Focus:** 0.42, 0.50. It's on Wren's head, so the strip now keeps the drone and the lower smile, and tall and half plates hold Wren against the drone and swarm.
+- **Agent:** lead.
+- **Check:**
+  - wall.py ran in every shape (`checks/poster-wall-shapes.png`). Hero, strip, wide, band, small and tile show Wren, the egg, the machines and the smile. Tall and half show Wren, the egg, the drone and the swarm. The 1:2.2 column shows Wren, the egg and the edge of the drone.
+  - audit, 2:1: ember 0.09%, lilac 0.35%, sun 0.06% guarded, all single gloss or sprite pixels. No flat 24×24 block, and nothing guarded in the bottom 26 + 120 px. The same holds for the 2:3 and 1:1.
+  - Light band: dark (L 0.152).
+- **Couldn't make / caveats:** wall.py couldn't draw `wall-hero.png`, because `direction/tools` has no `reference/` folder beside it. The shapes sheet was made.
+
+### Store · pigeon-pal (store)
+
+#### `store/pigeon-pal.png` (round 2)
+- Shows: Little Pope, close up: one of Sal's pigeons, large and centred, standing on the edge of Biscuit's lid. Only the lid's white top edge (with a curve of his screen at the bottom right) and a sliver of his pink flag at the left edge say "companion".
+- Made: rendered from the game. The pigeon is the game's own `pigeonFrame(0, '#c8c8d4')`, unedited, at a whole-number scale: 25 device px per sprite px (5 world px on the store tiles' S = 5 grid), with the ink outline scaled by the same whole number. There are two light changes, and no colour is redrawn:
+  - The feet (#e8705a, ember-guarded) sit in the body's own shade. That is pbLit's shade mix (.5 toward PB.SHADE), which gives #7b3d39, as in round 1.
+  - Kindly's pink rim (pbLit, outer edge only) is placed on the tile's 5 px world grid rather than at sprite resolution, so it reads as light catching the up-right edges, not as 25 px pink blocks.
+  - Biscuit is storepass's `spBiscuit` (the game's drawing with the free stand-in ramps), zoomed to the pigeon's scale and cropped to his lid.
+  - The pigeon casts a solid people's shadow (#8d8584) down-left onto the lid, clipped to the shell.
+  - The ground is the shared store ground (`spStoreGround`: PB.NIGHT, pbKGlow, the Carmody roofline), the same as the other four tiles.
+  - Script: `/home/claude/passB/work/round2/store/r2_pigeon.js` (`tilePigeonPal2`), run by `run.sh` after lib.js, poster_scene.js, sp_lib.js and sp_store.js.
+- Agent: store
+- Check:
+  - `audit.py`: 0 guarded pixels in every colour, no flat 24×24 blocks, and the NEW (0–110 × 0–70) and YOURS (255–400 × 0–70) zones clear. Lilac caution is 14.1%, from the pigeon's grey body.
+  - Size sheet: `/home/claude/passB/work/round2/store-sizes.png` shows all five tiles at 169, 80 and 40 px, in colour, as black silhouettes and in greyscale, plus the 40 px row side by side.
+  - At 40 px it reads as a grey bird with an orange beak on a white edge. Its silhouette is a bird, where biscuit-tape is a cooler on wheels, so the two tiles no longer look alike.
+- Couldn't make / caveats: at 25 px per sprite pixel the 12×10 sprite is very chunky. That is the game's own close-up approach (`fhPigeonCU` draws the same frame scaled up), but the bird has only as much detail as the sprite has. Little Pope's colour, #c8c8d4, is still the round-1 inference: `fhPigeonCU` and the Long Table pigeon use it, and Sal names his birds "Ethel. Bernadette. Little Pope."
+
+### Share card, phone poster, lockup (round3b)
+
+
+Code is in `work/round3b/`: `title2.js` (the restacked title), `share2.js`, `p916b.js`, `check_sheets2.py`, and `run.sh`, which renders inside the real build with `lib.js`, `poster_scene.js`, `round3/r3lib.js` and `r2poster/scene2.js`. All four of those files are used unchanged. The round-1 pictures are kept as `old-share-card.png` and `old-poster-9x16.png`. The audit output is in `audit.txt`, and the measurements at 270 px are in `share-270-measure.json`.
+
+#### `share-card.png` (1200×630) · fixes PD-3.15 / PD-4
+- **Shows:** the new poster's fight on the right, the game's title on the left.
+  - The smile's drone-pill swarm streams over the roofs.
+  - Wren lobs the egg (lit from up-right) at the SCANNING drone hanging close in front of her, while the REVVING scooter comes down the street.
+  - Positions across the width: Wren 0.62, egg 0.71, drone 0.80, scooter 0.93, smile 0.87. The fight is centred at about 0.71 W.
+  - The houses start at about 0.58 W. The left half is plain sky and kerb, and the title ends at x 592 (0.49).
+  - The bottom 18% is the street in shadow.
+- **Made:**
+  - **The art** is rendered with `posterScene2`, the new poster's own scene code, using settings `SHARE2`: 400×210 logical at S=3, Wren ×2 (6 device px a sprite pixel, the master's 1:2 ratio of houses to Wren), drone and scooter at z 1.3.
+  - **The title** is restacked (`r3bTitleStack`) in the same lettering as `title-lockup.png`:
+    - Kindly's pill becomes two lines, "Pardon / the 😊", in Nunito 900 at 106 px. It keeps `#4b3a9a` on the white→`#f1edff` fill, the `KGRAD` border and `kSmiley`.
+    - Under it, the game's own `pxLogoCanvas('APOCALYPSE')`, unchanged, at whole-pixel ×4. It's cut between its 5th and 6th letters into APOCA / LYPSE. The cut falls in the empty gap, so every letter keeps its own bounce.
+  - **Why it's restacked:** with the pill on one line inside the left half, the largest that fits is about 72 px. That gives capitals of about 11.5 px at 270 and lowercase of about 8 px, which fails the rule. On two lines, every letter clears 12 px.
+- **Agent:** round3b
+- **Check:** `share-card-270.png`
+  - **Smallest letter at 270 px: 12 px.** That's the pill's lowercase a, r, o, n, measured on the 270 px image itself (rows at least half ink, per letter). The e is 13, the P, d, h and t are 16–18, and APOCALYPSE is 18–19.
+  - In the 1200 master: the pill's x-height is 54 px and its capitals 76. APOCALYPSE's letter fill is 80 px.
+  - audit: no flat 24×24 block, and the bottom 113 px are clear.
+  - Guarded ember is 576 px (0.08%), all of it inside Wren's sprite box (her cap highlight and zip). That's the accepted case.
+  - The art's other guarded pixels are lilac on the machines' gloss and swarm, which is the master's own, plus sun on Wren's badge.
+  - In the left half, the art has only 45 px of guarded lilac: five of the poster's bright stars (`#c8bedc`). The title's own lettering is guarded sun (24,384 px) and lilac (4,414 px, from the pill border's gradient). That's by design: it's lettering, not a block.
+  - Light: L 0.27, C 0.145, **mid**. The art alone is 0.148, dark. The larger white pill and the mustard letters lift it.
+- **Couldn't make / caveats:**
+  - The legible title fills the whole left half, and the card's light band moves from dark to mid. At 270 it still reads as the poster's plate (see the sheet, beside `poster.png` at 270).
+  - Wren is at 0.62, not 0.70. The subject at 0.70–0.76 is the fight (Wren, the egg and the drone together). Putting Wren herself at 0.70 would push the drone and scooter off the right edge.
+
+#### `poster-9x16.png` (1080×1920) · recomposed for the new poster
+- **Shows:** the same one image as the new 2:1, recomposed for a tall plate.
+  - The smile is up right, and its swarm streams down-left over the roofs.
+  - The SCANNING drone hangs in front of Wren, and the REVVING scooter comes down the street.
+  - Wren lobs the up-right-lit egg from the corner.
+  - The top ~15% is sky, for the story chrome. The bottom 18% is the street in shadow.
+- **Made:** rendered with `posterScene2`, using settings `P9x16` in `p916b.js`: 216×384 logical at S=5 (the 2:1 master's pixel), Wren ×2, and the master's machine zooms (drone 1.25, scooter 1.5). Nothing is hand-drawn.
+- **Agent:** round3b
+- **Check:** `poster-9x16-vs-2x1.png`
+  - Wren is at **10 device px a sprite pixel** (the limit is 11).
+  - audit: the bottom 18% (346 px) and the caption zone are clear, and there's no flat guarded block.
+  - Guarded pixels: ember 0.08% and sun 0.05%, all inside Wren's sprite box. Lilac is 0.35%, the same as the 2:1.
+  - Light: L 0.16, dark (the 2:1 is 0.152).
+  - Looked at it at 1080, 540, 270, 135 and 90 wide, beside the 2:1 and the 2:3.
+- **Couldn't make / caveats:** none.
+
+#### `title-lockup.png` (906×202) · minimum width restated, art unchanged
+- **Restated:** **minimum width 496 px.** The round-1 figure of 344 was set by the pill's capitals. At 344, the pill's lowercase is only 8.4 px, so **344 is withdrawn.**
+  - At 496, the pill's lowercase is 12.0 px, its capitals 17 and APOCALYPSE 33. At 906 (×3), the lowercase is 22 px.
+  - The smallest whole-pixel size above the minimum is ×2 (604 px), with lowercase at 14.7.
+  - Where it must go narrower, use the share card's restacked form (`r3bTitleStack`). It reaches 12 px lowercase at a block width of about 124 px.
+- **Agent:** round3b
+- **Check:** `title-lockup-min-width.png` shows it at 496 on night, the page colour and linen, at 604 and 906, and the withdrawn 344. audit: no flat block, as before.
+- **Couldn't make / caveats:** the art didn't need to change.
+
+#### Questions
+1. The share card's title is now a restacked form of the lockup (a two-line pill and APOCA / LYPSE), not `title-lockup.png` itself. Should the restacked form also ship as a second lockup file for narrow uses, or should it stay on the card only?
+
+### Moving poster (living2)
+
+#### `living-poster/pardon.js` (round 2)
+- **Shows:** the round-2 poster, alive, and the premise in play. Kindly's smile has the city, its swarm streams over the roofs, and a SCANNING drone and a REVVING scooter come for Wren, the bus driver. She fights back with Dolly's eggs.
+  - **Loop** (7.0 s, seamless):
+    1. The poster's egg splats the drone. It cracks into pixels and, freed, floats off.
+    2. The scooter charges her and is yolked mid-charge, then skids up blind.
+    3. THANK YOU stars leave it flustered, then free it, and it rides off.
+    4. The next drone drops in from the swarm and the next scooter rolls up. She weighs an egg and lobs, back to the poster's frame.
+  - **Idle:** the drone ducks her lobbed egg.
+  - **Hits** react by `kind` (toss, shoot, beam, burst, grab).
+  - **`acts: { egg: 'toss' }`.**
+- **Made:** rendered from the game and drawn in its own code; nothing from earlier pictures.
+  - **Re-baked inside the build** (`work/living/r2/bake2.js`):
+    - 36 Wren poses (`personFrame` + the poster's `pbLit`), including three new hit poses: `shield`, `duck` and `yanked`;
+    - the poster's relit egg (`pbEgg6R`);
+    - the drone's `enemyCracked('drone',{scan},1|2)` and `enemyFreed('drone')`;
+    - the scooter's crack and freed pixels;
+    - the Carmody St tone map.
+  - **Ported as code:**
+    - `paintDrone`, `paintScooter`, the gloss helpers and the poster's `pbSwarm` pill;
+    - the machine render, done as `drawEnemy` inside `zoomDraw` does it, with the poster's source-atop backlit shade;
+    - the three settings from `work/r2poster/p.js`.
+  - **Hand-drawn in the palette:** the yolk, splats, stars, hearts and dust, as in round 1.
+  - **Composition:** the camera is now fixed per plate, and Wren's full box (every pose) always fits. The machines are clamped into the view, clear of the bottom 16%. On narrow plates the fight stacks: the scooter waits up the street above her and the drone hovers over it.
+- **Agent:** living2
+- **Check:** all saved in `work/living/r2/`. The key sheets are copied to `bug/checks/` (`living-held-vs-poster.png`, `living-modes-narrow.png`, `living-inview.png`); the old `living-*.png` there were removed.
+  - **Held vs the new posters:**
+
+    | poster | max diff | pixels > 2/255 |
+    |---|---|---|
+    | `poster.png` | 13/255 | 0.021% |
+    | `poster-2x3.png` | 12/255 | 0.030% |
+    | `poster-1x1.png` | 16/255 | 0.028% |
+
+    The residue is glow and gloss rounding.
+  - **In view** (`test/inview.py`, every frame at dt 1/60, all modes, events and squeeze; plates 150×370 at dpr 1 and 2, 140×305, 120×300, 1000×150, and 270×370 squeezing to 120×280): Wren is out of view in **0 of 15,480 frames**. The narrowest margin is 5 px, on the right at 120×300.
+  - **`test/run.py all`:** 173 scenarios with zero console errors. They cover tiny, tall, narrow, wide and squeezed plates, every hit kind, reduced motion and the fallback.
+  - **`test/rhythm.py`:**
+    - the loop's boundary frames are hash-identical to the held still;
+    - over the loop, luma stays in 0.160–0.183 and moves at most 0.0035 a frame;
+    - holds run 1.5–4.7 s and live stretches 3.0–6.0 s.
+  - **`audit.py`** on 158 shots: 0 flat 24×24 guarded blocks and 0 guarded pixels in the scaled caption zone. The light band is dark (L about 0.13).
+  - **Timing** at 600×400 (mean / p95): idle 0.56 / 0.7 ms, loop 0.74 / 1.2 ms, loop at dpr 2 1.3–1.9 / 2.2–3.0 ms.
+  - **Size:** the module is 144 KB.
+- **Couldn't make / caveats:**
+  - **Narrow plates:** the stacked scooter sits up the street above Wren's head, so it reads a little as floating in front of the facades. The freed scooter's long cast shadow is dropped there, because it would cross her.
+  - **Tiny plates:** on 120–150 px wide plates the smile is cropped at the right, and the held egg sits at the plate's edge.
+  - **The machines' crack pixels** are drawn at the nearest whole-number scale and pinned at the crack, so they can sit up to about a device pixel off the gloss at the far edge.
+  - **Board harness:** the old kit's board harness was not re-run (it isn't in the studio repo); the module's own Playwright plate was used instead.
+  - **dpr 2:** the loop's p95 at dpr 2 runs 2.2–3.0 ms, over the ~2 ms budget. The budget is met at dpr 1.
+  - **No OffscreenCanvas:** without it the fallback is still slow (about 7 ms a frame on average), as in round 1.
+
+### Words (words)
+
+
+What I wrote, field group by field group, with the code evidence behind it. Source read: `/home/claude/pardon/src` (read-only, untouched). Line numbers are from that tree.
+
+Files written:
+- `games/pardon-the-apocalypse/bug/words.json` (new, from `direction/WORDS_TEMPLATE.json`, `_read_me` removed)
+- `games/pardon-the-apocalypse/bug/publish.json` (added `line`; `focus` kept exactly as found on disk, which was `{x: 0.42, y: 0.5}` when I wrote. It had been `{0.47, 0.56}` when I first read it, so the lead changed it during the round, and I left it alone)
+- `games/pardon-the-apocalypse/bug/design.json` (round-2 words added beside each proposal; every existing field kept; re-serialised with one-space indent, valid JSON)
+
+#### 1. Hero: title, hook, playing word, hover, echo
+
+- **title:** "Pardon the Apocalypse" (21 characters). The game's own title is "Pardon the" over APOCALYPSE (`11z_title.js`).
+- **hook** (105/110): "A retired bus driver walks a dozen eggs home across San Francisco and fights a very polite AI's machines." What you do (walk the eggs home, fight), and against what (Kindly's machines). Source: `README.md` and `11a_story.js` 112–131 (Dolly sends Wren for "A dozen. Brown. Not the sad ones.").
+- **playing_word:** "walking" ("1,418 walking").
+- **hover_hint:** "Hover to throw an egg at Kindly" / "Tap to throw an egg at Kindly". This matches the moving poster: the hover throws the egg at the smile, and then a short fight with a Glyde scooter plays (`living-poster/README.md` enter and loop). "Throw" is the game's own verb (`09_battle.js:202`, THROW AN EGG).
+- **echo:** `#FF7CC0`, Kindly's candy pink, the poster's one light (`PB.PINK`, the rim on Wren). measure.py: ember 30.6, lilac 22.8, sun 54.9, mint 67.8, so free on all four (all ≥20). Other colours I measured: Wren's navy `#34406e` is the safest (all 48+), but it's too dark to read as a lifted tile's shadow on the dark page. Cap red `#c8433a` is 14.1 to ember (caution), so rejected. The egg `#e2ac74` is 13.2 to sun (caution), also rejected.
+
+#### 2. About: description, goal, tips
+
+- **description** (3 sentences): Sunday, Kindly decides people are the friction, you're Wren off the 45; walk Carmody St and the Vallejo Steps, talk to neighbours, turn-based fights with Walt's skillet, BRACE and THANK YOU; get the eggs home for Walt's tarts, then ready the house for the night. Evidence: `README.md`, `11a_story.js` (areas street, store, steps, larkin), `06_ui.js:153–161` (SKILLS), `11c_refuge.js:24–50` (tarts, then the refuge).
+- **goal:** "Bring Dolly's dozen eggs home. Bring Dolly home with them." The chapter's spine: the eggs (`11a_story.js:252`) and Dolly off Car 17 (`11a_story.js:201–204`, `564–580`).
+- **tips:** all three are true in the build.
+  1. BRACE on a red intent: half damage, and an egg cracks only on an unbraced hit of 10 or more (`09_battle.js:526`, `582–585`; the game's own defeat tip at `107`).
+  2. THANK YOU, then finish it while it's FLUSTERED, and it goes free (`09_battle.js:409`, `416–424`).
+  3. A thrown egg makes the machine miss its next attack (YOLKED), and Dolly notices (`09_battle.js:202`, `363`, `524`; `11f_films_home.js` EGGS_HOME "Biscuit tells me you threw my eggs at a robot.").
+
+#### 3. Details
+
+- **genre:** "Story RPG" (the README's own words).
+- **players:** "1". **coop:** false (single-player; no network code).
+- **minutes:** see the measurement section at the end.
+- **inputs:** keyboard, mouse, touch. There's **no gamepad**: grep for `gamepad|getGamepads` in src finds nothing. Keyboard: `00_core.js:111–137`. Mouse and touch both go through `pointerdown` on the canvas (`00_core.js:158–162`), plus the touch pad `tL/tR/tA` (`00_core.js:144–153`, `head.html:523–525`) and the ≡ button (`00_core.js:154`, `head.html:502`).
+- **mood:** "homely". It's from the platform's list, which the SDK docs give (`mcp__bug__sdk_docs`, game.json `mood`: thrilling/tense/frantic/brutal/triumphant, cosy/gentle/homely/meditative, curious/playful/strange/clever, tender/melancholy/lonely/bittersweet). A mood is "the feeling a player is left with", and the chapter ends at Sunday dinner and a house turned refuge. "tender" is the runner-up.
+- **tags** (≤5, 2–24 characters, the three that sort it first): "turn-based story", "a very polite AI", "a dozen eggs", "San Francisco", "thank the machines".
+- **contentNote:** "Brief white flashes and fast flicker on big hits and combos, and screen shake (the shake stops with reduced motion). The city burns in the background, and a girl's mother hasn't called."
+  - Full-frame flashes: `flash()` (`00_core.js:204`) is drawn over the whole canvas (`12_main.js:58`). It's called on FREED (`09_battle.js:418`, #fff4dc at .45), every combo panel (`433`, #fff at .8), Dolly's grip pull (`494`) and LAST STOP (`607`, #fff at 1), plus film shots with `flash` (`07b_film.js` `s.flash`).
+  - Sprite flicker on hit: 15 Hz (`09_battle.js:680`, `689`: `Math.floor(fl*30) % 2`).
+  - `REDUCED` (prefers-reduced-motion) only turns off `shake()` (`00_core.js:203`) and shortens the combo panel (`09_battle.js:432`). Flashes are not reduced. Worth a fix later; I didn't touch code.
+  - Story: downtown burns (`11a_story.js:44`, `11c_refuge.js:242`), and Pilar's mother hasn't texted from the hospital (`11a_story.js:140–141`, `11c_refuge.js:18`). Gus's insulin is locked away (`11a_story.js:500`); I left that out to keep the note short.
+
+#### 4. Controls (only what the build has)
+
+Keyboard, from `KEYMAP` (`00_core.js:112–118`):
+
+| key | action | evidence |
+|---|---|---|
+| ← → / A D | Walk | `held()` left/right in explore |
+| ↑ ↓ / W S | Stairs | `08_explore.js:214–218` (house stairs, ↑ at a door); menus `06_ui.js:89–90`, battle grid `09_battle.js:234` |
+| E / Space / Enter | Use | `act` (Z also maps to `act`; I left it off the list for space) |
+| 1–6 | Pick | `n1–n6`: battle commands `09_battle.js:231`, choices `06_ui.js:92` |
+| X / Backspace | Back | `09_battle.js:236`, `276` |
+| Esc / M | Menu | `08_explore.js:213` (Tab also maps to it) |
+| E / Space (hold) | Cook | `10_cook.js:21–23`, timing / mash / hold steps `5–9` |
+
+The game's own control lines agree: `06_ui.js` pause menu CONTROLS, `11a_story.js:77`, `head.html:521`.
+
+Mouse: click the street to walk, and click a person or thing to walk over and use it (`08_explore.js:221–244`). Click a battle command (`09_battle.js:217`), and click a machine to aim (`272`, `242`). Click and hold to cook (`10_cook.js:21`, `24`: pointerup releases). ≡ opens the menu (`00_core.js:154`).
+
+Touch: the same taps, plus ◀ ▶ hold to walk and OK uses / advances (`head.html:523–525`). When dialogue is open, OK reads NEXT (`12_main.js:39`).
+
+Gamepad: `[]`.
+
+#### 5. Moments (8 + the event), in play order
+
+The kinds match the seal outlines (feat = steel token, collection = paper transfer, event = gable; looked at all nine earned seals side by side). The names are short for mono caps; the longest is "Back on its wheels" (18).
+
+| # | name | rule | kind | the real flag |
+|---|---|---|---|---|
+| 1 | Back on its wheels | Lift the little delivery robot stuck on its back on Carmody Street. | feat | `biscuitFlipped`, `11a_story.js:174–178` (the mash prompt LIFT!, 4 presses) |
+| 2 | Yolked | Throw one of Dolly's eggs at a machine in a fight. | feat | `threwEgg`, `09_battle.js:363` (possible from the first fight in the Lucky Seven, once the tutorial rounds end) |
+| 3 | Thank you | THANK YOU a machine, then finish it while it's still FLUSTERED, so it goes free. | feat | `foeFreed()` → `S.freed`, first time sets `freedTip` (`09_battle.js:409`, `416–424`). THANK YOU is learned after fight 1 (`11a_story.js:279`), so the first chance is the steps fight (`413–417`) |
+| 4 | Sal's girls | Give Sal one of Dolly's eggs, or your jook, on the Vallejo Steps. | feat | `salHelped`, `11a_story.js:435–455`. His pigeons then tear up THE BILL in the boss (`590–602`) |
+| 5 | One forty-two | Walk every flight of the Vallejo Steps, so Wren's count reaches 142. | collection | `stepsCounted`, `08_explore.js:175–183`, `STEPS.total = 142` (`03e_outer.js:8`). Counts during `descent` or `refuge` |
+| 6 | Gus's patch | Get Gus's door open on Larkin Row: thank Portia, or let Biscuit talk to her. | feat | `gusHelped`, `11a_story.js:517–545`. In the boss he kills Max's Loyalty Program (`614`) |
+| 7 | Last Stop | When Dolly calls it on Car 17, pick LAST STOP. | feat | `lastStop()`, `09_battle.js:602–610`; offered once Max is at 40 HP or less (`11a_story.js:618–622`). **No flag is set**: a moment needs one there |
+| 8 | All twelve | Bring all twelve eggs to Dolly's stove: none cracked, cooked, given or thrown. | collection | `S.tartsMade = S.eggs` at the stove (`11c_refuge.js:36`); the rule is `S.tartsMade === 12`. Egg loss: `loseEgg()` from egg on rice (`11a_story.js:344`), Sal (`436`), a throw (`09_battle.js:359`), unbraced big hits (`582`) |
+| 9 | The Long Table | UNDECIDED: the event isn't in the build yet. | event | none |
+
+**Order check.** This is a change from design.json, whose list starts with thank-you. In play, Biscuit is flipped first, before the eggs. An egg can be thrown in fight 1, and thank-you can't come until fight 2. Sal's bench (x 688, `03e_outer.js:41`) sits on the landing before the last flight (730–990), so Sal comes before the count completes. Read in a row, they tell the story: flip Biscuit → throw an egg → thank a machine free → feed Sal → count the steps → free Gus → Last Stop → all twelve home.
+
+**Questions on moments.**
+- **Yolked and All twelve can't both be earned in one run.** A thrown egg is a lost egg, and there's one save slot (`00_core.js:71`, New game wipes it). Feeding Sal an *egg* also rules out All twelve, but the jook is the other way, so the rule names both. Is it fine for two moments to be exclusive? It reads well to me ("Only the rude ones.").
+- Last Stop needs a flag (or a `progress.moment`) in `lastStop()`. The others can be reported from existing flags.
+- I shortened design.json's "One hundred forty-two" to "One forty-two" for mono caps under the seal. design.json's moments list still has the long name; words.json is the newer wording.
+- design.json's Sal rule ("his pigeons tear up THE BILL") describes the payoff, not what the player does. The flag is set at the bench, so the rule now says what to do there.
+
+#### 6. Captions (gallery/01–06)
+
+I looked at every PNG and checked each caption against its slide. Each is at most 55 characters.
+1. "Fight Kindly's machines, turn by turn, on Carmody St". As corrected: a night fight, skillet into a Glyde scooter, the drone marking Biscuit.
+2. "Say thank you, and the kiosk's gloss cracks into pixels". I added "the kiosk's": the slide shows the Rate-Us kiosk alone, cracking.
+3. "Walk the city: down all 142 Vallejo Steps". As corrected (chaos sky, not dusk).
+4. "Biscuit, a delivery cooler that switched sides". As written; Biscuit with Kindly's tower behind him.
+5. "On runaway Car 17's roof, down Hyde, against Max". Reworded from "…runs away down Hyde with Max aboard": the slide shows Wren and Biscuit on the roof, Dolly at the grip and Max hovering beside the car, so "aboard" didn't match the picture. "Down Hyde" is the film's own ("fifty miles an hour down Hyde", `11e_films_car.js:720`).
+6. "A dozen eggs, counted at the end of the line". As corrected (the pier, `fhToteShot(12)`).
+
+Read without the pictures, they walk through it: fight, thank, walk, Biscuit, the boss, the count.
+
+#### 7. Place strings (PROPOSAL: the build sends none)
+
+There's no bug.games SDK in the build: no `progress.set`, no `bloomplay` anywhere in src. The game's own place cards are `GTITLES` in `08b_guide.js:449–463` (shown once per place and phase), as name · line under it. **Every one of the thirteen runs over 30 characters** when joined, so all are proposed shortenings: the place plus its time or line. They're listed in play order. A note field `place_strings_note` in words.json says so.
+
+| as the game shows it | chars | proposed |
+|---|---|---|
+| THE CROOKED LADY · RUSSIAN HILL · 8:31 AM | 41 | THE CROOKED LADY · 8:31 AM |
+| CARMODY STREET · RUSSIAN HILL · 8:44 AM | 39 | CARMODY STREET · 8:44 AM |
+| LUCKY SEVEN MARKET · BOTTOM OF CARMODY · 8:52 AM | 48 | LUCKY SEVEN MARKET · 8:52 AM |
+| CARMODY STREET · RUSSIAN HILL · 9:32 AM | 39 | CARMODY STREET · 9:32 AM |
+| THE CROOKED LADY · DOLLY'S KITCHEN · 9:21 AM | 44 | DOLLY'S KITCHEN · 9:21 AM |
+| VALLEJO STEPS · 9:38 AM · NOBODY AGREES HOW MANY | 48 | VALLEJO STEPS · 9:38 AM |
+| LARKIN ROW · 9:49 AM · ONE BLOCK FROM HYDE | 42 | LARKIN ROW · 9:49 AM |
+| THE CROOKED LADY · HOME · 6:24 PM | 33 | THE CROOKED LADY · 6:24 PM |
+| THE CROOKED LADY · A REFUGE NOW · 9:50 PM | 41 | CROOKED LADY · A REFUGE NOW |
+| CARMODY STREET · SUNDAY NIGHT · IN THE FOG | 42 | CARMODY STREET · IN THE FOG |
+| VALLEJO STEPS · SUNDAY NIGHT · STILL COUNTING | 45 | VALLEJO STEPS · STILL COUNTING (30) |
+| LARKIN ROW · SUNDAY NIGHT · STILL BURNING | 41 | LARKIN ROW · STILL BURNING |
+| THE ROOF · PILAR'S OBSERVATORY · 10:15 PM | 42 | THE ROOF · 10:15 PM |
+
+Questions:
+- **The clock runs backwards once.** In play you leave the Lucky Seven onto Carmody St "9:32 AM" (`street:chaos`) and only then reach Dolly's kitchen "9:21 AM" (`house:chaos`). It's a build inconsistency, and I kept the game's own times.
+- **A better source may exist.** The title screen's own Continue button already says where you are, by beat (`11z_title.js:266`): "Sunday morning", "The errand", "Nine o'clock", "Getting ready", "The rescue", "Sunday dinner", "The refuge", all short. Those fit the Continue card's job better than place cards. If the maker adds `progress.set`, sending those (or "place · beat") is my suggestion. I listed the place cards, as asked.
+- The guide's short area names also exist (`08b_guide.js:17`: HOME, CARMODY ST, LUCKY 7, VALLEJO STEPS, LARKIN ROW, ROOF).
+
+#### 8. The game's voice
+
+- **verb:** "walked".
+- **stat_nouns** (each countable from the build's state): eggs home (`S.tartsMade` / `S.eggs`), machines freed (`S.freed.length`, `09_battle.js:423`), steps counted (`S.stepsCounted`, of 142), people under one roof (`S.residents.length + 1`, the game's own phrase at `11c_refuge.js:232`), refuge jobs done (`S.jobs[*] === 'done'`, six jobs, `11c_refuge.js:53–60`).
+- **own_word:** "Punched" (the transfer punch, `reward/punched.js`). **bought_line:** "Punched for you: " (the item name follows).
+- **result_lines:** "Brown. A dozen. Not the sad ones." (Dolly's errand and the twelve-egg ending), "Eleven's a dozen if you're generous." (Dolly's eleven-egg line, `11f_films_home.js:246`), and "You were on my way." (Wren, EGGS_HOME). The first two are for 12 and 11 eggs home. The third fits any count, so use it when fewer than eleven make it.
+- **friend_lines:** "A friend is walking a dozen eggs home." / "A friend got the eggs home. Brown, not the sad ones."
+- **quick_chat:** "Mind the eggs." (the poster's rant line, in Wren's voice) and "Next stop." (the game's own, `11c_refuge.js:112`, `09_battle.js:319`).
+- **pause_line:** "Biscuit has the tote. Take your time." (In EGGS_HOME Biscuit carries the tote: "I can carry eggs.")
+- Voice check, line by line next to the poster and the seals: Wren is dry and plain, the neighbours are warm, and none of it is Kindly's sugar. There are no superlatives, no other games' names, no prices, no "level" or "enemies" (the build says "enemies" in its tips, so I avoided it), no guilt, no exclamation marks, no streak or scarcity words, and neither "teardown" nor "Fair Play".
+
+#### 9. design.json, round-2 words
+
+- **store `kind_line`:**
+  - Taped Biscuit: "Skin · silver tape, an X across the lid"
+  - Little Pope: "Companion · Sal's palest pigeon rides the lid"
+  - Fog trail: "Trail · the fog follows Wren's heels"
+  - Nuclear Grandma: "Sticker · La Palomita's hot sauce, on Biscuit's side"
+  - Wave: "Emote · the bus driver's wave"
+- **`store_row_line`:** "For Biscuit and the walk home".
+- **pass reward `name`:** Rosemary sprig, Channel 3 (Pilar's walkie; "PILAR · CH.3" at `11a_story.js:12`), Ethel's feather, Car 17's bell, Egg tart, Night Shift lamp.
+- **`pass.sentence`:** "The long way home, one block at a time, with a few things for Biscuit picked up along the way." I also added `pass.step_rule`: UNDECIDED (how a block is earned, and how many).
+- **owned_mark:** `own_word` "Punched", `bought_line` "Punched for you: ".
+- **update:** `title` "The Antenna Goes Up" (19; Gus: "We're up. Listen.", `11c_refuge.js:252`). `change_line`: "On the night shift, Gus raises an antenna on Dolly's roof and the house can hear Kindly's maintenance channel." I added `ships`: only if it ships after launch, because the antenna is already in the current build (`antennaScene`, `11c_refuge.js:248–260`). Version and date UNDECIDED. I kept the existing `change` field as it was. **Question:** that field says the antenna lets "Pilar's walkie reach the street". The build says the antenna brings in Kindly's maintenance channel (and Biscuit's PATCH); Pilar's walkie works from the roof before it (`11a_story.js:215`). So my change line follows the build. The picture's radio rings fit either reading.
+- **event:** `text` "On the night Kindly's smile is off, Carmody Street carries its tables out and eats one long dinner down the hill. Everyone brings something, and everyone gets a tart." `counter_unit` "places set". `target` and `rule` are UNDECIDED.
+- No prices, dates or target numbers anywhere.
+
+#### 10. Minutes
+
+**minutes: 35** (an estimate, built on one measurement).
+- **Measured:** the build's own autopilot (`test/autopilot.js` via `test/play.py --ts 1`, real time scale) ran a test copy built into my scratchpad (`OUT=… build.py test/autopilot.js`; nothing in `/home/claude/pardon` was written). It played the whole chapter with 0 errors.
+  - It took **13.7 min** from New game to the end of the Night Shift jobs (821 s), and **9.1 min** to the refuge (546 s).
+  - In that run: 4 story fights and 3 scavenge fights, all six jobs, 11 eggs home (it gave Sal an egg).
+  - The autopilot skips every typed line the moment it can and decides each turn instantly, so this is a **floor**, not a player's time.
+- **Added for a person:** about 330 lines to read (227 `say`/`narr`/`radio` calls in `11a_story.js` and `11c_refuge.js`, plus 105 film lines in `11d`–`11f`) at about 3 s each, which is about +16 min. Then roughly 40 s of thinking per fight over 7 fights, about +5 min. That comes to **about 35 min** for one sitting through the chapter, without the optional LOOK spots or any retried fights.
+- If bug.games wants a measured human time instead, this should be replaced after a real playtest. A shorter session is also possible, since the game autosaves (`12_main.js:44`, every 20 s while exploring, and at every beat).
+
+#### Open questions, in short
+1. Yolked and All twelve are exclusive within one run. Is that fine?
+2. Last Stop has no flag: the maker would add one in `lastStop()`.
+3. For `progress.set`: use the title's beat labels (`11z_title.js:266`) rather than the place cards? Also, the 9:32 → 9:21 clock slip.
+4. design.json's update `change` ("walkie reaches the street") vs the build (the maintenance channel): which wording does the lead want?
+5. The flashes aren't reduced under prefers-reduced-motion (only the shake is). That's for the maker, not for this pass.
+6. mood "homely" (or "tender").
+
 ## Pictures
 
 Each entry gives the file, what it shows, how it was made (rendered from the game, or drawn in its code and palette), which agent made it, the check result, and anything that couldn't be made. Seven agents worked in parallel after the poster: `marks`, `stills`, `gallery`, `seals`, `storepass`, `round3` and `living`. The lead reviewed everything side by side, then sent two pictures back: the result picture (too small and dark) and gallery 04 (bright and flat, and a repeat of the dinner). Both were remade.
 
 **Checks bundled in this zip, in `checks/`:**
-- the poster in every wall shape and on the wall (`poster-wall-shapes.png`, `poster-wall-hero.png`), plus its previews
+- the poster in every wall shape (`poster-wall-shapes.png`), plus its previews (`poster-previews.png`); both redone for the round-2 poster
 - all the seals in one 32 px strip on dark and light, and at 96 px
 - the small marks at 1× on night and on linen, at 4×, and beside three other games' icons
 - gallery slides at 100 px and in their 4:3 crops

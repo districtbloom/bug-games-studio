@@ -33,13 +33,17 @@ async def main():
                     if same: st = max(st, n)
             lives = lives[1:]  # the first entry is the board's first frame before the opening hold
             rep[f'idle_seed{seed}'] = dict(holds_s=holds, live_s=lives, longest_still_in_live_s=max(still) if still else 0)
-        r = await pg.evaluate('(o) => window.run(o)', dict(w=480, h=240, hash=True, noImage=True, steps=[dict(mode='idle', dur=.3), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=14.4)]))
+        r = await pg.evaluate('(o) => window.run(o)', dict(w=480, h=240, hash=True, noImage=True, steps=[dict(mode='idle', dur=.3), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=14.0)]))
         lum = r['lum']; n0 = int(round((.3 + .8 + .7) * 60))
-        L = lum[n0:]; per = 432
+        L = lum[n0:]; per = 420   # the loop is 7.0 s
         seam = [abs(L[i] - L[i + per]) for i in range(len(L) - per)]
         jumps = [round(abs(L[i + 1] - L[i]), 4) for i in range(len(L) - 1)]
         rep['loop'] = dict(luma_min=round(min(L), 4), luma_max=round(max(L), 4), luma_idle=round(lum[5], 4), max_frame_jump=max(jumps), seam_repeat_maxdiff=round(max(seam), 5),
                            hash_repeats=sum(1 for i in range(len(r['hashes']) - n0 - per) if r['hashes'][n0 + i] == r['hashes'][n0 + i + per]), frames_compared=len(r['hashes']) - n0 - per)
+        # the loop returns to the held pose: the frame at every loop boundary against the reduced-motion held still
+        h0 = await pg.evaluate('(o) => window.run(o)', dict(w=480, h=240, hash=True, noImage=True, rm=True, steps=[dict(mode='idle', dur=3 / 60)]))  # its 3rd frame (the cached layers)
+        rep['loop']['boundary_frames_equal_held'] = [r['hashes'][n0 + k * per] == h0['hashes'][2] for k in (1, 2) if n0 + k * per < len(r['hashes'])]
+        rep['loop']['loop_start_equals_held'] = r['hashes'][n0] == h0['hashes'][2]
         json.dump(dict(rep=rep, lum_loop=[round(v, 4) for v in L], errors=errs), open(os.path.join(OUT, 'rhythm.json'), 'w'))
         print(json.dumps(rep, indent=1)); print('errors', errs[:5])
         await b.close()

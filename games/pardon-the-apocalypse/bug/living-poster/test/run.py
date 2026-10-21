@@ -37,13 +37,16 @@ SHOTS = {
   **{f'react_{int(t*100):03d}': dict(w=760, h=380, steps=[idle(.5), dict(mode='react', dur=t)]) for t in [.05, .12, .25, .5, .79]},
   **{f'enter_{int(t*100):03d}': dict(w=760, h=380, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=t)]) for t in [.1, .25, .4, .55, .69]},
   # the loop
-  **{f'loop_{int(t*100):03d}': dict(w=760, h=380, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for t in [.1, .4, 1.1, 1.6, 2.0, 2.7, 3.2, 3.5, 3.85, 4.15, 4.6, 5.4, 6.1, 6.6, 7.0, 7.19]},
+  **{f'loop_{int(t*100):03d}': dict(w=760, h=380, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for t in [.1, .2, .4, .8, 1.15, 1.5, 1.7, 1.95, 2.3, 2.9, 3.1, 3.45, 3.7, 4.0, 4.3, 4.8, 5.2, 5.9, 6.3, 6.8, 6.98]},
   'loop_900x640_330': dict(w=900, h=640, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=3.3)]),
   'loop_900x640_440': dict(w=900, h=640, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=4.4)]),
-  **{f'loopN_150x370_{int(t*100):03d}': dict(w=150, h=370, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for t in [.3, 1.6, 2.6, 3.05, 3.5, 4.3, 5.5, 6.6]},
+  **{f'loopN_{w}x{h}_{int(t*100):03d}': dict(w=w, h=h, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for (w, h) in [(150, 370), (140, 305), (120, 300)] for t in [.1, .4, .8, 1.5, 1.95, 2.9, 3.45, 4.0, 4.3, 5.2, 6.3, 6.98]},
+  **{f'loopW_1000x150_{int(t*100):03d}': dict(w=1000, h=150, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for t in [.1, .4, 1.5, 1.95, 2.9, 4.0, 5.2, 6.98]},
+  **{f'held_{w}x{h}': dict(w=w, h=h, steps=[idle(.5)]) for (w, h) in [(120, 300), (1000, 150)]},
+  **{f'squeezedN_{w}x{h}': dict(w=w, h=h, steps=[idle(.5), dict(mode='squeezed', dur=2.0, squeeze=.8)]) for (w, h) in [(150, 370), (140, 305), (120, 300), (1000, 150)]},
   'loop_560x380_220': dict(w=560, h=380, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=2.2)]),
   # the largest scale (900x640 at dpr 2: 10 device px a pixel) for the guarded-colour audit
-  **{f'big_loop_{int(t*100):03d}': dict(w=900, h=640, dpr=2, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for t in [.3, 1.1, 3.3, 3.8, 4.4, 5.3, 6.6]},
+  **{f'big_loop_{int(t*100):03d}': dict(w=900, h=640, dpr=2, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=t)]) for t in [.15, .5, 1.95, 2.4, 3.1, 3.5, 4.0, 4.3, 5.0, 6.6]},
   'big_held': dict(w=900, h=640, dpr=2, steps=[idle(.5)]),
   'big_squeezed': dict(w=420, h=640, dpr=2, steps=[idle(.5), dict(mode='squeezed', dur=2.0, squeeze=.8)]),
   # back to idle after the loop: the settle
@@ -57,6 +60,7 @@ SHOTS = {
   'ev_cue_100': dict(w=420, h=370, steps=[idle(3.0), dict(mode='idle', dur=1.0, on={'type': 'cue'})]),
   'ev_hit_020': dict(w=420, h=370, steps=[idle(3.0), dict(mode='idle', dur=.2, on={'type': 'hit', 'item': 'clip', 'from': 'carbon', 'x': 120, 'y': 150})]),
   'ev_hit_080': dict(w=420, h=370, steps=[idle(3.0), dict(mode='idle', dur=.8, on={'type': 'hit', 'item': 'clip', 'from': 'carbon', 'x': 120, 'y': 150})]),
+  **{f'ev_hit_{k}_{int(t*100):03d}': dict(w=420, h=370, steps=[idle(3.0), dict(mode='idle', dur=t, on={'type': 'hit', 'item': 'clip', 'from': 'carbon', 'kind': k, 'x': 120 if k != 'grab' else 330, 'y': 150})]) for k in ['shoot', 'beam', 'burst', 'grab'] for t in [.15, .9]},
   'ev_look_left': dict(w=420, h=370, steps=[idle(3.0), dict(mode='idle', dur=.8, on={'type': 'look', 'dx': -1, 'dy': 0})]),
   'ev_look_right': dict(w=420, h=370, steps=[idle(3.0), dict(mode='idle', dur=.8, on={'type': 'look', 'dx': 1, 'dy': 0})]),
   'ev_shake': dict(w=420, h=370, steps=[idle(3.0), dict(mode='idle', dur=.15, on={'type': 'shake', 'amount': 1})]),
@@ -64,7 +68,7 @@ SHOTS = {
   'odd_60x40': dict(w=60, h=40, steps=[idle(.5)]),
   'odd_1200x800_dpr1.5': dict(w=1200, h=800, dpr=1.5, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=1.0)]),
   'odd_333x777_dpr1.25': dict(w=333, h=777, dpr=1.25, steps=[idle(.5), dict(mode='squeezed', dur=1.0, squeeze=.5)]),
-  'odd_1000x150': dict(w=1000, h=150, steps=[idle(.5), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=3.3)]),
+  
   # the one throwable (drawn by the board's overlay)
   'item_egg': dict(w=300, h=60, items=[0, .8, 1.6, 2.4, 3.2, 4.0, 4.8]),
   'item_egg_dpr2': dict(w=300, h=60, dpr=2, items=[0, .8, 1.6, 2.4, 3.2, 4.0, 4.8]),
@@ -83,8 +87,8 @@ POSTER = {'rm_1920x960': dict(w=1920, h=960, rm=True, steps=[dict(mode='idle', d
 # timing: 600x400 at dpr 1 and 2, every mode, many frames; also a continuously resizing plate (squeeze)
 TIME = {
   'flush_idle': dict(w=600, h=400, flush=True, noImage=True, steps=[idle(12.0)]),
-  'flush_loop': dict(w=600, h=400, flush=True, noImage=True, steps=[idle(.2), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=14.4)]),
-  'flush_loop_dpr2': dict(w=600, h=400, dpr=2, flush=True, noImage=True, steps=[idle(.2), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=7.2)]),
+  'flush_loop': dict(w=600, h=400, flush=True, noImage=True, steps=[idle(.2), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=14.0)]),
+  'flush_loop_dpr2': dict(w=600, h=400, dpr=2, flush=True, noImage=True, steps=[idle(.2), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=7.0)]),
   'flush_squeeze': dict(w=600, h=400, flush=True, noImage=True, steps=[idle(.2), dict(mode='squeezed', dur=6.0, squeeze=.6)]),
   'flush_resize': dict(w=600, h=400, flush=True, noImage=True, steps=[dict(mode='idle', dur=8.0, resize=[600, 400, 300, 380, 4.0])]),
   'flush_squeezing': dict(w=270, h=370, flush=True, noImage=True, steps=[dict(mode='squeezed', dur=8.0, squeeze=.6, resize=[270, 370, 120, 280, 4.0])]),
@@ -94,7 +98,7 @@ TIME = {
   'time_loop_dpr2': dict(w=600, h=400, dpr=2, noImage=True, steps=[idle(.2), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=14.4)]),
   'time_idle_dpr2': dict(w=600, h=400, dpr=2, noImage=True, steps=[idle(12.0)]),
   'time_squeeze': dict(w=600, h=400, noImage=True, steps=[idle(.2), dict(mode='squeezed', dur=6.0, squeeze=.6)]),
-  'time_fallback': dict(w=600, h=400, noOffscreen=True, noImage=True, steps=[idle(.2), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=7.2)]),
+  'time_fallback': dict(w=600, h=400, noOffscreen=True, noImage=True, steps=[idle(.2), dict(mode='react', dur=.8), dict(mode='enter', dur=.7), dict(mode='loop', dur=7.0)]),
 }
 
 

@@ -1,40 +1,190 @@
 {
-  "status": "PROPOSAL. Design only: nothing is declared in game.json or the game, and there are no prices, days or counts.",
-  "store": [
-    {"id": "biscuit-tape", "name": "Taped Biscuit", "kind": "skin", "look": "Biscuit patched with silver duct tape: an X across the lid and a strip over one wheel arch (the game's own 'patched' Biscuit)", "at_40px": "a white cooler with a grey tape X"},
-    {"id": "pigeon-pal", "name": "Little Pope", "kind": "companion", "look": "one of Sal's pigeons rides on Biscuit's lid, head tilted", "at_40px": "a grey pigeon on a white lid"},
-    {"id": "fog-trail", "name": "Fog trail", "kind": "trail", "look": "a curl of dithered fog follows Wren's heels (the game's fog is dither density, never alpha)", "at_40px": "a pale dithered curl behind a small Wren"},
-    {"id": "hot-sauce-sticker", "name": "Nuclear Grandma", "kind": "sticker", "look": "La Palomita's hot sauce bottle as a sticker for Biscuit's side; a grandma face on the label, no lettering", "at_40px": "a red bottle with a round face"},
-    {"id": "wave-emote", "name": "Wave", "kind": "emote", "look": "Wren lifts an open hand: the bus driver's wave", "at_40px": "Wren's head and a raised hand"}
-  ],
-  "owned_mark": {"verb": "punched", "look": "a bus-transfer punch clips a round hole into the tile's lower corner and the paper chad drops out; plays once in under 900 ms and ends with the hole held"},
-  "pass": {
-    "name": "The Long Way Home",
-    "step_unit": "a block (one block of the walk home)",
-    "marker": {"next": "one of Dolly's brown eggs, rolling forward, tipped", "held": "the egg sitting in an egg-carton cup"},
-    "grounds": {"free": "Carmody Street pavement at night", "pass": "Car 17's wooden floor slats", "bug": "Dolly's kitchen linoleum checks"},
-    "rewards": [
-      {"id": "rosemary-sprig", "row": "free", "kind": "trim", "look": "a sprig of rosemary from the Vallejo Steps, tucked on Biscuit's flag pole"},
-      {"id": "walkie-chirp", "row": "free", "kind": "emote", "look": "Pilar's walkie crackles, with three pixel arcs off its antenna"},
-      {"id": "pigeon-feather", "row": "free", "kind": "sticker", "look": "one of Ethel's grey feathers"},
-      {"id": "cable-bell", "row": "pass", "kind": "trim", "look": "Car 17's bell, hung from Biscuit's pole"},
-      {"id": "tart-sticker", "row": "pass", "kind": "sticker", "look": "one of Dolly's egg tarts"},
-      {"id": "night-shift-lamp", "row": "bug", "kind": "trim", "look": "the refuge's hurricane lamp on Biscuit's lid, lit"}
-    ]
+ "status": "PROPOSAL. Design only: nothing is declared in game.json or the game, and there are no prices, days or counts.",
+ "store": [
+  {
+   "id": "biscuit-tape",
+   "name": "Taped Biscuit",
+   "kind": "skin",
+   "look": "Biscuit patched with silver duct tape: an X across the lid and a strip over one wheel arch (the game's own 'patched' Biscuit)",
+   "at_40px": "a white cooler with a grey tape X",
+   "kind_line": "Skin · silver tape, an X across the lid"
   },
-  "update": {"version": "UNDECIDED (no version yet; file is updates/next.png)", "change": "the roof antenna on the night shift: Gus's antenna on Dolly's roof, so Pilar's walkie reaches the street (in the current build: the refuge's antenna job)", "look": "a close-up of the antenna on Dolly's roof at night, with the walkie's signal going out over the dark street"},
-  "event": {"id": "long-table", "name": "The Long Table", "look": "Carmody Street eats one long dinner down the hill on the night Kindly's smile is off, lit by the neighbours' own string of bulbs", "seal": "an egg tart inside the event outline (a house gable)"},
-  "moments": {
-    "note": "PROPOSED. game.json doesn't exist, so these moments come from story flags the build really sets. bug.games or the maker decides the final list.",
-    "list": [
-      {"id": "thank-you", "name": "Thank you", "kind": "feat", "rule": "free one of Kindly's machines with THANK YOU (FREED)", "glyph": "Kindly's smiley with a pixel crack"},
-      {"id": "yolked", "name": "Yolked", "kind": "feat", "rule": "throw one of Dolly's eggs in a fight (flag threwEgg)", "glyph": "a brown egg with a yolk run"},
-      {"id": "back-on-its-wheels", "name": "Back on its wheels", "kind": "feat", "rule": "flip Biscuit back up (flag biscuitFlipped)", "glyph": "Biscuit's screen face"},
-      {"id": "one-forty-two", "name": "One hundred forty-two", "kind": "collection", "rule": "count the Vallejo Steps (flag stepsCounted)", "glyph": "a flight of steps"},
-      {"id": "sals-girls", "name": "Sal's girls", "kind": "feat", "rule": "help Sal; his pigeons tear up THE BILL (flag salHelped)", "glyph": "a pigeon in flight"},
-      {"id": "gus-patch", "name": "Gus's patch", "kind": "feat", "rule": "help Gus; he cuts Max's Loyalty Program (flag gusHelped)", "glyph": "an open laptop"},
-      {"id": "last-stop", "name": "Last Stop", "kind": "feat", "rule": "stop Car 17 with LAST STOP", "glyph": "Car 17's grip lever"},
-      {"id": "all-twelve", "name": "All twelve", "kind": "collection", "rule": "bring all twelve eggs home", "glyph": "an egg carton, full"}
-    ]
+  {
+   "id": "pigeon-pal",
+   "name": "Little Pope",
+   "kind": "companion",
+   "look": "one of Sal's pigeons rides on Biscuit's lid, head tilted",
+   "at_40px": "a grey pigeon on a white lid",
+   "kind_line": "Companion · Sal's palest pigeon rides the lid"
+  },
+  {
+   "id": "fog-trail",
+   "name": "Fog trail",
+   "kind": "trail",
+   "look": "a curl of dithered fog follows Wren's heels (the game's fog is dither density, never alpha)",
+   "at_40px": "a pale dithered curl behind a small Wren",
+   "kind_line": "Trail · the fog follows Wren's heels"
+  },
+  {
+   "id": "hot-sauce-sticker",
+   "name": "Nuclear Grandma",
+   "kind": "sticker",
+   "look": "La Palomita's hot sauce bottle as a sticker for Biscuit's side; a grandma face on the label, no lettering",
+   "at_40px": "a red bottle with a round face",
+   "kind_line": "Sticker · La Palomita's hot sauce, on Biscuit's side"
+  },
+  {
+   "id": "wave-emote",
+   "name": "Wave",
+   "kind": "emote",
+   "look": "Wren lifts an open hand: the bus driver's wave",
+   "at_40px": "Wren's head and a raised hand",
+   "kind_line": "Emote · the bus driver's wave"
   }
+ ],
+ "owned_mark": {
+  "verb": "punched",
+  "look": "a bus-transfer punch clips a round hole into the tile's lower corner and the paper chad drops out; plays once in under 900 ms and ends with the hole held",
+  "own_word": "Punched",
+  "bought_line": "Punched for you: "
+ },
+ "pass": {
+  "name": "The Long Way Home",
+  "step_unit": "a block (one block of the walk home)",
+  "marker": {
+   "next": "one of Dolly's brown eggs, rolling forward, tipped",
+   "held": "the egg sitting in an egg-carton cup"
+  },
+  "grounds": {
+   "free": "Carmody Street pavement at night",
+   "pass": "Car 17's wooden floor slats",
+   "bug": "Dolly's kitchen linoleum checks"
+  },
+  "rewards": [
+   {
+    "id": "rosemary-sprig",
+    "row": "free",
+    "kind": "trim",
+    "look": "a sprig of rosemary from the Vallejo Steps, tucked on Biscuit's flag pole",
+    "name": "Rosemary sprig"
+   },
+   {
+    "id": "walkie-chirp",
+    "row": "free",
+    "kind": "emote",
+    "look": "Pilar's walkie crackles, with three pixel arcs off its antenna",
+    "name": "Channel 3"
+   },
+   {
+    "id": "pigeon-feather",
+    "row": "free",
+    "kind": "sticker",
+    "look": "one of Ethel's grey feathers",
+    "name": "Ethel's feather"
+   },
+   {
+    "id": "cable-bell",
+    "row": "pass",
+    "kind": "trim",
+    "look": "Car 17's bell, hung from Biscuit's pole",
+    "name": "Car 17's bell"
+   },
+   {
+    "id": "tart-sticker",
+    "row": "pass",
+    "kind": "sticker",
+    "look": "one of Dolly's egg tarts",
+    "name": "Egg tart"
+   },
+   {
+    "id": "night-shift-lamp",
+    "row": "bug",
+    "kind": "trim",
+    "look": "the refuge's hurricane lamp on Biscuit's lid, lit",
+    "name": "Night Shift lamp"
+   }
+  ],
+  "sentence": "The long way home, one block at a time, with a few things for Biscuit picked up along the way.",
+  "step_rule": "UNDECIDED (how a block is earned, and how many blocks)"
+ },
+ "update": {
+  "version": "UNDECIDED (no version yet; file is updates/next.png)",
+  "change": "the roof antenna on the night shift: Gus's antenna on Dolly's roof, so Pilar's walkie reaches the street (in the current build: the refuge's antenna job)",
+  "look": "a close-up of the antenna on Dolly's roof at night, with the walkie's signal going out over the dark street",
+  "title": "The Antenna Goes Up",
+  "change_line": "On the night shift, Gus raises an antenna on Dolly's roof and the house can hear Kindly's maintenance channel.",
+  "ships": "Only if it ships after launch: the antenna is already in the current build (11c_refuge.js antennaScene), so if the first upload includes it, this isn't an update. Version and date UNDECIDED."
+ },
+ "event": {
+  "id": "long-table",
+  "name": "The Long Table",
+  "look": "Carmody Street eats one long dinner down the hill on the night Kindly's smile is off, lit by the neighbours' own string of bulbs",
+  "seal": "an egg tart inside the event outline (a house gable)",
+  "text": "On the night Kindly's smile is off, Carmody Street carries its tables out and eats one long dinner down the hill. Everyone brings something, and everyone gets a tart.",
+  "counter_unit": "places set",
+  "target": "UNDECIDED",
+  "rule": "UNDECIDED (the event isn't in the build)"
+ },
+ "moments": {
+  "note": "PROPOSED. game.json doesn't exist, so these moments come from story flags the build really sets. bug.games or the maker decides the final list.",
+  "list": [
+   {
+    "id": "thank-you",
+    "name": "Thank you",
+    "kind": "feat",
+    "rule": "free one of Kindly's machines with THANK YOU (FREED)",
+    "glyph": "Kindly's smiley with a pixel crack"
+   },
+   {
+    "id": "yolked",
+    "name": "Yolked",
+    "kind": "feat",
+    "rule": "throw one of Dolly's eggs in a fight (flag threwEgg)",
+    "glyph": "a brown egg with a yolk run"
+   },
+   {
+    "id": "back-on-its-wheels",
+    "name": "Back on its wheels",
+    "kind": "feat",
+    "rule": "flip Biscuit back up (flag biscuitFlipped)",
+    "glyph": "Biscuit's screen face"
+   },
+   {
+    "id": "one-forty-two",
+    "name": "One hundred forty-two",
+    "kind": "collection",
+    "rule": "count the Vallejo Steps (flag stepsCounted)",
+    "glyph": "a flight of steps"
+   },
+   {
+    "id": "sals-girls",
+    "name": "Sal's girls",
+    "kind": "feat",
+    "rule": "help Sal; his pigeons tear up THE BILL (flag salHelped)",
+    "glyph": "a pigeon in flight"
+   },
+   {
+    "id": "gus-patch",
+    "name": "Gus's patch",
+    "kind": "feat",
+    "rule": "help Gus; he cuts Max's Loyalty Program (flag gusHelped)",
+    "glyph": "an open laptop"
+   },
+   {
+    "id": "last-stop",
+    "name": "Last Stop",
+    "kind": "feat",
+    "rule": "stop Car 17 with LAST STOP",
+    "glyph": "Car 17's grip lever"
+   },
+   {
+    "id": "all-twelve",
+    "name": "All twelve",
+    "kind": "collection",
+    "rule": "bring all twelve eggs home",
+    "glyph": "an egg carton, full"
+   }
+  ]
+ },
+ "store_row_line": "For Biscuit and the walk home"
 }
