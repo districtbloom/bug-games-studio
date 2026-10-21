@@ -29,5 +29,6 @@ Never put a secret in the repository, never touch another game's folder or `dire
 | Caracolina | `caracolina` |
 | Pardon the Apocalypse | `pardon-the-apocalypse` |
 | Perlune | `perlune` |
+| Miracle Thieves | `miracle-thieves` |
 
 A new game gets its folder from the design chat first: it writes `games/<slug>/ROUND.md` with round 1, the whole design pass.
