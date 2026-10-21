@@ -1,0 +1,119 @@
+{
+  "note": "Round-2 proposals for Caracolina: names and looks only. No prices, nothing declared, nothing added to the game. The game has no cosmetics today; every item needs the game to build it.",
+  "store": [
+    {
+      "id": "paper-dove",
+      "name": "Paper dove",
+      "kind": "companion",
+      "look": "A white paper dove, cut out and painted on both sides like the residents, that rides your traveller's shoulder and lifts off when you raise the lens.",
+      "reads_at_40": "a white bird on a blue sky"
+    },
+    {
+      "id": "fisherman-beret",
+      "name": "Fisherman's beret",
+      "kind": "skin",
+      "look": "A cobalt beret for your paper traveller, drawn by the game's own people painter.",
+      "reads_at_40": "a round blue hat on a face"
+    },
+    {
+      "id": "sea-glass-tape",
+      "name": "Sea-glass tape",
+      "kind": "trim",
+      "look": "Washi tape in sea-glass green and blue for taping prints into your sketchbook.",
+      "reads_at_40": "crossed translucent stripes on paper"
+    },
+    {
+      "id": "deckle-edge",
+      "name": "Deckle edge",
+      "kind": "trim",
+      "look": "Your prints come out with a torn, deckled paper edge.",
+      "reads_at_40": "a ragged white rectangle with a blue picture"
+    },
+    {
+      "id": "shell-stamp",
+      "name": "Shell stamp",
+      "kind": "sticker",
+      "look": "A small rubber stamp that presses an oxblood scallop shell onto a print.",
+      "reads_at_40": "a stamp block beside its red shell print"
+    }
+  ],
+  "owned_mark": {
+    "verb": "taped in",
+    "look": "A strip of washi tape slaps across the tile's lower-left corner and settles flat, the way prints are taped into the sketchbook. Under 900 ms; the held frame is the tape in place."
+  },
+  "pass": {
+    "name": "Sketchbook pass",
+    "step_unit": "a sunset",
+    "marker": {
+      "look": "A small print hanging from one strip of tape (next), and the same print taped flat (held)."
+    },
+    "rewards": [
+      {
+        "id": "tape-plum",
+        "name": "Plum tape",
+        "track": "free",
+        "look": "Plum washi tape for prints."
+      },
+      {
+        "id": "sticker-black-egg",
+        "name": "Black egg sticker",
+        "track": "free",
+        "look": "A black egg, like the ones on the town's roofs, to stick on a print."
+      },
+      {
+        "id": "postcard-stamp-lighthouse",
+        "name": "Lighthouse stamp",
+        "track": "free",
+        "look": "A postage stamp with the lighthouse on legs, for the postcards you send."
+      },
+      {
+        "id": "chalk-steps",
+        "name": "Chalk steps",
+        "track": "free",
+        "look": "A trail of chalk footprints behind your traveller."
+      },
+      {
+        "id": "paper-gull",
+        "name": "Paper gull",
+        "track": "pass",
+        "look": "A paper gull companion that circles over your traveller."
+      },
+      {
+        "id": "sailor-stripes",
+        "name": "Sailor stripes",
+        "track": "pass",
+        "look": "A striped top for your paper traveller."
+      },
+      {
+        "id": "paper-lantern",
+        "name": "Paper lantern",
+        "track": "pass",
+        "look": "A paper lantern your traveller carries after dark."
+      },
+      {
+        "id": "tidemark-border",
+        "name": "Tidemark border",
+        "track": "pass",
+        "look": "A sea-blue watercolour edge on your prints."
+      }
+    ],
+    "memberReward": {
+      "id": "keeper-cap",
+      "name": "Keeper's cap",
+      "look": "Tomàs's lighthouse-keeper's cap for your traveller.",
+      "step": "not decided"
+    }
+  },
+  "update": {
+    "version": "3",
+    "change": "The residents turn to face you when you talk to them.",
+    "look": "Quim at his place in the garden of eyes at 19:48, turned square to the camera inside the eye-shaped door, the low sun beside him. (Planned as Remei; at that hour she stands in the great shell's shadow, so Quim shows the change in the poster's light.)"
+  },
+  "event": {
+    "id": "festival-of-the-shell",
+    "name": "The Festival of the Shell",
+    "line": "A week of festival nights: the whole town on the summit under fireworks.",
+    "shared_goal": "Photographs of the fireworks, counted together. Target and dates: not decided.",
+    "look": "The summit at festival night, fireworks over the sea in the right 55%, dark sky on the left."
+  }
+}
