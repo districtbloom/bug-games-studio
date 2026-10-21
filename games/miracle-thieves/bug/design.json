@@ -1,0 +1,108 @@
+{
+  "game": "miracle-thieves",
+  "status": "PROPOSED, round 1, design first. Waits for Yelnur's yes; nothing declared, nothing in game.json. Prices UNDECIDED. Full reasoning in ../PROPOSALS.md.",
+  "store": {
+    "row_line": "Stolen looks for broke wizards.",
+    "verb": "Pocketed",
+    "verb_look": "a numbered brass ownership plate swings onto the tile on a string, turned around so the thieves' scratched mark faces out",
+    "featured": {
+      "id": "starter_pack",
+      "why": "Real and tested end to end; the most surface (hat, robe, staff on screen all run, seen by friends in co-op); the cathedral's finery on the thieves who robbed it. The Relight is a recovery and is never what the store pushes.",
+      "met_in_game": "The Wardrobe, from the title screen: the pack's looks sit in each slot beside the earned ones. Never pushed during a run, on results or on the knockout screen."
+    },
+    "items": [
+      {
+        "id": "starter_pack", "status": "real", "name": "Thieves' Starter Pack",
+        "kind": "Pack · six stolen looks, for all four thieves", "price": "UNDECIDED",
+        "what": "Crooked Mitre, Spoon-Crowned Beret, Stained-Glass Cloche, Midnight Brocade, Censer Staff, Candlewax spell look. Durable.",
+        "look": "the Crooked Mitre, tilted, on a padded transport-case cushion"
+      },
+      {
+        "id": "miracle_relight", "status": "real", "name": "Miracle Relight",
+        "kind": "Relight · once a run, after the free rescue", "price": "UNDECIDED",
+        "what": "Consumable revive at full health with a moment of shelter. Once per player per run; only after the free rescue chance; never after a teammate's knockout; a free Restart beside it.",
+        "look": "a stub of votive candle catching again, its flame rounded, in wax ivory and warm door light"
+      },
+      {
+        "id": "pending_ghosts", "status": "proposal", "needs": "a new Ghost slot in the Wardrobe and the ghost renderer",
+        "name": "Filed Under Pending", "kind": "Ghost look · how you look while you wait to be rescued", "price": "UNDECIDED",
+        "what": "Three ghost looks: a manila folder with a Pending ribbon, a filing drawer, a candle in a confiscation jar. Ghost outline, ground ring and rescue circle unchanged.",
+        "look": "a little manila soul-folder with two eyes, ribbon tied"
+      },
+      {
+        "id": "dawn_barrow", "status": "proposal", "needs": "a new Getaway slot, drawn in getaway.ts / fx-getaway.ts",
+        "name": "The Dawn Barrow", "kind": "Getaway look · what your miracle rides home in", "price": "UNDECIDED",
+        "what": "Four looks for the miracle on the run home: the wheelbarrow, a padded transport case, a birdcage, a soup tureen. Getaway and dawn yard only; smaller than the thief; never ruby.",
+        "look": "the patched wheelbarrow with a glowing miracle sitting in it like a loaf"
+      }
+    ],
+    "turned_down": ["anything that sells the four wants", "spell looks that recolour magic", "revive bundles, XP boosts, rerolls, a second relight"]
+  },
+  "moments": [
+    { "id": "cloister", "name": "Into the Cloister", "kind": "feat", "status": "in build", "rule": "Break in through the service entrance.", "glyph": "the broken parabolic service gate, one door hanging" },
+    { "id": "boss", "name": "The Custodian Wakes", "kind": "feat", "status": "in build", "rule": "Face the reliquary snail.", "glyph": "the snail's spiral shell with a tiny spire on top" },
+    { "id": "heist", "name": "A Miracle Stolen", "kind": "feat", "status": "in build", "rule": "Win a run.", "glyph": "cupped hands holding a round miracle light" },
+    { "id": "rescue", "name": "Nobody Left Behind", "kind": "collection", "status": "in build", "rule": "Rescue 5 friends, over any runs.", "glyph": "a hand pulling a little ghost up by its sleeve" },
+    { "id": "duets", "name": "Two Hands, One Crime", "kind": "collection", "status": "proposed moment", "rule": "Trigger 25 duets, over any runs: one thief sets it up, another sets it off.", "glyph": "two crossed staffs" },
+    { "id": "wire", "name": "Under the Wire", "kind": "feat", "status": "proposed moment", "rule": "Escape with your miracle in the last 15 seconds.", "glyph": "a closing gate with a thief's hat squeezing through" },
+    { "id": "kettle", "name": "Kettle On", "kind": "feat", "status": "proposed moment and rule change", "rule": "Get every thief out in one run, two or more of you.", "rule_now": "Get every thief out of the cathedral in one run. (Any solo win earns it today.)", "glyph": "a kettle with a curl of steam" },
+    { "id": "seals", "name": "All Seals Broken", "kind": "feat", "status": "in build", "rule": "Break all three seals in one run.", "glyph": "a round wax seal cracked in three" },
+    { "id": "bread", "name": "Daily Bread", "kind": "collection", "status": "proposed moment and clearer line", "rule": "Win 5 of Today's Jobs, over any days.", "glyph": "a round communion wafer, bitten" },
+    { "id": "nuisance", "name": "Public Nuisance", "kind": "feat", "status": "in build", "rule": "Win a run at notoriety 3.", "glyph": "a falling bell (notoriety 3's twist)" },
+    { "id": "snail", "name": "Slow and Steady", "kind": "collection", "status": "proposed moment", "rule": "Win with every wizard.", "glyph": "the Snail Helm" },
+    { "id": "leastfav", "name": "Least Favourite Thieves", "kind": "feat", "status": "in build", "rule": "Win a run at notoriety 5.", "glyph": "the Crown of Lesser Miracles, askew" }
+  ],
+  "achievement_changes": [
+    { "id": "kettle", "change": "count only when two or more thieves started the run (meta.ts fires on escaped === players, so any solo win earns it)" },
+    { "id": "rsw", "change": "line: 'Trigger Snapback, Burnt Offering and Lost Wax in one run.' (it says Muffle, renamed Lost Wax)" },
+    { "id": "bread", "change": "line: 'Win 5 of Today's Jobs, over any days.' (same rule)" }
+  ],
+  "pass": {
+    "name": "The Stolen Ledger",
+    "step_unit": "a page",
+    "step_unit_look": "a torn page of the cathedral's confiscation ledger, handwritten columns, one wax seal",
+    "line": "The cathedral's confiscation ledger, stolen; every heist tears out a page, and every page gives back something they took.",
+    "step_rule": "one page per finished heist, won or caught",
+    "marker": "a torn ledger page with a wax seal: next flutters over the next cell; held is pinned flat",
+    "rewards": [
+      { "id": "ledger_clip", "row": "free", "slot": "hat", "name": "Ledger Clip", "look": "a brass bulldog clip worn as a crown, a page still in it" },
+      { "id": "inked_cuffs", "row": "free", "slot": "robe", "name": "Ink-Stained Cuffs", "look": "the wizard's robe with blotted clerk's cuffs" },
+      { "id": "pew_number", "row": "free", "slot": "staff", "name": "Pew Number", "look": "a numbered brass ownership plate screwed to the staff" },
+      { "id": "lampshade", "row": "pass", "slot": "hat", "name": "Archdeacon's Lampshade", "look": "a fringed vestry lampshade" },
+      { "id": "cope", "row": "pass", "slot": "robe", "name": "Confiscated Cope", "look": "a gold-thread cope three sizes too big, hem patched" },
+      { "id": "sanctus_staff", "row": "pass", "slot": "staff", "name": "Sanctus Bell Staff", "look": "a hand-bell lashed on with twine" },
+      { "id": "sealing_wax", "row": "pass", "slot": "spell look", "name": "Sealing Wax", "look": "the same element colours, finished as dripped and stamped wax" },
+      { "id": "reliquary_hood", "row": "pass", "slot": "hat", "name": "Reliquary Hood", "look": "a leaded glass relic dome worn as a helmet" }
+    ],
+    "bug_pass_row": "left to bug.games"
+  },
+  "event": {
+    "id": "lost-property-night",
+    "name": "Lost Property Night",
+    "line": "The cathedral's lost-property auction stacks the precinct with confiscated odds and ends. Every relic any squad wheels home goes on one pile for everyone.",
+    "shared_goal": "wheel displaced relics home to the wheelbarrow (the run's first objective); one shared pile",
+    "count": "relics wheeled home",
+    "target": "UNDECIDED",
+    "dates": "UNDECIDED",
+    "look": "the precinct at night dressed for the auction: lot tags on the relics, bunting of confiscation tickets, lamplight",
+    "not": "Today's Job is the daily heist, not an event"
+  },
+  "update": {
+    "id": "complaint-upheld",
+    "name": "Complaint Upheld",
+    "status": "PLANNED, not built; needs the game on bug.games and real-device play first",
+    "line": "The cathedral has read the complaints: the middle notoriety levels bite in duo, the falling bells hurt, Fire Ribbon is fairer against the boss, phones keep their frame rate in the Custodian fight, and the old wrong words are fixed.",
+    "why": "Notoriety is the reason to replay and duo is flat from N1 to N4; phones are where many will play, and the boss is the heaviest scene.",
+    "changes": [
+      "duo notoriety 1–4 bites (92–100% wins now, 50% at N5)",
+      "falling bells at N3 can hurt, ruby warning kept",
+      "Fire Ribbon fairer against the Custodian, crowd strength kept",
+      "getaway clock into the middle of its 55–75% target",
+      "Custodian on low detail within 110 draw calls; a lighter yard ending on high",
+      "stale words: Muffle to Lost Wax, game.json v1 text and minutes, HURT_NAMES case",
+      "Kettle On counts only with two or more thieves"
+    ],
+    "look": "close-up of a falling bell striking the court floor inside its ruby warning ring",
+    "date": "UNDECIDED"
+  }
+}
