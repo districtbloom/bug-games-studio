@@ -35,7 +35,13 @@ START-MESSAGE.md            the message a game chat is given to begin
 6. **Fix** on the same branch and push again. Reply to each comment with what you did.
 7. **Merge.** When every slot is approved, the design chat merges. `main` always holds each game's latest approved set.
 
-If you can't open a pull request from where you run, push the branch anyway and say so in `games/<slug>/ROUND.md`. The design chat reviews the branch the same way.
+**If your push is refused** (a 403: your session has no access to this repository), don't retry. Instead:
+1. Make a git bundle of your branch: `git bundle create <slug>-round-<n>.bundle main..<slug>/round-<n>`.
+2. Give the file to Yelnur.
+
+The design chat pushes the branch from the bundle, with your commits unchanged, and opens the pull request for you. Next time, start your session with `districtbloom/bug-games-studio` among its repositories.
+
+If you can push but can't open a pull request, push the branch and say so. The design chat opens it.
 
 ## Rules
 

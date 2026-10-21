@@ -6,7 +6,7 @@ Paste this into the chat that made the game. Replace `<slug>` with the game's fo
 
 You made this game, and its pictures and words for bug.games now live in a shared studio on GitHub: `districtbloom/bug-games-studio`. The bug.games design chat reviews your work there.
 
-1. Add the repository `districtbloom/bug-games-studio` with push access, and clone it.
+1. Add the repository `districtbloom/bug-games-studio` with push access, and clone it. Your session needs it among its repositories to push. If the push is refused, follow "If your push is refused" in the README.
 2. Read, in order:
    - `README.md`, for how the studio works and its rules;
    - `direction/START_HERE.md`;
